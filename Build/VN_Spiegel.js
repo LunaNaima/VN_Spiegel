@@ -4820,7 +4820,7 @@ var Spiegel_VN;
             let pos = Spiegel_VN.ƒS.pointCanvasToMiddleGround(offset);
             nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
         }
-        let demonMovement = Spiegel_VN.ƒ.Vector2.ZERO();
+        let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
         function loopFrame(_event) {
             let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.A, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_LEFT]))
@@ -4833,9 +4833,12 @@ var Spiegel_VN;
                 moveGraph.z = 20;
             if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
                 graph.mtxLocal.translate(moveGraph);
-            if (Spiegel_VN.ƒ.Random.default.getNorm() < 0.04)
-                demonMovement = Spiegel_VN.ƒ.Random.default.getVector2(Spiegel_VN.ƒ.Vector2.ONE(-8), Spiegel_VN.ƒ.Vector2.ONE(8));
-            nodeDemon.mtxLocal.translate(demonMovement.toVector3());
+            let demonSpeed = 10;
+            let move = Spiegel_VN.ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);
+            if (move.magnitude < demonSpeed)
+                demonTargetPosition = Spiegel_VN.ƒ.Random.default.getVector3(new Spiegel_VN.ƒ.Vector3(-800, 100, 0), new Spiegel_VN.ƒ.Vector3(800, -400, 0));
+            move.normalize(demonSpeed);
+            nodeDemon.mtxLocal.translate(move);
             console.log(graph.mtxLocal.translation.toString());
             Spiegel_VN.ƒS.update(0);
         }

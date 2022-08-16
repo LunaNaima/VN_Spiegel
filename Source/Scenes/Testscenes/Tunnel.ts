@@ -48,7 +48,7 @@ namespace Spiegel_VN {
       nodeMirror.mtxLocal.translation = ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
     }
 
-    let demonMovement: ƒ.Vector2 = ƒ.Vector2.ZERO();
+    let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
 
     function loopFrame(_event: Event): void {
       let moveGraph: ƒ.Vector3 = ƒ.Vector3.ZERO();
@@ -65,9 +65,15 @@ namespace Spiegel_VN {
       if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
         graph.mtxLocal.translate(moveGraph);
 
-      if (ƒ.Random.default.getNorm() < 0.04)
-        demonMovement = ƒ.Random.default.getVector2(ƒ.Vector2.ONE(-8), ƒ.Vector2.ONE(8));
-      nodeDemon.mtxLocal.translate(demonMovement.toVector3());
+      let demonSpeed: number = 10;
+      let move: ƒ.Vector3 = ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);
+      if (move.magnitude < demonSpeed)
+        demonTargetPosition = ƒ.Random.default.getVector3
+          (new ƒ.Vector3(-800, 100, 0), new ƒ.Vector3(800, -400, 0)
+          );
+
+      move.normalize(demonSpeed);
+      nodeDemon.mtxLocal.translate(move);
 
       console.log(graph.mtxLocal.translation.toString());
 
