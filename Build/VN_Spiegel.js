@@ -4806,7 +4806,9 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, Spiegel_VN.ƒS.positionPercent(50, 50));
         let nodeDemon = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
         let nodeMirror = await Spiegel_VN.ƒS.Character.get(mirror).getPose(mirror.pose.normal);
-        nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateY(-0.2);
+        nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateY(0.1);
+        nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
+        nodeDemon.mtxLocal.translateX(1);
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         // console.log(graph);
@@ -4822,6 +4824,7 @@ var Spiegel_VN;
             nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
         }
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
+        let demonMood = -1000;
         function loopFrame(_event) {
             let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.A, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_LEFT]))
@@ -4840,7 +4843,16 @@ var Spiegel_VN;
                 demonTargetPosition = Spiegel_VN.ƒ.Random.default.getVector3(new Spiegel_VN.ƒ.Vector3(-800, 100, 0), new Spiegel_VN.ƒ.Vector3(800, -400, 0));
             move.normalize(demonSpeed);
             nodeDemon.mtxLocal.translate(move);
-            console.log(graph.mtxLocal.translation.toString());
+            let prox = Spiegel_VN.ƒ.Vector3.DIFFERENCE(nodeDemon.mtxLocal.translation, nodeMirror.mtxLocal.translation);
+            // console.log(prox.magnitude);
+            if (prox.magnitude > 340) {
+                console.log("I see you!");
+                demonMood -= 50;
+            }
+            else {
+                console.log(demonMood);
+                demonMood += 2;
+            }
             Spiegel_VN.ƒS.update(0);
         }
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);

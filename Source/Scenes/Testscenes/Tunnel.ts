@@ -30,7 +30,9 @@ namespace Spiegel_VN {
     );
     let nodeDemon: ƒ.Node = await ƒS.Character.get(demon).getPose(demon.pose.attack);
     let nodeMirror: ƒ.Node = await ƒS.Character.get(mirror).getPose(mirror.pose.normal);
-    nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateY(-0.2);
+    nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateY(0.1);
+    nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
+    nodeDemon.mtxLocal.translateX(1);
 
     let graph: ƒ.Node = ƒS.Base.getGraph();
     let margin: number = 960;
@@ -50,6 +52,7 @@ namespace Spiegel_VN {
     }
 
     let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
+    let demonMood: number = -1000;
 
     function loopFrame(_event: Event): void {
       let moveGraph: ƒ.Vector3 = ƒ.Vector3.ZERO();
@@ -76,7 +79,16 @@ namespace Spiegel_VN {
       move.normalize(demonSpeed);
       nodeDemon.mtxLocal.translate(move);
 
-      console.log(graph.mtxLocal.translation.toString());
+      let prox: ƒ.Vector3 = ƒ.Vector3.DIFFERENCE(nodeDemon.mtxLocal.translation, nodeMirror.mtxLocal.translation);
+      // console.log(prox.magnitude);
+      if (prox.magnitude > 340) {
+        console.log("I see you!");
+        demonMood -= 50;
+      }
+      else {
+        console.log(demonMood);
+        demonMood += 2;
+      }
 
       ƒS.update(0);
     }
