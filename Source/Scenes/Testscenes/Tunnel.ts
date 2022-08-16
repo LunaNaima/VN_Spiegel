@@ -48,7 +48,7 @@ namespace Spiegel_VN {
       2 * camera.getFar()
     );
 
-    viewport.getCanvas().addEventListener("mousemove", moveMirror);
+    viewport.canvas.addEventListener("mousemove", moveMirror);
     ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
 
     function moveMirror(_event: MouseEvent): void {
@@ -101,7 +101,7 @@ namespace Spiegel_VN {
 
     graph.cmpTransform.mtxLocal = ƒ.Matrix4x4.IDENTITY();
     ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
-    viewport.getCanvas().removeEventListener("mousemove", moveMirror);
+    viewport.canvas.removeEventListener("mousemove", moveMirror);
     ƒS.update(0);
   }
 }
