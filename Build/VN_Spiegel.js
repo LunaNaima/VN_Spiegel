@@ -4789,25 +4789,26 @@ var Spiegel_VN;
     async function testTunnel() {
         let locTunnel = {
             name: "Tunnel",
-            background: "./Assets/Test_Minigame_Demon/Standbild_Test.png",
+            background: "./Assets/Test_Minigame_Demon/Standbild_Test.png"
         };
         let demon = {
             name: "Demon",
             pose: { attack: "./Assets/Characters/Demon/Demon_smile.png" },
-            origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER,
+            origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER
         };
         let mirror = {
             name: "Mirror",
             pose: { normal: "./Assets/Items/Mirror_silver_front.png" },
-            origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER,
+            origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER
         };
         await Spiegel_VN.ƒS.Location.show(locTunnel);
         await Spiegel_VN.ƒS.Character.show(mirror, mirror.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
         await Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, Spiegel_VN.ƒS.positionPercent(50, 50));
-        let nodeDemon = Spiegel_VN.ƒS.Character.get(demon).poses.get(demon.pose.attack);
-        let nodeMirror = Spiegel_VN.ƒS.Character.get(mirror).poses.get(mirror.pose.normal);
+        let nodeDemon = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
+        let nodeMirror = await Spiegel_VN.ƒS.Character.get(mirror).getPose(mirror.pose.normal);
         let graph = Spiegel_VN.ƒS.Base.getGraph();
-        console.log(graph);
+        let margin = 960;
+        // console.log(graph);
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
         let viewport = Reflect.get(Spiegel_VN.ƒS.Base, "viewport");
         let camera = viewport.camera;
@@ -4815,32 +4816,27 @@ var Spiegel_VN;
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         function moveMirror(_event) {
-            nodeMirror.mtxLocal.translateX(_event.movementX);
-            nodeMirror.mtxLocal.translateY(-_event.movementY);
-            // let offset: ƒ.Vector2 = new ƒ.Vector2(_event.offsetX, _event.offsetY);
-            // let pos: ƒ.Vector2 = viewport.pointClientToProjection(offset);
-            // console.log(pos.toString());
+            let offset = new Spiegel_VN.ƒ.Vector2(_event.offsetX, _event.offsetY);
+            let pos = Spiegel_VN.ƒS.pointCanvasToMiddleGround(offset);
+            nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
         }
         let demonMovement = Spiegel_VN.ƒ.Vector2.ZERO();
         function loopFrame(_event) {
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.A, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_LEFT])) {
-                graph.mtxLocal.translateX(20); // wie schnell wir uns bewegen
-            }
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([
-                Spiegel_VN.ƒ.KEYBOARD_CODE.D,
-                Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_RIGHT,
-            ])) {
-                graph.mtxLocal.translateX(-20);
-            }
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.S, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_DOWN])) {
-                graph.mtxLocal.translateZ(-20);
-            }
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.W, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_UP])) {
-                graph.mtxLocal.translateZ(20);
-            }
+            let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
+            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.A, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_LEFT]))
+                moveGraph.x = 20;
+            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.D, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_RIGHT]))
+                moveGraph.x = -20;
+            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.S, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_DOWN]))
+                moveGraph.z = -20;
+            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.W, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_UP]))
+                moveGraph.z = 20;
+            if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
+                graph.mtxLocal.translate(moveGraph);
             if (Spiegel_VN.ƒ.Random.default.getNorm() < 0.04)
                 demonMovement = Spiegel_VN.ƒ.Random.default.getVector2(Spiegel_VN.ƒ.Vector2.ONE(-8), Spiegel_VN.ƒ.Vector2.ONE(8));
             nodeDemon.mtxLocal.translate(demonMovement.toVector3());
+            console.log(graph.mtxLocal.translation.toString());
             Spiegel_VN.ƒS.update(0);
         }
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
