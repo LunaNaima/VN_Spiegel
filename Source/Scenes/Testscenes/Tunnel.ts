@@ -2,19 +2,19 @@ namespace Spiegel_VN {
   export async function testTunnel(): ƒS.SceneReturn {
     let locTunnel = {
       name: "Tunnel",
-      background: "./Assets/Test_Minigame_Demon/Standbild_Test.png",
+      background: "./Assets/Test_Minigame_Demon/Standbild_Test.png"
     };
 
     let demon: ƒS.CharacterDefinition = {
       name: "Demon",
       pose: { attack: "./Assets/Characters/Demon/Demon_smile.png" },
-      origin: ƒ.ORIGIN2D.CENTER,
+      origin: ƒ.ORIGIN2D.CENTER
     };
 
     let mirror: ƒS.CharacterDefinition = {
       name: "Mirror",
       pose: { normal: "./Assets/Items/Mirror_silver_front.png" },
-      origin: ƒ.ORIGIN2D.CENTER,
+      origin: ƒ.ORIGIN2D.CENTER
     };
 
     await ƒS.Location.show(locTunnel);
@@ -28,71 +28,55 @@ namespace Spiegel_VN {
       demon.pose.attack,
       ƒS.positionPercent(50, 50)
     );
-    let nodeDemon: ƒ.Node = ƒS.Character.get(demon).poses.get(
-      demon.pose.attack
-    );
-    let nodeMirror: ƒ.Node = ƒS.Character.get(mirror).poses.get(
-      mirror.pose.normal
-    );
+    let nodeDemon: ƒ.Node = await ƒS.Character.get(demon).getPose(demon.pose.attack);
+    let nodeMirror: ƒ.Node = await ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+    nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateY(-0.2);
 
     let graph: ƒ.Node = ƒS.Base.getGraph();
-    console.log(graph);
+    let margin: number = 960;
+    // console.log(graph);
     graph.addComponent(new ƒ.ComponentTransform());
     let viewport: ƒ.Viewport = Reflect.get(ƒS.Base, "viewport");
     let camera: ƒ.ComponentCamera = viewport.camera;
-    camera.projectCentral(
-      camera.getAspect(),
-      camera.getFieldOfView(),
-      camera.getDirection(),
-      camera.getNear(),
-      2 * camera.getFar()
-    );
+    camera.projectCentral(camera.getAspect(), camera.getFieldOfView(), camera.getDirection(), camera.getNear(), 2 * camera.getFar());
 
     viewport.canvas.addEventListener("mousemove", moveMirror);
     ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
 
     function moveMirror(_event: MouseEvent): void {
-      nodeMirror.mtxLocal.translateX(_event.movementX);
-      nodeMirror.mtxLocal.translateY(-_event.movementY);
-      // let offset: ƒ.Vector2 = new ƒ.Vector2(_event.offsetX, _event.offsetY);
-      // let pos: ƒ.Vector2 = viewport.pointClientToProjection(offset);
-      // console.log(pos.toString());
+      let offset: ƒ.Vector2 = new ƒ.Vector2(_event.offsetX, _event.offsetY);
+      let pos: ƒ.Vector3 = ƒS.pointCanvasToMiddleGround(offset);
+      nodeMirror.mtxLocal.translation = ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
     }
 
-    let demonMovement: ƒ.Vector2 = ƒ.Vector2.ZERO();
+    let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
 
     function loopFrame(_event: Event): void {
-      if (
-        ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.A, ƒ.KEYBOARD_CODE.ARROW_LEFT])
-      ) {
-        graph.mtxLocal.translateX(20); // wie schnell wir uns bewegen
-      }
-      if (
-        ƒ.Keyboard.isPressedOne([
-          ƒ.KEYBOARD_CODE.D,
-          ƒ.KEYBOARD_CODE.ARROW_RIGHT,
-        ])
-      ) {
-        graph.mtxLocal.translateX(-20);
-      }
+      let moveGraph: ƒ.Vector3 = ƒ.Vector3.ZERO();
 
-      if (
-        ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN])
-      ) {
-        graph.mtxLocal.translateZ(-20);
-      }
-      if (
-        ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.W, ƒ.KEYBOARD_CODE.ARROW_UP])
-      ) {
-        graph.mtxLocal.translateZ(20);
-      }
+      if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.A, ƒ.KEYBOARD_CODE.ARROW_LEFT]))
+        moveGraph.x = 20;
+      if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.D, ƒ.KEYBOARD_CODE.ARROW_RIGHT]))
+        moveGraph.x = -20;
+      if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN]))
+        moveGraph.z = -20;
+      if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.W, ƒ.KEYBOARD_CODE.ARROW_UP]))
+        moveGraph.z = 20;
 
-      if (ƒ.Random.default.getNorm() < 0.04)
-        demonMovement = ƒ.Random.default.getVector2(
-          ƒ.Vector2.ONE(-8),
-          ƒ.Vector2.ONE(8)
-        );
-      nodeDemon.mtxLocal.translate(demonMovement.toVector3());
+      if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
+        graph.mtxLocal.translate(moveGraph);
+
+      let demonSpeed: number = 10;
+      let move: ƒ.Vector3 = ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);
+      if (move.magnitude < demonSpeed)
+        demonTargetPosition = ƒ.Random.default.getVector3
+          (new ƒ.Vector3(-800, 100, 0), new ƒ.Vector3(800, -400, 0)
+          );
+
+      move.normalize(demonSpeed);
+      nodeDemon.mtxLocal.translate(move);
+
+      console.log(graph.mtxLocal.translation.toString());
 
       ƒS.update(0);
     }
