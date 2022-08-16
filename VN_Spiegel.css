@@ -1,0 +1,132 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2.3vmin;
+  color: rgb(225, 240, 18);
+  user-select: none;
+}
+
+scene {
+  /* width: 1280px;
+  height: 720px; */
+  width: 1920px;
+  height: 1080px;
+  display: inline-block;
+  position: absolute;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+#FudgeStoryLogo {
+  display: block;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.choicesCSSclass { /*ist ne klasse, greift auf was anderes zu, kann ich später ändern*/
+  background-color: lightcoral;
+}
+
+speech {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: beige;
+  background-color: rgb(210, 196, 178, 0.8);
+  width: 100%;
+  height: 13%;
+}
+
+speech content { /* text */
+  color: rgb(112, 96, 74);
+  font-size: 2.5vmin;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+name {
+  font-size: 4vmin; /*vmin = vertical min, in relation, geht auch in % oder px*/
+  display: block;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  margin-top: 1%;
+  margin-left: 5%;
+
+}
+
+.decisionButtons {
+  padding: 2%;
+  background-color: blueviolet;
+}
+
+dialog[type="inventory"]>ul>li>amount { /*ändert amount spezfisch*/
+  background-color: rgb(255, 255, 255);
+  left: 0px;
+  width: 20px;
+  margin-top: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: large;
+  border:rgb(0, 0, 0);
+  border-width: 2px;
+  padding: 10px;
+
+}
+dialog[type="inventory"] {
+  background-color: rgb(240, 18, 103);
+  left: 0px;
+  width: 90%;
+  height: 90%;
+  font-size: large;
+
+}
+
+/***** METER BAR *****/
+meter::-webkit-meter-bar {
+  background-color: #ececec;
+}
+
+meter[id="EmpathyPointsSkala"] {
+  position: absolute;
+  transform: rotate(-90deg);
+  bottom: 50%;
+  left: -14%;
+  width: 35%;
+  height: 10%;
+}
+
+meter[id="EmpathyPointsSkala"]::-webkit-meter-optimum-value {
+  background-image: linear-gradient(
+    90deg, 
+    #8bcf69 5%, 
+    #e6d450 5%,
+    #e6d450 15%,
+    #f28f68 15%,
+    #f28f68 55%,
+    #cf82bf 55%,
+    #cf82bf 95%,
+    #719fd1 95%,
+    #719fd1 100%
+  );
+  /* background-color: #719fd1; */
+}
+
+input[name="scoreEmpathyPoints"] {
+  background-color:rgb(111, 76, 10);
+  color: rgb(255, 248, 253);
+  position: absolute;
+  left: 0.75%;
+  bottom: 19.5%;
+  width: 5%;
+}
