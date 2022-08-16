@@ -30,6 +30,7 @@ namespace Spiegel_VN {
     );
     let nodeDemon: ƒ.Node = await ƒS.Character.get(demon).getPose(demon.pose.attack);
     let nodeMirror: ƒ.Node = await ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+    nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateY(-0.2);
 
     let graph: ƒ.Node = ƒS.Base.getGraph();
     let margin: number = 960;

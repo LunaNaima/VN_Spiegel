@@ -4806,6 +4806,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, Spiegel_VN.ƒS.positionPercent(50, 50));
         let nodeDemon = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
         let nodeMirror = await Spiegel_VN.ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+        nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateY(-0.2);
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         // console.log(graph);
