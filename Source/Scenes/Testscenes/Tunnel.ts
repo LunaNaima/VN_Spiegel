@@ -30,29 +30,43 @@ namespace Spiegel_VN {
     );
     let nodeDemon: ƒ.Node = await ƒS.Character.get(demon).getPose(demon.pose.attack);
     let nodeMirror: ƒ.Node = await ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+    // adjust mirror position
     nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateY(0.1);
     nodeMirror.getComponent(ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
+    // prevent normalization error
     nodeDemon.mtxLocal.translateX(1);
 
     let graph: ƒ.Node = ƒS.Base.getGraph();
     let margin: number = 960;
-    // console.log(graph);
+    let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
+    let demonMood: number = -1000;
+
     graph.addComponent(new ƒ.ComponentTransform());
     let viewport: ƒ.Viewport = Reflect.get(ƒS.Base, "viewport");
     let camera: ƒ.ComponentCamera = viewport.camera;
     camera.projectCentral(camera.getAspect(), camera.getFieldOfView(), camera.getDirection(), camera.getNear(), 2 * camera.getFar());
 
+    // start game interactions
     viewport.canvas.addEventListener("mousemove", moveMirror);
     ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
 
+    // stop game when space pressed
+    await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
+
+    // cleanup and end chapter
+    graph.cmpTransform.mtxLocal = ƒ.Matrix4x4.IDENTITY();
+    ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
+    viewport.canvas.removeEventListener("mousemove", moveMirror);
+    ƒS.update(0);
+    // chapter end
+
+
+    // game functions
     function moveMirror(_event: MouseEvent): void {
       let offset: ƒ.Vector2 = new ƒ.Vector2(_event.offsetX, _event.offsetY);
       let pos: ƒ.Vector3 = ƒS.pointCanvasToMiddleGround(offset);
       nodeMirror.mtxLocal.translation = ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
     }
-
-    let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
-    let demonMood: number = -1000;
 
     function loopFrame(_event: Event): void {
       let moveGraph: ƒ.Vector3 = ƒ.Vector3.ZERO();
@@ -92,12 +106,5 @@ namespace Spiegel_VN {
 
       ƒS.update(0);
     }
-
-    await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
-
-    graph.cmpTransform.mtxLocal = ƒ.Matrix4x4.IDENTITY();
-    ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
-    viewport.canvas.removeEventListener("mousemove", moveMirror);
-    ƒS.update(0);
   }
 }

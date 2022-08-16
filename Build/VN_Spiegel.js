@@ -4806,25 +4806,36 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, Spiegel_VN.ƒS.positionPercent(50, 50));
         let nodeDemon = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
         let nodeMirror = await Spiegel_VN.ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+        // adjust mirror position
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateY(0.1);
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
+        // prevent normalization error
         nodeDemon.mtxLocal.translateX(1);
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
-        // console.log(graph);
+        let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
+        let demonMood = -1000;
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
         let viewport = Reflect.get(Spiegel_VN.ƒS.Base, "viewport");
         let camera = viewport.camera;
         camera.projectCentral(camera.getAspect(), camera.getFieldOfView(), camera.getDirection(), camera.getNear(), 2 * camera.getFar());
+        // start game interactions
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
+        // stop game when space pressed
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        // cleanup and end chapter
+        graph.cmpTransform.mtxLocal = Spiegel_VN.ƒ.Matrix4x4.IDENTITY();
+        Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
+        viewport.canvas.removeEventListener("mousemove", moveMirror);
+        Spiegel_VN.ƒS.update(0);
+        // chapter end
+        // game functions
         function moveMirror(_event) {
             let offset = new Spiegel_VN.ƒ.Vector2(_event.offsetX, _event.offsetY);
             let pos = Spiegel_VN.ƒS.pointCanvasToMiddleGround(offset);
             nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
         }
-        let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
-        let demonMood = -1000;
         function loopFrame(_event) {
             let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.A, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_LEFT]))
@@ -4855,11 +4866,6 @@ var Spiegel_VN;
             }
             Spiegel_VN.ƒS.update(0);
         }
-        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
-        graph.cmpTransform.mtxLocal = Spiegel_VN.ƒ.Matrix4x4.IDENTITY();
-        Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
-        viewport.canvas.removeEventListener("mousemove", moveMirror);
-        Spiegel_VN.ƒS.update(0);
     }
     Spiegel_VN.testTunnel = testTunnel;
 })(Spiegel_VN || (Spiegel_VN = {}));
