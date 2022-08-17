@@ -4789,17 +4789,23 @@ var Spiegel_VN;
     async function testTunnel() {
         let locTunnel = {
             name: "Tunnel",
-            background: "./Assets/Test_Minigame_Demon/Standbild_Test.png"
+            background: "./Assets/Test_Minigame_Demon/Background_draft2.png"
         };
         let demon = {
             name: "Demon",
-            pose: { attack: "./Assets/Characters/Demon/Demon_smile.png" },
+            pose: {
+                attack: "./Assets/Characters/Demon/Demon_pos2_angry.png",
+                normal: "./Assets/Characters/Demon/Demon_smile.png"
+            },
             origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER
         };
         let mirror = {
             name: "Mirror",
-            pose: { normal: "./Assets/Items/Mirror_silver_front.png" },
+            pose: { normal: "./Assets/Items/Mirror_back.png" },
             origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER
+        };
+        let soundeffekt = {
+            evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3",
         };
         await Spiegel_VN.ƒS.Location.show(locTunnel);
         await Spiegel_VN.ƒS.Character.show(mirror, mirror.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
@@ -4859,6 +4865,11 @@ var Spiegel_VN;
             if (prox.magnitude > 340) {
                 console.log("I see you!");
                 demonMood -= 50;
+                Spiegel_VN.ƒS.Sound.fade(soundeffekt.evillaugh, 1, 0, false);
+            }
+            else if (prox.magnitude > 200) {
+                console.log("Watch out!");
+                demonMood -= 1;
             }
             else {
                 console.log(demonMood);
