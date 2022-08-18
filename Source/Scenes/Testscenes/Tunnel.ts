@@ -67,12 +67,14 @@ namespace Spiegel_VN {
     console.log(event);
 
     // cleanup and end chapter
-    graph.cmpTransform.mtxLocal = ƒ.Matrix4x4.IDENTITY();
+    graph.removeComponent(graph.cmpTransform);
+    ƒS.Character.hideAll();
     ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
     viewport.canvas.removeEventListener("mousemove", moveMirror);
 
     // for testing, stop NV from starting
     await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
+    await testTunnel();
     // chapter end
 
     // ------------------------------------------------------------------

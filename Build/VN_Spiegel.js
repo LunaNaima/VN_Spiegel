@@ -4841,11 +4841,13 @@ var Spiegel_VN;
         let event = await gameOver();
         console.log(event);
         // cleanup and end chapter
-        graph.cmpTransform.mtxLocal = Spiegel_VN.ƒ.Matrix4x4.IDENTITY();
+        graph.removeComponent(graph.cmpTransform);
+        Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         viewport.canvas.removeEventListener("mousemove", moveMirror);
         // for testing, stop NV from starting
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        await testTunnel();
         // chapter end
         // ------------------------------------------------------------------
         // game functions
