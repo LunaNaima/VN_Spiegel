@@ -2,20 +2,26 @@ namespace Spiegel_VN {
   export async function testTunnel(): ƒS.SceneReturn {
     let locTunnel = {
       name: "Tunnel",
-      background: "./Assets/Test_Minigame_Demon/Standbild_Test.png"
+      background: "./Assets/Test_Minigame_Demon/Background_draft2.png"
     };
 
     let demon: ƒS.CharacterDefinition = {
       name: "Demon",
-      pose: { attack: "./Assets/Characters/Demon/Demon_smile.png" },
+      pose: { 
+        attack: "./Assets/Characters/Demon/Demon_pos2_angry.png",
+      normal: "./Assets/Characters/Demon/Demon_smile.png"},
       origin: ƒ.ORIGIN2D.CENTER
     };
 
     let mirror: ƒS.CharacterDefinition = {
       name: "Mirror",
-      pose: { normal: "./Assets/Items/Mirror_silver_front.png" },
+      pose: { normal: "./Assets/Items/Mirror_back.png" },
       origin: ƒ.ORIGIN2D.CENTER
     };
+
+    let soundeffekt = {
+      evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3",
+    }
 
     await ƒS.Location.show(locTunnel);
     await ƒS.Character.show(
@@ -98,6 +104,14 @@ namespace Spiegel_VN {
       if (prox.magnitude > 340) {
         console.log("I see you!");
         demonMood -= 50;
+        ƒS.Sound.fade(soundeffekt.evillaugh, 
+          1, 0, false);
+      }
+      
+      else if (prox.magnitude > 200) {
+        console.log("Watch out!");
+        ƒS.Character.show(demon, demon.pose.normal, ƒS.positionPercent(50,50));
+        demonMood -= 1;
       }
       else {
         console.log(demonMood);

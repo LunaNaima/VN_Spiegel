@@ -1,1 +1,1 @@
-Der Spiegel, der das Lächeln frass
+Der Spiegel, der das Lächeln fraß
