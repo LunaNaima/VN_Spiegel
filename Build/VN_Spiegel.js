@@ -4805,13 +4805,16 @@ var Spiegel_VN;
             origin: Spiegel_VN.ƒ.ORIGIN2D.CENTER
         };
         let soundeffekt = {
-            evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3",
+            evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3"
         };
+        let nodeDemon;
         await Spiegel_VN.ƒS.Location.show(locTunnel);
         await Spiegel_VN.ƒS.Character.show(mirror, mirror.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
-        await Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, Spiegel_VN.ƒS.positionPercent(50, 50));
-        let nodeDemon = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
+        await Spiegel_VN.ƒS.Character.show(demon, demon.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
         let nodeMirror = await Spiegel_VN.ƒS.Character.get(mirror).getPose(mirror.pose.normal);
+        let nodeDemonNormal = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.normal);
+        let nodeDemonAttack = await Spiegel_VN.ƒS.Character.get(demon).getPose(demon.pose.attack);
+        nodeDemon = nodeDemonNormal;
         // adjust mirror position
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateY(0.1);
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
@@ -4828,6 +4831,9 @@ var Spiegel_VN;
         // start game interactions
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
+        // ƒS.Progress.defineSignal(()=>{document.addEventListener("tunnelFailed")})
+        document.addEventListener("tunnelFail", () => console.log("TunnelFail"));
+        document.addEventListener("tunnelSuccess", () => console.log("TunnelSucces"));
         // stop game when space pressed
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         // cleanup and end chapter
@@ -4841,6 +4847,7 @@ var Spiegel_VN;
             let offset = new Spiegel_VN.ƒ.Vector2(_event.offsetX, _event.offsetY);
             let pos = Spiegel_VN.ƒS.pointCanvasToMiddleGround(offset);
             nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
+            // ƒS.update(0);
         }
         function loopFrame(_event) {
             let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
@@ -4848,13 +4855,38 @@ var Spiegel_VN;
                 moveGraph.x = 20;
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.D, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_RIGHT]))
                 moveGraph.x = -20;
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.S, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_DOWN]))
-                moveGraph.z = -20;
-            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.W, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_UP]))
-                moveGraph.z = 20;
+            // if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN]))
+            //   moveGraph.z = -20;
+            if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.W, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_UP])) {
+                if (Math.abs(nodeDemon.mtxWorld.translation.x) > 600) // demon must be out of the way
+                    moveGraph.z = 20;
+            }
             if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
                 graph.mtxLocal.translate(moveGraph);
+            if (graph.mtxLocal.translation.z > 4000)
+                document.dispatchEvent(new Event("tunnelSuccess"));
             let demonSpeed = 10;
+            // if (demonMood > 100)
+            //   demonMood = 100;
+            if (demonMood > 0) {
+                demonSpeed = 0;
+                viewport.canvas.removeEventListener("mousemove", moveMirror);
+            }
+            if (demonMood > -800 && nodeDemon == nodeDemonAttack) {
+                // console.log("Calm down");
+                Spiegel_VN.ƒS.Character.hide(demon);
+                Spiegel_VN.ƒS.Character.show(demon, demon.pose.normal, nodeDemon.mtxLocal.translation.toVector2());
+                nodeDemon = nodeDemonNormal;
+            }
+            if (demonMood < -2000 && nodeDemon == nodeDemonNormal) {
+                console.log("Watch out!");
+                Spiegel_VN.ƒS.Character.hide(demon);
+                Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
+                nodeDemon = nodeDemonAttack;
+            }
+            if (demonMood < -4000) {
+                document.dispatchEvent(new Event("tunnelFail"));
+            }
             let move = Spiegel_VN.ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);
             if (move.magnitude < demonSpeed)
                 demonTargetPosition = Spiegel_VN.ƒ.Random.default.getVector3(new Spiegel_VN.ƒ.Vector3(-800, 100, 0), new Spiegel_VN.ƒ.Vector3(800, -400, 0));
@@ -4864,18 +4896,14 @@ var Spiegel_VN;
             // console.log(prox.magnitude);
             if (prox.magnitude > 340) {
                 console.log("I see you!");
-                demonMood -= 50;
-                Spiegel_VN.ƒS.Sound.fade(soundeffekt.evillaugh, 1, 0, false);
-            }
-            else if (prox.magnitude > 200) {
-                console.log("Watch out!");
-                Spiegel_VN.ƒS.Character.show(demon, demon.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
-                demonMood -= 1;
+                demonMood -= 10;
+                if (!Spiegel_VN.ƒS.Sound.isPlaying(soundeffekt.evillaugh))
+                    Spiegel_VN.ƒS.Sound.play(soundeffekt.evillaugh, 1, false);
             }
             else {
-                console.log(demonMood);
-                demonMood += 2;
+                demonMood += 10;
             }
+            // console.log(demonMood);
             Spiegel_VN.ƒS.update(0);
         }
     }
