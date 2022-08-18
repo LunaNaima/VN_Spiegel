@@ -464,6 +464,8 @@ declare namespace FudgeStory {
         private loop;
         private fadingToVolume;
         private constructor();
+        static getSound(_url: RequestInfo): boolean;
+        static isPlaying(_url: RequestInfo): Sound;
         /**
          * Plays the audiofile defined by the given url with the given volume and loops it, if desired
          */
@@ -486,6 +488,7 @@ declare namespace FudgeStory {
          */
         static deserialize(_serialization: ƒ.Serialization[]): void;
         private static setup;
+        get audio(): ƒ.ComponentAudio;
     }
 }
 declare namespace FudgeStory {

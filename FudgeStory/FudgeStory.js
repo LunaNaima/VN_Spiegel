@@ -840,6 +840,15 @@ var FudgeStory;
             this.loop = _loop;
             Sound.sounds.set(_url, this);
         }
+        static getSound(_url) {
+            let sound = Sound.sounds.get(_url);
+            if (!sound)
+                return false;
+            return sound.cmpAudio.isPlaying;
+        }
+        static isPlaying(_url) {
+            return Sound.sounds.get(_url);
+        }
         /**
          * Plays the audiofile defined by the given url with the given volume and loops it, if desired
          */
@@ -916,6 +925,9 @@ var FudgeStory;
             let nodeSound = new ƒ.Node("Sound");
             ƒ.AudioManager.default.listenTo(nodeSound);
             return nodeSound;
+        }
+        get audio() {
+            return this.cmpAudio;
         }
     }
     FudgeStory.Sound = Sound;
