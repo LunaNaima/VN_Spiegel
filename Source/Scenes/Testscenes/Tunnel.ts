@@ -110,6 +110,7 @@ namespace Spiegel_VN {
       
       else if (prox.magnitude > 200) {
         console.log("Watch out!");
+        ƒS.Character.show(demon, demon.pose.normal);
         demonMood -= 1;
       }
       else {
