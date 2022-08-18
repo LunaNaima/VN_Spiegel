@@ -4807,6 +4807,7 @@ var Spiegel_VN;
         let soundeffekt = {
             evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3"
         };
+        // initialize characters and nodes
         let nodeDemon;
         await Spiegel_VN.ƒS.Location.show(locTunnel);
         await Spiegel_VN.ƒS.Character.show(mirror, mirror.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
@@ -4820,13 +4821,15 @@ var Spiegel_VN;
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
         // prevent normalization error
         nodeDemon.mtxLocal.translateX(1);
+        // define variables
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
         let demonMood = -1000;
+        // make graph transformable
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
-        let viewport = Spiegel_VN.ƒS.Base.getViewport();
         // start game interactions
+        let viewport = Spiegel_VN.ƒS.Base.getViewport();
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         // define signals for fail and success
