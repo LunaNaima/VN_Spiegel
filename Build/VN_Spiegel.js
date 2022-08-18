@@ -4825,29 +4825,32 @@ var Spiegel_VN;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
         let demonMood = -1000;
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
-        let viewport = Reflect.get(Spiegel_VN.ƒS.Base, "viewport");
-        let camera = viewport.camera;
-        camera.projectCentral(camera.getAspect(), camera.getFieldOfView(), camera.getDirection(), camera.getNear(), 2 * camera.getFar());
+        let viewport = Spiegel_VN.ƒS.Base.getViewport();
         // start game interactions
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
-        // ƒS.Progress.defineSignal(()=>{document.addEventListener("tunnelFailed")})
-        document.addEventListener("tunnelFail", () => console.log("TunnelFail"));
-        document.addEventListener("tunnelSuccess", () => console.log("TunnelSucces"));
-        // stop game when space pressed
-        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        // define signals for fail and success
+        let gameOver = Spiegel_VN.ƒS.Progress.defineSignal([
+            () => Spiegel_VN.ƒS.Progress.createEventPromise(document, "tunnelFail"),
+            () => Spiegel_VN.ƒS.Progress.createEventPromise(document, "tunnelSuccess")
+        ]);
+        // wait for signals
+        let event = await gameOver();
+        console.log(event);
         // cleanup and end chapter
         graph.cmpTransform.mtxLocal = Spiegel_VN.ƒ.Matrix4x4.IDENTITY();
         Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         viewport.canvas.removeEventListener("mousemove", moveMirror);
-        Spiegel_VN.ƒS.update(0);
+        // for testing, stop NV from starting
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         // chapter end
+        // ------------------------------------------------------------------
         // game functions
         function moveMirror(_event) {
             let offset = new Spiegel_VN.ƒ.Vector2(_event.offsetX, _event.offsetY);
             let pos = Spiegel_VN.ƒS.pointCanvasToMiddleGround(offset);
             nodeMirror.mtxLocal.translation = Spiegel_VN.ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
-            // ƒS.update(0);
+            Spiegel_VN.ƒS.update(0);
         }
         function loopFrame(_event) {
             let moveGraph = Spiegel_VN.ƒ.Vector3.ZERO();
@@ -4855,8 +4858,6 @@ var Spiegel_VN;
                 moveGraph.x = 20;
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.D, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_RIGHT]))
                 moveGraph.x = -20;
-            // if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN]))
-            //   moveGraph.z = -20;
             if (Spiegel_VN.ƒ.Keyboard.isPressedOne([Spiegel_VN.ƒ.KEYBOARD_CODE.W, Spiegel_VN.ƒ.KEYBOARD_CODE.ARROW_UP])) {
                 if (Math.abs(nodeDemon.mtxWorld.translation.x) > 600) // demon must be out of the way
                     moveGraph.z = 20;
@@ -4866,8 +4867,6 @@ var Spiegel_VN;
             if (graph.mtxLocal.translation.z > 4000)
                 document.dispatchEvent(new Event("tunnelSuccess"));
             let demonSpeed = 10;
-            // if (demonMood > 100)
-            //   demonMood = 100;
             if (demonMood > 0) {
                 demonSpeed = 0;
                 viewport.canvas.removeEventListener("mousemove", moveMirror);
@@ -4893,7 +4892,6 @@ var Spiegel_VN;
             move.normalize(demonSpeed);
             nodeDemon.mtxLocal.translate(move);
             let prox = Spiegel_VN.ƒ.Vector3.DIFFERENCE(nodeDemon.mtxLocal.translation, nodeMirror.mtxLocal.translation);
-            // console.log(prox.magnitude);
             if (prox.magnitude > 340) {
                 console.log("I see you!");
                 demonMood -= 10;
@@ -4903,7 +4901,6 @@ var Spiegel_VN;
             else {
                 demonMood += 10;
             }
-            // console.log(demonMood);
             Spiegel_VN.ƒS.update(0);
         }
     }

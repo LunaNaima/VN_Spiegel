@@ -749,6 +749,15 @@ var FudgeStory;
                 return Progress.bundlePromises(_promiseFactoriesOrEventTypes);
             };
         }
+        static createEventPromise(_target, _eventType) {
+            return new Promise((resolve) => {
+                let hndEvent = function (_event) {
+                    _target.removeEventListener(_eventType, hndEvent);
+                    resolve(_event);
+                };
+                _target.addEventListener(_eventType, hndEvent);
+            });
+        }
         /**
          * Wait for the given amount of time in seconds to pass
          */

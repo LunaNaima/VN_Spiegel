@@ -45,35 +45,39 @@ namespace Spiegel_VN {
     let demonMood: number = -1000;
 
     graph.addComponent(new ƒ.ComponentTransform());
-    let viewport: ƒ.Viewport = Reflect.get(ƒS.Base, "viewport");
-    let camera: ƒ.ComponentCamera = viewport.camera;
-    camera.projectCentral(camera.getAspect(), camera.getFieldOfView(), camera.getDirection(), camera.getNear(), 2 * camera.getFar());
+    let viewport: ƒ.Viewport = ƒS.Base.getViewport();
 
     // start game interactions
     viewport.canvas.addEventListener("mousemove", moveMirror);
     ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
 
-    // ƒS.Progress.defineSignal(()=>{document.addEventListener("tunnelFailed")})
-    document.addEventListener("tunnelFail", () => console.log("TunnelFail"));
-    document.addEventListener("tunnelSuccess", () => console.log("TunnelSucces"));
-    // stop game when space pressed
-    await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
+    // define signals for fail and success
+    let gameOver: ƒS.Signal = ƒS.Progress.defineSignal([
+      () => ƒS.Progress.createEventPromise(document, "tunnelFail"),
+      () => ƒS.Progress.createEventPromise(document, "tunnelSuccess")
+    ]);
+
+    // wait for signals
+    let event: Event = await gameOver();
+    console.log(event);
 
     // cleanup and end chapter
     graph.cmpTransform.mtxLocal = ƒ.Matrix4x4.IDENTITY();
     ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
     viewport.canvas.removeEventListener("mousemove", moveMirror);
-    ƒS.update(0);
+
+    // for testing, stop NV from starting
+    await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
     // chapter end
 
+    // ------------------------------------------------------------------
 
     // game functions
     function moveMirror(_event: MouseEvent): void {
       let offset: ƒ.Vector2 = new ƒ.Vector2(_event.offsetX, _event.offsetY);
       let pos: ƒ.Vector3 = ƒS.pointCanvasToMiddleGround(offset);
       nodeMirror.mtxLocal.translation = ƒ.Vector3.DIFFERENCE(pos, graph.mtxWorld.translation);
-
-      // ƒS.update(0);
+      ƒS.update(0);
     }
 
     function loopFrame(_event: Event): void {
@@ -83,8 +87,6 @@ namespace Spiegel_VN {
         moveGraph.x = 20;
       if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.D, ƒ.KEYBOARD_CODE.ARROW_RIGHT]))
         moveGraph.x = -20;
-      // if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN]))
-      //   moveGraph.z = -20;
       if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.W, ƒ.KEYBOARD_CODE.ARROW_UP])) {
         if (Math.abs(nodeDemon.mtxWorld.translation.x) > 600) // demon must be out of the way
           moveGraph.z = 20;
@@ -96,9 +98,6 @@ namespace Spiegel_VN {
         document.dispatchEvent(new Event("tunnelSuccess"));
 
       let demonSpeed: number = 10;
-
-      // if (demonMood > 100)
-      //   demonMood = 100;
 
       if (demonMood > 0) {
         demonSpeed = 0;
@@ -131,7 +130,6 @@ namespace Spiegel_VN {
       nodeDemon.mtxLocal.translate(move);
 
       let prox: ƒ.Vector3 = ƒ.Vector3.DIFFERENCE(nodeDemon.mtxLocal.translation, nodeMirror.mtxLocal.translation);
-      // console.log(prox.magnitude);
       if (prox.magnitude > 340) {
         console.log("I see you!");
         demonMood -= 10;
@@ -141,9 +139,6 @@ namespace Spiegel_VN {
       else {
         demonMood += 10;
       }
-
-      // console.log(demonMood);
-
       ƒS.update(0);
     }
   }
