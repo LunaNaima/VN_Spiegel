@@ -438,6 +438,7 @@ declare namespace FudgeStory {
          *
          */
         static defineSignal(_promiseFactoriesOrEventTypes: (Function | EVENT)[]): Signal;
+        static createEventPromise(_target: EventTarget, _eventType: string): Promise<Event>;
         /**
          * Wait for the given amount of time in seconds to pass
          */
