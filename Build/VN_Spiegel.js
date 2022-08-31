@@ -210,11 +210,11 @@ var Spiegel_VN;
         buttonFunctionalities("Close");
         let scenes = [
             // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
-            {
-                id: "TestTunnel",
-                scene: Spiegel_VN.testTunnel,
-                name: "TestTunnel"
-            },
+            // {
+            //   id: "TestTunnel",
+            //   scene: testTunnel,
+            //   name: "TestTunnel"
+            // },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
@@ -226,11 +226,11 @@ var Spiegel_VN;
             // *** INTRO ***
             // { id: "00 Name Entry", scene: Chp00_00_NameEntry, name: "NameEntry" },
             // ***CHAPTER 01 ***
-            {
-                id: "01_00 IntroNarration",
-                scene: Spiegel_VN.Chp01_00_IntroNarration,
-                name: "Intro Narration"
-            },
+            // {
+            //   id: "01_00 IntroNarration",
+            //   scene: Chp01_00_IntroNarration,
+            //   name: "Intro Narration"
+            // },
             {
                 id: "01_01 Intro Marketplace",
                 scene: Spiegel_VN.Chp01_01_IntroMarketplace,
@@ -1026,11 +1026,12 @@ var Spiegel_VN;
         Mama: {
             name: "Leijla",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
-            //   pose: {
-            //     angry: "/Pfad", //nicht nur pose, sondern auch Mimik beschreiben
-            //     happy: "/Pfad",
-            //     sad: "/Pfad",
-            //   },
+            pose: {
+                dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress1_laugh.png",
+                angry: "/Pfad",
+                happy: "/Pfad",
+                sad: "/Pfad",
+            },
         },
         Mutti: {
             name: "Elena",
@@ -1428,10 +1429,11 @@ var Spiegel_VN;
         //   "Hallo, ich bin Dein Name."
         // );
         // ***BEGINN SZENE***
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.worried, // pose muss in der main sein
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
         Spiegel_VN.ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
         // ƒS.positionPercent(70,100)
         );
+        Spiegel_VN.ƒS.update();
         let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5); //gerundet
         switch (randomTextChp01Marketplace) {
             case 1:

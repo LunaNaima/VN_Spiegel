@@ -96,6 +96,12 @@ declare namespace Spiegel_VN {
         Mama: {
             name: string;
             origin: ƒ.ORIGIN2D;
+            pose: {
+                dress_34_neutral: string;
+                angry: string;
+                happy: string;
+                sad: string;
+            };
         };
         Mutti: {
             name: string;
