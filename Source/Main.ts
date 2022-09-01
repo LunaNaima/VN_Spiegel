@@ -245,6 +245,11 @@ namespace Spiegel_VN {
         scene: testTunnel,
         name: "TestTunnel"
       },
+      {
+        id: "Quiz_Wishtree",
+        scene: quizWishtree,
+        name: "Quiz_Wishtree"
+      },
       //   id: "Auswahlmöglichkeiten",
       //   scene: Auswahlmöglichkeiten,
       //   name: "Testszene 1",

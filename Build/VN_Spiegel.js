@@ -215,6 +215,11 @@ var Spiegel_VN;
                 scene: Spiegel_VN.testTunnel,
                 name: "TestTunnel"
             },
+            {
+                id: "Quiz_Wishtree",
+                scene: quizWishtree,
+                name: "Quiz_Wishtree"
+            },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
