@@ -1,18 +1,61 @@
 .lake {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0);
   cursor: pointer;
 }
 
 #hit0.lake {
-  width: 10%;
-  height: 10%;
-  top: 50%;
-  left: 10%;
+  /*lighthouse*/
+  width: 8%;
+  height: 11%;
+  top: 33%;
+  left: 14%;
 }
+
 #hit1.lake {
+  /*stones*/
+  width: 20%;
+  height: 19%;
+  top: 66%;
+  left: 8%;
+}
+
+#hit2.lake {
+  /*water*/
   width: 10%;
   height: 10%;
   top: 50%;
-  left: 30%;
+  left: 18%;
+}
+
+#hit3.lake {
+  /*turtles*/
+  width: 9%;
+  height: 15%;
+  top: 55%;
+  left: 38%;
+}
+
+#hit4.lake {
+  /*reed*/
+  width: 10%;
+  height: 15%;
+  top: 45%;
+  left: 50%;
+}
+
+#hit5.lake {
+  /*birds*/
+  width: 11%;
+  height: 12%;
+  top: 1%;
+  left: 57%;
+}
+
+#hit6.lake {
+  /*forest*/
+  width: 19%;
+  height: 17%;
+  top: 29%;
+  left: 71%;
 }

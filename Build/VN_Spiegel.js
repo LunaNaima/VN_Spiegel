@@ -216,16 +216,16 @@ var Spiegel_VN;
                 scene: Spiegel_VN.imageRiddle,
                 name: "ImageRiddle"
             },
-            {
-                id: "TextRiddle",
-                scene: Spiegel_VN.textRiddle,
-                name: "TextRiddle"
-            },
-            {
-                id: "TestTunnel",
-                scene: Spiegel_VN.testTunnel,
-                name: "TestTunnel"
-            },
+            // {
+            //   id: "TextRiddle",
+            //   scene: textRiddle,
+            //   name: "TextRiddle"
+            // },
+            // {
+            //   id: "TestTunnel",
+            //   scene: testTunnel,
+            //   name: "TestTunnel"
+            // },
             // {
             //   id: "Quiz_Wishtree",
             //   scene: quizWishtree,
@@ -1242,9 +1242,9 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
-    Spiegel_VN.Music = {
+    Spiegel_VN.music = {
         //themes
-        backgroundTheme_default: "./Assets/Music/bg_theme_default.mp3",
+        theme_ordinaryworld: "./Assets/Music/Theme_OrdinaryWorld.wav",
         //Soundeffekte SFX
         click: "Pfad",
     };
@@ -1397,7 +1397,7 @@ var Spiegel_VN;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp01_00_IntroNarration() {
-        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.Music.backgroundTheme_default, 0.8, 0.1, true);
+        // ƒS.Sound.fade(Music.backgroundTheme_default, 0.8, 0.1, true);
         // ***BEGINN SZENE***
         // for (let diaSequence of Object.values(
         //   dlg_scn_00_IntroNarrator.narratorEntry
@@ -1427,11 +1427,13 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp01_01_IntroMarketplace() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 0.1, true);
         // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
         // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
         // if (dataForSave.pickedThisScene = true)
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge //edge ist der Härtegrad
         );
+        Spiegel_VN.ƒS.update();
         // ***TEST-INVENTORY***
         // ƒS.Inventory.add(inventory.apple);
         // await ƒS.Inventory.open;
@@ -1446,9 +1448,8 @@ var Spiegel_VN;
         // );
         // ***BEGINN SZENE***
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
-        Spiegel_VN.ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-        // ƒS.positionPercent(70,100)
-        );
+        // ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
+        Spiegel_VN.ƒS.positionPercent(70, 130));
         Spiegel_VN.ƒS.update();
         let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5); //gerundet
         switch (randomTextChp01Marketplace) {
@@ -4661,6 +4662,12 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update(0);
         createHitbox(0);
         createHitbox(1);
+        createHitbox(2);
+        createHitbox(3);
+        createHitbox(4);
+        createHitbox(5);
+        createHitbox(6);
+        createHitbox(7);
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         // -------------------
         function createHitbox(_number) {
@@ -4676,9 +4683,31 @@ var Spiegel_VN;
             switch (_event.target.id) {
                 case "hit0":
                     console.log("Leuchtturm");
+                    Spiegel_VN.ƒS.Speech.tell("", "Auf dem Leuchtturm könnten wir Ausschau nach Schiffen halten? Aber wie kommen wir dahin?");
                     break;
                 case "hit1":
-                    console.log("Nicht Leuchtturm");
+                    console.log("Steine");
+                    Spiegel_VN.ƒS.Speech.tell("", "Ich weiß nicht, ob über die Steine hüpfen so eine gute Idee ist.");
+                    break;
+                case "hit2":
+                    console.log("Wasser");
+                    Spiegel_VN.ƒS.Speech.tell("", "Willst du wirklich rüber schwimmen? Das würde ich mir nochmal überlegen!");
+                    break;
+                case "hit3":
+                    console.log("Schildkröten");
+                    Spiegel_VN.ƒS.Speech.tell("", "Die Schildkröten lassen uns sicher nicht auf ihnen reiten!");
+                    break;
+                case "hit4":
+                    console.log("Schilf");
+                    Spiegel_VN.ƒS.Speech.tell("", "Perfekt. Hinter dem Schilf liegt ein Boot.");
+                    break;
+                case "hit5":
+                    console.log("Vögel");
+                    Spiegel_VN.ƒS.Speech.tell("", "Ich würde auch sofort rüber fliegen! Aber das klappt nicht.");
+                    break;
+                case "hit6":
+                    console.log("Wald");
+                    Spiegel_VN.ƒS.Speech.tell("", "Ein Floß bauen könntet ihr auch. Wo kriegt ihr aber das Werkzeug her?");
                     break;
             }
         }

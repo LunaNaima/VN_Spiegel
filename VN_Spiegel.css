@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   margin: 0px;
@@ -34,11 +35,13 @@ canvas {
   margin-left: auto;
 }
 
-.choicesCSSclass { /*ist ne klasse, greift auf was anderes zu, kann ich später ändern*/
+.choicesCSSclass {
+  /*ist ne klasse, greift auf was anderes zu, kann ich später ändern*/
   background-color: lightcoral;
 }
 
 speech {
+  background-image: url('/UI_Speechbox.png');
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -48,7 +51,9 @@ speech {
   height: 13%;
 }
 
-speech content { /* text */
+speech content {
+  /* text */
+
   color: rgb(112, 96, 74);
   font-size: 2.5vmin;
   margin-left: 5%;
@@ -56,7 +61,8 @@ speech content { /* text */
 }
 
 name {
-  font-size: 4vmin; /*vmin = vertical min, in relation, geht auch in % oder px*/
+  font-size: 4vmin;
+  /*vmin = vertical min, in relation, geht auch in % oder px*/
   display: block;
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
@@ -70,7 +76,8 @@ name {
   background-color: blueviolet;
 }
 
-dialog[type="inventory"]>ul>li>amount { /*ändert amount spezfisch*/
+dialog[type="inventory"]>ul>li>amount {
+  /*ändert amount spezfisch*/
   background-color: rgb(255, 255, 255);
   left: 0px;
   width: 20px;
@@ -78,11 +85,12 @@ dialog[type="inventory"]>ul>li>amount { /*ändert amount spezfisch*/
   margin-left: 50px;
   margin-right: 50px;
   font-size: large;
-  border:rgb(0, 0, 0);
+  border: rgb(0, 0, 0);
   border-width: 2px;
   padding: 10px;
 
 }
+
 dialog[type="inventory"] {
   background-color: rgb(240, 18, 103);
   left: 0px;
@@ -107,23 +115,21 @@ meter[id="EmpathyPointsSkala"] {
 }
 
 meter[id="EmpathyPointsSkala"]::-webkit-meter-optimum-value {
-  background-image: linear-gradient(
-    90deg, 
-    #8bcf69 5%, 
-    #e6d450 5%,
-    #e6d450 15%,
-    #f28f68 15%,
-    #f28f68 55%,
-    #cf82bf 55%,
-    #cf82bf 95%,
-    #719fd1 95%,
-    #719fd1 100%
-  );
+  background-image: linear-gradient(90deg,
+      #8bcf69 5%,
+      #e6d450 5%,
+      #e6d450 15%,
+      #f28f68 15%,
+      #f28f68 55%,
+      #cf82bf 55%,
+      #cf82bf 95%,
+      #719fd1 95%,
+      #719fd1 100%);
   /* background-color: #719fd1; */
 }
 
 input[name="scoreEmpathyPoints"] {
-  background-color:rgb(111, 76, 10);
+  background-color: rgb(111, 76, 10);
   color: rgb(255, 248, 253);
   position: absolute;
   left: 0.75%;

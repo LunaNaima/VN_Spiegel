@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
-  export let Music = {
+  export let music = {
     //themes
-    backgroundTheme_default: "./Assets/Music/bg_theme_default.mp3",
+    theme_ordinaryworld: "./Assets/Music/Theme_OrdinaryWorld.wav",
     //Soundeffekte SFX
     click: "Pfad",
   };

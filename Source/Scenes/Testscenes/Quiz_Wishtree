@@ -1,5 +1,0 @@
-namespace Spiegel_VN {
-  export async function quizWishtree(): ƒS.SceneReturn {
-    await ƒS.Speech.getInput();
-
-  }}

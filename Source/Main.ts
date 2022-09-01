@@ -246,16 +246,16 @@ namespace Spiegel_VN {
         scene: imageRiddle,
         name: "ImageRiddle"
       },
-      {
-        id: "TextRiddle",
-        scene: textRiddle,
-        name: "TextRiddle"
-      },
-      {
-        id: "TestTunnel",
-        scene: testTunnel,
-        name: "TestTunnel"
-      },
+      // {
+      //   id: "TextRiddle",
+      //   scene: textRiddle,
+      //   name: "TextRiddle"
+      // },
+      // {
+      //   id: "TestTunnel",
+      //   scene: testTunnel,
+      //   name: "TestTunnel"
+      // },
       // {
       //   id: "Quiz_Wishtree",
       //   scene: quizWishtree,

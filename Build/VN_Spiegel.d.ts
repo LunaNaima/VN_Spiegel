@@ -272,8 +272,8 @@ declare namespace Spiegel_VN {
     };
 }
 declare namespace Spiegel_VN {
-    let Music: {
-        backgroundTheme_default: string;
+    let music: {
+        theme_ordinaryworld: string;
         click: string;
     };
 }

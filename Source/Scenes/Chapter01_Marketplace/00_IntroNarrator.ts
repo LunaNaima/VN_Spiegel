@@ -1,6 +1,6 @@
 namespace Spiegel_VN {
   export async function Chp01_00_IntroNarration(): ƒS.SceneReturn {
-    ƒS.Sound.fade(Music.backgroundTheme_default, 0.8, 0.1, true);
+    // ƒS.Sound.fade(Music.backgroundTheme_default, 0.8, 0.1, true);
 
     // ***BEGINN SZENE***
     // for (let diaSequence of Object.values(
