@@ -210,11 +210,11 @@ var Spiegel_VN;
         buttonFunctionalities("Close");
         let scenes = [
             // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
-            // {
-            //   id: "TestTunnel",
-            //   scene: testTunnel,
-            //   name: "TestTunnel"
-            // },
+            {
+                id: "TestTunnel",
+                scene: Spiegel_VN.testTunnel,
+                name: "TestTunnel"
+            },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
@@ -4825,7 +4825,7 @@ var Spiegel_VN;
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
-        let demonMood = -1000;
+        let demonMood = -4000;
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
         let viewport = Spiegel_VN.ƒS.Base.getViewport();
         // start game interactions
@@ -4866,26 +4866,27 @@ var Spiegel_VN;
             }
             if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
                 graph.mtxLocal.translate(moveGraph);
-            if (graph.mtxLocal.translation.z > 4000)
+            if (graph.mtxLocal.translation.z > 2000)
                 document.dispatchEvent(new Event("tunnelSuccess"));
-            let demonSpeed = 10;
+            let demonSpeed = 17;
             if (demonMood > 0) {
                 demonSpeed = 0;
                 viewport.canvas.removeEventListener("mousemove", moveMirror);
             }
-            if (demonMood > -800 && nodeDemon == nodeDemonAttack) {
+            if (demonMood > -2500 && nodeDemon == nodeDemonAttack) {
                 // console.log("Calm down");
                 Spiegel_VN.ƒS.Character.hide(demon);
                 Spiegel_VN.ƒS.Character.show(demon, demon.pose.normal, nodeDemon.mtxLocal.translation.toVector2());
                 nodeDemon = nodeDemonNormal;
             }
-            if (demonMood < -2000 && nodeDemon == nodeDemonNormal) {
+            if (demonMood < -4000 && nodeDemon == nodeDemonNormal) {
                 console.log("Watch out!");
                 Spiegel_VN.ƒS.Character.hide(demon);
                 Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
                 nodeDemon = nodeDemonAttack;
             }
-            if (demonMood < -4000) {
+            if (demonMood < -8000) {
+                console.log("you failed");
                 document.dispatchEvent(new Event("tunnelFail"));
             }
             let move = Spiegel_VN.ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);
