@@ -47,6 +47,7 @@ namespace Spiegel_VN {
     EmpathyPointsSkala: "",
     scoreCouragePoints: 0,
     scoreKnowledgePoints: 0,
+    tunnelFailed: 0,
     // so geht nicht! muss die einzeln aufschreiben und nicht als Objekt scoreEmpathyPoints: 20 usw. und dann wo ichs aufruf ändern (ohne score)
 
     // *** RIGHT OPTION PICKED ***
@@ -241,15 +242,25 @@ namespace Spiegel_VN {
     let scenes: ƒS.Scenes = [
       // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
       {
+        id: "ImageRiddle",
+        scene: imageRiddle,
+        name: "ImageRiddle"
+      },
+      {
+        id: "TextRiddle",
+        scene: textRiddle,
+        name: "TextRiddle"
+      },
+      {
         id: "TestTunnel",
         scene: testTunnel,
         name: "TestTunnel"
       },
-      {
-        id: "Quiz_Wishtree",
-        scene: quizWishtree,
-        name: "Quiz_Wishtree"
-      },
+      // {
+      //   id: "Quiz_Wishtree",
+      //   scene: quizWishtree,
+      //   name: "Quiz_Wishtree"
+      // },
       //   id: "Auswahlmöglichkeiten",
       //   scene: Auswahlmöglichkeiten,
       //   name: "Testszene 1",

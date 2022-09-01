@@ -1,0 +1,18 @@
+.lake {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#hit0.lake {
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  left: 10%;
+}
+#hit1.lake {
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  left: 30%;
+}

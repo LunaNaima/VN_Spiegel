@@ -7,6 +7,7 @@ declare namespace Spiegel_VN {
         EmpathyPointsSkala: string;
         scoreCouragePoints: number;
         scoreKnowledgePoints: number;
+        tunnelFailed: number;
         pickedRightChoice: boolean;
         pickedIron: boolean;
         pickedChp08TrustFlynn: boolean;
@@ -778,6 +779,9 @@ declare namespace Spiegel_VN {
     function HowToMakeChoices(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
+    function imageRiddle(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
     function MinigameDemon(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
@@ -788,6 +792,9 @@ declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     function ScnTestzene02(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function textRiddle(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function testTunnel(): ƒS.SceneReturn;

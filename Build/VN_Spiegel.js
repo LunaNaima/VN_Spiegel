@@ -41,6 +41,7 @@ var Spiegel_VN;
         EmpathyPointsSkala: "",
         scoreCouragePoints: 0,
         scoreKnowledgePoints: 0,
+        tunnelFailed: 0,
         // so geht nicht! muss die einzeln aufschreiben und nicht als Objekt scoreEmpathyPoints: 20 usw. und dann wo ichs aufruf ändern (ohne score)
         // *** RIGHT OPTION PICKED ***
         pickedRightChoice: false,
@@ -211,15 +212,25 @@ var Spiegel_VN;
         let scenes = [
             // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
             {
+                id: "ImageRiddle",
+                scene: Spiegel_VN.imageRiddle,
+                name: "ImageRiddle"
+            },
+            {
+                id: "TextRiddle",
+                scene: Spiegel_VN.textRiddle,
+                name: "TextRiddle"
+            },
+            {
                 id: "TestTunnel",
                 scene: Spiegel_VN.testTunnel,
                 name: "TestTunnel"
             },
-            {
-                id: "Quiz_Wishtree",
-                scene: quizWishtree,
-                name: "Quiz_Wishtree"
-            },
+            // {
+            //   id: "Quiz_Wishtree",
+            //   scene: quizWishtree,
+            //   name: "Quiz_Wishtree"
+            // },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
@@ -4641,6 +4652,41 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
+    async function imageRiddle() {
+        let locLake = {
+            name: "Lake",
+            background: "./Assets/Backgrounds/CrossLake.png"
+        };
+        await Spiegel_VN.ƒS.Location.show(locLake);
+        Spiegel_VN.ƒS.update(0);
+        createHitbox(0);
+        createHitbox(1);
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        // -------------------
+        function createHitbox(_number) {
+            let scene = document.querySelector("scene");
+            let hitbox = document.createElement("span");
+            hitbox.id = "hit" + _number;
+            hitbox.className = "lake";
+            scene.appendChild(hitbox);
+            hitbox.addEventListener("click", hndClick);
+            return hitbox;
+        }
+        function hndClick(_event) {
+            switch (_event.target.id) {
+                case "hit0":
+                    console.log("Leuchtturm");
+                    break;
+                case "hit1":
+                    console.log("Nicht Leuchtturm");
+                    break;
+            }
+        }
+    }
+    Spiegel_VN.imageRiddle = imageRiddle;
+})(Spiegel_VN || (Spiegel_VN = {}));
+var Spiegel_VN;
+(function (Spiegel_VN) {
     async function MinigameDemon() {
         //*** DIALOGRUNDE 1 */
         // let loopend = 0;
@@ -4793,6 +4839,17 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
+    async function textRiddle() {
+        await Spiegel_VN.ƒS.Speech.tell("", "Wie lautet der Vorname der Autorin dieser Visual Novel?<br/>", false);
+        let answer = await Spiegel_VN.ƒS.Speech.getInput();
+        if (answer.toLowerCase() == "luna")
+            console.log("RICHTIG!");
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+    }
+    Spiegel_VN.textRiddle = textRiddle;
+})(Spiegel_VN || (Spiegel_VN = {}));
+var Spiegel_VN;
+(function (Spiegel_VN) {
     async function testTunnel() {
         let locTunnel = {
             name: "Tunnel",
@@ -4814,6 +4871,7 @@ var Spiegel_VN;
         let soundeffekt = {
             evillaugh: "./Assets/Test_Minigame_Demon/evil-laugh-.mp3"
         };
+        // initialize characters and nodes
         let nodeDemon;
         await Spiegel_VN.ƒS.Location.show(locTunnel);
         await Spiegel_VN.ƒS.Character.show(mirror, mirror.pose.normal, Spiegel_VN.ƒS.positionPercent(50, 50));
@@ -4827,13 +4885,15 @@ var Spiegel_VN;
         nodeMirror.getComponent(Spiegel_VN.ƒ.ComponentMesh).mtxPivot.translateX(-0.05);
         // prevent normalization error
         nodeDemon.mtxLocal.translateX(1);
+        // define variables
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
         let demonMood = -4000;
+        // make graph transformable
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
-        let viewport = Spiegel_VN.ƒS.Base.getViewport();
         // start game interactions
+        let viewport = Spiegel_VN.ƒS.Base.getViewport();
         viewport.canvas.addEventListener("mousemove", moveMirror);
         Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         // define signals for fail and success
@@ -4845,11 +4905,16 @@ var Spiegel_VN;
         let event = await gameOver();
         console.log(event);
         // cleanup and end chapter
-        graph.cmpTransform.mtxLocal = Spiegel_VN.ƒ.Matrix4x4.IDENTITY();
+        graph.removeComponent(graph.cmpTransform);
+        Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         viewport.canvas.removeEventListener("mousemove", moveMirror);
+        if (event.type == "tunnelFail")
+            Spiegel_VN.dataForSave.tunnelFailed += 1;
+        Spiegel_VN.ƒS.Speech.tell("", "You failed " + Spiegel_VN.dataForSave.tunnelFailed + "time, try again!<br/>Press Space");
         // for testing, stop NV from starting
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        await testTunnel();
         // chapter end
         // ------------------------------------------------------------------
         // game functions
