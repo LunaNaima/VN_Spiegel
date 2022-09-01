@@ -46,7 +46,7 @@ namespace Spiegel_VN {
     let graph: ƒ.Node = ƒS.Base.getGraph();
     let margin: number = 960;
     let demonTargetPosition: ƒ.Vector3 = ƒ.Vector3.ZERO();
-    let demonMood: number = -1000;
+    let demonMood: number = -4000;
 
     // make graph transformable
     graph.addComponent(new ƒ.ComponentTransform());
@@ -101,29 +101,30 @@ namespace Spiegel_VN {
 
       if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
         graph.mtxLocal.translate(moveGraph);
-      if (graph.mtxLocal.translation.z > 4000)
+      if (graph.mtxLocal.translation.z > 2000)
         document.dispatchEvent(new Event("tunnelSuccess"));
 
-      let demonSpeed: number = 10;
+      let demonSpeed: number = 17;
 
       if (demonMood > 0) {
         demonSpeed = 0;
         viewport.canvas.removeEventListener("mousemove", moveMirror);
       }
 
-      if (demonMood > -800 && nodeDemon == nodeDemonAttack) {
+      if (demonMood > -2500 && nodeDemon == nodeDemonAttack) {
         // console.log("Calm down");
         ƒS.Character.hide(demon);
         ƒS.Character.show(demon, demon.pose.normal, nodeDemon.mtxLocal.translation.toVector2());
         nodeDemon = nodeDemonNormal;
       }
-      if (demonMood < -2000 && nodeDemon == nodeDemonNormal) {
+      if (demonMood < -4000 && nodeDemon == nodeDemonNormal) {
         console.log("Watch out!");
         ƒS.Character.hide(demon);
         ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
         nodeDemon = nodeDemonAttack;
       }
-      if (demonMood < -4000) {
+      if (demonMood < -8000) {
+        console.log("you failed");
         document.dispatchEvent(new Event("tunnelFail"));
       }
 

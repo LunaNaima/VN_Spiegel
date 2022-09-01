@@ -215,6 +215,11 @@ var Spiegel_VN;
                 scene: Spiegel_VN.testTunnel,
                 name: "TestTunnel"
             },
+            {
+                id: "Quiz_Wishtree",
+                scene: quizWishtree,
+                name: "Quiz_Wishtree"
+            },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
@@ -226,11 +231,11 @@ var Spiegel_VN;
             // *** INTRO ***
             // { id: "00 Name Entry", scene: Chp00_00_NameEntry, name: "NameEntry" },
             // ***CHAPTER 01 ***
-            {
-                id: "01_00 IntroNarration",
-                scene: Spiegel_VN.Chp01_00_IntroNarration,
-                name: "Intro Narration"
-            },
+            // {
+            //   id: "01_00 IntroNarration",
+            //   scene: Chp01_00_IntroNarration,
+            //   name: "Intro Narration"
+            // },
             {
                 id: "01_01 Intro Marketplace",
                 scene: Spiegel_VN.Chp01_01_IntroMarketplace,
@@ -1026,11 +1031,12 @@ var Spiegel_VN;
         Mama: {
             name: "Leijla",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
-            //   pose: {
-            //     angry: "/Pfad", //nicht nur pose, sondern auch Mimik beschreiben
-            //     happy: "/Pfad",
-            //     sad: "/Pfad",
-            //   },
+            pose: {
+                dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress1_laugh.png",
+                angry: "/Pfad",
+                happy: "/Pfad",
+                sad: "/Pfad",
+            },
         },
         Mutti: {
             name: "Elena",
@@ -1428,10 +1434,11 @@ var Spiegel_VN;
         //   "Hallo, ich bin Dein Name."
         // );
         // ***BEGINN SZENE***
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.worried, // pose muss in der main sein
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
         Spiegel_VN.ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
         // ƒS.positionPercent(70,100)
         );
+        Spiegel_VN.ƒS.update();
         let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5); //gerundet
         switch (randomTextChp01Marketplace) {
             case 1:
@@ -4825,8 +4832,12 @@ var Spiegel_VN;
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
+<<<<<<< HEAD
         let demonMood = -1000;
         // make graph transformable
+=======
+        let demonMood = -4000;
+>>>>>>> 204122a53ab739ecba02f96aaa34fdcb9b757947
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
         // start game interactions
         let viewport = Spiegel_VN.ƒS.Base.getViewport();
@@ -4869,26 +4880,27 @@ var Spiegel_VN;
             }
             if (Math.abs(graph.mtxLocal.translation.x + moveGraph.x) < margin)
                 graph.mtxLocal.translate(moveGraph);
-            if (graph.mtxLocal.translation.z > 4000)
+            if (graph.mtxLocal.translation.z > 2000)
                 document.dispatchEvent(new Event("tunnelSuccess"));
-            let demonSpeed = 10;
+            let demonSpeed = 17;
             if (demonMood > 0) {
                 demonSpeed = 0;
                 viewport.canvas.removeEventListener("mousemove", moveMirror);
             }
-            if (demonMood > -800 && nodeDemon == nodeDemonAttack) {
+            if (demonMood > -2500 && nodeDemon == nodeDemonAttack) {
                 // console.log("Calm down");
                 Spiegel_VN.ƒS.Character.hide(demon);
                 Spiegel_VN.ƒS.Character.show(demon, demon.pose.normal, nodeDemon.mtxLocal.translation.toVector2());
                 nodeDemon = nodeDemonNormal;
             }
-            if (demonMood < -2000 && nodeDemon == nodeDemonNormal) {
+            if (demonMood < -4000 && nodeDemon == nodeDemonNormal) {
                 console.log("Watch out!");
                 Spiegel_VN.ƒS.Character.hide(demon);
                 Spiegel_VN.ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
                 nodeDemon = nodeDemonAttack;
             }
-            if (demonMood < -4000) {
+            if (demonMood < -8000) {
+                console.log("you failed");
                 document.dispatchEvent(new Event("tunnelFail"));
             }
             let move = Spiegel_VN.ƒ.Vector3.DIFFERENCE(demonTargetPosition, nodeDemon.mtxLocal.translation);

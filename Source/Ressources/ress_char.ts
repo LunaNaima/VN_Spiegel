@@ -12,11 +12,12 @@ namespace Spiegel_VN {
     Mama: {
       name: "Leijla",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
-      //   pose: {
-      //     angry: "/Pfad", //nicht nur pose, sondern auch Mimik beschreiben
-      //     happy: "/Pfad",
-      //     sad: "/Pfad",
-      //   },
+        pose: {
+          dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress1_laugh.png",
+          angry: "/Pfad", //nicht nur pose, sondern auch Mimik beschreiben
+          happy: "/Pfad",
+          sad: "/Pfad",
+        },
     },
 
     Mutti: {
