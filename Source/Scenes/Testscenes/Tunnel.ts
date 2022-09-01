@@ -50,11 +50,12 @@ namespace Spiegel_VN {
 
     // make graph transformable
     graph.addComponent(new ƒ.ComponentTransform());
-    
+
     // start game interactions
     let viewport: ƒ.Viewport = ƒS.Base.getViewport();
     viewport.canvas.addEventListener("mousemove", moveMirror);
     ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
+
 
     // define signals for fail and success
     let gameOver: ƒS.Signal = ƒS.Progress.defineSignal([
@@ -66,11 +67,18 @@ namespace Spiegel_VN {
     let event: Event = await gameOver();
     console.log(event);
 
+
     // cleanup and end chapter
     graph.removeComponent(graph.cmpTransform);
     ƒS.Character.hideAll();
     ƒ.Loop.removeEventListener(ƒ.EVENT.LOOP_FRAME, loopFrame);
     viewport.canvas.removeEventListener("mousemove", moveMirror);
+
+
+    if (event.type == "tunnelFail") 
+      dataForSave.tunnelFailed += 1;
+
+    ƒS.Speech.tell("", "You failed " + dataForSave.tunnelFailed + "time, try again!<br/>Press Space");
 
     // for testing, stop NV from starting
     await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);

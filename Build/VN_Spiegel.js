@@ -41,6 +41,7 @@ var Spiegel_VN;
         EmpathyPointsSkala: "",
         scoreCouragePoints: 0,
         scoreKnowledgePoints: 0,
+        tunnelFailed: 0,
         // so geht nicht! muss die einzeln aufschreiben und nicht als Objekt scoreEmpathyPoints: 20 usw. und dann wo ichs aufruf ändern (ohne score)
         // *** RIGHT OPTION PICKED ***
         pickedRightChoice: false,
@@ -215,11 +216,11 @@ var Spiegel_VN;
                 scene: Spiegel_VN.testTunnel,
                 name: "TestTunnel"
             },
-            {
-                id: "Quiz_Wishtree",
-                scene: quizWishtree,
-                name: "Quiz_Wishtree"
-            },
+            // {
+            //   id: "Quiz_Wishtree",
+            //   scene: quizWishtree,
+            //   name: "Quiz_Wishtree"
+            // },
             //   id: "Auswahlmöglichkeiten",
             //   scene: Auswahlmöglichkeiten,
             //   name: "Testszene 1",
@@ -4832,12 +4833,8 @@ var Spiegel_VN;
         let graph = Spiegel_VN.ƒS.Base.getGraph();
         let margin = 960;
         let demonTargetPosition = Spiegel_VN.ƒ.Vector3.ZERO();
-<<<<<<< HEAD
-        let demonMood = -1000;
-        // make graph transformable
-=======
         let demonMood = -4000;
->>>>>>> 204122a53ab739ecba02f96aaa34fdcb9b757947
+        // make graph transformable
         graph.addComponent(new Spiegel_VN.ƒ.ComponentTransform());
         // start game interactions
         let viewport = Spiegel_VN.ƒS.Base.getViewport();
@@ -4856,6 +4853,9 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
         viewport.canvas.removeEventListener("mousemove", moveMirror);
+        if (event.type == "tunnelFail")
+            Spiegel_VN.dataForSave.tunnelFailed += 1;
+        Spiegel_VN.ƒS.Speech.tell("", "You failed " + Spiegel_VN.dataForSave.tunnelFailed + "time, try again!<br/>Press Space");
         // for testing, stop NV from starting
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         await testTunnel();

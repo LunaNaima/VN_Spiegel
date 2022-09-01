@@ -7,6 +7,7 @@ declare namespace Spiegel_VN {
         EmpathyPointsSkala: string;
         scoreCouragePoints: number;
         scoreKnowledgePoints: number;
+        tunnelFailed: number;
         pickedRightChoice: boolean;
         pickedIron: boolean;
         pickedChp08TrustFlynn: boolean;
