@@ -1,6 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp01_01_IntroMarketplace(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
+    ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
 
     // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
     // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
@@ -12,6 +13,7 @@ namespace Spiegel_VN {
       transitions.fade.alpha,
       transitions.fade.edge //edge ist der Härtegrad
     );
+    ƒS.update();
 
     // ***TEST-INVENTORY***
     // ƒS.Inventory.add(inventory.apple);
@@ -32,8 +34,8 @@ namespace Spiegel_VN {
     await ƒS.Character.show(
       characters.Mama,
       characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
-      ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-      // ƒS.positionPercent(70,100)
+      // ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
+      ƒS.positionPercent(70,130)
     );
     ƒS.update();
 
