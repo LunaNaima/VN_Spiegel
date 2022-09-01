@@ -242,6 +242,16 @@ namespace Spiegel_VN {
     let scenes: ƒS.Scenes = [
       // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
       {
+        id: "ImageRiddle",
+        scene: imageRiddle,
+        name: "ImageRiddle"
+      },
+      {
+        id: "TextRiddle",
+        scene: textRiddle,
+        name: "TextRiddle"
+      },
+      {
         id: "TestTunnel",
         scene: testTunnel,
         name: "TestTunnel"

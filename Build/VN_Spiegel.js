@@ -212,6 +212,16 @@ var Spiegel_VN;
         let scenes = [
             // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
             {
+                id: "ImageRiddle",
+                scene: Spiegel_VN.imageRiddle,
+                name: "ImageRiddle"
+            },
+            {
+                id: "TextRiddle",
+                scene: Spiegel_VN.textRiddle,
+                name: "TextRiddle"
+            },
+            {
                 id: "TestTunnel",
                 scene: Spiegel_VN.testTunnel,
                 name: "TestTunnel"
@@ -4642,6 +4652,41 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
+    async function imageRiddle() {
+        let locLake = {
+            name: "Lake",
+            background: "./Assets/Backgrounds/CrossLake.png"
+        };
+        await Spiegel_VN.ƒS.Location.show(locLake);
+        Spiegel_VN.ƒS.update(0);
+        createHitbox(0);
+        createHitbox(1);
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+        // -------------------
+        function createHitbox(_number) {
+            let scene = document.querySelector("scene");
+            let hitbox = document.createElement("span");
+            hitbox.id = "hit" + _number;
+            hitbox.className = "lake";
+            scene.appendChild(hitbox);
+            hitbox.addEventListener("click", hndClick);
+            return hitbox;
+        }
+        function hndClick(_event) {
+            switch (_event.target.id) {
+                case "hit0":
+                    console.log("Leuchtturm");
+                    break;
+                case "hit1":
+                    console.log("Nicht Leuchtturm");
+                    break;
+            }
+        }
+    }
+    Spiegel_VN.imageRiddle = imageRiddle;
+})(Spiegel_VN || (Spiegel_VN = {}));
+var Spiegel_VN;
+(function (Spiegel_VN) {
     async function MinigameDemon() {
         //*** DIALOGRUNDE 1 */
         // let loopend = 0;
@@ -4791,6 +4836,17 @@ var Spiegel_VN;
         return ScnTestzene02();
     }
     Spiegel_VN.ScnTestzene02 = ScnTestzene02;
+})(Spiegel_VN || (Spiegel_VN = {}));
+var Spiegel_VN;
+(function (Spiegel_VN) {
+    async function textRiddle() {
+        await Spiegel_VN.ƒS.Speech.tell("", "Wie lautet der Vorname der Autorin dieser Visual Novel?<br/>", false);
+        let answer = await Spiegel_VN.ƒS.Speech.getInput();
+        if (answer.toLowerCase() == "luna")
+            console.log("RICHTIG!");
+        await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
+    }
+    Spiegel_VN.textRiddle = textRiddle;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {

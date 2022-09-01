@@ -779,6 +779,9 @@ declare namespace Spiegel_VN {
     function HowToMakeChoices(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
+    function imageRiddle(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
     function MinigameDemon(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
@@ -789,6 +792,9 @@ declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     function ScnTestzene02(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function textRiddle(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function testTunnel(): ƒS.SceneReturn;
