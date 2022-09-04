@@ -4,6 +4,8 @@ namespace Spiegel_VN {
       name: "Lake",
       background: "./Assets/Backgrounds/CrossLake.png"
     };
+        ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
+
 
 
     await ƒS.Location.show(locLake);

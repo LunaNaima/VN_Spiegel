@@ -211,11 +211,11 @@ var Spiegel_VN;
         buttonFunctionalities("Close");
         let scenes = [
             // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
-            {
-                id: "ImageRiddle",
-                scene: Spiegel_VN.imageRiddle,
-                name: "ImageRiddle"
-            },
+            // {
+            //   id: "ImageRiddle",
+            //   scene: imageRiddle,
+            //   name: "ImageRiddle"
+            // },
             // {
             //   id: "TextRiddle",
             //   scene: textRiddle,
@@ -4658,6 +4658,7 @@ var Spiegel_VN;
             name: "Lake",
             background: "./Assets/Backgrounds/CrossLake.png"
         };
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 0.1, true);
         await Spiegel_VN.ƒS.Location.show(locLake);
         Spiegel_VN.ƒS.update(0);
         createHitbox(0);
