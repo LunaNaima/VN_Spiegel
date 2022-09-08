@@ -274,6 +274,8 @@ declare namespace Spiegel_VN {
 declare namespace Spiegel_VN {
     let music: {
         theme_ordinaryworld: string;
+        theme_mirrorworld_whary: string;
+        theme_mirrorworld_factory: string;
         click: string;
     };
 }
@@ -793,6 +795,10 @@ declare namespace Spiegel_VN {
 declare namespace Spiegel_VN {
     function ScnTestzene02(): ƒS.SceneReturn;
 }
+declare let weihnachtsdeko: string;
+declare let x: number;
+declare let y: number;
+declare let z: number;
 declare namespace Spiegel_VN {
     function textRiddle(): ƒS.SceneReturn;
 }

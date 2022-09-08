@@ -3,35 +3,6 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     Spiegel_VN.ƒ = FudgeCore; //importiert teile, die nicht in typescript sind, sondern außerhalb in fudge
     Spiegel_VN.ƒS = FudgeStory;
-    console.log("FudgeStory template starting");
-    console.log("was anderes");
-    let weihnachtsdeko = "Lichterketten, Baumkerzen, Lebkuchen, kerzen"; //let bedeutet: ich hab hier eine neue box, die ich beschriften muss (weihnachtsdekobox); = "was ist in der kiste", danach sit der befehl vorbei, also ;
-    console.log(weihnachtsdeko); //
-    console.log("weihnachtsdeko"); //
-    let x = 2; //variablen haben immer einen typus, zb strings "" lange zeichenketten. bei einer zahl ohne "" = number. Object auch ein typ
-    let y = 7;
-    let z = x + y;
-    console.log(z);
-    z = z + 1;
-    console.log(z);
-    // // funktionen machen was mit Zeug innendrin, Fabrik mit Heinzelmännchen, ich leg denen was rein und die machen was damit
-    // export function NameDerFunktion() {
-    //   // hiermit habe ich funktionen initiiert, aber ich benutze sie nirgendwo
-    //   console.log("irgendwas");
-    // } // export heißt, dass diese funktion auch von anderen szenen aufrufbar ist
-    // NameDerFunktion();
-    // export function randomNum(min: number = 1, max: number = 4): number {
-    // }
-    // export function Addition(Zahl1: number = 1, Zahl2: number = 2) {
-    //   // 1 und 2 sind nur default werte
-    //   let summe = Zahl1 + Zahl2;
-    //   console.log("Die Summe von Zahl1 und Zahl2 ist");
-    //   console.log(summe);
-    // }
-    // Addition();
-    // Addition(4, 7);
-    // Addition(x, y);
-    // //vorher kommentieren, was man hier macht, in dem fall export transitions
     // *** DATA THAT WILL BE SAVED ***
     Spiegel_VN.dataForSave = {
         // hier kommt alles rein, was gespeichert werden soll. Der Spielstand wird von Beginn der jeweiligen Szene gespeichert.
@@ -1245,6 +1216,8 @@ var Spiegel_VN;
     Spiegel_VN.music = {
         //themes
         theme_ordinaryworld: "./Assets/Music/Theme_OrdinaryWorld.wav",
+        theme_mirrorworld_whary: "./Assets/Music/Theme_Mirrorworld_Whary.wav",
+        theme_mirrorworld_factory: "./Assets/Music/Theme_Mirrorworld_Factory1.wav",
         //Soundeffekte SFX
         click: "Pfad",
     };
@@ -1427,7 +1400,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp01_01_IntroMarketplace() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
-        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 0.1, true);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0.8, 0.1, true);
         // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
         // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
         // if (dataForSave.pickedThisScene = true)
@@ -4867,6 +4840,35 @@ var Spiegel_VN;
     }
     Spiegel_VN.ScnTestzene02 = ScnTestzene02;
 })(Spiegel_VN || (Spiegel_VN = {}));
+console.log("FudgeStory template starting");
+console.log("was anderes");
+let weihnachtsdeko = "Lichterketten, Baumkerzen, Lebkuchen, kerzen"; //let bedeutet: ich hab hier eine neue box, die ich beschriften muss (weihnachtsdekobox); = "was ist in der kiste", danach sit der befehl vorbei, also ;
+console.log(weihnachtsdeko); //
+console.log("weihnachtsdeko"); //
+let x = 2; //variablen haben immer einen typus, zb strings "" lange zeichenketten. bei einer zahl ohne "" = number. Object auch ein typ
+let y = 7;
+let z = x + y;
+console.log(z);
+z = z + 1;
+console.log(z);
+// // funktionen machen was mit Zeug innendrin, Fabrik mit Heinzelmännchen, ich leg denen was rein und die machen was damit
+// export function NameDerFunktion() {
+//   // hiermit habe ich funktionen initiiert, aber ich benutze sie nirgendwo
+//   console.log("irgendwas");
+// } // export heißt, dass diese funktion auch von anderen szenen aufrufbar ist
+// NameDerFunktion();
+// export function randomNum(min: number = 1, max: number = 4): number {
+// }
+// export function Addition(Zahl1: number = 1, Zahl2: number = 2) {
+//   // 1 und 2 sind nur default werte
+//   let summe = Zahl1 + Zahl2;
+//   console.log("Die Summe von Zahl1 und Zahl2 ist");
+//   console.log(summe);
+// }
+// Addition();
+// Addition(4, 7);
+// Addition(x, y);
+// //vorher kommentieren, was man hier macht, in dem fall export transitions
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function textRiddle() {
