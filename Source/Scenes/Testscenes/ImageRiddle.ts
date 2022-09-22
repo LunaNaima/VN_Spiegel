@@ -2,7 +2,7 @@ namespace Spiegel_VN {
   export async function imageRiddle(): ƒS.SceneReturn {
     let locLake = {
       name: "Lake",
-      background: "./Assets/Backgrounds/CrossLake.png"
+      background: "./Assets/Backgrounds/Chapter08/CrossLake.png"
     };
         ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
 

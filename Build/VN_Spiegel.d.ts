@@ -325,6 +325,18 @@ declare namespace Spiegel_VN {
                 pos2_smile: string;
             };
         };
+        Stablehand: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                pos1_afraid: string;
+                pos1_angry: string;
+                pos1_laugh: string;
+                pos2_afraid: string;
+                pos2_angry: string;
+                pos2_laugh: string;
+            };
+        };
     };
 }
 declare namespace Spiegel_VN {
@@ -356,92 +368,196 @@ declare namespace Spiegel_VN {
         Chp01_CS_ArrivalHome: {
             name: string;
             background: string;
+            night: string;
         };
         Chp02_01_Dinner: {
-            Chp02_02_LivingRoom: {
-                name: string;
-                background: string;
-            };
-            Chp02_03_PickHerbs: {
-                name: string;
-                background: string;
-            };
-            Chp02_04_FightNeighbor: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverBedroom: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverBedroomDiary: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverBedroomBooks: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverKitchen: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverKitchenOven: {
-                name: string;
-                background: string;
-            };
-            Chp02_E_DiscoverKitchenPantry: {
-                name: string;
-                background: string;
-            };
-            Chp02_CS_Sleep: {
-                name: string;
-                background: string;
-            };
-            Chp03_01_Dressmaker: {
-                name: string;
-                background: string;
-            };
-            Chp03_021_FirewoodKailani: {
-                name: string;
-                background: string;
-            };
-            Chp03_022_WaterwellKailani: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverDonkey: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverDonkeyCloseup: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverForest: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverLibraryOutside: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverLibraryInside: {
-                name: string;
-                background: string;
-            };
-            Chp03_E_DiscoverLibraryCloseup: {
-                name: string;
-                background: string;
-            };
-            Chp03_CS_KailaniMissing: {
-                name: string;
-                background: string;
-            };
-            black: {
-                name: string;
-                background: string;
-            };
+            name: string;
+            background: string;
+        };
+        Chp02_02_LivingRoom: {
+            name: string;
+            background: string;
+            night: string;
+        };
+        Chp02_03_PickHerbs: {
+            name: string;
+            background: string;
+        };
+        Chp02_04_FightNeighbor: {
+            name: string;
+            background: string;
+        };
+        Chp02_E_DiscoverBedroom: {
+            name: string;
+            background: string;
+        };
+        Chp02_E_DiscoverBedroomDiary: {
+            name: string;
+            background: string;
+        };
+        Chp02_E_DiscoverKitchen: {
+            name: string;
+            background: string;
+        };
+        Chp02_E_DiscoverKitchenOven: {
+            name: string;
+            background: string;
+        };
+        Chp02_E_DiscoverKitchenPantry: {
+            name: string;
+            background: string;
+        };
+        Chp03_01_Dressmaker: {
+            name: string;
+            background: string;
+        };
+        Chp03_021_FirewoodKailani: {
+            name: string;
+            background: string;
+        };
+        Chp03_022_Marketplace_empty: {
+            name: string;
+            background: string;
+        };
+        Chp03_E_DiscoverForest: {
+            name: string;
+            background: string;
+        };
+        Chp03_E_DiscoverLibrary: {
+            name: string;
+            background: string;
+        };
+        Chp03_CS_KailaniMissing: {
+            name: string;
+            background: string;
+        };
+        Chp04_Library_Interior: {
+            name: string;
+            background: string;
+        };
+        Chp04_Library_Bookshelf: {
+            name: string;
+            background: string;
+        };
+        Chp04_Bookshelf_Book: {
+            name: string;
+            background: string;
+        };
+        Chp05_Forestpath: {
+            name: string;
+            background: string;
+        };
+        Chp05_River: {
+            name: string;
+            background: string;
+        };
+        Chp05_Trees: {
+            name: string;
+            background: string;
+        };
+        Chp05_Wishtree: {
+            name: string;
+            background: string;
+        };
+        Chp06_ArrivalMeadow: {
+            name: string;
+            background: string;
+        };
+        Chp06_CityGates: {
+            name: string;
+            background: string;
+        };
+        Chp06_ClothingStore: {
+            name: string;
+            background: string;
+        };
+        Chp06_Inn_ext: {
+            name: string;
+            background: string;
+        };
+        Chp06_Inn_int: {
+            name: string;
+            background: string;
+        };
+        Chp06_InWhary: {
+            name: string;
+            background: string;
+        };
+        Chp06_StreetToWhary: {
+            name: string;
+            background: string;
+        };
+        Chp06_WharyWindow: {
+            name: string;
+            background: string;
+        };
+        Chp07_Barn: {
+            name: string;
+            background: string;
+        };
+        Chp07_InnKitchen: {
+            name: string;
+            background: string;
+        };
+        Chp07_MarketplaceWhary: {
+            name: string;
+            background: string;
+        };
+        Chp08_ArrivalFactory: {
+            name: string;
+            background: string;
+        };
+        Chp08_E_FactoryVillage: {
+            name: string;
+            background: string;
+        };
+        Chp08_Mirrorroom_unbroken: {
+            name: string;
+            background: string;
+        };
+        Chp08_OnBoat: {
+            name: string;
+            background: string;
+        };
+        Chp08_OnBoatGhosts1: {
+            name: string;
+            background: string;
+        };
+        Chp08_OnBoatGhosts2: {
+            name: string;
+            background: string;
+        };
+        Chp08_OnBoatGhosts3: {
+            name: string;
+            background: string;
+        };
+        Chp08_OutsideTower: {
+            name: string;
+            background: string;
+        };
+        Chp08_ForestPath: {
+            name: string;
+            background: string;
+        };
+        Chp08_HidingPlace: {
+            name: string;
+            background: string;
+        };
+        Chp08_HidingPlaceSlaves: {
+            name: string;
+            background: string;
+        };
+        Chp08_Village: {
+            name: string;
+            background: string;
+        };
+        Chp09_OutsideFactory: {
+            name: string;
+            background: string;
+        };
+        black: {
+            name: string;
+            background: string;
         };
     };
 }
