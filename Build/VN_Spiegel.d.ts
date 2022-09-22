@@ -583,6 +583,15 @@ declare namespace Spiegel_VN {
 declare namespace Spiegel_VN {
     let Soundeffekte: {
         click: string;
+        birds: string;
+        crowd: string;
+        door: string;
+        forest: string;
+        forest2: string;
+        glass: string;
+        kitchen: string;
+        water: string;
+        wood: string;
     };
 }
 declare namespace Spiegel_VN {

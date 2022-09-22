@@ -7,9 +7,9 @@ namespace Spiegel_VN {
 
     await ƒS.Character.show(
       characters.Mama,
-      characters.Mama.pose.angry, 
+      characters.Mama.pose.dress_34_neutral, 
       // ƒS.positions.bottomcenter.
-      ƒS.positionPercent(70, 100)
+      ƒS.positionPercent(70, 130)
     );
 
     // await ƒS.update(2, transitions.fade.alpha, transitions.fade.edge);
