@@ -169,19 +169,101 @@ declare namespace Spiegel_VN {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
-                worried: string;
-                angry: string;
+                annoyed_angry: string;
+                annoyed_eyeroll: string;
+                back_smile: string;
+                back_worried: string;
+                begging_eyeroll: string;
+                begging_shrug: string;
+                crossed_angry: string;
+                crossed_eyeroll: string;
+                crossed_neutral: string;
+                neutral_angry: string;
+                neutral_eyeroll: string;
+                neutral_happy: string;
+                neutral_neutral: string;
+                neutral_smile: string;
+                profile_h_neutral: string;
+                profile_h_smile: string;
+                profile_neutral: string;
+                profile_smile: string;
+                shrug_eyeroll: string;
+                shrug_happy: string;
+                shrug_shrug: string;
+                thinking_angry: string;
+                thinking_neutral: string;
+                thinking_shrug: string;
+                dress_back_neutral: string;
+                dress_back_smile: string;
+                dress1_angry: string;
+                dress1_eyeroll: string;
+                dress1_happy: string;
+                dress1_shrug: string;
+                dress1_smile: string;
+                dress2_smile: string;
+                dress2_eyeroll: string;
+                dress3_angry: string;
+                dress3_eyeroll: string;
+                dress3_happy: string;
+                dress3_shrug: string;
+                dress3_smile: string;
+                grey_slave: string;
             };
         };
         Evarius: {
             name: string;
             origin: ƒ.ORIGIN2D;
+            pose: {
+                pos1_angry: string;
+                pos1_frown: string;
+                pos1_laugh: string;
+                pos1_neutral: string;
+                pos1_smile: string;
+                pos2_angry: string;
+                pos2_frown: string;
+                pos2_laugh: string;
+                pos2_neutral: string;
+                pos2_smile: string;
+                pos3_angry: string;
+                pos3_frown: string;
+                pos3_laugh: string;
+                pos3_neutral: string;
+                profile_neutral: string;
+                profile_smile: string;
+            };
         };
         Flynn: {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
-                angry: string;
+                pos1_angry: string;
+                pos1_happy: string;
+                pos1_neutral: string;
+                pos1_smile: string;
+                pos1_smile2: string;
+                pos2_happy2: string;
+                pos2_neutral: string;
+                pos2_neutral2: string;
+                pos2_uncertain2: string;
+                pos3_angry: string;
+                pos3_happy: string;
+                pos3_smile: string;
+                pos1_confused: string;
+                pos1_sad: string;
+                pos2_crossed_angry: string;
+                pos2_crossed_neutral: string;
+                pos2_crossed_neutral2: string;
+                pos2_crossed_sad: string;
+                pos2_crossed_shocked: string;
+                pos2_crossed_shocked2: string;
+                pos2_crossed_smile: string;
+                pos2_crossed_smile2: string;
+                pos2_crossed_uncertain: string;
+                pos3_arms_smile: string;
+                pos3_arms_happy: string;
+                pos3_arms2_angry: string;
+                pos3_arms2_sad: string;
+                pos3_arms2_smile: string;
             };
         };
         flowerMerchant: {
@@ -195,15 +277,52 @@ declare namespace Spiegel_VN {
         mirrorMerchant: {
             name: string;
             origin: ƒ.ORIGIN2D;
+            pose: {
+                left: string;
+                neutral: string;
+            };
         };
         Demon: {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
-                angry: string;
-                neutralAngry: string;
-                furious: string;
-                distracted: string;
+                pos1_angry: string;
+                pos2_angry: string;
+                pos2_smile: string;
+            };
+        };
+        Beggar: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                anguish: string;
+                front: string;
+                neutral: string;
+                shocked: string;
+            };
+        };
+        Cook: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                pos1_concerned: string;
+                pos1_neutral: string;
+                pos2_concerned: string;
+                pos2_unknowing: string;
+            };
+        };
+        Innkeeper: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                pos1_laugh: string;
+                pos1_neutral: string;
+                pos1_smile: string;
+                pos1_worried: string;
+                pos2_frown: string;
+                pos2_laugh: string;
+                pos2_neutral: string;
+                pos2_smile: string;
             };
         };
     };
