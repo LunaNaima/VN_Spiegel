@@ -226,53 +226,65 @@ namespace Spiegel_VN {
       },
     },
 
-      Demon: {
-        name: "Dämon",
-        origin: ƒS.ORIGIN.BOTTOMRIGHT,
-        pose: {
-          pos1_angry: "./Assets/Characters/Demon/Demon_angry.png",
-          pos2_angry: "./Assets/Characters/Demon/Demon_pos2_angry.png",
-          pos2_smile: "./Assets/Characters/Demon/Demon_pos2_smile.png",
-        },
-    },
-      
-       Beggar: {
-        name: "Bettlerin",
-        origin: ƒS.ORIGIN.BOTTOMRIGHT,
-        pose: {
-          anguish: "./Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
-          front: "./Assets/Characters/Beggar/Beggar_Pos1_front.png",
-          neutral: "./Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
-          shocked: "./Assets/Characters/Beggar/Beggar_Pos1_shocked.png",
-        },
-    },
-       
-       Cook: {
-        name: "Koch",
-        origin: ƒS.ORIGIN.BOTTOMRIGHT,
-        pose: {
-          pos1_concerned: "./Assets/Characters/Cook/Cook_Pos1_concerned.png",
-          pos1_neutral: "./Assets/Characters/Cook/Cook_Pos1_neutral.png",
-          pos2_concerned: "./Assets/Characters/Cook/Cook_Pos2_concerned.png",
-          pos2_unknowing: "./Assets/Characters/Cook/Cook_Pos2_unknowing.png",
-        },
-    },
-       
-        Innkeeper: {
-        name: "Wirtin",
-        origin: ƒS.ORIGIN.BOTTOMRIGHT,
-        pose: {
-          pos1_laugh: "./Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
-          pos1_neutral: "./Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
-          pos1_smile: "./Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
-          pos1_worried: "./Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
-          pos2_frown: "./Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
-          pos2_laugh: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-          pos2_neutral: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-          pos2_smile: "./Assets/Characters/Innkeeper/Innk_Pos2_smile.png",
-        },
+    Demon: {
+      name: "Dämon",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1_angry: "./Assets/Characters/Demon/Demon_angry.png",
+        pos2_angry: "./Assets/Characters/Demon/Demon_pos2_angry.png",
+        pos2_smile: "./Assets/Characters/Demon/Demon_pos2_smile.png",
       },
     },
-  },
+      
+    Beggar: {
+      name: "Bettlerin",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        anguish: "./Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
+        front: "./Assets/Characters/Beggar/Beggar_Pos1_front.png",
+        neutral: "./Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
+        shocked: "./Assets/Characters/Beggar/Beggar_Pos1_shocked.png",
+      },
+    },
+       
+    Cook: {
+      name: "Koch",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1_concerned: "./Assets/Characters/Cook/Cook_Pos1_concerned.png",
+        pos1_neutral: "./Assets/Characters/Cook/Cook_Pos1_neutral.png",
+        pos2_concerned: "./Assets/Characters/Cook/Cook_Pos2_concerned.png",
+        pos2_unknowing: "./Assets/Characters/Cook/Cook_Pos2_unknowing.png",
+      },
+    },
+       
+    Innkeeper: {
+      name: "Wirtin",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1_laugh: "./Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
+        pos1_neutral: "./Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
+        pos1_smile: "./Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
+        pos1_worried: "./Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
+        pos2_frown: "./Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
+        pos2_laugh: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+        pos2_neutral: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+        pos2_smile: "./Assets/Characters/Innkeeper/Innk_Pos2_smile.png",
+      },
+    },
+        
+    Stablehand: {
+      name: "Stallmädchen",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1_afraid: "./Assets/Characters/Stablehand/Stable_Pos1_afraid.png",
+        pos1_angry: "./Assets/Characters/Stablehand/Stable_Pos1_angry.png",
+        pos1_laugh: "./Assets/Characters/Stablehand/Stable_Pos1_laugh.png",
+        pos2_afraid: "./Assets/Characters/Stablehand/Stable_Pos2_afraid.png",
+        pos2_angry: "./Assets/Characters/Stablehand/Stable_Pos2_angry.png",
+        pos2_laugh: "./Assets/Characters/Stablehand/Stable_Pos2_laugh.png",
+      },
+    },
+  }
 }
 
