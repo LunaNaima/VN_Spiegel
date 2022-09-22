@@ -1014,10 +1014,37 @@ var Spiegel_VN;
             name: "Leijla",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress1_laugh.png",
-                angry: "/Pfad",
-                happy: "/Pfad",
-                sad: "/Pfad",
+                dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress_34_neutral1.png",
+                dress_34_angry: "/Assets/Characters/Leijla/Leijla_dress_34_angry.png",
+                dress_34_smile: "/Assets/Characters/Leijla/Leijla_dress_34_smile.png",
+                //
+                dress_angry: "/Assets/Characters/Leijla/Leijla_dress_angry.png",
+                dress_laugh: "/Assets/Characters/Leijla/Leijla_dress_laugh.png",
+                dress_neutral: "/Assets/Characters/Leijla/Leijla_dress_neutral.png",
+                dress_shocked: "/Assets/Characters/Leijla/Leijla_dress_shocked.png",
+                //
+                pants1_34_angry: "/Assets/Characters/Leijla/Leijla_pants1_34_angry.png",
+                pants1_34_neutral: "/Assets/Characters/Leijla/Leijla_pants1_34_neutral.png",
+                pants1_34_smile: "/Assets/Characters/Leijla/Leijla_pants1_34_smile.png",
+                //
+                pants1_laugh: "/Assets/Characters/Leijla/Leijla_pants1_laugh.png",
+                pants1_neutral: "/Assets/Characters/Leijla/Leijla_pants1_neutral.png",
+                pants1_shocked: "/Assets/Characters/Leijla/Leijla_Pants1_shocked.png",
+                //
+                pants2_angry: "/Assets/Characters/Leijla/Leijla_pants2_angry.png",
+                pants2_laugh: "/Assets/Characters/Leijla/Leijla_pants2_laugh.png",
+                pants2_neutral: "/Assets/Characters/Leijla/Leijla_pants2_neutral.png",
+                pants2_shocked: "/Assets/Characters/Leijla/Leijla_pants2_shocked.png",
+                //
+                pants2_angry2: "/Assets/Characters/Leijla/Leijla_pants2_angry2.png",
+                pants2_laugh2: "/Assets/Characters/Leijla/Leijla_pants2_laugh2.png",
+                pants2_neutral2: "/Assets/Characters/Leijla/Leijla_pants2_neutral2.png",
+                pants2_shocked2: "/Assets/Characters/Leijla/Leijla_pants2_shocked2.png",
+                //
+                pants2_hand_angry: "/Assets/Characters/Leijla/Leijla_pants2_hand_angry.png",
+                pants2_hand_laugh: "/Assets/Characters/Leijla/Leijla_pants2_hand_laugh.png",
+                pants2_hand_neutral: "/Assets/Characters/Leijla/Leijla_pants2_hand_neutral.png",
+                pants2_hand_shocked: "/Assets/Characters/Leijla/Leijla_pants2_hand_shocked.png",
             },
         },
         Mutti: {
@@ -1090,14 +1117,11 @@ var Spiegel_VN;
         // *** CHAPTER 01 ***
         Chp01_01_IntroMarketplace: {
             name: "Intro_Marktplatz",
-            background: 
-            // "./Assets/Backgrounds/Chapter01/Kap01_01_Intro_Marktplatz.png", //1280x853 (passt)
-            // "./Assets/Backgrounds/Chapter01/Chp01_Marketplace.png", //1920x1080 (passt nicht)
-            "./Assets/Backgrounds/Chapter01/Chp01_Marketplace1.png"
+            background: "./Assets/Backgrounds/Chapter01/Chp01_Marketplace1.png"
         },
         Chp01_02_ConvoMother: {
             name: "Convo_Mother",
-            background: "./Assets/Backgrounds/BG_Wald_Test1.png"
+            background: "./Assets/Backgrounds/Chapter01/Chp01_Marketplace1.png"
         },
         Chp01_E_FlowerMerchant: {
             name: "E_FlowerMerchant",
@@ -1113,101 +1137,102 @@ var Spiegel_VN;
         },
         Chp01_CS_ArrivalHome: {
             name: "House from outside",
-            background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
+            background: "./Assets/Backgrounds/Chapter02/Dinner/Cottage_Outside.png"
         },
         // *** CHAPTER 02 ***
         Chp02_01_Dinner: {
-            name: "Dinnertable",
-            background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
-        },
-        Chp02_02_LivingRoom: {
-            name: "Living room",
-            background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
-        },
-        Chp02_03_PickHerbs: {
-            name: "Garden",
-            background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
-        },
-        Chp02_04_FightNeighbor: {
-            name: "Neighbors house",
-            background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
-        },
-        Chp02_E_DiscoverBedroom: {
-            name: "My Bedroom",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_E_DiscoverBedroomDiary: {
-            name: "Bedroom diary",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_E_DiscoverBedroomBooks: {
-            name: "Bedroom books",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_E_DiscoverKitchen: {
-            name: "Kitchen",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_E_DiscoverKitchenOven: {
-            name: "Kitchen oven",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_E_DiscoverKitchenPantry: {
-            name: "Kitchen pantry",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp02_CS_Sleep: {
-            // night filter
-            name: "Bedroom sleep",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        // *** CHAPTER 03 ***
-        Chp03_01_Dressmaker: {
-            name: "Dressmaker",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_021_FirewoodKailani: {
-            name: "Firewood chopping Kailani",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_022_WaterwellKailani: {
-            // empty marketplace
-            name: "Well empty marketplace",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverDonkey: {
-            name: "Discover donkey",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverDonkeyCloseup: {
-            name: "Discover donkey closeup",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverForest: {
-            name: "Discover forest",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverLibraryOutside: {
-            name: "Discover library",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverLibraryInside: {
-            name: "Discover library",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_E_DiscoverLibraryCloseup: {
-            name: "Discover library closeup books",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        Chp03_CS_KailaniMissing: {
-            name: "Kailanis bedroom",
-            background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-        },
-        // *** CHAPTER 04 ***
-        // *** TRANSITION BETWEEN CHAPTERS ***
-        black: {
-            name: "Black_BG",
-            background: "./Assets/Transitions/Black.png"
+            //   name: "Dinnertable",
+            //   background: "./Assets/Backgrounds/Chapter02/LivingRoom.png"
+            // },
+            Chp02_02_LivingRoom: {
+                name: "Living room",
+                background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
+            },
+            Chp02_03_PickHerbs: {
+                name: "Garden",
+                background: "./Assets/Backgrounds/Chapter02/Dinner/DiningTable.jpeg"
+            },
+            Chp02_04_FightNeighbor: {
+                name: "Neighbors house",
+                background: "./Assets/Backgrounds/Chapter02/Neighbor_house.png"
+            },
+            Chp02_E_DiscoverBedroom: {
+                name: "My Bedroom",
+                background: "./Assets/Backgrounds/Chapter02/MC_bedroom.png"
+            },
+            Chp02_E_DiscoverBedroomDiary: {
+                name: "Bedroom diary",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp02_E_DiscoverBedroomBooks: {
+                name: "Bedroom books",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp02_E_DiscoverKitchen: {
+                name: "Kitchen",
+                background: "./Assets/Backgrounds/Chapter02/Kitchen.png"
+            },
+            Chp02_E_DiscoverKitchenOven: {
+                name: "Kitchen oven",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp02_E_DiscoverKitchenPantry: {
+                name: "Kitchen pantry",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp02_CS_Sleep: {
+                // night filter
+                name: "Bedroom sleep",
+                background: "./Assets/Backgrounds/Chapter02/MC_bedroom.png"
+            },
+            // *** CHAPTER 03 ***
+            Chp03_01_Dressmaker: {
+                name: "Dressmaker",
+                background: "./Assets/Backgrounds/Chapter03/Dressmaker.png"
+            },
+            Chp03_021_FirewoodKailani: {
+                name: "Firewood chopping Kailani",
+                background: "./Assets/Backgrounds/Chapter03/Firewood.png"
+            },
+            Chp03_022_WaterwellKailani: {
+                // empty marketplace
+                name: "Well empty marketplace",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverDonkey: {
+                name: "Discover donkey",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverDonkeyCloseup: {
+                name: "Discover donkey closeup",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverForest: {
+                name: "Discover forest",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverLibraryOutside: {
+                name: "Discover library",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverLibraryInside: {
+                name: "Discover library",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_E_DiscoverLibraryCloseup: {
+                name: "Discover library closeup books",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            Chp03_CS_KailaniMissing: {
+                name: "Kailanis bedroom",
+                background: "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
+            },
+            // *** CHAPTER 04 ***
+            // *** TRANSITION BETWEEN CHAPTERS ***
+            black: {
+                name: "Black_BG",
+                background: "./Assets/Transitions/Black.png"
+            }
         }
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
@@ -1266,27 +1291,28 @@ var Spiegel_VN;
             T0004: '"Bevor es aber losgeht, musst du mir eine wichtige Frage beantworten: Welche Eigenschaft ist dir am wichtigsten? Wähle mit Bedacht aus, denn deine Antwort kann auf den Verlauf der Geschichte Einfluss nehmen …"',
             T0005: '"Schließe nun die Augen und lass dich von mir in eine Welt entführen, die nicht viel anders ist als deine hier. Nur mit etwas mehr … Magie!"',
             T0006: '"Es war einmal …."',
-            T0007: '"... ein geschäftiger Marktplatz in einer kleinen Stadt, die letzte Stadt des Bezirks, bevor der dunkle Wald began."',
+            T0007: '"... ein geschäftiger Marktplatz in einer kleinen Stadt am Rande des Bezirks, bevor der dunkle Wald begann."',
             T0008: '"Du schaust dich um und siehst Reihen an Marktständen, die mit bunten Waren bis oben hin aufgefüllt sind. Die Schreie der Händler schweben durch die kalte Luft, die von den lauen Sommerstrahlen an diesem kühlen Aprilmorgen ziemlich unberührt scheint."',
             T0009: '"Die Bewohner schlendern von Stand zu Stand und holen ihre Wocheneinkäufe. Ihre braunen, blauen und gelben Kleider zwischen den farbigen Waren lassen den gesamten Marktplatz wie die Farbpalette einer temperamentvollen, pinselschwingenden Künstlerin wirken."',
-            T0010: '"hier fehlt noch dialog"',
+            T0010: '"Am Rande stehen und Beobachten ist sowieso eine deiner liebsten Beschäftigungen. So kannst du in Ruhe nachdenken. Als du so beobachtest, fällt dir auf, dass das Treiben geschäftiger wirkt als sonst."',
+            T0011: '"Du runzelst die Stirn. Ist denn heute etwas anders als sonst? Wo ist außerdem Mama abgeblieben?"',
+            T00012: '"Sicherlich rennt sie irgendwo deinen Chaos-Geschwistern hinterher. Kailani und Evarius. Verrückte Namen, oder? Was haben sich Mama und Mutti nur dabei gedacht!"',
+            T0013: '"Mama ist wieder gestresst. Dabei sehe ich sie gerade sowieso so selten. Manchmal wünschte ich mir, sie würde weniger arbeiten und lieber mit uns Zeit verbringen."',
+            T0014: '"(Tipp: Die Erkundungsoptionen kannst du wählen, ohne in der Story voranzuschreiten!)"',
         },
-        // maincharacter: {
-        //   T0000:
-        //     "Die Händler sind im Dorf! Nach einem langen und grauen Winter reihen sich endlich wieder die farbigen Wagons der fahrenden Händler am Marktplatz ein.",
-        //   T0001:
-        //     "Auch wenn die Luft noch eisig in meinen Lungen ist, die Waren der Händler und die Sonne, die manchmal durch die Wolken blitzt, erschaffen ein schon fast frühlingshaftes Gefühl von Freude.",
-        //   T0002: "Meine Geschwister rennen herum wie die Irren.",
-        //   T0003: "",
-        // },
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
     Spiegel_VN.dlg_scn_01 = {
-        maincharacter: {
-            T0000: "Intro into marketplace.",
-            T0001: "Das ist meine erste Szene yay.",
+        Mama: {
+            T0001: '"Hör auf zu träumen und komm’. Wir haben noch einiges vor dem Essen zu erledigen."',
+            T0002: '"Da bist du ja! Bleibe nah bei mir, okay? Heute ist was los …"',
+            T0003: '"Am Rande stehen und Beobachten ist sowieso eine deiner liebsten Beschäftigungen. So kannst du in Ruhe nachdenken. Als du so beobachtest, fällt dir auf, dass das Treiben geschäftiger wirkt als sonst."',
+            T0004: '"Du runzelst die Stirn. Ist denn heute etwas anders als sonst? Wo ist außerdem Mama abgeblieben?"',
+            T0005: '"Sicherlich rennt sie irgendwo deinen Chaos-Geschwistern hinterher. Kailani und Evarius. Verrückte Namen, oder? Was haben sich Mama und Mutti nur dabei gedacht!"',
+            T0006: '"Mama ist wieder gestresst. Dabei sehe ich sie gerade sowieso so selten. Manchmal wünschte ich mir, sie würde weniger arbeiten und lieber mit uns Zeit verbringen."',
+            T0007: '"(Tipp: Die Erkundungsoptionen kannst du wählen, ohne in der Story voranzuschreiten)"',
         },
         // Mama: {
         //   T0000: "Hallo mein Kind.",
@@ -1390,8 +1416,6 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge //edge ist der Härtegrad
         );
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0007);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0008);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0009);
         return "01_01 Intro Marketplace";
     }
     Spiegel_VN.Chp01_00_IntroNarration = Chp01_00_IntroNarration;
@@ -1400,7 +1424,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp01_01_IntroMarketplace() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
-        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0.8, 0.1, true);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 0.1, true);
         // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
         // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
         // if (dataForSave.pickedThisScene = true)
@@ -1420,29 +1444,27 @@ var Spiegel_VN;
         //   "Hallo, ich bin Dein Name."
         // );
         // ***BEGINN SZENE***
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
-        // ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-        Spiegel_VN.ƒS.positionPercent(70, 130));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, Spiegel_VN.ƒS.positionPercent(70, 130));
         Spiegel_VN.ƒS.update();
         let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5); //gerundet
         switch (randomTextChp01Marketplace) {
             case 1:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Random dialogue 1 -----------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Hör auf zu träumen und komm’. Wir haben noch einiges vor dem Essen zu erledigen."');
                 break;
             case 2:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Random dialogue 2 -----------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Da bist du ja! Bleibe nah bei mir, okay? Heute ist was los …"');
                 break;
             case 3:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Random dialogue 3 -----------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Erinnerst du mich daran, dass wir nachher Salat und Zucker holen?"');
                 break;
             case 4:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Random dialogue 4 -----------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Letzte Woche haben wir doch Kartoffeln vergessen, da war Mutti ziemlich böse …"');
                 break;
             case 5:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Random dialogue 5 -----------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Ich renn’ schon den ganzen Tag Kailani und Evarius hinterher, die machen mich wahnsinnig!"');
                 break;
             default:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, "Default--------------------");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Kommst du?"');
                 break;
         }
         // await ƒS.Speech.tell(
@@ -1473,7 +1495,7 @@ var Spiegel_VN;
         console.log(Spiegel_VN.dataForSave.pickedChp01_ConvoMother);
         console.log("boolean Mirrormerhant besucht: ");
         console.log(Spiegel_VN.dataForSave.pickedChp01_MirrorMerchant);
-        if (!Spiegel_VN.dataForSave.pickedChp01_ConvoMother || // ! heißt not: es wird nach entgegengesetztem Zustand gefragt // || = oder; && = und
+        if (!Spiegel_VN.dataForSave.pickedChp01_ConvoMother ||
             !Spiegel_VN.dataForSave.pickedChp01_MirrorMerchant) {
             delete Chp01PickSceneElementAnswers.PickSceneContinue;
             // return Chp01_CS_ArrivalHome();
@@ -1492,33 +1514,29 @@ var Spiegel_VN;
         switch (Chp01SceneElement) {
             case Chp01PickSceneElementAnswers.PickSceneConvoMother:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter.name, '"Warte kurz, Mama!"');
-                Spiegel_VN.dataForSave.scoreEmpathyPoints += 10;
-                console.log(Spiegel_VN.dataForSave.scoreEmpathyPoints);
+                // dataForSave.scoreEmpathyPoints += 10;
                 Spiegel_VN.ƒS.Speech.clear();
-                return "01_02 Conversation Mama"; // hier lieber: return "Chp ..."; if clause: ich nehm versch keys und sage: if dataforsave.pciekd = alle true, dann in der if clause return. if (dataforsave.pickedChoice, pickedotherchoice, usw. = true), dann gehts weiter
+                return "01_02 Conversation Mama";
                 break;
             case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter.name, "Choice Talk to Mirrormerchant");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter.name, '"Ich schau mir noch schnell etwas an!"');
                 Spiegel_VN.ƒS.Speech.clear();
                 // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
                 // ƒS.Character.hide(characters.Mama);
                 return "01_03 MirrorMerchant";
                 break;
             case Chp01PickSceneElementAnswers.PickSceneExploreFlowerMerchant:
-                // continue path here
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, "Choice (Explore) Talk to flower merchant.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, 'Mal schauen, was der Blumenhändler so im Angebot hat');
                 Spiegel_VN.ƒS.Speech.clear();
                 return "01_E_FlowerMerchant";
                 break;
             case Chp01PickSceneElementAnswers.PickSceneExploreLeatherMerchant:
-                // continue path here
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, "Choice (Explore) Talk to leather merchant.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, 'Da wollte ich schon lange mal vorbei.');
                 Spiegel_VN.ƒS.Speech.clear();
                 return "01_E_LeatherMerchant";
                 break;
             case Chp01PickSceneElementAnswers.PickSceneContinue:
-                // continue path here
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, "Choice (Explore) Talk to mirror merchant.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Okay, gehen wir weiter."');
                 Spiegel_VN.ƒS.Speech.clear();
                 return "01_CS PerchaseMirror";
                 break;

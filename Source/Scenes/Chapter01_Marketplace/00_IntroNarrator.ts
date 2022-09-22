@@ -56,16 +56,6 @@ namespace Spiegel_VN {
       dlg_scn_00_IntroNarrator.narratorEntry.T0007
     );
 
-    await ƒS.Speech.tell(
-      characters.narrator.name,
-      dlg_scn_00_IntroNarrator.narratorEntry.T0008
-    );
-
-    await ƒS.Speech.tell(
-      characters.narrator.name,
-      dlg_scn_00_IntroNarrator.narratorEntry.T0009
-    );
-
     return "01_01 Intro Marketplace";
   }
 }

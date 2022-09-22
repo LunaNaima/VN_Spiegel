@@ -99,9 +99,30 @@ declare namespace Spiegel_VN {
             origin: ƒ.ORIGIN2D;
             pose: {
                 dress_34_neutral: string;
-                angry: string;
-                happy: string;
-                sad: string;
+                dress_34_angry: string;
+                dress_34_smile: string;
+                dress_angry: string;
+                dress_laugh: string;
+                dress_neutral: string;
+                dress_shocked: string;
+                pants1_34_angry: string;
+                pants1_34_neutral: string;
+                pants1_34_smile: string;
+                pants1_laugh: string;
+                pants1_neutral: string;
+                pants1_shocked: string;
+                pants2_angry: string;
+                pants2_laugh: string;
+                pants2_neutral: string;
+                pants2_shocked: string;
+                pants2_angry2: string;
+                pants2_laugh2: string;
+                pants2_neutral2: string;
+                pants2_shocked2: string;
+                pants2_hand_angry: string;
+                pants2_hand_laugh: string;
+                pants2_hand_neutral: string;
+                pants2_hand_shocked: string;
             };
         };
         Mutti: {
@@ -182,92 +203,90 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp02_01_Dinner: {
-            name: string;
-            background: string;
-        };
-        Chp02_02_LivingRoom: {
-            name: string;
-            background: string;
-        };
-        Chp02_03_PickHerbs: {
-            name: string;
-            background: string;
-        };
-        Chp02_04_FightNeighbor: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverBedroom: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverBedroomDiary: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverBedroomBooks: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverKitchen: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverKitchenOven: {
-            name: string;
-            background: string;
-        };
-        Chp02_E_DiscoverKitchenPantry: {
-            name: string;
-            background: string;
-        };
-        Chp02_CS_Sleep: {
-            name: string;
-            background: string;
-        };
-        Chp03_01_Dressmaker: {
-            name: string;
-            background: string;
-        };
-        Chp03_021_FirewoodKailani: {
-            name: string;
-            background: string;
-        };
-        Chp03_022_WaterwellKailani: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverDonkey: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverDonkeyCloseup: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverForest: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverLibraryOutside: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverLibraryInside: {
-            name: string;
-            background: string;
-        };
-        Chp03_E_DiscoverLibraryCloseup: {
-            name: string;
-            background: string;
-        };
-        Chp03_CS_KailaniMissing: {
-            name: string;
-            background: string;
-        };
-        black: {
-            name: string;
-            background: string;
+            Chp02_02_LivingRoom: {
+                name: string;
+                background: string;
+            };
+            Chp02_03_PickHerbs: {
+                name: string;
+                background: string;
+            };
+            Chp02_04_FightNeighbor: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverBedroom: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverBedroomDiary: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverBedroomBooks: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverKitchen: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverKitchenOven: {
+                name: string;
+                background: string;
+            };
+            Chp02_E_DiscoverKitchenPantry: {
+                name: string;
+                background: string;
+            };
+            Chp02_CS_Sleep: {
+                name: string;
+                background: string;
+            };
+            Chp03_01_Dressmaker: {
+                name: string;
+                background: string;
+            };
+            Chp03_021_FirewoodKailani: {
+                name: string;
+                background: string;
+            };
+            Chp03_022_WaterwellKailani: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverDonkey: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverDonkeyCloseup: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverForest: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverLibraryOutside: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverLibraryInside: {
+                name: string;
+                background: string;
+            };
+            Chp03_E_DiscoverLibraryCloseup: {
+                name: string;
+                background: string;
+            };
+            Chp03_CS_KailaniMissing: {
+                name: string;
+                background: string;
+            };
+            black: {
+                name: string;
+                background: string;
+            };
         };
     };
 }
@@ -318,14 +337,23 @@ declare namespace Spiegel_VN {
             T0008: string;
             T0009: string;
             T0010: string;
+            T0011: string;
+            T00012: string;
+            T0013: string;
+            T0014: string;
         };
     };
 }
 declare namespace Spiegel_VN {
     let dlg_scn_01: {
-        maincharacter: {
-            T0000: string;
+        Mama: {
             T0001: string;
+            T0002: string;
+            T0003: string;
+            T0004: string;
+            T0005: string;
+            T0006: string;
+            T0007: string;
         };
     };
 }
