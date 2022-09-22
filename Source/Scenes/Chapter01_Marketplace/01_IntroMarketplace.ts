@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp01_01_IntroMarketplace(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
-    ƒS.Sound.fade(music.theme_mirrorworld_factory, 0.8, 0.1, true);
+    ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
 
     // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
     // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
@@ -14,7 +14,7 @@ namespace Spiegel_VN {
       transitions.fade.edge //edge ist der Härtegrad
     );
     ƒS.update();
-
+    
     // ***TEST-INVENTORY***
     // ƒS.Inventory.add(inventory.apple);
     // await ƒS.Inventory.open;
@@ -33,9 +33,7 @@ namespace Spiegel_VN {
     // ***BEGINN SZENE***
     await ƒS.Character.show(
       characters.Mama,
-      characters.Mama.pose.dress_34_neutral, // pose muss in der main sein
-      // ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-      ƒS.positionPercent(70,130)
+      characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70,130)
     );
     ƒS.update();
 
@@ -44,42 +42,42 @@ namespace Spiegel_VN {
       case 1:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Random dialogue 1 -----------"
+          '"Hör auf zu träumen und komm’. Wir haben noch einiges vor dem Essen zu erledigen."'
         );
         break;
 
       case 2:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Random dialogue 2 -----------"
+          '"Da bist du ja! Bleibe nah bei mir, okay? Heute ist was los …"'
         );
         break;
 
       case 3:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Random dialogue 3 -----------"
+          '"Erinnerst du mich daran, dass wir nachher Salat und Zucker holen?"'
         );
         break;
 
       case 4:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Random dialogue 4 -----------"
+          '"Letzte Woche haben wir doch Kartoffeln vergessen, da war Mutti ziemlich böse …"'
         );
         break;
 
       case 5:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Random dialogue 5 -----------"
+          '"Ich renn’ schon den ganzen Tag Kailani und Evarius hinterher, die machen mich wahnsinnig!"'
         );
         break;
 
       default:
         await ƒS.Speech.tell(
           characters.Mama.name,
-          "Default--------------------"
+          '"Kommst du?"'
         );
         break;
     }
@@ -120,7 +118,7 @@ namespace Spiegel_VN {
     console.log(dataForSave.pickedChp01_MirrorMerchant);
 
     if (
-      !dataForSave.pickedChp01_ConvoMother || // ! heißt not: es wird nach entgegengesetztem Zustand gefragt // || = oder; && = und
+      !dataForSave.pickedChp01_ConvoMother || 
       !dataForSave.pickedChp01_MirrorMerchant
     ) {
       delete Chp01PickSceneElementAnswers.PickSceneContinue;
@@ -150,16 +148,15 @@ namespace Spiegel_VN {
           characters.maincharacter.name,
           '"Warte kurz, Mama!"'
         );
-        dataForSave.scoreEmpathyPoints += 10;
-        console.log(dataForSave.scoreEmpathyPoints);
+        // dataForSave.scoreEmpathyPoints += 10;
         ƒS.Speech.clear();
-        return "01_02 Conversation Mama"; // hier lieber: return "Chp ..."; if clause: ich nehm versch keys und sage: if dataforsave.pciekd = alle true, dann in der if clause return. if (dataforsave.pickedChoice, pickedotherchoice, usw. = true), dann gehts weiter
+        return "01_02 Conversation Mama";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
         await ƒS.Speech.tell(
           characters.maincharacter.name,
-          "Choice Talk to Mirrormerchant"
+          '"Ich schau mir noch schnell etwas an!"'
         );
         ƒS.Speech.clear();
         // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
@@ -168,30 +165,27 @@ namespace Spiegel_VN {
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreFlowerMerchant:
-        // continue path here
         await ƒS.Speech.tell(
           characters.Mama,
-          "Choice (Explore) Talk to flower merchant."
+          'Mal schauen, was der Blumenhändler so im Angebot hat'
         );
         ƒS.Speech.clear();
         return "01_E_FlowerMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreLeatherMerchant:
-        // continue path here
         await ƒS.Speech.tell(
           characters.Mama,
-          "Choice (Explore) Talk to leather merchant."
+          'Da wollte ich schon lange mal vorbei.'
         );
         ƒS.Speech.clear();
         return "01_E_LeatherMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneContinue:
-        // continue path here
         await ƒS.Speech.tell(
           characters.Mama,
-          "Choice (Explore) Talk to mirror merchant."
+          '"Okay, gehen wir weiter."'
         );
         ƒS.Speech.clear();
         return "01_CS PerchaseMirror";
