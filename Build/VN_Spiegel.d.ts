@@ -128,6 +128,42 @@ declare namespace Spiegel_VN {
         Mutti: {
             name: string;
             origin: ƒ.ORIGIN2D;
+            pose: {
+                dress1_basket_frown: string;
+                dress1_basket_laugh: string;
+                dress1_basket_neutral: string;
+                dress1_basket_smile: string;
+                dress1_basket_smirk: string;
+                dress2_basket_laugh: string;
+                dress2_basket_neutral: string;
+                dress2_basket_smile: string;
+                dress2_basket_smirk: string;
+                dress3_frown: string;
+                dress3_laugh: string;
+                dress3_neutral: string;
+                dress3_smile: string;
+                dress3_smirk: string;
+                dress4_laugh: string;
+                dress4_neutral: string;
+                dress4_frown: string;
+                dress4_smile: string;
+                dress4_smirk: string;
+                dress5_frown: string;
+                dress5_laugh: string;
+                dress5_neutral: string;
+                dress5_smile: string;
+                dress5_smirk: string;
+                dress6_frown: string;
+                dress6_laugh: string;
+                dress6_neutral: string;
+                dress6_smile: string;
+                dress6_smirk: string;
+                dress7_frown: string;
+                dress7_laugh: string;
+                dress7_neutral: string;
+                dress7_smile: string;
+                dress7_smirk: string;
+            };
         };
         Kailani: {
             name: string;

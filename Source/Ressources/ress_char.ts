@@ -50,9 +50,48 @@ namespace Spiegel_VN {
     Mutti: {
       name: "Elena",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
-      //   pose: {
-      //     angry: "",
-      //   },
+      pose: {
+        dress1_basket_frown: "/Assets/Characters/Elena/Elena_Dress1_frown.png",
+        dress1_basket_laugh: "/Assets/Characters/Elena/Elena_Dress1_laugh.png",
+        dress1_basket_neutral: "/Assets/Characters/Elena/Elena_Dress1_neutral.png",
+        dress1_basket_smile: "/Assets/Characters/Elena/Elena_Dress1_smile.png",
+        dress1_basket_smirk: "/Assets/Characters/Elena/Elena_Dress1_smirk.png",
+        //
+        dress2_basket_laugh: "/Assets/Characters/Elena/Elena_Dress2_laugh.png",
+        dress2_basket_neutral: "/Assets/Characters/Elena/Elena_Dress2_neutral.png",
+        dress2_basket_smile: "/Assets/Characters/Elena/Elena_Dress2_smile.png",
+        dress2_basket_smirk: "/Assets/Characters/Elena/Elena_Dress2_smirk.png",
+        //
+        dress3_frown: "/Assets/Characters/Elena/Elena_Dress3_frown.png",
+        dress3_laugh: "/Assets/Characters/Elena/Elena_Dress3_laugh.png",
+        dress3_neutral: "/Assets/Characters/Elena/Elena_Dress3_neutral.png",
+        dress3_smile: "/Assets/Characters/Elena/Elena_Dress3_smile.png",
+        dress3_smirk: "/Assets/Characters/Elena/Elena_Dress3_smirk.png",
+        //
+        dress4_laugh: "/Assets/Characters/Elena/Elena_Dress4_laugh.png",
+        dress4_neutral: "/Assets/Characters/Elena/Elena_Dress4_neutral.png",
+        dress4_frown: "/Assets/Characters/Elena/Elena_Dress4_frown.png",
+        dress4_smile: "/Assets/Characters/Elena/Elena_Dress4_smile.png",
+        dress4_smirk: "/Assets/Characters/Elena/Elena_Dress4_smirk.png",
+        //
+        dress5_frown: "/Assets/Characters/Elena/Elena_Dress5_frown.png",
+        dress5_laugh: "/Assets/Characters/Elena/Elena_Dress5_laugh.png",
+        dress5_neutral: "/Assets/Characters/Elena/Elena_Dress5_neutral.png",
+        dress5_smile: "/Assets/Characters/Elena/Elena_Dress5_smile.png",
+        dress5_smirk: "/Assets/Characters/Elena/Elena_Dress5_smirk.png",
+        //
+        dress6_frown: "/Assets/Characters/Elena/Elena_Dress6_frown.png",
+        dress6_laugh: "/Assets/Characters/Elena/Elena_Dress6_laugh.png",
+        dress6_neutral: "/Assets/Characters/Elena/Elena_Dress6_neutral.png",
+        dress6_smile: "/Assets/Characters/Elena/Elena_Dress6_smile.png",
+        dress6_smirk: "/Assets/Characters/Elena/Elena_Dress6_smirk.png",
+        //
+        dress7_frown: "/Assets/Characters/Elena/Elena_Dress7_frown.png",
+        dress7_laugh: "/Assets/Characters/Elena/Elena_Dress7_laugh.png",
+        dress7_neutral: "/Assets/Characters/Elena/Elena_Dress7_neutral.png",
+        dress7_smile: "/Assets/Characters/Elena/Elena_Dress7_smile.png",
+        dress7_smirk: "/Assets/Characters/Elena/Elena_Dress7_smirk.png",
+        },
     },
 
     Kailani: {
