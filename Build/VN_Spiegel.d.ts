@@ -643,9 +643,13 @@ declare namespace Spiegel_VN {
     };
 }
 declare namespace Spiegel_VN {
-    let Soundeffekte: {
-        click: string;
-        birds: string;
+    let soundeffects: {
+        Birds: {
+            birds: string;
+        };
+        Fire: {
+            cracklingfire: string;
+        };
         crowd: string;
         door: string;
         forest: string;
@@ -796,13 +800,7 @@ declare namespace Spiegel_VN {
     function Chp02_E_DiscoverBedroom(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp02_E_DiscoverKitchen(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
     function Chp02_CS_NewDay(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp02_CS_Sleep(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Chp03_01_Dressmaker(): ƒS.SceneReturn;

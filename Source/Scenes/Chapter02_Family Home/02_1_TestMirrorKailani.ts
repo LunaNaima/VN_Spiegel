@@ -43,7 +43,7 @@ namespace Spiegel_VN {
     while (!dataForSave.pickedRightChoiceMirror);
 
     await ƒS.Speech.tell(characters.maincharacter, '"Was wünschen wir uns denn nun?"');
-    
+    ƒS.Character.hideAll();
     let Chp02TestMirrorScenesOptions = {
       iSayAnswer1: "Strand.",
       iSayAnswer2: "Bergsee",
@@ -58,22 +58,27 @@ namespace Spiegel_VN {
       case Chp02TestMirrorScenesOptions.iSayAnswer1:
         await ƒS.Location.show(locations.Chp02_TestSceneFBeach)
         await ƒS.Speech.tell(characters.Kailani, '"Schau mal, wie schön meine Haare glänzen!"');
+        break;
 
         case Chp02TestMirrorScenesOptions.iSayAnswer2:
         await ƒS.Location.show(locations.Chp02_TestSceneFWater)
         await ƒS.Speech.tell(characters.Kailani, '"Ach, was für ein tolles Kleid."');
+         break;
 
         case Chp02TestMirrorScenesOptions.iSayAnswer3:
         await ƒS.Location.show(locations.Chp02_TestSceneFTrees)
-        await ƒS.Speech.tell(characters.Kailani, '"Das sind aber tolle Farben, findest du nicht auch?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Das sind aber tolle Farben, findest du nicht auch?"');
+         break;
 
         case Chp02TestMirrorScenesOptions.iSayAnswer4:
         await ƒS.Location.show(locations.Chp02_TestSceneFFly)
-        await ƒS.Speech.tell(characters.Kailani, '"Juchu! Ich wollte schon immer mal fliegen."');
+        await ƒS.Speech.tell(characters.Kailani, '"Juchu! Ich wollte schon immer mal fliegen. Wie eine Fee."');
+         break;
 
         case Chp02TestMirrorScenesOptions.iSayAnswer5:
         await ƒS.Location.show(locations.Chp02_TestSceneFCoral)
-        await ƒS.Speech.tell(characters.Kailani, '"Ich war noch nie so weit unter Wasser, wie aufregend!"');
+        await ƒS.Speech.tell(characters.Kailani, '"Schau mal, wie schön meine Haare glänzen!"');
+         break;
     }
     await ƒS.Location.show(locations.Chp02_02_LivingRoom)
 
@@ -86,7 +91,11 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Mama, '"Also nicht wieder die ganze Nacht wachbleiben! Evarius, dich meine ich. Gute Nacht"');
 
     await ƒS.Location.show(locations.Chp02_E_DiscoverBedroom)
-    ƒS.update();
+    await ƒS.Location.show(locations.black);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    
+    await ƒS.Speech.tell("", "Ein paar Tage später ...");
+    return 
     
   }
 }

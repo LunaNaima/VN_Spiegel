@@ -11,7 +11,9 @@ namespace Spiegel_VN {
     let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 5); //gerundet
     switch (randomTextChp03NewDay) {
       case 1:
-        await ƒS.Speech.tell("Ich", "Random dialogue 1 -----------");
+        ƒS.Character.hideAll();
+        // await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile )
+        await ƒS.Speech.tell(characters.Mutti,"Hallo, Schatz!");
         break;
 
       case 2:

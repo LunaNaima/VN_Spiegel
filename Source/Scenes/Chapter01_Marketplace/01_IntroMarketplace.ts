@@ -146,7 +146,6 @@ namespace Spiegel_VN {
       case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
         await ƒS.Speech.tell(characters.maincharacter.name,'"Ich schau mir noch schnell etwas an!"');
         ƒS.Speech.clear();
-        // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
         ƒS.Character.hide(characters.Mama);
         return "01_03 MirrorMerchant";
         break;

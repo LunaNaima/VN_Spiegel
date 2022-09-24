@@ -25,10 +25,12 @@ namespace Spiegel_VN {
                 break;
             
             case Chp02PickSceneElementAnswersKitchen.PickSceneOven:
+                await ƒS.Sound.fade(soundeffects.Fire.cracklingfire, 0.1, 1, true);
                 await ƒS.Location.show(locations.Chp02_E_DiscoverKitchenOven);
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
                 await ƒS.Speech.tell(characters.maincharacter, "Das Holz muss nachgelegt werden. Dieses Jahr müsst ihr besonders viel Holz sammeln und hacken, weil der Winter ziemlich kalt werden soll. Das sagen zumindest die Bauern, weil die Vögel so früh zwitschern.");
                 ƒS.Speech.clear();
+                ƒS.Sound.fade(soundeffects.Fire.cracklingfire, 0, 0, false);
                 return "02_Kitchen";
                 break;
 

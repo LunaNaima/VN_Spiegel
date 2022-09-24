@@ -140,23 +140,13 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp02TestMirrorElement) {
       case Chp02TestMirrorElementAnswers.iSayTestWithKailani:
-        dataForSave.pickedChp02_TestWithKailani
         await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
         return "02_021 Test Mirror Kailani";
-        
-        
+        break;
             
       case Chp02TestMirrorElementAnswers.iSayTestWithEvarius:
-        dataForSave.pickedChp02_TestWithEvarius = true;
         await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
-        ƒS.Character.hide(characters.Kailani);
-        ƒS.Character.hide(characters.Evarius);
-        await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos2_laugh, ƒS.positionPercent(45, 100));
-        ƒS.update();
-        await ƒS.Speech.tell(characters.Evarius, '"Auja!"');
-        await ƒS.Speech.tell(characters.maincharacter, "Er packt den Spiegel und hebt ihn sich vors Gesicht.");
-        await ƒS.Speech.tell(characters.maincharacter, '"Vorsicht, Evarius! Der ist Muttis und war teuer. Also, wie ging der Spruch nochmal?"');
-        ƒS.Speech.clear();
+        return "02_021 Test Mirror Evarius";
         break;
     }
   }

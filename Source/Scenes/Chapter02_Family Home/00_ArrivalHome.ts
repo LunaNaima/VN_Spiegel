@@ -35,13 +35,13 @@ namespace Spiegel_VN {
         };
         
 // doesnt work yet
-        // if (
-        //     !dataForSave.pickedChp02_PickHerbsGarden ||
-        //     !dataForSave.pickedChp02_Kitchen
-        // ) {
-        //     delete Chp02PickSceneElementAnswers.PickSceneContinue;
-        //     // return Chp01_CS_ArrivalHome();
-        // }
+        if (
+            !dataForSave.pickedChp02_PickHerbsGarden ||
+            !dataForSave.pickedChp02_Kitchen
+        ) {
+            delete Chp02PickSceneElementAnswers.PickSceneContinue;
+            // return Chp01_CS_ArrivalHome();
+        }
 
         if (dataForSave.pickedChp02_PickHerbsGarden) {
       delete Chp02PickSceneElementAnswers.PickScenePickHerbs;
@@ -72,15 +72,14 @@ namespace Spiegel_VN {
 
             case Chp02PickSceneElementAnswers.PickSceneDiscoverBedroom:
                 // continue path here
-                await ƒS.Speech.tell(characters.maincharacter, "Mein eigenes Reich.");
+                await ƒS.Speech.tell(characters.maincharacter, "");
                 ƒS.Speech.clear();
                 return "02_E Discover bedroom";
                 break;
 
             
             case Chp02PickSceneElementAnswers.PickSceneContinue:
-                // continue path here
-                await ƒS.Speech.tell("Ich", "Weiter zur cut scene.");
+                await ƒS.Speech.tell(characters.maincharacter, "Jetzt gibt's Essen!");
                 ƒS.Speech.clear();
                 return "02_01 Dinner at home";
                 break;
