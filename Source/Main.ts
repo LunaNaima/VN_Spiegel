@@ -279,99 +279,93 @@ namespace Spiegel_VN {
       //   scene: Chp01_CS_PerchaseMirror,
       //   name: "CS: PerchaseMirror"
       // },
-      {
-        id: "01_CS Arrival Home",
-        scene: Chp01_CS_ArrivalHome,
-        name: "CS: ArrivalHome"
-      },
+      // {
+      //   id: "01_CS Arrival Home",
+      //   scene: Chp01_CS_ArrivalHome,
+      //   name: "CS: ArrivalHome"
+      // },
 
-      // // ***CHAPTER 02: FAMILY HOME ***
-      {
-        id: "02_00 Arrival Home",
-        scene: Chp02_00_ArrivalHome,
-        name: "02_00 ArrivalHome"
-      },
-      {
-        id: "02_01 Dinner at home",
-        scene: Chp02_01_Dinner,
-        name: "Dinner"
-      },
-      {
-        id: "02_021 Test Mirror Kailani",
-        scene: Chp02_021_TestMirrorK,
-        name: "Test mirror"
-      },
-      {
-       id: "02_021 Test Mirror Evarius",
-        scene: Chp02_021_TestMirrorE,
-        name: "Test mirror"
-      },
-      {
-        id: "02_03 Fight with neighbor",
-        scene: Chp02_03_FightNeighbor,
-        name: "FightNeighbor"
-      },
-      {
-        id: "02_E Discover bedroom",
-        scene: Chp02_E_DiscoverBedroom,
-        name: "E_Bedroom"
-      },
-      {
-        id: "02_03 Pick Herbs",
-        scene: Chp02_03_PickHerbs,
-        name: "Herbs Garden"
-      },
+      // // // ***CHAPTER 02: FAMILY HOME ***
+      // {
+      //   id: "02_00 Arrival Home",
+      //   scene: Chp02_00_ArrivalHome,
+      //   name: "02_00 ArrivalHome"
+      // },
+      // {
+      //   id: "02_01 Dinner at home",
+      //   scene: Chp02_01_Dinner,
+      //   name: "Dinner"
+      // },
+      // {
+      //   id: "02_021 Test Mirror Kailani",
+      //   scene: Chp02_021_TestMirrorK,
+      //   name: "Test mirror"
+      // },
+      // {
+      //  id: "02_021 Test Mirror Evarius",
+      //   scene: Chp02_021_TestMirrorE,
+      //   name: "Test mirror"
+      // },
+      // {
+      //   id: "02_E Discover bedroom",
+      //   scene: Chp02_E_DiscoverBedroom,
+      //   name: "E_Bedroom"
+      // },
+      // {
+      //   id: "02_03 Pick Herbs",
+      //   scene: Chp02_03_PickHerbs,
+      //   name: "Herbs Garden"
+      // },
       {
         id: "02_Kitchen",
         scene: Chp02_Kitchen,
         name: "Kitchen"
       },
       // // CUTSCENES ***
-      { id: "02_CS Sleep", scene: Chp02_CS_Sleep, name: "CS: Sleep" },
       { id: "02_CS New day", scene: Chp02_CS_NewDay, name: "CS: New Day" },
 
-      // // *** CHAPTER 03: VILLAGE ***
-      // {
-      //   id: "03_01 Dressmaker",
-      //   scene: Chp03_01_Dressmaker,
-      //   name: "Dressmaker"
-      // },
+      // *** CHAPTER 03: VILLAGE ***
+      {
+        id: "03_01 Dressmaker",
+        scene: Chp03_01_Dressmaker,
+        name: "Dressmaker"
+      },
       // {
       //   id: "03_E Discover donkey",
       //   scene: Chp03_E_DiscoverDonkey,
       //   name: "E_Donkey"
       // },
+      {
+        id: "03_E Discover Forest",
+        scene: Chp03_E_DiscoverForest,
+        name: "E_Forest"
+      },
+      {
+        id: "03_E Discover Library",
+        scene: Chp03_E_DiscoverLibrary,
+        name: "E_Library"
+      },
+      {
+        id: "03_021 Chores with Kailani",
+        scene: Chp03_021_ChoresWithKailani,
+        name: "Chores Kailani"
+      },
       // {
-      //   id: "03_E Discover Forest",
-      //   scene: Chp03_E_DiscoverForest,
-      //   name: "E_Forest"
+      //   id: "03_022 Waterwell with Kailani",
+      //   scene: Chp03_022_WaterWellKailani,
+      //   name: "Waterwell Kailani",
       // },
-      // {
-      //   id: "03_E Discover Library",
-      //   scene: Chp03_E_DiscoverLibrary,
-      //   name: "E_Library"
-      // },
-      // {
-      //   id: "03_021 Chores with Kailani",
-      //   scene: Chp03_021_ChoresWithKailani,
-      //   name: "Chores Kailani"
-      // },
-      // // {
-      // //   id: "03_022 Waterwell with Kailani",
-      // //   scene: Chp03_022_WaterWellKailani,
-      // //   name: "Waterwell Kailani",
-      // // },
-      // // *** CUTSCENES ***
-      // {
-      //   id: "03_CS Turmoil marketplace",
-      //   scene: Chp03_CS_TurmoilMarketplace,
-      //   name: "CS: TurmoilMarketplace"
-      // },
-      // {
-      //   id: "03_CS Kailani is missing",
-      //   scene: Chp03_CS_KailaniMissing,
-      //   name: "CS: Kailani is missing"
-      // },
+      // *** CUTSCENES ***
+      {
+        id: "03_CS Turmoil marketplace",
+        scene: Chp03_CS_TurmoilMarketplace,
+        name: "CS: TurmoilMarketplace"
+      },
+      {
+        id: "03_CS Kailani is missing",
+        scene: Chp03_CS_KailaniMissing,
+        name: "CS: Kailani is missing"
+      },
 
       // // *** CHAPTER 04 RESEARCH ***
       // {

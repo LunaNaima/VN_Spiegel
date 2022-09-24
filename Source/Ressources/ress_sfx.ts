@@ -1,7 +1,12 @@
 namespace Spiegel_VN {
-  export let Soundeffekte = {
-    click: "./Assets/Soundeffekte/mouseclick.flac",
-    birds: "./Assets/Soundeffekte/cardinal.mp3",
+  export let soundeffects = {
+    // click: "./Assets/Soundeffekte/mouseclick.flac",
+    Birds: {
+      birds: "./Assets/Soundeffekte/cardinal.mp3",
+    },
+    Fire: {
+      cracklingfire: "./Assets/Soundeffekte/crackling-fireplace-nature-sounds.mp3",
+    },
     crowd: "./Assets/Soundeffekte/crowd_talking.mp3",
     door: "./Assets/Soundeffekte/door-opening.mp3",
     forest: "./Assets/Soundeffekte/forest-wind-and-birds.mp3",
