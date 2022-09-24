@@ -8,8 +8,11 @@ declare namespace Spiegel_VN {
         scoreCouragePoints: number;
         scoreKnowledgePoints: number;
         tunnelFailed: number;
+        pickedBoat: boolean;
         pickedRightChoice: boolean;
+        pickedRightChoiceMirror: boolean;
         pickedIron: boolean;
+        pickedSeeds: boolean;
         pickedChp08TrustFlynn: boolean;
         pickedChp10SingToBirds: boolean;
         pickedChoice: boolean;
@@ -19,7 +22,7 @@ declare namespace Spiegel_VN {
         pickedChp01_E_LeatherMerchantScene: boolean;
         pickedChp01_ConvoMother: boolean;
         pickedChp01_MirrorMerchant: boolean;
-        pickedChp02_DinnerScene: boolean;
+        pickedChp02_Kitchen: boolean;
         pickedChp02_TestMirror: boolean;
         pickedChp02_TestWithElena: boolean;
         pickedChp02_TestWithKailani: boolean;
@@ -169,44 +172,44 @@ declare namespace Spiegel_VN {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
-                annoyed_angry: string;
-                annoyed_eyeroll: string;
-                back_smile: string;
-                back_worried: string;
-                begging_eyeroll: string;
-                begging_shrug: string;
-                crossed_angry: string;
-                crossed_eyeroll: string;
-                crossed_neutral: string;
-                neutral_angry: string;
-                neutral_eyeroll: string;
-                neutral_happy: string;
-                neutral_neutral: string;
-                neutral_smile: string;
-                profile_h_neutral: string;
-                profile_h_smile: string;
-                profile_neutral: string;
-                profile_smile: string;
-                shrug_eyeroll: string;
-                shrug_happy: string;
-                shrug_shrug: string;
-                thinking_angry: string;
-                thinking_neutral: string;
-                thinking_shrug: string;
-                dress_back_neutral: string;
-                dress_back_smile: string;
-                dress1_angry: string;
-                dress1_eyeroll: string;
-                dress1_happy: string;
-                dress1_shrug: string;
-                dress1_smile: string;
-                dress2_smile: string;
-                dress2_eyeroll: string;
-                dress3_angry: string;
-                dress3_eyeroll: string;
-                dress3_happy: string;
-                dress3_shrug: string;
-                dress3_smile: string;
+                outfit1_annoyed_angry: string;
+                outfit1_annoyed_eyeroll: string;
+                outfit1_back_smile: string;
+                outfit1_back_worried: string;
+                outfit1_begging_eyeroll: string;
+                outfit1_begging_shrug: string;
+                outfit1_crossed_angry: string;
+                outfit1_crossed_eyeroll: string;
+                outfit1_crossed_neutral: string;
+                outfit1_neutral_angry: string;
+                outfit1_neutral_eyeroll: string;
+                outfit1_neutral_happy: string;
+                outfit1_neutral_neutral: string;
+                outfit1_neutral_smile: string;
+                outfit1_profile_h_neutral: string;
+                outfit1_profile_h_smile: string;
+                outfit1_profile_neutral: string;
+                outfit1_profile_smile: string;
+                outfit1_shrug_eyeroll: string;
+                outfit1_shrug_happy: string;
+                outfit1_shrug_shrug: string;
+                outfit1_thinking_angry: string;
+                outfit1_thinking_neutral: string;
+                outfit1_thinking_shrug: string;
+                outfit2_dress_back_neutral: string;
+                outfit2_dress_back_smile: string;
+                outfit2_dress1_angry: string;
+                outfit2_dress1_eyeroll: string;
+                outfit2_dress1_happy: string;
+                outfit2_dress1_shrug: string;
+                outfit2_dress1_smile: string;
+                outfit2_dress2_smile: string;
+                outfit2_dress2_eyeroll: string;
+                outfit2_dress3_angry: string;
+                outfit2_dress3_eyeroll: string;
+                outfit2_dress3_happy: string;
+                outfit2_dress3_shrug: string;
+                outfit2_dress3_smile: string;
                 grey_slave: string;
             };
         };
@@ -365,10 +368,13 @@ declare namespace Spiegel_VN {
             name: string;
             background: string;
         };
+        Chp01_03_MirrorDemo: {
+            name: string;
+            background: string;
+        };
         Chp01_CS_ArrivalHome: {
             name: string;
             background: string;
-            night: string;
         };
         Chp02_01_Dinner: {
             name: string;
@@ -384,6 +390,10 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp02_04_FightNeighbor: {
+            name: string;
+            background: string;
+        };
+        Chp02_04_FightNeighborNeighbors: {
             name: string;
             background: string;
         };
@@ -404,6 +414,46 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp02_E_DiscoverKitchenPantry: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneFBeach: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneFCoral: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneFFly: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneFTrees: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneFWater: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneMWater: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneMTrees: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneMFly: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneMBeach: {
+            name: string;
+            background: string;
+        };
+        Chp02_TestSceneMCoral: {
             name: string;
             background: string;
         };
@@ -476,6 +526,10 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp06_Inn_int: {
+            name: string;
+            background: string;
+        };
+        Chp06_Inn_room: {
             name: string;
             background: string;
         };
@@ -552,6 +606,14 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp09_OutsideFactory: {
+            name: string;
+            background: string;
+        };
+        Chp10_Tunnel1: {
+            name: string;
+            background: string;
+        };
+        Chp10_ExplorePortrait: {
             name: string;
             background: string;
         };
@@ -640,12 +702,19 @@ declare namespace Spiegel_VN {
 declare namespace Spiegel_VN {
     let dlg_scn_02: {
         maincharacter: {
-            T0000: string;
             T0001: string;
+            T0004: string;
+            T0006: string;
+            T0008: string;
+            T0010: string;
         };
         Mama: {
             T0000: string;
-            T0001: string;
+            T0002: string;
+            T0003: string;
+            T0005: string;
+            T0007: string;
+            T0009: string;
         };
     };
 }
@@ -654,15 +723,19 @@ declare namespace Spiegel_VN {
         mirrorMerchant: {
             T0000: string;
             T0001: string;
+            T0003: string;
+            T0005: string;
+            T0006: string;
+            T0011: string;
         };
         maincharacter: {
-            T0000: string;
-        };
-    };
-    let dlg_Chp01MirrorMerchantiSayUnsure: {
-        maincharacter: {
-            T0000: string;
-            T0001: string;
+            T0002: string;
+            T0004: string;
+            T0007: string;
+            T0008: string;
+            T0009: string;
+            T0010: string;
+            T0012: string;
         };
     };
 }
@@ -671,28 +744,6 @@ declare namespace Spiegel_VN {
         maincharacter: {
             T0000: string;
             T0001: string;
-        };
-    };
-}
-declare namespace Spiegel_VN {
-    let dlg_scn_E_Flowermerchant: {
-        maincharacter: {
-            T0000: string;
-            T0001: string;
-        };
-        flowerMerchant: {
-            T0000: string;
-        };
-    };
-}
-declare namespace Spiegel_VN {
-    let dlg_scn_E_Leathermerchant: {
-        maincharacter: {
-            T0000: string;
-            T0001: string;
-        };
-        leatherMerchant: {
-            T0000: string;
         };
     };
 }
@@ -724,16 +775,22 @@ declare namespace Spiegel_VN {
     function Chp01_CS_PerchaseMirror(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
+    function Chp02_00_ArrivalHome(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
     function Chp02_01_Dinner(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp02_021_TestMirror(): ƒS.SceneReturn;
+    function Chp02_021_TestMirrorE(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function Chp02_021_TestMirrorK(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function Chp02_Kitchen(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Chp02_03_PickHerbs(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp02_03_FightNeighbor(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Chp02_E_DiscoverBedroom(): ƒS.SceneReturn;
@@ -1078,6 +1135,15 @@ declare namespace Spiegel_VN {
     function Chp16_End_EmptyScene(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
+    function BadEnding(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function GoodEnding(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
+    function SemiGoodEnding(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     function Auswahlmöglichkeiten(): ƒS.SceneReturn;
@@ -1090,9 +1156,6 @@ declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     function imageRiddle(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function MinigameDemon(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function RandomIntervall(): ƒS.SceneReturn;

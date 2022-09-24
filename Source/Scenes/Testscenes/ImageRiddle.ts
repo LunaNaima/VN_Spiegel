@@ -55,6 +55,8 @@ namespace Spiegel_VN {
         case "hit4":
           console.log("Schilf");
           ƒS.Speech.tell("", "Perfekt. Hinter dem Schilf liegt ein Boot.");
+          dataForSave.pickedBoat = true;
+          // return Chp01_01_IntroMarketplace
           break;
         case "hit5":
           console.log("Vögel");
@@ -66,5 +68,8 @@ namespace Spiegel_VN {
           break;
       }
     }
+    // if (dataForSave.pickedBoat = true) {
+      return "01_01 Intro Marketplace";
+    // }
   }
 }

@@ -3,17 +3,13 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
     ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
 
-    // await ƒS.Location.show(location.Chp01_01_IntroMarketplace);
     // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
-
-    // if (dataForSave.pickedThisScene = true)
 
     await ƒS.update(
       transitions.fade.duration,
       transitions.fade.alpha,
       transitions.fade.edge //edge ist der Härtegrad
     );
-    ƒS.update();
     
     // ***TEST-INVENTORY***
     // ƒS.Inventory.add(inventory.apple);
@@ -31,10 +27,7 @@ namespace Spiegel_VN {
     // );
 
     // ***BEGINN SZENE***
-    await ƒS.Character.show(
-      characters.Mama,
-      characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70,130)
-    );
+    await ƒS.Character.show(characters.Mama,characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70,115));
     ƒS.update();
 
     let randomTextChp01Marketplace = ƒ.Random.default.getRangeFloored(1, 5); //gerundet
@@ -144,49 +137,37 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp01SceneElement) {
       case Chp01PickSceneElementAnswers.PickSceneConvoMother:
-        await ƒS.Speech.tell(
-          characters.maincharacter.name,
-          '"Warte kurz, Mama!"'
-        );
+        await ƒS.Speech.tell(characters.maincharacter.name,'"Warte kurz, Mama!"');
         // dataForSave.scoreEmpathyPoints += 10;
         ƒS.Speech.clear();
         return "01_02 Conversation Mama";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
-        await ƒS.Speech.tell(
-          characters.maincharacter.name,
-          '"Ich schau mir noch schnell etwas an!"'
-        );
+        await ƒS.Speech.tell(characters.maincharacter.name,'"Ich schau mir noch schnell etwas an!"');
         ƒS.Speech.clear();
         // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
-        // ƒS.Character.hide(characters.Mama);
+        ƒS.Character.hide(characters.Mama);
         return "01_03 MirrorMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreFlowerMerchant:
-        await ƒS.Speech.tell(
-          characters.Mama,
-          'Mal schauen, was der Blumenhändler so im Angebot hat'
-        );
+        await ƒS.Speech.tell(characters.maincharacter, 'Mal schauen, was der Blumenhändler so im Angebot hat');
+        ƒS.Character.hide(characters.Mama);
         ƒS.Speech.clear();
         return "01_E_FlowerMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreLeatherMerchant:
-        await ƒS.Speech.tell(
-          characters.Mama,
-          'Da wollte ich schon lange mal vorbei.'
-        );
+        await ƒS.Speech.tell(characters.Mama, 'Da wollte ich schon lange mal vorbei.');
+        ƒS.Character.hide(characters.Mama);
         ƒS.Speech.clear();
         return "01_E_LeatherMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneContinue:
-        await ƒS.Speech.tell(
-          characters.Mama,
-          '"Okay, gehen wir weiter."'
-        );
+        await ƒS.Speech.tell(characters.Mama, '"Okay, gehen wir weiter."');
+        ƒS.Character.hide(characters.Mama);
         ƒS.Speech.clear();
         return "01_CS PerchaseMirror";
         break;

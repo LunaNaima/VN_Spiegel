@@ -1,9 +1,9 @@
 namespace Spiegel_VN {
   export async function Chp03_E_DiscoverLibrary(): ƒS.SceneReturn {
-    await ƒS.Location.show(locations.Chp03_E_DiscoverLibraryOutside);
+    // await ƒS.Location.show(locations.Chp03_E_DiscoverLibraryOutside);
     await ƒS.Speech.tell("Ich", "Juchuu Bücher.");
 
-    await ƒS.Location.show(locations.Chp03_E_DiscoverLibraryInside);
+    // await ƒS.Location.show(locations.Chp03_E_DiscoverLibraryInside);
     await ƒS.Speech.tell("Ich", "Du schnupperst und riechst die alten Bücher.");
 
     let Chp02DiscoverLibraryElementAnswers = {

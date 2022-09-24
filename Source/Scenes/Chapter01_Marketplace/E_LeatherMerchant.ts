@@ -4,25 +4,33 @@ namespace Spiegel_VN {
 
     // await ƒS.update(2, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.update(
-      transitions.fade.duration,
-      transitions.fade.alpha,
-      transitions.fade.edge //edge ist der Härtegrad
-    );
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    
+    let randomTextChp01LeatherMerchant = ƒ.Random.default.getRangeFloored(1, 3); //gerundet
+    switch (randomTextChp01LeatherMerchant) {
+      case 1:
+        await ƒS.Speech.tell(characters.leatherMerchant,'"Suchst du etwas Bestimmtes?"');
+        break;
+
+      case 2:
+        await ƒS.Speech.tell(characters.maincharacter,'"Die Felle der Lederhändler sind immer so schön weich."');
+        break;
+
+      case 3:
+        await ƒS.Speech.tell(characters.leatherMerchant,'"Heute im Angebot: Gelb getönte Schafswolle!"'
+        );
+        break;
+
+      default:
+        await ƒS.Speech.tell(characters.leatherMerchant,'"Willkommen!"');
+        break;
+    }
 
     // ***BEGIN DIALOGUE ***
-    await ƒS.Speech.tell(
-      characters.maincharacter.name,
-      dlg_scn_E_Leathermerchant.maincharacter.T0000
-    );
-    await ƒS.Speech.tell(
-      characters.leatherMerchant.name,
-      dlg_scn_E_Leathermerchant.leatherMerchant.T0000
-    );
 
     // *** DIALOGUE OPTIONS ***
     let Chp01LeatherMerchantDialogueElementAnswers = {
-      iSayAskAboutTrip: "'(Erkunden) Wie war denn die Reise ins Dorf?'",
+      iSayAskAboutTrip: '"(Erkunden) Was gibt es denn Neues in der Welt?"',
       iSayAskAboutClothes: "'(Erkunden) Eure Ware sieht so anders aus...'",
       iSayBuyShoeCream: "Schuhcreme kaufen",
       iSayLeave: "'Auf Wiedersehen!'",
@@ -40,19 +48,17 @@ namespace Spiegel_VN {
     // *** SWITCHCASE DIALOGUE OPTIONS ***
     switch (Chp01LeatherMerchantDialogueElement) {
       case Chp01LeatherMerchantDialogueElementAnswers.iSayAskAboutTrip:
-        // continue path here
-        await ƒS.Speech.tell(characters.leatherMerchant, "Antwort Reise.");
-        // dataForSave.score.scoreEmpathyPoints += 10;
-        // console.log(dataForSave.score.scoreEmpathyPoints);
+        await ƒS.Speech.tell(characters.maincharacter,'"Ihr habt auf der Reise bestimmt Interessantes erlebt!"');
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Oh, aber wie! Die Leute haben uns mitten auf der Straße angehalten und wollten unsere Ware kaufen. Das ist uns noch nie passiert."'); 
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Etwas ungewöhnlich, das Ganze. Ganz gesund sahen sie nicht aus.Aber du, du siehst sehr gesund aus! Dir würde sicherlich diese Schafswolle stehen"');
         ƒS.Speech.clear();
         return Chp01_E_LeatherMerchant();
         break;
 
       case Chp01LeatherMerchantDialogueElementAnswers.iSayAskAboutClothes:
-        await ƒS.Speech.tell(
-          characters.leatherMerchant,
-          "Answer ask about decorations"
-        );
+        await ƒS.Speech.tell(characters.maincharacter,'"Letztes Jahr hattet Ihr andere Ware dabei, oder?"');
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Tatsächlich haben viele nach den neuen Modetönen aus der Hauptstadt gefragt. Normalerweise benötigen wir für das Färben einige Monate, aber die Nachfrage war so stark, dass wir unser Verfahren kurzerhand umstellen mussten."');
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Die Farben sind dafür schön satt, halten aber leider nicht lange.Das war unseren Kunden aber egal! Nun gut."');
         ƒS.Speech.clear();
         // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
         // ƒS.Character.hide(characters.Mama);
@@ -60,29 +66,19 @@ namespace Spiegel_VN {
         break;
 
       case Chp01LeatherMerchantDialogueElementAnswers.iSayBuyShoeCream:
-        await ƒS.Speech.tell(
-          characters.maincharacter,
-          "Kann ich etwas Schuhcreme haben?"
-        );
+        await ƒS.Speech.tell(characters.maincharacter, "Ich würde gerne diese Schuhcreme für meine Lederstiefel kaufen.");
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Die können es wirklich gebrauchen! Das macht 30 Pfennig."');
+        await ƒS.Speech.tell(characters.maincharacter, "Du nimmst die Schuhcreme an und lächelst. Du liebst deine alten Schuhe, egal was andere sagen.");
         ƒS.Speech.clear();
         return "01_E_LeatherMerchant";
         break;
 
       case Chp01LeatherMerchantDialogueElementAnswers.iSayLeave:
-        await ƒS.Speech.tell(characters.maincharacter, "Machen Sies gut.");
+        await ƒS.Speech.tell(characters.maincharacter, "Wiedersehen!");
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Auf bald!"');
         ƒS.Speech.clear();
         return "01_01 Intro Marketplace";
         break;
-
-      // case firstDialogueElementAnswers.iSayExploreLeatherMerchant:
-      //   // continue path here
-      //   await ƒS.Speech.tell(
-      //     characters.Mama,
-      //     "Choice (Explore) Talk to leather merchant."
-      //   );
-      //   ƒS.Speech.clear();
-      //   return Chp01_E_LeatherMerchant();
-      //   break;
     }
   }
 }

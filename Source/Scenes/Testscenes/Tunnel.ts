@@ -3,7 +3,7 @@ namespace Spiegel_VN {
 
     let locTunnel = {
       name: "Tunnel",
-      background: "./Assets/Test_Minigame_Demon/Background_draft2.png"
+      background: "./Assets/Backgrounds/Chapter10/Demontunnel.png"
     };
 
     let demon: ƒS.CharacterDefinition = {
@@ -75,11 +75,21 @@ namespace Spiegel_VN {
     viewport.canvas.removeEventListener("mousemove", moveMirror);
 
 
-    if (event.type == "tunnelFail") 
+    if (event.type == "tunnelFail") {
       dataForSave.tunnelFailed += 1;
 
-    ƒS.Speech.tell("", "You failed " + dataForSave.tunnelFailed + "time, try again!<br/>Press Space");
+      ƒS.Speech.tell("", "Mist, der Dämon hat dich erwischt! " + dataForSave.tunnelFailed + " Mal, probier's nochmal.<br/>Drücke dazu die Leertaste");
+    };
 
+    if (dataForSave.tunnelFailed == 3) {
+      ƒS.Speech.clear();
+      ƒS.Speech.tell("Dämon", "Ha! Hab' ich dich!")
+      return "Bad Ending";
+    };
+
+    if (event.type == "tunnelSuccess") {
+      return "Good Ending";
+    };
     // for testing, stop NV from starting
     await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
     await testTunnel();

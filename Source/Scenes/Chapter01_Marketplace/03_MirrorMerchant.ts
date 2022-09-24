@@ -2,72 +2,73 @@ namespace Spiegel_VN {
   export async function Chp01_03_IntroMirror(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp01_03_IntroMirror);
     dataForSave.pickedChp01_MirrorMerchant = true;
+    ƒS.Character.hideAll();
+    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
 
-    await ƒS.Character.show(
-      characters.Flynn,
-      characters.Flynn.pose.angry, // pose muss in der main sein
-      ƒS.positions.bottomright //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-      // ƒS.positionPercent(70,100)
-    );
-
-    // await ƒS.update();
-
-    await ƒS.Speech.tell(
-      characters.mirrorMerchant.name,
-      dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0000
-    );
+    await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0000);
+    await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0001);
+    await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0002);
+    await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0003);
 
     //*** OPTIONS *//
     let Chp01MirrorMerchantElementAnswers = {
-      iSayUnsure: "Ich bin mir unsicher.",
-      iSayYes: "Zeigen Sie mal her!",
-      iSayNo: "Ne, gar nicht ...",
+      iSayUnsure: 'Unsicher',
+      iSayYes: 'Aufgeregt',
+      iSayNo: 'Abwehrend',
     };
 
-    let Chp01MirrorMerchantElement = await ƒS.Menu.getInput(
-      Chp01MirrorMerchantElementAnswers,
-      "choicesCSSclass"
-    );
+    let Chp01MirrorMerchantElement = await ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers, "choicesCSSclass");
 
     // *** RESPONSES ***
     switch (Chp01MirrorMerchantElement) {
       case Chp01MirrorMerchantElementAnswers.iSayUnsure:
-        await ƒS.Speech.tell(
-          characters.maincharacter.name,
-          '"Bin mir echt unsicher!"'
-        );
-        await ƒS.Speech.tell(
-          characters.mirrorMerchant.name,
-          '"Aber nein, schau doch mal her! Deine Zweifel sind unbegründet!"'
-        );
-        // hier noch: rest von Gespräch, posen Spiegelhändler, nochmal Dialog
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0004);
+        await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0005);
         ƒS.Speech.clear();
-        return "01_01 Intro Marketplace";
         break;
 
       case Chp01MirrorMerchantElementAnswers.iSayYes:
-        await ƒS.Speech.tell(
-          characters.maincharacter.name,
-          "Ja gerne, zeigen Sie mal her!"
-        );
-        await ƒS.Speech.tell(
-          characters.mirrorMerchant.name,
-          '"Interessierte Kundschaft! Ich zeige es dir ... "'
-        );
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0010);
+        await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0011);
         ƒS.Speech.clear();
-        return "01_01 Intro Marketplace";
         break;
 
       case Chp01MirrorMerchantElementAnswers.iSayNo:
-        await ƒS.Speech.tell(
-          characters.maincharacter.name,
-          "Lieber nicht, nein"
-        );
-        await ƒS.Speech.tell(
-          characters.mirrorMerchant.name,
-          '"Bist du sicher? Komm, schau mal ... "'
-        );
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0010);
         ƒS.Speech.clear();
+        break;
+    }
+
+    await ƒS.Speech.tell(characters.mirrorMerchant.name, 'Seine Stimme senkt sich verschwörerisch. Er winkt dich mit einer von funkelnden Ringen verzierten Hand heran.');
+    await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0006);
+    await ƒS.Location.show(locations.Chp01_03_MirrorDemo);
+    ƒS.update();
+
+    let Chp01MirrorMerchantElementAnswers2 = {
+      iSayYes: '"Klar!"',
+      iSayUnsure: '"Weiß nicht."',
+      iSayNo: '"Nein"',
+    };
+
+    let Chp01MirrorMerchantElement2 = await ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers2, "choicesCSSclass");
+
+    // *** RESPONSES ***
+    switch (Chp01MirrorMerchantElement2) {
+      case Chp01MirrorMerchantElementAnswers2.iSayYes:
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0007);
+        // ƒS.Character.hideAll();
+        return "01_01 Intro Marketplace";
+        break;
+      
+      case Chp01MirrorMerchantElementAnswers2.iSayUnsure:
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0008);
+        // ƒS.Character.hideAll();
+        return "01_01 Intro Marketplace";
+        break;
+      
+      case Chp01MirrorMerchantElementAnswers2.iSayNo:
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0009);
+        // ƒS.Character.hideAll();
         return "01_01 Intro Marketplace";
         break;
     }

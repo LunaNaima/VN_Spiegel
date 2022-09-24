@@ -30,6 +30,8 @@ namespace Spiegel_VN {
       case firstDialogueElementAnswers.iSayOk:
         // continue path here
         await ƒS.Speech.tell(characters.Mama, "Hi");
+        // dataForSave.score.scoreEmpathyPoints += 10;
+        // console.log(dataForSave.score.scoreEmpathyPoints);
         ƒS.Speech.clear();
         break;
       case firstDialogueElementAnswers.iSayYes:
