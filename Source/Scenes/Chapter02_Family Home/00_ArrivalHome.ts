@@ -1,7 +1,9 @@
 namespace Spiegel_VN {
     export async function Chp02_00_ArrivalHome(): ƒS.SceneReturn {
-        await ƒS.Location.show(locations.Chp02_02_LivingRoom);
+        await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+        await ƒS.Location.show(locations.Chp02_02_LivingRoom);
+        await ƒS.update();
 
         // ** RANDOM TEXT ***
         let randomTextChp02FamilyHome = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
@@ -34,7 +36,6 @@ namespace Spiegel_VN {
             PickSceneContinue: "Weiter",
         };
         
-// doesnt work yet
         if (
             !dataForSave.pickedChp02_PickHerbsGarden ||
             !dataForSave.pickedChp02_Kitchen

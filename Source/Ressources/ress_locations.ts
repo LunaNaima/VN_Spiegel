@@ -32,6 +32,10 @@ namespace Spiegel_VN {
       background: "./Assets/Backgrounds/Chapter02/Cottage_Outside.png",
       // night: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
     },
+    Chp01_CS_ArrivalHomeNight: {
+      name: "House from outside",
+      background: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
+    },
 
     // *** CHAPTER 02 ***
 
@@ -43,7 +47,11 @@ namespace Spiegel_VN {
     Chp02_02_LivingRoom: {
       name: "Living room",
       background: "./Assets/Backgrounds/Chapter02/LivingRoom.png",
-      night: "./Assets/Backgrounds/Chapter02/LivingRoom_night.png"
+      // night: "./Assets/Backgrounds/Chapter02/LivingRoom_night.png"
+    },
+    Chp02_02_LivingRoomNight: {
+      name: "Living room",
+      background: "./Assets/Backgrounds/Chapter05/LivingRoom_night.png",
     },
 
     Chp02_03_PickHerbs: {
@@ -146,6 +154,11 @@ namespace Spiegel_VN {
       background:
         "./Assets/Backgrounds/Chapter03/Dressmaker.png"
     },
+    Chp03_01_DressmakerMan: {
+      name: "Dressmaker",
+      background:
+        "./Assets/Backgrounds/Chapter03/Dressmaker_Man.png"
+    },
 
     Chp03_021_FirewoodKailani: {
       name: "Firewood chopping Kailani",
@@ -159,22 +172,31 @@ namespace Spiegel_VN {
         "./Assets/Backgrounds/Chapter03/Marketplace_empty.png"
     },
 
-    Chp03_E_DiscoverForest: {
-      name: "Discover forest",
-      background:
-        "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/MyBedroom.jpg"
-    },
-
     Chp03_E_DiscoverLibrary: {
       name: "Discover library",
       background:
-        "./Assets/Backgrounds/Chapter02/E_DiscoverBedroom/Library.png"
+        "./Assets/Backgrounds/Chapter03/Library.png"
     },
 
-    Chp03_CS_KailaniMissing: {
+    Chp03_KailaniBedroom: {
       name: "Kailanis bedroom",
       background:
-        "./Assets/Backgrounds/Chapter02/Kailani_bedroom.png"
+        "./Assets/Backgrounds/Chapter03/Kailani_bedroom.png"
+    },
+    Chp03_KailaniBedroomDiary: {
+      name: "Kailanis bedroom dairy",
+      background:
+        "./Assets/Backgrounds/Chapter04/KailaniDiary.png"
+    },
+    Chp03_KailaniBedroomMirror: {
+      name: "Kailanis bedroom dairy",
+      background:
+        "./Assets/Backgrounds/Chapter04/Kailani_Mirror.png"
+    },
+    Chp03_MarketplacePerson: {
+      name: "Marketplace + char",
+      background:
+        "./Assets/Backgrounds/Chapter04/Marketplace_empty_person.png"
     },
 
     // *** CHAPTER 04 ***
@@ -217,6 +239,11 @@ namespace Spiegel_VN {
       background:
         "./Assets/Backgrounds/Chapter05/Wishtree.png"
     },
+    Chp05_WishtreeBirds: {
+      name: "Wishtrees",
+      background:
+        "./Assets/Backgrounds/Chapter05/Wishtree_Birds.png"
+    },
       
     // *** CHAPTER 06 ***
     Chp06_ArrivalMeadow: {
@@ -224,10 +251,21 @@ namespace Spiegel_VN {
       background:
         "./Assets/Backgrounds/Chapter06/Arrival_Meadow.png"
     },
+    Chp06_ArrivalMeadowFlowers: {
+      name: "Arrival meadow",
+      background:
+        "./Assets/Backgrounds/Chapter06/Arrival_Meadow_flowers.png"
+    },
+    
     Chp06_CityGates: {
       name: "City gates",
       background:
         "./Assets/Backgrounds/Chapter06/CityGates.png"
+    },
+    Chp06_InWharyPeople: {
+      name: "In Whary + ppl",
+      background:
+        "./Assets/Backgrounds/Chapter06/InWhary_Ppl.png"
     },
     Chp06_ClothingStore: {
       name: "Clothing Store",
@@ -269,7 +307,7 @@ namespace Spiegel_VN {
     Chp07_Barn: {
       name: "Barn",
       background:
-        "./Assets/Backgrounds/Chapter07/Barn.png"
+        "./Assets/Backgrounds/Chapter07/InnKitchen.png"
     },
     Chp07_InnKitchen: {
       name: "Kitchen inn",
@@ -281,8 +319,18 @@ namespace Spiegel_VN {
       background:
         "./Assets/Backgrounds/Chapter07/Marketplace_Whary.png"
     },
+    Chp07_MarketplaceWharyBirds: {
+      name: "Marketplace Whary",
+      background:
+        "./Assets/Backgrounds/Chapter07/Marketplace_Whary_birds.png"
+    },
        
     // *** CHAPTER 08 ***
+    Chp08_Lake: {
+      name: "Lake",
+      background:
+        "./Assets/Backgrounds/Chapter08/CrossLake.png"
+    },
     Chp08_ArrivalFactory: {
       name: "Arrival at factory",
       background:
@@ -362,6 +410,11 @@ namespace Spiegel_VN {
       name: "Portrait",
       background:
         "./Assets/Backgrounds/Chapter10/Portrait.png"
+    },
+    Chp10_MinigameInstructions: {
+      name: "Portrait",
+      background:
+        "./Assets/Backgrounds/Chapter10/Minigame_Instructions.png"
     },
     // *** TRANSITION BETWEEN CHAPTERS ***
     black: {

@@ -9,6 +9,10 @@ namespace Spiegel_VN {
       name: "Erzählerin",
     },
 
+    wishtree: {
+      name: "Baum der Wünsche",
+    },
+
     Mama: {
       name: "Mama",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
@@ -61,6 +65,7 @@ namespace Spiegel_VN {
         dress2_basket_neutral: "/Assets/Characters/Elena/Elena_Dress2_neutral.png",
         dress2_basket_smile: "/Assets/Characters/Elena/Elena_Dress2_smile.png",
         dress2_basket_smirk: "/Assets/Characters/Elena/Elena_Dress2_smirk.png",
+        dress2_basket_frown: "/Assets/Characters/Elena/Elena_Dress2_frown.png",
         //
         dress3_frown: "/Assets/Characters/Elena/Elena_Dress3_frown.png",
         dress3_laugh: "/Assets/Characters/Elena/Elena_Dress3_laugh.png",
@@ -140,6 +145,12 @@ namespace Spiegel_VN {
         outfit2_dress3_smile: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_smile.png",
         // Grey Outfits
         grey_slave: "./Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
+        grey_shrug_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
+        grey_neutral_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+        grey_neutral_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+        grey_crossed_angry: "./Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
+        grey_neutral_happy: "./Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png",
+
       },
     },
 
@@ -285,6 +296,19 @@ namespace Spiegel_VN {
         pos2_laugh: "./Assets/Characters/Stablehand/Stable_Pos2_laugh.png",
       },
     },
+      Seller: {
+      name: "Verkäuferin",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1: "./Assets/Characters/wharywoman.png",
+      },
+    },
+      MerchantWhary: {
+      name: "Händler",
+      origin: ƒS.ORIGIN.BOTTOMRIGHT,
+      pose: {
+        pos1: "./Assets/Characters/wharymale.png",
+      },
+    },
   }
 }
-

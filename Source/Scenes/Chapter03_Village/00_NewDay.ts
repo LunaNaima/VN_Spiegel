@@ -1,57 +1,64 @@
 namespace Spiegel_VN {
-  export async function Chp02_CS_NewDay(): ƒS.SceneReturn {
-    await ƒS.update(
-      transitions.fade.duration,
-      transitions.fade.alpha,
-      transitions.fade.edge //edge ist der Härtegrad
-    );
-    await ƒS.Speech.tell("Ich", "Guten Morgen!");
-
-    // ** RANDOM TEXT ***
-    let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 5); //gerundet
+  export async function Chp03_00_NewDay(): ƒS.SceneReturn {
+    await ƒS.Location.show(locations.black);
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.Location.show(locations.Chp02_02_LivingRoom)
+    ƒS.Character.hideAll();
+    await ƒS.update();
+      
+      // ** RANDOM TEXT ***
+    let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
     switch (randomTextChp03NewDay) {
       case 1:
         ƒS.Character.hideAll();
-        // await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile )
-        await ƒS.Speech.tell(characters.Mutti,"Hallo, Schatz!");
+        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile, ƒS.positionPercent(55, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.Mutti, "Hallo, Schatz!");
+        ƒS.Character.hideAll();
         break;
 
       case 2:
-        await ƒS.Speech.tell("Ich", "Random dialogue 2 -----------");
+        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile, ƒS.positionPercent(55, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.Mutti, '"Denkst du an deine Aufgaben?"');
+        ƒS.Character.hideAll();
         break;
 
       case 3:
-        await ƒS.Speech.tell("Ich", "Random dialogue 3 -----------");
+        await ƒS.Speech.tell(characters.maincharacter, "Schule ging so ewig ...");
         break;
 
       case 4:
-        await ƒS.Speech.tell("Ich", "Random dialogue 4 -----------");
-        break;
-
-      case 5:
-        await ƒS.Speech.tell("Ich", "Random dialogue 5 -----------");
+        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile, ƒS.positionPercent(55, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, "Ich hab' noch so viel zu erledigen!");
         break;
 
       default:
-        await ƒS.Speech.tell("Ich", "Default--------------------");
+        await ƒS.Speech.tell(characters.maincharacter, "Endlich Wochenende.");
         break;
     }
 
     let Chp03PickSceneElementAnswers = {
-      PickSceneDressmaker: "Jacke abholen",
-      PickSceneChoresWithKailani: "Mit Kailani Hausarbeit machen",
-      PickSceneDiscoverDonkey: "(Erkunden) Glücksesel streicheln",
+      PickSceneDressmaker: "Jacken abholen",
+      PickSceneChoresWithKailani: "Mit Kailani Hausarbeiten machen",
       PickSceneDiscoverForest: "(Erkunden) Im Wald rumgucken",
       PickSceneDiscoverLibrary: "(Erkunden) Die Bücherei erkunden",
       PickSceneContinue: "Weiter",
     };
 
     if (
-      !dataForSave.pickedChp03_Dressmaker || // ! heißt not: es wird nach entgegengesetztem Zustand gefragt // || = oder; && = und
+      !dataForSave.pickedChp03_Dressmaker ||
       !dataForSave.pickedChp03_ChoresWithKailani
     ) {
       delete Chp03PickSceneElementAnswers.PickSceneContinue;
-      // return Chp01_CS_ArrivalHome();
+    }
+
+    if (dataForSave.pickedChp03_Dressmaker) {
+      delete Chp03PickSceneElementAnswers.PickSceneDressmaker;
+    }
+    if (dataForSave.pickedChp03_ChoresWithKailani) {
+      delete Chp03PickSceneElementAnswers.PickSceneChoresWithKailani;
     }
 
     let Chp03PickSceneElement = await ƒS.Menu.getInput(
@@ -62,50 +69,36 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp03PickSceneElement) {
       case Chp03PickSceneElementAnswers.PickSceneDressmaker:
-        // continue path here
-        await ƒS.Speech.tell("Ich", "Auf zur Schneiderin!");
-        // dataForSave.score.scoreEmpathyPoints += 10;
-        console.log(dataForSave.scoreEmpathyPoints);
+        await ƒS.Speech.tell(characters.maincharacter, '"Gut, dann geh` ich mal zum Schneider!"');
         ƒS.Speech.clear();
-        return "03_01 Dressmaker"; // hier lieber: return "Chp ..."; if clause: ich nehm versch keys und sage: if dataforsave.pciekd = alle true, dann in der if clause return. if (dataforsave.pickedChoice, pickedotherchoice, usw. = true), dann gehts weiter
+        return "03_01 Dressmaker"; 
         break;
 
       case Chp03PickSceneElementAnswers.PickSceneChoresWithKailani:
-        await ƒS.Speech.tell("Ich", "Gehen wir Holz hacken");
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_shrug_eyeroll, ƒS.positionPercent(45, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, '"Komm Kailani, gehen wir!"');
         ƒS.Speech.clear();
-        // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
-        // ƒS.Character.hide(characters.Mama);
+        ƒS.Character.hideAll();
         return "03_021 Chores with Kailani";
         break;
 
-      case Chp03PickSceneElementAnswers.PickSceneDiscoverDonkey:
-        await ƒS.Speech.tell("Ich", "Süß, ein Esel!.");
-        ƒS.Speech.clear();
-        return "03_E Discover donkey";
-        break;
-
       case Chp03PickSceneElementAnswers.PickSceneDiscoverForest:
-        // continue path here
-        await ƒS.Speech.tell("Ich", "Gehen wir den Wald anschauen.");
+        await ƒS.Speech.tell("", "");
         ƒS.Speech.clear();
         return "03_E Discover Forest";
         break;
 
       case Chp03PickSceneElementAnswers.PickSceneDiscoverLibrary:
-        // continue path here
-        await ƒS.Speech.tell("Ich", "Ich liebe Bücher <3.");
+        await ƒS.Speech.tell("", "");
         ƒS.Speech.clear();
         return "03_E Discover Library";
         break;
 
       case Chp03PickSceneElementAnswers.PickSceneContinue:
-        // continue path here
-        await ƒS.Speech.tell(
-          "Ich",
-          "Weiter zur cut scene turmoil marketplace."
-        );
+        await ƒS.Speech.tell("","");
         ƒS.Speech.clear();
-        return "03_CS Turmoil marketplace";
+        return "03_CS Kailani is missing";
         break;
     }
   }

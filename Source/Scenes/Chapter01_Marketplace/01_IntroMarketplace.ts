@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp01_01_IntroMarketplace(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
-    ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 0.1, true);
+    ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
 
     // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
 
@@ -104,11 +104,6 @@ namespace Spiegel_VN {
         "(Erkunden) Was gibt es Neues beim Lederhändler?",
       PickSceneContinue: "Weiter",
     };
-    console.log("boolean Mama gesprochen: ");
-    console.log(dataForSave.pickedChp01_ConvoMother);
-
-    console.log("boolean Mirrormerhant besucht: ");
-    console.log(dataForSave.pickedChp01_MirrorMerchant);
 
     if (
       !dataForSave.pickedChp01_ConvoMother || 

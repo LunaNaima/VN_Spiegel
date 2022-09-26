@@ -11,7 +11,7 @@ namespace Spiegel_VN {
     };
     if (
       // !dataForSave.score.scoreEmpathyPoints >= 80 ||
-      !dataForSave.pickedChp08TrustFlynn
+      !dataForSave.pickedChp06TrustFlynn
     ) {
       delete Chp16PickSceneElementAnswers.PickSceneGoHomeWithFlynn;
     }
