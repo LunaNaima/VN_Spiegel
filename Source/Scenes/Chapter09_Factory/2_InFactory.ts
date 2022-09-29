@@ -5,7 +5,7 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen. Trotzdem herrscht eine angespannte Stille.");
-    ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_shocked, ƒS.positionPercent(70, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_shocked, ƒS.positionPercent(85, 100));
     ƒS.update();
     
     await ƒS.Speech.tell(characters.maincharacter, '"Das ist … die Fabrik! Von der die Bettlerin gesprochen hat! Was ist hier los?"');
@@ -18,7 +18,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Deine Schwester steht in der Schlange mit den anderen Kuttentragenden. Sie sieht nicht auf, als du ihren Namen rufst. Du kannst es gar nicht glauben, Kailani zu sehen. Sie sieht erschöpft und fast gebrochen aus, Zustände, in denen du sie noch nie gesehen hast. Du willst losrennen und sie holen, doch Flynn hält deinen Ärmel fest.");
     
     ƒS.Character.hideAll();
-    ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(70, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(85, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Shh! Siehst du nicht die Wachen da drüben? Du kannst hier nicht einfach so durchrennen! Wir brauchen einen Plan."');
@@ -31,7 +31,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Tränen laufen dir über das Gesicht. Trotzdem hat Flynn Recht; es wäre unsinnig gewesen, euch in Gefahr zu bringen. Trotzdem kannst du es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
 
     ƒS.Character.hideAll();
-    ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(85, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Sie ist wieder da!"');
@@ -43,7 +43,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani hat diesen Szenen zugeschaut, jeden Tag! Sie hat sich selbst im Spiegel gesehen – aber warte, das war nicht sie. Sondern jemand, der sie imitiert und getäuscht hat. Der Spiegel hat diese Kabine gezeigt!"');
 
     ƒS.Character.hideAll();
-    ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(70, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(80, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Meinst du, das Spiegelbild in deinem Handspiegel? Diese Halle ist also eine Spiegelbild-Fabrik?"');
