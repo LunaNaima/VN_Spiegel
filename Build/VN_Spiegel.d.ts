@@ -756,6 +756,7 @@ declare namespace Spiegel_VN {
         theme_ordinaryworld: string;
         theme_mirrorworld_whary: string;
         theme_mirrorworld_factory: string;
+        theme_DemonMinigame: string;
         click: string;
     };
 }

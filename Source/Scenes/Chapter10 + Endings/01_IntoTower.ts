@@ -29,20 +29,26 @@ namespace Spiegel_VN {
           break;
         
         case Chp10InTowerElementAnswers.iSayWindow:
+          await ƒS.Location.show(locations.Chp10_GroundFloorTower);
+          ƒS.update();
           await ƒS.Speech.tell(characters.maincharacter, "Du schaust aus dem Fenster und erschrickst. Obwohl du und Flynn erst in den Turm eingetreten seid, liegt der Boden plötzlich etliche Meter unter euch. Du blickst auf die graue Welt hinaus und erschauerst. Der Turm soll ungebetene Besucher wohl in die Irre führen. Du schüttelst den Kopf und blickst wieder nach vorne. Bloß nicht ablenken lassen.");
           ƒS.Speech.clear();
           break;
         
         case Chp10InTowerElementAnswers.iSayContinue:
           dataForSave.pickedChp10IntoTowerContinue = true;
-
-          await ƒS.Speech.tell(characters.Flynn, "Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks.");
+await ƒS.Location.show(locations.Chp10_GroundFloorTower);
+          ƒS.update();
+          await ƒS.Speech.tell(characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks."');
           await ƒS.Speech.tell(characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Du hast Sorge, dass etwas aus dem Dunklen herab geflogen kommt, als du den ersten Schritt tust. Doch nichts passiert. Vorsichtig schleicht ihr euch hoch, bis du vor einer schwarzen Tür stehst.");
           await ƒS.Location.show(locations.black);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-          await ƒS.Location.show(locations.Chp10_MinigameInstructions);
-          await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-          ƒS.Speech.clear();
+          await ƒS.Speech.tell("", "ACHTUNG! Hinter dieser Wendeltreppe haust der eitle Dämon. Du kannst nur an ihm vorbeikommen, wenn du ihn mit deinem Handspiegel ablenkst. Fange den Dämon also mit deinem Spiegel ein, bis er seinem Spiegelbild verfallen ist. Danach kannst du dich an ihm vorbeischleichen. Wähle dazu die Pfeiltasten. Aber Vorsicht! Du hast nur drei Versuche, sonst schnappt dich der Dämon und steckt dich zu Kailani in die Fabrik!");
+
+          await ƒS.Location.show(locations.Chp10_Demontunnel);
+          await ƒS.Character.show(characters.Demon, characters.Demon.pose.pos2_angry, ƒS.positionPercent(100, 100));
+          await ƒS.update();
+          await ƒS.Speech.tell(characters.Demon, "Dich kriege ich schon noch!");
           return "10_MinigameDemon";
           break;         
          

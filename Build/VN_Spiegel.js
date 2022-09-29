@@ -218,70 +218,70 @@ var Spiegel_VN;
             // *** INTRO ***
             // { id: "00 Name Entry", scene: Chp00_00_NameEntry, name: "NameEntry" },
             // ***CHAPTER 01 ***
-            { id: "01_00 IntroNarration", scene: Spiegel_VN.Chp01_00_IntroNarration, name: "Intro Narration" },
-            { id: "01_01 Intro Marketplace", scene: Spiegel_VN.Chp01_01_IntroMarketplace, name: "Intro marketplace" },
-            { id: "01_E_FlowerMerchant", scene: Spiegel_VN.Chp01_E_FlowerMerchant, name: "E_FlowerMerchant" },
-            { id: "01_E_LeatherMerchant", scene: Spiegel_VN.Chp01_E_LeatherMerchant, name: "E_LeatherMerchant" },
-            { id: "01_02 Conversation Mama", scene: Spiegel_VN.Chp01_02_ConvoMother, name: "ConvoMother", },
-            { id: "01_03 MirrorMerchant", scene: Spiegel_VN.Chp01_03_IntroMirror, name: "IntroMirror" },
-            // *** CUTSCENES CHP01***
-            { id: "01_CS PerchaseMirror", scene: Spiegel_VN.Chp01_CS_PerchaseMirror, name: "CS: PerchaseMirror" },
-            { id: "01_CS Arrival Home", scene: Spiegel_VN.Chp01_CS_ArrivalHome, name: "CS: ArrivalHome" },
+            // {id: "01_00 IntroNarration",scene: Chp01_00_IntroNarration, name: "Intro Narration"},
+            // {id: "01_01 Intro Marketplace",scene: Chp01_01_IntroMarketplace, name: "Intro marketplace"}, 
+            // {id: "01_E_FlowerMerchant",scene: Chp01_E_FlowerMerchant, name: "E_FlowerMerchant"},
+            // { id: "01_E_LeatherMerchant", scene: Chp01_E_LeatherMerchant, name: "E_LeatherMerchant" },
+            // {id: "01_02 Conversation Mama", scene: Chp01_02_ConvoMother, name: "ConvoMother", },
+            // {id: "01_03 MirrorMerchant", scene: Chp01_03_IntroMirror, name: "IntroMirror"},
+            // // *** CUTSCENES CHP01***
+            // {id: "01_CS PerchaseMirror", scene: Chp01_CS_PerchaseMirror, name: "CS: PerchaseMirror"},
+            // {id: "01_CS Arrival Home", scene: Chp01_CS_ArrivalHome, name: "CS: ArrivalHome"},
             // // // // ***CHAPTER 02: FAMILY HOME ***
-            { id: "02_00 Arrival Home", scene: Spiegel_VN.Chp02_00_ArrivalHome, name: "02_00 ArrivalHome" },
-            { id: "02_01 Dinner at home", scene: Spiegel_VN.Chp02_01_Dinner, name: "Dinner" },
-            { id: "02_021 Test Mirror Kailani", scene: Spiegel_VN.Chp02_021_TestMirrorK, name: "Test mirror" },
-            { id: "02_021 Test Mirror Evarius", scene: Spiegel_VN.Chp02_021_TestMirrorE, name: "Test mirror" },
-            { id: "02_E Discover bedroom", scene: Spiegel_VN.Chp02_E_DiscoverBedroom, name: "E_Bedroom" },
-            { id: "02_03 Pick Herbs", scene: Spiegel_VN.Chp02_03_PickHerbs, name: "Herbs Garden" },
-            { id: "02_Kitchen", scene: Spiegel_VN.Chp02_Kitchen, name: "Kitchen" },
+            // {id: "02_00 Arrival Home",scene: Chp02_00_ArrivalHome, name: "02_00 ArrivalHome"},
+            // {id: "02_01 Dinner at home", scene: Chp02_01_Dinner, name: "Dinner"},
+            // {id: "02_021 Test Mirror Kailani", scene: Chp02_021_TestMirrorK, name: "Test mirror"},
+            // {id: "02_021 Test Mirror Evarius", scene: Chp02_021_TestMirrorE,name: "Test mirror"},
+            // {id: "02_E Discover bedroom", scene: Chp02_E_DiscoverBedroom, name: "E_Bedroom"},
+            // {id: "02_03 Pick Herbs", scene: Chp02_03_PickHerbs, name: "Herbs Garden"},
+            // {id: "02_Kitchen", scene: Chp02_Kitchen, name: "Kitchen"},
             // // CUTSCENES ***
             // *** CHAPTER 03: VILLAGE ***
-            { id: "03_00 New day", scene: Spiegel_VN.Chp03_00_NewDay, name: " New Day" },
-            { id: "03_01 Dressmaker", scene: Spiegel_VN.Chp03_01_Dressmaker, name: "Dressmaker" },
-            { id: "03_E Discover Forest", scene: Spiegel_VN.Chp03_E_DiscoverForest, name: "E_Forest" },
-            { id: "03_E Discover Library", scene: Spiegel_VN.Chp03_E_DiscoverLibrary, name: "E_Library" },
-            { id: "03_021 Chores with Kailani", scene: Spiegel_VN.Chp03_021_ChoresWithKailani, name: "Chores Kailani" },
-            { id: "03_CS Kailani is missing", scene: Spiegel_VN.Chp03_CS_KailaniMissing, name: "CS: Kailani is missing" },
-            { id: "03_CS Turmoil marketplace", scene: Spiegel_VN.Chp03_CS_TurmoilMarketplace, name: "CS: TurmoilMarketplace" },
+            // {id: "03_00 New day", scene: Chp03_00_NewDay, name: " New Day" },
+            // {id: "03_01 Dressmaker", scene: Chp03_01_Dressmaker, name: "Dressmaker"},
+            // {id: "03_E Discover Forest",scene: Chp03_E_DiscoverForest, name: "E_Forest"},
+            // {id: "03_E Discover Library", scene: Chp03_E_DiscoverLibrary, name: "E_Library"},
+            // {id: "03_021 Chores with Kailani",scene: Chp03_021_ChoresWithKailani, name: "Chores Kailani" },
+            // {id: "03_CS Kailani is missing", scene: Chp03_CS_KailaniMissing, name: "CS: Kailani is missing"},
+            // {id: "03_CS Turmoil marketplace", scene: Chp03_CS_TurmoilMarketplace, name: "CS: TurmoilMarketplace"},
             // // // *** CHAPTER 04 RESEARCH ***
-            { id: "04_00_Research Options", scene: Spiegel_VN.Chp04_00_ResearchOptions, name: "Research options" },
-            { id: "04_01 Talk with family", scene: Spiegel_VN.Chp04_01_TalkWithFamily, name: "Talk with family" },
-            { id: "04_03 Research library", scene: Spiegel_VN.Chp04_03_ResearchLibrary, name: "Research library" },
-            { id: "04_E_Examine mirror", scene: Spiegel_VN.Chp04_E_ExamineMirror, name: "Examine Mirror" },
+            // {id: "04_00_Research Options", scene: Chp04_00_ResearchOptions, name: "Research options"},
+            // {id: "04_01 Talk with family",scene: Chp04_01_TalkWithFamily, name: "Talk with family"},
+            // {id: "04_03 Research library", scene: Chp04_03_ResearchLibrary, name: "Research library"},
+            // {id: "04_E_Examine mirror",scene: Chp04_E_ExamineMirror,name: "Examine Mirror"},
             // // *** CHAPTER 05: FOREST
-            { id: "04_CS Entry forest", scene: Spiegel_VN.Chp04_CS_EntryForest, name: "Entry forest" },
-            { id: "TextRiddle", scene: Spiegel_VN.textRiddle, name: "TextRiddle" },
-            { id: "05_02 Convo Tree", scene: Spiegel_VN.Chp05_02_ConvoTree, name: "Convo tree" },
-            { id: "05_ConvoMother", scene: Spiegel_VN.Chp05_ConvoMother, name: "ConvoMother" },
+            // {id: "04_CS Entry forest", scene: Chp04_CS_EntryForest, name: "Entry forest"},
+            // {id: "TextRiddle", scene: textRiddle, name: "TextRiddle"},
+            // {id: "05_02 Convo Tree", scene: Chp05_02_ConvoTree, name: "Convo tree"},
+            // {id: "05_ConvoMother", scene: Chp05_ConvoMother, name: "ConvoMother"},
             // // // *** CHAPTER 06: WHARY
-            { id: "06_CS Arrival Meadow", scene: Spiegel_VN.Chp06_CS_ArrivalMeadow, name: "Arrival meadow" },
-            { id: "06_In Whary", scene: Spiegel_VN.Chp06_InWhary, name: "In Whary" },
-            { id: "06_ClothingStore", scene: Spiegel_VN.Chp06_ClothingStore, name: "In Whary" },
-            { id: "06_Inn", scene: Spiegel_VN.Chp06_Inn, name: "Inn" },
-            { id: "06_new day", scene: Spiegel_VN.Chp06_NewDay, name: "New day" },
+            // {id: "06_CS Arrival Meadow", scene: Chp06_CS_ArrivalMeadow, name: "Arrival meadow"},
+            // {id: "06_In Whary", scene: Chp06_InWhary, name: "In Whary"},
+            // {id: "06_ClothingStore", scene: Chp06_ClothingStore, name: "In Whary"},
+            // {id: "06_Inn", scene: Chp06_Inn, name: "Inn"},
+            // {id: "06_new day", scene: Chp06_NewDay, name: "New day"},
             // // // // *** CHAPTER 07:
-            { id: "07_Research Marketplace", scene: Spiegel_VN.Chp07_ResearchMarketplace, name: "Research Marketplace" },
-            { id: "07_Beggar", scene: Spiegel_VN.Chp07_Beggar, name: "Beggar scene" },
-            { id: "07_TalkToInnkeeper", scene: Spiegel_VN.Chp07_TalkToInnkeeper, name: "Talk to innkeeper" },
-            { id: "07_TalkToCook", scene: Spiegel_VN.Chp07_TalkToCook, name: "Talk to cook" },
+            // {id: "07_Research Marketplace", scene: Chp07_ResearchMarketplace, name: "Research Marketplace"},
+            // {id: "07_Beggar", scene: Chp07_Beggar, name: "Beggar scene"},
+            // {id: "07_TalkToInnkeeper", scene: Chp07_TalkToInnkeeper, name: "Talk to innkeeper"},
+            // {id: "07_TalkToCook", scene: Chp07_TalkToCook, name: "Talk to cook"},
             // // *** CHAPTER 10: CROSSING LAKE ***
-            { id: "08_Arrival lake", scene: Spiegel_VN.Chp08_ArrivalLake, name: "Arrival at lake" },
-            { id: "08_ImageRiddle", scene: Spiegel_VN.Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake", },
-            { id: "08_OnLake", scene: Spiegel_VN.Chp08_OnLake, name: "On lake" },
-            { id: "08_Arrival other side", scene: Spiegel_VN.Chp08_ArrivalOtherSide, name: "Arrival other side" },
-            { id: "08_Search hiding place", scene: Spiegel_VN.Chp08_SearchHidingPlace, name: "Search for hiding place" },
+            // {id: "08_Arrival lake", scene: Chp08_ArrivalLake, name: "Arrival at lake"},
+            // {id: "08_ImageRiddle", scene: Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake",},
+            // {id: "08_OnLake", scene: Chp08_OnLake, name: "On lake"},
+            // {id: "08_Arrival other side", scene: Chp08_ArrivalOtherSide, name: "Arrival other side"},
+            // {id: "08_Search hiding place", scene: Chp08_SearchHidingPlace, name: "Search for hiding place"},
             // // *** CHAPTER 12: ENTRY FACTORY
-            { id: "09_Enter factory", scene: Spiegel_VN.Chp09_EnterFactory, name: "Enter factory" },
-            { id: "09_In Factory", scene: Spiegel_VN.Chp09_InFactory, name: "In Factory" },
-            { id: "09_Scout Tower", scene: Spiegel_VN.Chp09_ScoutTower, name: "Scout Tower" },
+            // {id: "09_Enter factory", scene: Chp09_EnterFactory, name: "Enter factory"},
+            // {id: "09_In Factory", scene: Chp09_InFactory, name: "In Factory"},
+            // {id: "09_Scout Tower", scene: Chp09_ScoutTower, name: "Scout Tower"},
             // // *** CHAPTER 10: THE GREAT ORDEAL ***
             // {id: "13_01 Entry village", scene: Chp13_01_EntryVillage, name: "Entry village"},
             // {id: "13_02 Get into tower", scene: Chp13_02_GetIntoTower, name: "Go to tower"},
             // {id: "13_03 Entry tower", scene: Chp13_03_EntryTower, name: "Entry tower"},
             // // *** CHAPTER 10 Endings
             { id: "10_IntoTower", scene: Spiegel_VN.Chp10_IntoTower, name: "Destroy mirror" },
-            { id: "c", scene: Spiegel_VN.Chp10_MinigameDemon, name: "Destroy mirror" },
+            { id: "10_MinigameDemon", scene: Spiegel_VN.Chp10_MinigameDemon, name: "Destroy mirror" },
             { id: "Good Ending", scene: Spiegel_VN.GoodEnding, name: "Good Ending" },
             // {id: "Semi Good Ending", scene: SemiGoodEnding, name: "Semi good ending"},
             // {id: "Bad Ending",scene: BadEnding,name: "Bad Ending"},
@@ -1133,6 +1133,7 @@ var Spiegel_VN;
         theme_ordinaryworld: "./Assets/Music/Theme_OrdinaryWorld.wav",
         theme_mirrorworld_whary: "./Assets/Music/Theme_Mirrorworld_Whary.wav",
         theme_mirrorworld_factory: "./Assets/Music/Theme_Mirrorworld_Factory1.wav",
+        theme_DemonMinigame: "./Assets/Music/Theme_MinigameDemon.wav",
         //Soundeffekte SFX
         click: "Pfad",
     };
@@ -4674,13 +4675,13 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Zum zweiten Mal innerhalb weniger Tage wachst du auf und weißt zuerst nicht, wo du bist. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Und Kailani ganz nahe. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Na, auch schon wach?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wieso ist er immer vor dir auf den Beinen?");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Wir müssen runter! Und uns das Haus anschauen, aus dem gestern alle Menschen gekommen sind."');
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ganz früh heute Morgen sind sie auch reingelaufen, da habe ich sie gesehen."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Wieso hast du mich nicht geweckt? Wir hätten sie abfangen können!"');
@@ -4694,7 +4695,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp09_OutsideFactory);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Es ist genau so still und gruselig wie gestern. Von Nahem ist es riesig und wuchtig und wirkt eher wie eine Halle, statt einem Haus.");
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Wie sollen wir da reinkommen? Es gibt keine Türen!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Schau mal, dahinten ist ein Fenster geöffnet! Vielleicht können wir da einbrechen?"');
@@ -4781,7 +4782,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen. Trotzdem herrscht eine angespannte Stille.");
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(85, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Das ist … die Fabrik! Von der die Bettlerin gesprochen hat! Was ist hier los?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Es sieht aus, als ob sie etwas vorführen …"');
@@ -4791,7 +4792,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani!!! Da ist sie! KAILANI!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Deine Schwester steht in der Schlange mit den anderen Kuttentragenden. Sie sieht nicht auf, als du ihren Namen rufst. Du kannst es gar nicht glauben, Kailani zu sehen. Sie sieht erschöpft und fast gebrochen aus, Zustände, in denen du sie noch nie gesehen hast. Du willst losrennen und sie holen, doch Flynn hält deinen Ärmel fest.");
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(85, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Shh! Siehst du nicht die Wachen da drüben? Du kannst hier nicht einfach so durchrennen! Wir brauchen einen Plan."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich will keinen Plan! Meine Schwester ist dort drüben! Ich kann sie sehen und will sie holen!"');
@@ -4801,7 +4802,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Tränen laufen dir über das Gesicht. Trotzdem hat Flynn Recht; es wäre unsinnig gewesen, euch in Gefahr zu bringen. Trotzdem kannst du es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(85, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Sie ist wieder da!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaust ungläubig auf. Kailani steht wieder im Raum. Nur: sie sieht komplett anders aus. Eine lange Perücke bedeckt ihre schulterlangen, braunen Haare. Sie trägt ein pinkes Kleid und – es kann nicht anders sein – ein ausgestopftes Hinterteil. Sie geht in eine der Kabinen und beginnt, sich ebenfalls hin und her zu wiegen.");
@@ -4810,7 +4811,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani hat diesen Szenen zugeschaut, jeden Tag! Sie hat sich selbst im Spiegel gesehen – aber warte, das war nicht sie. Sondern jemand, der sie imitiert und getäuscht hat. Der Spiegel hat diese Kabine gezeigt!"');
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Meinst du, das Spiegelbild in deinem Handspiegel? Diese Halle ist also eine Spiegelbild-Fabrik?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Genau, in dem magischen Spiegel! Warte mal – woher weißt du denn, dass ich einen Handspiegel habe?"');
@@ -4875,18 +4876,24 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
                 case Chp10InTowerElementAnswers.iSayWindow:
+                    await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTower);
+                    Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaust aus dem Fenster und erschrickst. Obwohl du und Flynn erst in den Turm eingetreten seid, liegt der Boden plötzlich etliche Meter unter euch. Du blickst auf die graue Welt hinaus und erschauerst. Der Turm soll ungebetene Besucher wohl in die Irre führen. Du schüttelst den Kopf und blickst wieder nach vorne. Bloß nicht ablenken lassen.");
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
                 case Chp10InTowerElementAnswers.iSayContinue:
                     Spiegel_VN.dataForSave.pickedChp10IntoTowerContinue = true;
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, "Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks.");
+                    await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTower);
+                    Spiegel_VN.ƒS.update();
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Du hast Sorge, dass etwas aus dem Dunklen herab geflogen kommt, als du den ersten Schritt tust. Doch nichts passiert. Vorsichtig schleicht ihr euch hoch, bis du vor einer schwarzen Tür stehst.");
                     await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
                     await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                    await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_MinigameInstructions);
-                    await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                    Spiegel_VN.ƒS.Speech.clear();
+                    await Spiegel_VN.ƒS.Speech.tell("", "ACHTUNG! Hinter dieser Wendeltreppe haust der eitle Dämon. Du kannst nur an ihm vorbeikommen, wenn du ihn mit deinem Handspiegel ablenkst. Fange den Dämon also mit deinem Spiegel ein, bis er seinem Spiegelbild verfallen ist. Danach kannst du dich an ihm vorbeischleichen. Wähle dazu die Pfeiltasten. Aber Vorsicht! Du hast nur drei Versuche, sonst schnappt dich der Dämon und steckt dich zu Kailani in die Fabrik!");
+                    await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_Demontunnel);
+                    await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Demon, Spiegel_VN.characters.Demon.pose.pos2_angry, Spiegel_VN.ƒS.positionPercent(100, 100));
+                    await Spiegel_VN.ƒS.update();
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Demon, "Dich kriege ich schon noch!");
                     return "10_MinigameDemon";
                     break;
             }
@@ -4897,6 +4904,9 @@ var Spiegel_VN;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp10_MinigameDemon() {
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0, 0, false);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_DemonMinigame, 0.8, 1, true);
+        Spiegel_VN.ƒS.Character.hideAll();
         let Demontunnel = {
             name: "Tunnel",
             background: "./Assets/Backgrounds/Chapter10/Demontunnel.png"
@@ -5033,6 +5043,8 @@ var Spiegel_VN;
                 demonMood += 10;
             }
             Spiegel_VN.ƒS.update(0);
+            Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_DemonMinigame, 0, 0, false);
+            Spiegel_VN.ƒS.update();
         }
     }
     Spiegel_VN.Chp10_MinigameDemon = Chp10_MinigameDemon;
@@ -5041,6 +5053,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function GoodEnding() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_Mirrorroom);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0.8, 1, true);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du hast es geschafft! Der Dämon war ein paar Mal knapp dran, dich zu fangen, doch du bist ihm entwischt. Jetzt bist du in dem Spiegelzimmer angelangt, das die Vögel von außen gesehen haben. Tatsächlich stehen sechs große Spiegel aneinandergereiht in dem runden Raum.");
@@ -5064,19 +5077,19 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Alle Spiegel sind zerstört! Du schnappst nach Luft – das war anstrengender, als gedacht. Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Du hast alle kaputt gemacht!?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn erscheint und schaut sich entsetzt um.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Alle sechs Spiegel? Musste das wirklich sein?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn, bist du verrückt! Die Spiegel haben böse Magie durchgelassen. Natürlich musste ich sie zerstören. Wo warst du denn eigentlich?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, bist du verrückt! Die Spiegel haben böse Magie durchgelassen. Natürlich musste ich sie zerstören. Wo warst du denn eigentlich?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ach, nirgends … "');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er bückt sich und schaut die Splitter genauer an. Für ihn hast du jetzt aber keine Zeit mehr. Du gehst vorsichtig um die Splitter herum und trittst auf den Balkon, um herunterzuschauen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Welt hat den kleinen Rest an Farbe, den sie noch besaß, verloren. Was dich aber mehr erschreckt, ist der weite Blick. Du kannst sogar bis ganz über den See nach Whary schauen. Offensichtlich wollte der Dämon seine Augen überall haben. Der See, der vorher ein tiefes Blau war, ist nun – grau. Soweit dein Auge reicht, siehst du keine Farben. Whary hat seine bunten Fassaden durch trübe Hauswände eingetauscht. Die Zerstörung der Spiegel muss die Verbindungen zur Farbwelt gekappt haben!");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Das ist ja Wahnsinn! So schlimm sieht es gar nicht aus, finde ich …"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn ist, aus unerfindlichen Gründen, ziemlich heiter. Er strahlt und schaut herunter.");
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Schau mal, dort unten versammeln sich Leute! Die sehen ziemlich verwirrt aus."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Und tatsächlich ist ein kleiner Kreis von Menschen auf dem Platz vor dem Turm zusammengekommen. Ratlos stehen sie beieinander und beraten sich. Manche schütteln sich oder schauen sich um, wie wenn sie aus einer Trance erwacht sind.");
@@ -5089,24 +5102,24 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Vorbei an den Portraits, deren tote Augen dich im Halbdunklen verfolgen."');
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_TowerOutsideSlaves);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Wo ist Kailani? Ist sie vielleicht noch in der Fabrik? Die Spiegelzerstörung hat sie hoffentlich aus ihrem Dämmerzustand ge –"');
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_smile, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_smile, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani! KAILANI! Du bist wieder da! Ich kann es kaum fassen… Wie geht’s dir? Was ist passiert? Ich bin so erleichtert!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal. Wie geht’s dir?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ich bin dir so unendlich dankbar. Wirklich! Die Zeit hier war richtig schlimm. Also, wo fange ich an. Jetzt geht’s mir besser, nachdem ich befreit wurde. Aber vorher, puh, das war nicht einfach."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich. Der hat mir alles gezeigt, was ich wollte. Daheim ist halt alles so trist und langweilig, weißt du."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ich weiß auch nicht, war irgendwie peinlich, weißt. Weil ich doch so schön war im Spiegel und in echt nicht. Im Spiegel hatte ich ganz lange Haare, die haben toll geglänzt! Und eine schmale Taille. Große Brüste und einen super Hintern."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"So sehe ich ja gar nicht in echt aus. Aber im Spiegel fand’ ich das einfach schön. Und deshalb konnte ich nicht aufhören, zu schauen! Aber wie soll ich euch das erklären? Ihr sagt ja bloß, ich bin in echt hübsch. Aber das hat mir nicht wirklich was gebracht."');
@@ -5126,7 +5139,7 @@ var Spiegel_VN;
                 case Chp10GoodEndingElementAnswers1.iSayGrey:
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und dann bist du ganz grau geworden, weißt du noch? Ich dachte, dein Kleid wäre verwaschen, aber es war gar nicht so!"');
                     Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-                    Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
+                    await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Nee, das habe ich gar nicht gemerkt. Ich hab’ mich tagelang schlecht gefühlt, bis ich dann eines Tages den Spiegel in die Hand genommen hab’, wie immer, und der hat schon so komisch geblitzt. Da hätte ich was merken sollen."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Aber er hat nur mehr und mehr geblinkt, ich konnte gar nicht wegschauen, dann wurde alles schwarz. Aufgewacht bin ich dann in diesem Haus da drüben. Dort war alles grau und alle hatten große Angst. Wir haben gar nicht verstanden, was mit uns passiert."');
@@ -5139,11 +5152,11 @@ var Spiegel_VN;
         } while (!Spiegel_VN.dataForSave.pickedChp10GoodEndingContinue1);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Musstest du dann in die Fabrik?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ja, wir haben dann gearbeitet. Das war das Verrückteste: Die Bilder, die ich daheim im Spiegel gesehen hab’, die musste ich dann selbst produzieren! Ich musste Perücken anziehen und mich in ein Korsett einschnüren. Dann hab’ ich Polster um Brüste und Hintern bekommen. Tagein, tagaus, standen wir in diesen Kabinen. Die Jungs haben sich Sixpack- und Schulterpolster umgeschnürt. Ich weiß aber einfach nicht, wieso …"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und du hast das alles mitgekriegt?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn, der sich bis jetzt bei diesem Familientreffen zurückgehalten hat, mischt sich in das Gespräch ein. Als er sich euch zuwendet, siehst du etwas aus seiner Tasche aufblitzen. Das war vorher nicht da, da bist du dir sicher! Stellst du ihn zur Rede?");
@@ -5169,14 +5182,14 @@ var Spiegel_VN;
                 break;
         }
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Naja, es ist ein Splitter aus dem Spiegelzimmer. Ich fand die so schön und –"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, was für ein Blödsinn! Seit Tagen verhältst du dich komisch. Ich hatte immer den Eindruck, als wärst du eher an den Spiegeln interessiert, statt an Kailani. Und du hast dich so schnell bereitwillig erklärt, mir zu helfen, statt deine Ausbildung zu beginnen. Was ist denn mit dir los?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Natürlich wollte ich Kailani auch retten! Nur haben mich die Spiegel auch interessiert und –"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Lüg’ mich ja nicht an! Rück’ schon raus damit! Wir kennen uns zwar nicht lange, aber trotzdem haben wir einiges zusammen hinter uns. Ist dir unsere Freundschaft nichts wert?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Okay, ich geb’s auf. Ich war deshalb an den Spiegeln interessiert, weil –"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"– weil ich von meiner Heimat geschickt wurde, um die Spiegeltechnologie zu stehlen."');
@@ -5198,7 +5211,7 @@ var Spiegel_VN;
                 case Chp10GoodEndingElementAnswers3.iSayHome:
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Von wo kommst du denn?"');
                     Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-                    Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
+                    await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich komme von einer Welt namens Valde. Dort lebe ich in einer großen Stadt und habe die Mission erhalten, die Spiegeltechnologie von dieser Welt, Norovia, zu klauen."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Kopf schwirrt. Es gibt mehr Welten als nur deine und die Spiegelwelt? Flynn scheint deine Frage schon zu ahnen.");
@@ -5209,7 +5222,7 @@ var Spiegel_VN;
                     Spiegel_VN.dataForSave.pickedChp10GoodEndingContinue2 = true;
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und die Spiegeltechnologie willst du klauen, weil …?"');
                     Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-                    Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
+                    await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Mir wurde beauftragt, die Technologie mitzubringen. Damit wir in Varunomo, meiner Stadt, die Farbe benutzen können"');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Kopf schwirrt. Es gibt mehr Welten als nur deine und die Spiegelwelt? Flynn scheint deine Frage schon zu ahnen.");
@@ -5220,29 +5233,29 @@ var Spiegel_VN;
         } while (!Spiegel_VN.dataForSave.pickedChp10GoodEndingContinue2);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Aber bevor du mehr fragen kannst, erzählt Flynn weiter. Die Worte sprudeln nur so aus ihm heraus, und du hast den Eindruck, ihm fällt eine große Last von den Schultern.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Weißt du, ich wurde meinen Eltern als Kind weggenommen und in einem Trainingscamp zum Spion erzogen. Ich war in einem Lager mit lauter Jungs wie mich, die auch aufgekauft wurden. Und als ich diese Mission erhielt, war das für mich wie ein Ritterschlag! Ich durfte mich das erste Mal beweisen! Wie soll ich denn mit leeren Händen zurück? Das müsst ihr doch verstehen."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Du kannst doch nicht einfach diese Technologie mitnehmen? Hast du denn nicht verstanden, wie viel Leid diese Spiegel mit sich bringen? Ich musste mich komplett verstellen! Und vorher, da war ich todunglücklich. Wegen dieser blöden Bilder; nur, weil ich auch so aussehen wollte. Ich bin einem Vorbild hinterhergejagt, das es gar nicht gab! Die Spiegelbilder sind nicht echt! Und dadurch wurde ich krank."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_shrug_eyeroll, Spiegel_VN.ƒS.positionPercent(40, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_shrug_eyeroll, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Schau dich um, Flynn. Ich kenne dich zwar nicht und weiß auch nicht, was deine Leute mit dem Spiegel vorhaben. Aber ich muss dir wirklich sagen: wenn du diese Technologie mitnimmst und in deinem Land weiterführst, werden nur noch mehr Menschen verzweifeln. Ich wurde in eine Fabrik gesteckt und musste Bilder erzeugen, die anderen krank machten. Willst du das wirklich? Ich hab’ gelernt: Wir sollten mit uns selbst zufrieden sein, so wie wir aussehen. Das macht uns doch Besonders, diese kleinen Macken."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wow, was für eine Rede! Du bist unglaublich stolz auf deine kleine Schwester. Nicht nur die Tortur hat sie überstanden, sondern auch verstanden, was es mit ihr gemacht hat. Offensichtlich kämpft Flynn mit unterschiedlichen Gefühlen. Er ist sichtlich betroffen von unseren Reaktionen.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Da, wo ich herkomme, ist so vieles so anders und doch gleich. Die Überheblichkeit der Leute, das Verurteilen wegen Äußeren, ich dachte das wäre normal! Aber jetzt habe ich dich kennengelernt, und du warst die erste Person, die mir gezeigt hat, dass es auch anders geht."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deshalb hatte ich auch immer diese Polster an."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_I_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_I_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und natürlich hat Kailani Recht. Der Spiegel bringt nur Leid! Die Regierung in Varunomo will die Farbe aus den anderen Welten saugen und verkaufen. So wird nämlich die Farbe übertragen, mit Gefühlen, versteht ihr? Von der Person, die auf der anderen Seite des Spiegels ist, kann nur Farbe entnommen werden, wenn sie sich schlecht fühlt."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_II_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_II_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deshalb funktioniert die Technologie so, dass zuerst die Menschen traurig werden, wenn sie in den Spiegel schauen. Gleichzeitig sollen sie aber immer öfter reinschauen, damit nach und nach die Farbe entzogen werden kann. So gelangt die Farbe über den Spiegel zu den Menschen und die können sich dann bunt anziehen, wie wir in Whary gesehen haben."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums: ‘Die Magie verstärkt sich bei schlechten Gefühlen’ … das hatte er also damit gemeint!");
@@ -5256,17 +5269,17 @@ var Spiegel_VN;
             case Chp10GoodEndingElementAnswers4.iSayTakeFlynn:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Willst du mit uns nach Hause kommen? Mama und Mutti nehmen dich sicher gerne auf! Und dort kannst du deine Ausbildung fertig machen, oder auch Tischlern, Gartenarbeit oder sonst was lernen. Was meinst du?"');
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-                Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
+                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Oh … ich weiß gar nicht, was ich sagen soll! Meint ihr, meine Regierung findet mich dort nicht?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Auf keinen Fall!"');
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
-                Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
+                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Du hast geholfen, mich zu retten, Jetzt sind wir dran mit retten!"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kommt mit, wir reisen nach Hause. Ich habe dieses Grau einfach satt."');
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-                Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
+                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ich bin so froh, wieder heimzugehen. Dort ist zwar alles langweilig und niemand hat schicke Klamotten an. Dafür lieben wir uns, so wie wir sind!"');
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_ArrivalFactory);
@@ -5280,6 +5293,8 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_CS_ArrivalHome);
+                Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0, 0, false);
+                Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 1, true);
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_laugh, Spiegel_VN.ƒS.positionPercent(80, 100));
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.outfit1_neutral_happy, Spiegel_VN.ƒS.positionPercent(45, 100));
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos3_laugh, Spiegel_VN.ƒS.positionPercent(10, 100));

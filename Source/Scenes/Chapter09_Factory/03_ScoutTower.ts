@@ -2,7 +2,7 @@ namespace Spiegel_VN {
   export async function Chp09_ScoutTower(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp10_TowerOutside)
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 
     await ƒS.Speech.tell(characters.Flynn, '"Verrückt, diese Fabrik! Meinst du, der Turm hängt damit zusammen?"');
@@ -72,7 +72,7 @@ namespace Spiegel_VN {
     let answerBirds: String = await ƒS.Speech.getInput();
 
 
-      await ƒS.Speech.tell(characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Und das Spiegelzimmer müssen wir zerstören! Hast du die Vögel gehört, Flynn? Wir können es schaffen, ich bin mir sicher! Endlich weiß ich, wie ich Kailani retten kann! Wir müssen diese Spiegel ein für alle Mal zerstören. Dann können wir nach Hause."');
     
     ƒS.Character.hideAll();

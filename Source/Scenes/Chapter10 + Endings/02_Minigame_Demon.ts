@@ -1,5 +1,8 @@
 namespace Spiegel_VN {
   export async function Chp10_MinigameDemon(): ƒS.SceneReturn {
+        ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
+    ƒS.Sound.fade(music.theme_DemonMinigame, 0.8, 1, true);
+    ƒS.Character.hideAll();
 
     let Demontunnel= {
       name: "Tunnel",
@@ -166,6 +169,8 @@ namespace Spiegel_VN {
         demonMood += 10;
       }
       ƒS.update(0);
+      ƒS.Sound.fade(music.theme_DemonMinigame, 0, 0, false);
+    ƒS.update();
     }
   }
 }
