@@ -1,7 +1,6 @@
 namespace Spiegel_VN {
   export async function Chp08_ArrivalOtherSide(): ƒS.SceneReturn {
-    ƒS.Sound.fade(music.theme_mirrorworld_whary, 0, 0, false);
-    ƒS.Sound.fade(music.theme_mirrorworld_factory, 0.8, 1, true);
+    
     ƒS.update();
 
     // ** RANDOM TEXT ***

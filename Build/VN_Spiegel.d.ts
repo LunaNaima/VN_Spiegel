@@ -68,6 +68,12 @@ declare namespace Spiegel_VN {
         pickedChp08ConvoContinue: boolean;
         pickedChp08Left: boolean;
         pickedChp08Right: boolean;
+        pickedChp08HidingPlaceContinue: boolean;
+        pickedChp09InFactoryContinue: boolean;
+        pickedChp09ScoutTowerBirds: boolean;
+        pickedChp10IntoTowerContinue: boolean;
+        pickedChp10GoodEndingContinue1: boolean;
+        pickedChp10GoodEndingContinue2: boolean;
     };
     let inventory: {
         apple: {
@@ -282,6 +288,24 @@ declare namespace Spiegel_VN {
                 pos3_arms2_angry: string;
                 pos3_arms2_sad: string;
                 pos3_arms2_smile: string;
+                wo_angry: string;
+                wo_happy: string;
+                wo_I_skeptical: string;
+                wo_II_skeptical: string;
+                wo_shocked: string;
+                grey_wo_skeptical: string;
+                grey_wo_angry: string;
+                grey_wo_I_skeptical: string;
+                grey_wo_II_skeptical: string;
+                grey_wo_shocked: string;
+                grey_blue_confused: string;
+                grey_blue_confused_sad: string;
+                grey_blue_happy: string;
+                grey_blue_crossed_angry: string;
+                grey_blue_crossed_shocked: string;
+                grey_blue_crossed_neutral: string;
+                grey_blue_crossed_sad: string;
+                grey_blue_crossed_smile: string;
             };
         };
         flowerMerchant: {
@@ -377,6 +401,10 @@ declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     let locations: {
+        WitchInTheWoods: {
+            name: string;
+            background: string;
+        };
         Chp01_01_IntroMarketplace: {
             name: string;
             background: string;
@@ -677,7 +705,27 @@ declare namespace Spiegel_VN {
             name: string;
             background: string;
         };
-        Chp10_Tunnel1: {
+        Chp09_InFactory: {
+            name: string;
+            background: string;
+        };
+        Chp09_InFactoryWK: {
+            name: string;
+            background: string;
+        };
+        Chp10_TowerOutside: {
+            name: string;
+            background: string;
+        };
+        Chp10_TowerOutsideBirds: {
+            name: string;
+            background: string;
+        };
+        Chp10_TowerOutsideSlaves: {
+            name: string;
+            background: string;
+        };
+        Chp10_GroundFloorTower: {
             name: string;
             background: string;
         };
@@ -686,6 +734,14 @@ declare namespace Spiegel_VN {
             background: string;
         };
         Chp10_MinigameInstructions: {
+            name: string;
+            background: string;
+        };
+        Chp10_Mirrorroom: {
+            name: string;
+            background: string;
+        };
+        Chp10_Demontunnel: {
             name: string;
             background: string;
         };
@@ -726,6 +782,9 @@ declare namespace Spiegel_VN {
         kitchen: string;
         water: string;
         wood: string;
+        listeningriddle_demon: string;
+        listeningriddle_mirror: string;
+        listeningriddle_destroy: string;
     };
 }
 declare namespace Spiegel_VN {
@@ -952,34 +1011,22 @@ declare namespace Spiegel_VN {
     function Chp08_SearchHidingPlace(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_01_SearchHidingPlace(): ƒS.SceneReturn;
+    function Chp09_EnterFactory(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_02_FindIron(): ƒS.SceneReturn;
+    function Chp09_ScoutTower(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_03_WatchFactory(): ƒS.SceneReturn;
+    function Chp09_InFactory(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_04_TryBreakIn(): ƒS.SceneReturn;
+    function Chp10_IntoTower(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_E_DiscoverForest(): ƒS.SceneReturn;
+    function Chp10_MinigameDemon(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp11_E_DiscoverHuts(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp11_E_DiscoverTower(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp11_CS_Sleep(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_011_SneakIn(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_012_SneakAmongSlaves(): ƒS.SceneReturn;
+    function GoodEnding(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Chp12_02_EnterFactory(): ƒS.SceneReturn;
@@ -988,123 +1035,10 @@ declare namespace Spiegel_VN {
     function Chp12_031_TalkToSlaves(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp12_032_SearchForKailani(): ƒS.SceneReturn;
+    function End(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp12_033_ListenToGuards(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_051_BirdsOfferHelp(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_052_MakeAWish(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_04_BackToHidingPlace(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_E_DiscoverVillage(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_E_Productionsite(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp12_CS_TalkToFlynn(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_01_EntryVillage(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_02_GetIntoTower(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_03_EntryTower(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_04_SneakPastDemon(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_E_DiscoverFamilyPortrait(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_E_DiscoverLockedDoor(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_E_DiscoverSneakAround(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_E_DiscoverTowerWindow(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_E_DiscoverWatchGuard(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp13_CS_EntryMirrorRoom(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp141_01_DestroyMirror(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp141_02_DemonDies(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp14_CS_BalconyTower(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp142_01_RealizationMirror(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp142_02_CaughtByDemon(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp142_03_TransformationSlaves(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp142_End_EmptyScene(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp15_01_ReunionKailani(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp15_E_DiscoverDemonRoom(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp15_E_DiscoverMirrorRoom(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp15_E_TalkToFreedVillagers(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp15_CS_GoToLake(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_01_ConfrontationFlynn(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_021_GoHomeAlone(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_022_GoHomeWithFlynn(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_02_MakeAWish(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_CS_ReunionFamily(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp16_End_EmptyScene(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function BadEnding(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function GoodEnding(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function SemiGoodEnding(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
+    function EmptyScene(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Auswahlmöglichkeiten(): ƒS.SceneReturn;
@@ -1130,7 +1064,4 @@ declare let y: number;
 declare let z: number;
 declare namespace Spiegel_VN {
     function textRiddle(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function testTunnel(): ƒS.SceneReturn;
 }

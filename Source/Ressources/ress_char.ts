@@ -215,6 +215,30 @@ namespace Spiegel_VN {
         pos3_arms2_angry: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_angry.png",
         pos3_arms2_sad: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_sad.png",
         pos3_arms2_smile: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_smile.png",
+        // W/O outfit
+        wo_angry: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_angry.png",
+        wo_happy: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_happy.png",
+        wo_I_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_I_skeptical.png",
+        wo_II_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_II_sad.png",
+        wo_shocked: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_shocked.png",
+        // Grey outfit
+        grey_wo_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_skeptical.png",
+        grey_wo_angry: "./Assets/Characters/Flynn/Outfit3/grey_wo_angry.png",
+        grey_wo_I_skeptical: "./Assets/Characters/Flynn/Outfit3/grey_wo_I_skeptical.png",
+        grey_wo_II_skeptical: "./Assets/Characters/Flynn/Outfit3/grey_wo_II_sad.png",
+        grey_wo_shocked: "./Assets/Characters/Flynn/Outfit3/grey_wo_shocked.png",
+
+        grey_blue_confused: "./Assets/Characters/Flynn/Outfit3/grey_blue_confused.png",
+        grey_blue_confused_sad: "./Assets/Characters/Flynn/Outfit3/grey_blue_confused_sad.png",
+        grey_blue_happy: "./Assets/Characters/Flynn/Outfit3/grey_blue_neutral_happy.png",
+        grey_blue_crossed_angry: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_angry.png",
+        grey_blue_crossed_shocked: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_shocked.png",
+        grey_blue_crossed_neutral: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_neutral.png",
+        grey_blue_crossed_sad: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_sad.png",
+        grey_blue_crossed_smile: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_smile_II.png",
+
+
+
       },
     },
 

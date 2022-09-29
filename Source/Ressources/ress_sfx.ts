@@ -11,5 +11,11 @@ namespace Spiegel_VN {
     kitchen: "./Assets/Soundeffekte/kitchen.mp3",
     water: "./Assets/Soundeffekte/relaxing-mountains-rivers-streams-running-water.mp3",
     wood: "./Assets/Soundeffekte/woodcutter.mp3",
+
+    listeningriddle_demon: "./Assets/Soundeffekte/Dämon_Cave.wav",
+    listeningriddle_mirror: "./Assets/Soundeffekte/Spiegelzimmer_cave.wav",
+    listeningriddle_destroy: "./Assets/Soundeffekte/Zerstören_cave.wav",
+
+
   };
 }

@@ -45,7 +45,7 @@ namespace Spiegel_VN {
           ƒS.update();
           await ƒS.Speech.tell(characters.Flynn, '"Achwas! Das hat doch damit nichts zu tun."');
           await ƒS.Speech.tell(characters.maincharacter, '"Meinst du nicht? Geht es den Leuten nicht darum, dass andere sich mit ihnen vergleichen können und so mehr Aufmerksamkeit kriegen? Ich glaube, schon ..."');
-          await ƒS.Speech.tell(characters.Flynn, "Hm.");
+          await ƒS.Speech.tell(characters.Flynn, '"Hm."');
           ƒS.Character.hideAll();
           ƒS.Speech.clear();
           break;
@@ -62,6 +62,8 @@ namespace Spiegel_VN {
         case Chp08ConvoFlynnElementAnswers.iSayContinue:
           dataForSave.pickedChp08ConvoContinue = true;
           await ƒS.Location.show(locations.Chp08_ArrivalFactory);
+          ƒS.Sound.fade(music.theme_mirrorworld_whary, 0, 0, false);
+    ƒS.Sound.fade(music.theme_mirrorworld_factory, 0.8, 1, true);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
           await ƒS.Speech.tell(characters.maincharacter, "Euer Boot driftet näher an die Häuser heran, die direkt am Ufer des Sees stehen. Du reibst dir die Augen, aber – alles ist grau! Du schaust an dir herunter – auch grau. Flynns buntes Outfit hat nun alle Farbe verloren. Einzig der Turm, der bedrohlich in die Höhe ragt, ist in knallorange.");
           await ƒS.Speech.tell(characters.maincharacter, '"Warum ist alles grau?"');

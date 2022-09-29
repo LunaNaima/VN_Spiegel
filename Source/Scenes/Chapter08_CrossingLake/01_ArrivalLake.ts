@@ -60,7 +60,8 @@ namespace Spiegel_VN {
 
     // if (dataForSave.pickedRightChoice) {
     ƒS.Speech.clear();
-      return "08_ImageRiddle";
+    // return "08_ImageRiddle";
+    return "08_OnLake";
     }
   }
 

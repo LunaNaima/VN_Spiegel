@@ -1,7 +1,10 @@
 namespace Spiegel_VN {
   // *** BACKGROUNDS ***
   export let locations = {
-
+WitchInTheWoods: {
+      name: "Witch in the woods",
+      background: "./Assets/Backgrounds/Chapter01/Witch.png"
+    },
     // *** CHAPTER 01 ***
     Chp01_01_IntroMarketplace: {
       name: "Intro_Marktplatz",
@@ -399,9 +402,34 @@ namespace Spiegel_VN {
       background:
         "./Assets/Backgrounds/Chapter09/Outside_Factory.png"
     },
+    Chp09_InFactory: {
+      name: "In factory",
+      background:
+        "./Assets/Backgrounds/Chapter09/InsideFactory.png"
+    },
+    Chp09_InFactoryWK: {
+      name: "In factory",
+      background:
+        "./Assets/Backgrounds/Chapter09/InsideFactory_Kailani.png"
+    },
 
     // *** CHAPTER 10 ***
-    Chp10_Tunnel1: {
+    Chp10_TowerOutside: {
+      name: "Tower outside",
+      background:
+        "./Assets/Backgrounds/Chapter10/OutsideTower.png"
+    },
+    Chp10_TowerOutsideBirds: {
+      name: "Tower outside birds",
+      background:
+        "./Assets/Backgrounds/Chapter10/OutsideTowerBirds.png"
+    },
+    Chp10_TowerOutsideSlaves: {
+      name: "Tower outside slaves",
+      background:
+        "./Assets/Backgrounds/Chapter10/OutsideTowerSlaves.png"
+    },
+    Chp10_GroundFloorTower: {
       name: "Tunnel 1",
       background:
         "./Assets/Backgrounds/Chapter10/Tunnel1.png"
@@ -415,6 +443,16 @@ namespace Spiegel_VN {
       name: "Portrait",
       background:
         "./Assets/Backgrounds/Chapter10/Minigame_Instructions.png"
+    },
+    Chp10_Mirrorroom: {
+      name: "Portrait",
+      background:
+        "./Assets/Backgrounds/Chapter10/Mirrorroom.png"
+    },
+    Chp10_Demontunnel: {
+      name: "Demon tunnel",
+      background:
+        "./Assets/Backgrounds/Chapter10/Demontunnel.png"
     },
     // *** TRANSITION BETWEEN CHAPTERS ***
     black: {

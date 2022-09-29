@@ -8,17 +8,22 @@ namespace Spiegel_VN {
 
     await ƒS.Location.show(locLake);
     ƒS.update(0);
-
-    createHitbox(0);
-    createHitbox(1);
-    createHitbox(2);
-    createHitbox(3);
-    createHitbox(4);
-    createHitbox(5);
-    createHitbox(6);
-    createHitbox(7);
+    let hitboxes: HTMLSpanElement[] = // Von Jonas Plotzky programmiert
+      [
+        createHitbox(0),
+        createHitbox(1),
+        createHitbox(2),
+        createHitbox(3),
+        createHitbox(4),
+        createHitbox(5),
+        createHitbox(6),
+        createHitbox(7),
+      ];
 
     await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
+    for (const hitbox of hitboxes) { // Von Jonas Plotzky programmiert
+      hitbox.remove();
+    }
 
 
     // -------------------
@@ -52,9 +57,7 @@ namespace Spiegel_VN {
           break;
         case "hit4":
           console.log("Schilf");
-          ƒS.Speech.tell("", "Perfekt. Hinter dem Schilf liegt ein Boot.");
-          dataForSave.pickedBoat = true;
-          console.log("result abfrage", dataForSave.pickedBoat)
+          ƒS.Speech.tell("", "Perfekt. Hinter dem Schilf liegt ein Boot. Drücke die Leertaste.");
           break;
         case "hit5":
           console.log("Vögel");
@@ -66,6 +69,7 @@ namespace Spiegel_VN {
           break;
       }
     }
+
 
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_smile2, ƒS.positionPercent(70, 100));
         ƒS.update();
