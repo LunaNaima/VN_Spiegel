@@ -33,6 +33,7 @@ declare namespace Spiegel_VN {
         pickedChp02_TestWithEvarius: boolean;
         pickedChp02_PickHerbsGarden: boolean;
         pickedChp02_FightNeighbor: boolean;
+        pickedChp02MirrorScenesContinue: boolean;
         pickedChp03_Dressmaker: boolean;
         pickedChp03_ChoresWithKailani: boolean;
         pickedChp03_SearchGarden: boolean;
@@ -74,6 +75,9 @@ declare namespace Spiegel_VN {
         pickedChp10IntoTowerContinue: boolean;
         pickedChp10GoodEndingContinue1: boolean;
         pickedChp10GoodEndingContinue2: boolean;
+        pickedChp10SemiGoodEndingContinue1: boolean;
+        pickedChp10SemiGoodEndingContinue2: boolean;
+        pickedChp10BadEndingContinue2: boolean;
     };
     let inventory: {
         apple: {
@@ -689,6 +693,10 @@ declare namespace Spiegel_VN {
             name: string;
             background: string;
         };
+        Chp08_ForestPathHammer: {
+            name: string;
+            background: string;
+        };
         Chp08_HidingPlace: {
             name: string;
             background: string;
@@ -964,6 +972,9 @@ declare namespace Spiegel_VN {
     function Chp04_CS_EntryForest(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
+    function textRiddle(): ƒS.SceneReturn;
+}
+declare namespace Spiegel_VN {
     function Chp05_02_ConvoTree(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
@@ -1030,10 +1041,10 @@ declare namespace Spiegel_VN {
     function GoodEnding(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp12_02_EnterFactory(): ƒS.SceneReturn;
+    function SemiGoodEnding(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp12_031_TalkToSlaves(): ƒS.SceneReturn;
+    function BadEnding(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function End(): ƒS.SceneReturn;
@@ -1063,6 +1074,3 @@ declare let weihnachtsdeko: string;
 declare let x: number;
 declare let y: number;
 declare let z: number;
-declare namespace Spiegel_VN {
-    function textRiddle(): ƒS.SceneReturn;
-}

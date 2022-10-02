@@ -1,12 +1,13 @@
 namespace Spiegel_VN {
   export async function Chp09_ScoutTower(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp10_TowerOutside)
+    ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 
     await ƒS.Speech.tell(characters.Flynn, '"Verrückt, diese Fabrik! Meinst du, der Turm hängt damit zusammen?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Wieso bist du denn so versessen auf den Turm? Meine Schwester ist da drin und muss ein Theater verrichten! Ich habe sie endlich gefunden und muss sie da rausholen."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Wieso bist du denn so versessen auf den Turm? Meine Schwester ist da drin und muss ein Theater verrichten!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Ich bin mir ziemlich sicher, dass der Dämon im Turm sitzt. Willst du dem wirklich begegnen?"');
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(70, 100));
@@ -73,7 +74,7 @@ namespace Spiegel_VN {
 
 
     await ƒS.Speech.tell(characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Und das Spiegelzimmer müssen wir zerstören! Hast du die Vögel gehört, Flynn? Wir können es schaffen, ich bin mir sicher! Endlich weiß ich, wie ich Kailani retten kann! Wir müssen diese Spiegel ein für alle Mal zerstören. Dann können wir nach Hause."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Und das Spiegelzimmer müssen wir zerstören! Hast du die Vögel gehört, Flynn? Wir können es schaffen, ich bin mir sicher! Wir müssen diese Spiegel ein für alle Mal zerstören. Dann können wir nach Hause."');
     
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_smile, ƒS.positionPercent(70, 100));

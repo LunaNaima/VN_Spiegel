@@ -10,14 +10,14 @@ await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_angry2, ƒ
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     dataForSave.pickedChp04TalkToFamily = true;
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Also. Es ist etwas passiert. Pantro, dein Klassenkamerad, Evarius, ist auch wie vom Boden verschluckt."');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin mir sicher, Kailani ist nicht einfach spazieren gegangen! Es muss etwas Schlimmes passiert sein!"');
+    await ƒS.Speech.tell(characters.Evarius, '"Also. Es ist etwas passiert. Pantro, mein Klassenkamerad, ist auch wie vom Boden verschluckt."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Es muss etwas Schlimmes passiert sein!"');
     ƒS.Character.hide(characters.Mutti);
     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress1_basket_frown, ƒS.positionPercent(55,100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Mutti, '"Pantro ist auch weg?"');
-    await ƒS.Speech.tell(characters.Mama, '"Woher weißt du das denn? Bist du dir sicher, dass er nicht auch kurz in den Wald ist? Nur, weil seine Eltern ihn nicht sofort finden, heißt es nicht, dass er gleich weg ist."');
-    await ƒS.Speech.tell(characters.Mutti, '"Leijla, meinst du, es ist der richtige Zeitpunkt, zweifelnd zu sein? Erzähl’ doch mal, Schatz."');
+    await ƒS.Speech.tell(characters.Mama, '"Woher weißt du das denn? Bist du dir sicher, dass er nicht auch kurz in den Wald ist?"');
+    await ƒS.Speech.tell(characters.Mutti, '"Leijla, meinst du, es ist der richtige Zeitpunkt, zweifelnd zu sein?"');
 
      let Chp04TalkFamilyElementAnswers = {
       iSayCoincidence: "Das ist kein Zufall.",
@@ -30,32 +30,33 @@ await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_angry2, ƒ
     // *** RESPONSES ***
     switch (Chp04TalkFamilyElement) {
       case Chp04TalkFamilyElementAnswers.iSayCoincidence:
-        await ƒS.Speech.tell(characters.maincharacter, '"Pantro war auch bleich! Und zurückgezogen! So hat das zumindest seine Mutter gesagt."');
+        await ƒS.Speech.tell(characters.Evarius, '"Pantro war auch bleich! Und zurückgezogen! So hat das zumindest seine Mutter gesagt."');
         await ƒS.Speech.tell(characters.Mutti, '"Bleich? Was meinst du damit?"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Heute Mittag war ich doch mit Kailani unterwegs. Sie hat so unausgeschlafen gewirkt. Jetzt im Nachhinein fällt mir auf, wie grau sie war. Sie war wirklich blasser als sonst. Aber sie wollte mir nicht erzählen, was sie bedrückt hat… Ich hätte weiter bohren sollen."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Heute Mittag war ich doch mit Kailani unterwegs. Jetzt im Nachhinein fällt mir auf, wie grau sie war. Sie war wirklich blasser als sonst. Aber sie wollte mir nicht erzählen, was sie bedrückt hat."');
         ƒS.Character.hide(characters.Mama);
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_hand_laugh, ƒS.positionPercent(80, 100));
         ƒS.update();
         await ƒS.Speech.tell(characters.Mama, '"Vielleicht ist sie gar nicht weg. Beruhige dich doch erstmal."');
-        await ƒS.Speech.tell(characters.Mutti, '"Ich verstehe nicht, was passiert ist. Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
+        await ƒS.Speech.tell(characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
         ƒS.Speech.clear();
         break;
       
       case Chp04TalkFamilyElementAnswers.iSayPointless:
         await ƒS.Speech.tell(characters.maincharacter, '"Ach, ich weiß auch nicht weiter. Was ist, wenn sie schon über alle Berge ist?"');
         await ƒS.Speech.tell(characters.Evarius, '"Kaili taucht schon noch auf!"');
-        await ƒS.Speech.tell(characters.Mutti, '"Ich verstehe nicht, was passiert ist. Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
+        await ƒS.Speech.tell(characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
         ƒS.Speech.clear();
         break;
 
       case Chp04TalkFamilyElementAnswers.iSayMirror:
-        await ƒS.Speech.tell(characters.maincharacter, '"Pantros Mutter hat erzählt, dass er kurz vor seinem Verschwinden ziemlich abweisend war. Dazu war er seltsam blass. Und den gleichen Eindruck hatte ich von Kailani, als ich heute Mittag mit ihr unterwegs war! Sie hat nur von diesem Spiegel erzählt …"');
+        await ƒS.Speech.tell(characters.Evarius, '"Pantros Mutter hat erzählt, dass er kurz vor seinem Verschwinden ziemlich abweisend war. Dazu war er seltsam blass."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Und den gleichen Eindruck hatte ich von Kailani, als ich heute Mittag mit ihr unterwegs war! Sie hat nur von diesem Spiegel erzählt …"');
         await ƒS.Speech.tell(characters.Mama, '"Der Spiegel, den wir letzte Woche zusammen gekauft haben? Hat sie ihn etwa benutzt?"');
 
         ƒS.Character.hide(characters.Mutti);
         await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smirk, ƒS.positionPercent(55, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Mutti, '"Ich habe ihn ihr gegeben, weil sie so gern damit gespielt hat… Oh Gott, was ist, wenn ich dadurch etwas ausgelöst habe und sie deshalb weggerannt ist?"');
+        await ƒS.Speech.tell(characters.Mutti, '"Ich habe ihn ihr gegeben, weil sie so gern damit gespielt hat… "');
         ƒS.Character.hide(characters.Mama);
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_laugh2, ƒS.positionPercent(80, 100));
         ƒS.update();
@@ -70,7 +71,7 @@ await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_angry2, ƒ
     ƒS.Character.hide(characters.Evarius);
     ƒS.update();
 
-            await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt. Ich sage dir das nur, weil ich glaube dass wirklich etwas Grausames mit Kailani geschehen ist."');
+            await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt. Ich sage dir das nur, weil ich glaube dass wirklich etwas Schlimmes mit Kailani geschehen ist."');
             await ƒS.Speech.tell(characters.Mutti, '"Also: wie du weißt, beschäftige ich mich gerne mit der Vergangenheit und Magie. Ich bin der festen Überzeugung, dass Magie noch heute existiert."');
 
     let Chp04TalkFamilyElementAnswers1 = {

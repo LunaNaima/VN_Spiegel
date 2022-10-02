@@ -7,7 +7,7 @@ namespace Spiegel_VN {
     await ƒS.update();
       
       // ** RANDOM TEXT ***
-    let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
+    let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 4);
     switch (randomTextChp03NewDay) {
       case 1:
         ƒS.Character.hideAll();
@@ -40,7 +40,7 @@ namespace Spiegel_VN {
     }
 
     let Chp03PickSceneElementAnswers = {
-      PickSceneDressmaker: "Jacken abholen",
+      // PickSceneDressmaker: "Jacken abholen",
       PickSceneChoresWithKailani: "Mit Kailani Hausarbeiten machen",
       PickSceneDiscoverForest: "(Erkunden) Im Wald rumgucken",
       PickSceneDiscoverLibrary: "(Erkunden) Die Bücherei erkunden",
@@ -48,15 +48,15 @@ namespace Spiegel_VN {
     };
 
     if (
-      !dataForSave.pickedChp03_Dressmaker ||
+      // !dataForSave.pickedChp03_Dressmaker ||
       !dataForSave.pickedChp03_ChoresWithKailani
     ) {
       delete Chp03PickSceneElementAnswers.PickSceneContinue;
     }
 
-    if (dataForSave.pickedChp03_Dressmaker) {
-      delete Chp03PickSceneElementAnswers.PickSceneDressmaker;
-    }
+    // if (dataForSave.pickedChp03_Dressmaker) {
+    //   delete Chp03PickSceneElementAnswers.PickSceneDressmaker;
+    // }
     if (dataForSave.pickedChp03_ChoresWithKailani) {
       delete Chp03PickSceneElementAnswers.PickSceneChoresWithKailani;
     }
@@ -68,11 +68,11 @@ namespace Spiegel_VN {
 
     // *** RESPONSES ***
     switch (Chp03PickSceneElement) {
-      case Chp03PickSceneElementAnswers.PickSceneDressmaker:
-        await ƒS.Speech.tell(characters.maincharacter, '"Gut, dann geh` ich mal zum Schneider!"');
-        ƒS.Speech.clear();
-        return "03_01 Dressmaker"; 
-        break;
+      // case Chp03PickSceneElementAnswers.PickSceneDressmaker:
+      //   await ƒS.Speech.tell(characters.maincharacter, '"Gut, dann geh` ich mal zum Schneider!"');
+      //   ƒS.Speech.clear();
+      //   return "03_01 Dressmaker"; 
+      //   break;
 
       case Chp03PickSceneElementAnswers.PickSceneChoresWithKailani:
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_shrug_eyeroll, ƒS.positionPercent(45, 100));

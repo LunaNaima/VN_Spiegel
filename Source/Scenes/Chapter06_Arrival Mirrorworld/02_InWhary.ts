@@ -1,6 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp06_InWhary(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp06_InWharyPeople);
+
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     // do {

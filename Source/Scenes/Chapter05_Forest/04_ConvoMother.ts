@@ -17,8 +17,8 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mama, '"Mitten in der Nacht gehst du nirgends hin. Komm, wir besprechen das morgen!"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Du verstehst nicht, ich muss los! Ich kann nicht bleiben! Ich muss Kailani retten!"');
-    await ƒS.Speech.tell(characters.Mama, '"Du hast mit deiner Mutter gesprochen, nicht wahr…Ich weiß nicht, was sie dir gesagt hat. Aber du kannst nicht einfach losziehen. Wohin willst du überhaupt?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Du verstehst nicht, ich muss los! Ich muss Kailani retten!"');
+    await ƒS.Speech.tell(characters.Mama, '"Du hast mit deiner Mutter gesprochen, nicht wahr … Ich weiß nicht, was sie dir gesagt hat. Aber du kannst nicht einfach losziehen."');
 
     let Chp05ConvoMotherElementAnswers = {
       iSayLie: "Lügen",
@@ -66,7 +66,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Mama, '"Du hast recht. Ich sehe dich noch als Kind, und nicht als starke und mutige Person."');
     await ƒS.Speech.tell(characters.Mama, '"Wenn du unbedingt gehen willst, dann tu es. Ich vertraue dir, in Ordnung? Aber bitte komme zurück, Liebling."');
-    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
+    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Hammer-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
 
     let Chp05ConvoMotherElementAnswers2 = {
       iSayTake: "Annehmen",
@@ -92,7 +92,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Mama, '"Bitte pass’ auf dich auf. Und komm zurück. Wir warten auf euch!"');
     ƒS.Character.hideAll();
     ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Mama wendet sich ab. Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");
+        await ƒS.Speech.tell(characters.maincharacter, "Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");
         await ƒS.Speech.tell(characters.maincharacter, "Das Geräusch tut dir im Herzen weh. Dir kommt das alles surreal vor. Aber packen solltest du trotzdem. Was willst du mitnehmen? Du kannst nur eine Sache einpacken!");
     
     
@@ -129,7 +129,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Die Kirchenglocken im Dorf schlagen 23 Uhr. Bevor du den Mut verlierst, drehst du dich um und verlässt das Haus.");
 await ƒS.Location.show(locations.Chp01_CS_ArrivalHomeNight);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        await ƒS.Speech.tell(characters.maincharacter, "Bevor du den Wald betrittst, schaust du dich ein letztes Mal um. Du schwörst dir, zurückzukommen, zurück nach Hause.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du schwörst dir, zurückzukommen, zurück nach Hause.");
 
     await ƒS.Location.show(locations.Chp05_Forestpath);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -140,7 +140,7 @@ await ƒS.Location.show(locations.Chp01_CS_ArrivalHomeNight);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 
-    await ƒS.Speech.tell(characters.maincharacter, "Beim Fluss angekommen, hältst du an. Der Mond leuchtet so hell, dass du alles ohne Probleme siehst. Du ziehst den Spiegel aus deiner Tasche und schaust hinein. Er ist immer noch blank.");
+    await ƒS.Speech.tell(characters.maincharacter, "Beim Fluss angekommen, hältst du an. Du ziehst den Spiegel aus deiner Tasche und schaust hinein. Er ist immer noch blank.");
     await ƒS.Speech.tell(characters.maincharacter, "Mit dem Spiegel gerüstet kniest du dich an das Flussufer. Du versuchst, das Spiegelbild des Mondes im Wasser damit einzufangen. Wie soll das denn gehen, wenn der Spiegel blank ist?");
     await ƒS.Speech.tell(characters.maincharacter, "Doch plötzlich blitzt es auf: der Mond ist nun auch im Handspiegel zu sehen. Dort glitzert er ebenso so schön wie auf dem Wasser und am Himmel. Wie ging der Spruch nochmal?");
 

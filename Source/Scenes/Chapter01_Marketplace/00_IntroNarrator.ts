@@ -1,13 +1,8 @@
 namespace Spiegel_VN {
   export async function Chp01_00_IntroNarration(): ƒS.SceneReturn {
-    // ƒS.Sound.fade(Music.backgroundTheme_default, 0.8, 0.1, true);
-
-    // ***BEGINN SZENE***
-    // for (let diaSequence of Object.values(
-    //   dlg_scn_00_IntroNarrator.narratorEntry
-    // )) {
-    //   await ƒS.Speech.tell(characters.narrator.name, diaSequence);
-    // }
+    await ƒS.Location.show(locations.WitchInTheWoods);
+    await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, false)
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(
       characters.narrator.name,
@@ -45,15 +40,15 @@ namespace Spiegel_VN {
 
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace);
 
-    await ƒS.update(
-      transitions.fade.duration,
-      transitions.fade.alpha,
-      transitions.fade.edge //edge ist der Härtegrad
-    );
+    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
 
     await ƒS.Speech.tell(
       characters.narrator.name,
       dlg_scn_00_IntroNarrator.narratorEntry.T0007
+    );
+    await ƒS.Speech.tell(
+      characters.narrator.name,
+      dlg_scn_00_IntroNarrator.narratorEntry.T0014
     );
 
     return "01_01 Intro Marketplace";

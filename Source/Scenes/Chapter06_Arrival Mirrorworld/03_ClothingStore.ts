@@ -1,6 +1,8 @@
 namespace Spiegel_VN {
   export async function Chp06_ClothingStore(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp06_ClothingStore);
+            ƒS.Sound.fade(soundeffects.crowd, 0, 0, false);
+    ƒS.update();
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.maincharacter, "Ohne auf deine Widerrede zu hören, zieht dich Flynn in ein Bekleidungsgeschäft.");
@@ -112,7 +114,7 @@ namespace Spiegel_VN {
         break;
     }
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir solche Sorgen! Wie werde ich sie jemals finden? Sie ist allein und hat bestimmt große Angst."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir solche Sorgen! Sie ist allein und hat bestimmt große Angst."');
 
     ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_smile2, ƒS.positionPercent(70, 100))
@@ -139,7 +141,7 @@ namespace Spiegel_VN {
         break;
       
       case Chp06ClothesElementAnswers3.iSayNotTrust:
-        await ƒS.Speech.tell(characters.maincharacter, "Ehrlich gesagt, findest du diesen jungen Mann ziemlich komisch. Du entscheidest, ihm nicht zu vertrauen. Wer weiß, welche Motivationen er hat? Er kann dir hoffentlich trotzdem bei der Suche helfen, da er sich in Whary ziemlich gut auskennt.");
+        await ƒS.Speech.tell(characters.maincharacter, "Ehrlich gesagt, findest du diesen jungen Mann ziemlich komisch. Du entscheidest, ihm nicht zu vertrauen. Wer weiß, welche Motivationen er hat?");
         ƒS.Speech.clear();
         break;
     }

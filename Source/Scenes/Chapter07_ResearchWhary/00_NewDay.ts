@@ -62,7 +62,6 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp07PickSceneElement) {
       case Chp07PickSceneElementAnswers.PickSceneResearchMarketplace:
-        await ƒS.Speech.tell(characters.maincharacter, '"Am Marktplatz finden wir sicher etwas raus."');
         await ƒS.Speech.tell(characters.maincharacter, '"Vielleicht macht es Sinn, an den Marktplatz zu gehen? Da ist meistens ziemlich viel los."');
         await ƒS.Speech.tell(characters.Flynn, '"Super! Eh– da finden wir sicher etwas über deine Schwester heraus."');
         await ƒS.Speech.tell(characters.maincharacter, "Flynn sieht das wohl noch als großes Abenteuer. Du schüttelst genervt den Kopf, begleitest ihn aber nach draußen.");
@@ -104,7 +103,7 @@ namespace Spiegel_VN {
 
       case Chp07PickSceneElementAnswers.PickSceneSpeakToInnkeeper:
         await ƒS.Speech.tell(characters.maincharacter, "Wo ist die Inhaberin?");
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich frage mal die Wirtin. Schließlich sieht sie so viele Leute jeden Tag, die hier durchspazieren. Vielleicht hat sie etwas aufgeschnappt?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich frage mal die Wirtin. Schließlich sieht sie so viele Leute jeden Tag, die hier durchspazieren."');
         ƒS.Location.show(locations.Chp06_Inn_int)
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos1_laugh, ƒS.positionPercent(70, 100));
@@ -113,7 +112,7 @@ namespace Spiegel_VN {
         dataForSave.pickedChp07TalkToInnkeeper = true;
 
         await ƒS.Speech.tell(characters.Innkeeper, '"Kann ich dir weiterhelfen?"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Sie ist vor ein paar Tagen verschwunden und ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet. Sie trug ein braunes Kleid und –"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Sie ist vor ein paar Tagen verschwunden und ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
     
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_frown, ƒS.positionPercent(70, 100));
@@ -141,7 +140,6 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Ich komme einfach nicht weiter, weißt du? Wo könnte sie denn sein?"');
         await ƒS.Speech.tell(characters.maincharacter, "Das Mädchen schweigt. Sie sieht nachdenklich aus.");
         await ƒS.Speech.tell(characters.Stablehand, '"Es gibt da etwas …"');
-        await ƒS.Speech.tell(characters.maincharacter, "Sie lässt den Satz unvollendet. Du versuchst, dir deine Ungeduld nicht anmerken zu lassen, schließlich hat sie dir gerade ohne Murren zugehört.");
 
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_afraid, ƒS.positionPercent(30, 100));
@@ -157,8 +155,8 @@ namespace Spiegel_VN {
 
         let Chp07StablehandElement = await ƒS.Menu.getInput(Chp07StablehandElementAnswers, "choicesCSSclass");
 
-        await ƒS.Speech.tell(characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt. Als ich älter wurde, versuchte ich, darum herumzureiten, aber trotz aller Bemühungen ritt ich immer im Kreis. Obwohl ich mich an das Ufer hielt. Ich habe es irgendwann gelassen und mich damit abgefunden, dass der See nicht zu umrunden ist."');
-        await ƒS.Speech.tell(characters.Stablehand, '"Aber ganz wohl ist mir dabei nicht. Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
+        await ƒS.Speech.tell(characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt."');
+        await ƒS.Speech.tell(characters.Stablehand, '"Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
         await ƒS.Speech.tell(characters.maincharacter, "Sie verschwindet in einem der Ställe, ehe du dich recht bedanken kannst. Ihre Worte machen dir Bange. Einen See, den man nicht umrunden kann? Auch wenn Kailani auf der anderen Seite ist, wie sollst du ihn überqueren?");
         ƒS.Speech.clear();
         ƒS.Character.hideAll();
@@ -205,11 +203,11 @@ namespace Spiegel_VN {
             break;
         }
       
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich gehe sofort los! Wenn du mitkommen willst, musst du dich beeilen. Ich will nicht noch länger herum warten. Kailani wartet auf mich!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich gehe sofort los! Wenn du mitkommen willst, musst du dich beeilen. Ich will nicht noch länger herum warten."');
         await ƒS.Speech.tell(characters.maincharacter, '"Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer."');
         await ƒS.Speech.tell(characters.Flynn, '"Natürlich lasse ich mir das nicht entgehen! Auf zum See!"');
 
-        return "07_ImageRiddle";
+        return "08_Arrival lake";
     }
   }
 }

@@ -77,62 +77,6 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, "Du verdrehst die Augen und hüpfst hinter Flynn ins Boot hinein. Zum Glück ist es trocken und nicht morsch. Ihr stoßt euch mit dem Paddel, das im Boot lag, vom Ufer ab und fahrt los.");
 
     
-    
-    
-    // await ƒS.Speech.tell(characters.maincharacter, "Und wie kommt ihr über den See?")
-    // do {
-    //   let Chp08HowToCrossElementAnswers = {
-    //     iSayLighthouse: "Leuchtturm",
-    //     iSayStones: "Steine",
-    //     iSaySwim: "Schwimmen",
-    //     iSayTurtles: "Schildkröten",
-    //     iSayBoat: "Boot",
-    //     iSayBirds: "Vögel",
-    //     iSayRaft: "Floß bauen",
-    //   };
-     
-    //   let Chp08HowToCrossElement = await ƒS.Menu.getInput(
-    //     Chp08HowToCrossElementAnswers,
-    //     "choicesCSSclass"
-    //   );
-    //   switch (Chp08HowToCrossElement) {
-    //     case Chp08HowToCrossElementAnswers.iSayLighthouse:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSayStones:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSaySwim:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSayTurtles:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSayBoat:
-    //       dataForSave.pickedBoat
-    //       await ƒS.Speech.tell(characters.maincharacter, "Mit dem Boot kannst du nichts falsch machen.")
-    //       ƒS.Speech.clear();
-    //       return "08_OnLake";
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSayBirds:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-        
-    //     case Chp08HowToCrossElementAnswers.iSayRaft:
-    //       await ƒS.Speech.tell(characters.maincharacter, "Sicher?")
-    //       ƒS.Speech.clear();
-    //       break;
-    //   }
-    // } while (!dataForSave.pickedBoat)
+
   }
 }

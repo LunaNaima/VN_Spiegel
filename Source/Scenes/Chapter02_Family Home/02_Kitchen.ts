@@ -19,13 +19,14 @@ namespace Spiegel_VN {
             case Chp02PickSceneElementAnswersKitchen.PickScenePantry:
                 await ƒS.Location.show(locations.Chp02_E_DiscoverKitchenPantry);
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-                await ƒS.Speech.tell(characters.maincharacter, "Die trockenen Lebensmittel kannst du alle in die Speisekammer einräumen. Hier ist es immer ziemlich voll, weil Mutti gerne viele Lebensmittel auf Vorrat bunkert. Für alle Notfälle, sagt sie. Welche Notfälle denn? Seit du ein kleines Kind bist, gab es immer reichlich zu essen. Erst recht, seit Mama dauernd mit ihrem Hufeisengeschäft unterwegs ist.");
+                await ƒS.Speech.tell(characters.maincharacter, "Die trockenen Lebensmittel kannst du alle in die Speisekammer einräumen. Hier ist es immer ziemlich voll, weil Mutti gerne viele Lebensmittel auf Vorrat bunkert. Für alle Notfälle, sagt sie.");
                 ƒS.Speech.clear();
                 return "02_Kitchen";
                 break;
             
             case Chp02PickSceneElementAnswersKitchen.PickSceneOven:
                 await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, true);
+                ƒS.update();
                 await ƒS.Location.show(locations.Chp02_E_DiscoverKitchenOven);
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
                 await ƒS.Speech.tell(characters.maincharacter, "Das Holz muss nachgelegt werden. Dieses Jahr müsst ihr besonders viel Holz sammeln und hacken, weil der Winter ziemlich kalt werden soll. Das sagen zumindest die Bauern, weil die Vögel so früh zwitschern.");

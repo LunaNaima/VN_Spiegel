@@ -3,10 +3,11 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         await ƒS.Location.show(locations.Chp02_02_LivingRoom);
+        ƒS.Character.hideAll();
         await ƒS.update();
 
         // ** RANDOM TEXT ***
-        let randomTextChp02FamilyHome = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
+        let randomTextChp02FamilyHome = ƒ.Random.default.getRangeFloored(1, 4);
         switch (randomTextChp02FamilyHome) {
             case 1:
                 await ƒS.Speech.tell(characters.maincharacter, "Zuhause ist es einfach so gemütlich.");
@@ -21,18 +22,18 @@ namespace Spiegel_VN {
                 break;
 
             case 4:
-                await ƒS.Speech.tell(characters.maincharacter, '"Du überlegst, wann du hoch in dein Zimmer kannst."');
+                await ƒS.Speech.tell(characters.maincharacter, "Du überlegst, wann du hoch in dein Zimmer kannst.");
                 break;
 
             default:
-                await ƒS.Speech.tell(characters.maincharacter, '"Endlich daheim"');
+                await ƒS.Speech.tell(characters.maincharacter, '"Endlich daheim."');
                 break;
         }
 
         let Chp02PickSceneElementAnswers = {
-            PickScenePickHerbs: "Kräuter pflücken",
+            PickScenePickHerbs: "Kräuter ernten",
             PickSceneKitchen: "Einkäufe wegbringen",
-            PickSceneDiscoverBedroom: "(Erkunden) Mein Schlafzimmer anschauen", 
+            PickSceneDiscoverBedroom: "(Erkunden) Dein Schlafzimmer anschauen", 
             PickSceneContinue: "Weiter",
         };
         
@@ -59,20 +60,20 @@ namespace Spiegel_VN {
         // *** RESPONSES ***
         switch (Chp01PickSceneElement) {
             case Chp02PickSceneElementAnswers.PickScenePickHerbs:
-                await ƒS.Speech.tell(characters.maincharacter, "Ich geh' kurz die Kräuter holen, Mutti!");
+                await ƒS.Speech.tell(characters.maincharacter, '"Ich geh` kurz die Kräuter holen, Mutti!"');
                 ƒS.Speech.clear();
                 return "02_03 Pick Herbs";
                 break;
             
             case Chp02PickSceneElementAnswers.PickSceneKitchen:
-                // continue path here
                 await ƒS.Speech.tell(characters.maincharacter, "Zuerst schnell die Einkäufe wegbringen.");
                 ƒS.Speech.clear();
                 return "02_Kitchen";
                 break;
 
             case Chp02PickSceneElementAnswers.PickSceneDiscoverBedroom:
-                // continue path here
+                ƒS.Character.hideAll();
+                ƒS.update();
                 await ƒS.Speech.tell(characters.maincharacter, "");
                 ƒS.Speech.clear();
                 return "02_E Discover bedroom";

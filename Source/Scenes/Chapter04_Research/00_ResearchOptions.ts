@@ -74,8 +74,7 @@ namespace Spiegel_VN {
                 break;
 
             case Chp04PickSceneElementAnswers.PickSceneContinue:
-                // continue path here
-                await ƒS.Speech.tell("Ich", "Ich gehe jetzt in den Wald cut scene.");
+                await ƒS.Speech.tell(characters.maincharacter, "Nun gut, ab in den Wald ...");
                 ƒS.Speech.clear();
                 return "04_CS Entry forest";
                 break;

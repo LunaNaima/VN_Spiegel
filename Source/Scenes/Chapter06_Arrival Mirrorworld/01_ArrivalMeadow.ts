@@ -3,10 +3,10 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp06_ArrivalMeadow);
     ƒS.Character.hideAll();
     ƒS.Sound.fade(music.theme_ordinaryworld, 0, 0, false);
-        ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.8, 1, true);
+        ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.5, 1, true);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Alles ist so farbig! Du staunst über kräftige Rot-, Grün und Blautöne. Von daheim kennst du so etwas gar nicht.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Alles ist so farbig! Du staunst über kräftige Rot-, Grün und Blautöne.");
 
     do {
       let Chp06ArrivalMeadowElementAnswers = {
@@ -31,11 +31,12 @@ namespace Spiegel_VN {
           await ƒS.Speech.tell(characters.maincharacter, "Du rappelst dich auf. Neben dir liegt ein See, und auf der anderen Seite eine Straße.");
           await ƒS.Location.show(locations.Chp06_StreetToWhary);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-          await ƒS.Speech.tell(characters.maincharacter, "In der Ferne glitzert etwas und du siehst Leute, die sich vor großen Stadttoren bewegen. Die Richtung sieht zumindest richtig aus. Du machst dich auf den Weg. Nebenbei bemerkst du die grellen, saftgrünen Bäume rechts und links. Auch wenn die Welt sonst so aussieht, wie deine eigene: an die satten Farben musst du dich erst gewöhnen.");
+          await ƒS.Speech.tell(characters.maincharacter, "In der Ferne glitzert etwas und du siehst Leute, die sich vor großen Stadttoren bewegen. Du machst dich auf den Weg. Nebenbei bemerkst du die grellen, saftgrünen Bäume rechts und links. Auch wenn die Welt sonst so aussieht, wie deine eigene: an die satten Farben musst du dich erst gewöhnen.");
       }
     } while (!dataForSave.pickedChp06Leave);
 
     await ƒS.Location.show(locations.Chp06_CityGates);
+    ƒS.Sound.fade(soundeffects.crowd, 0.1, 1, false);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.maincharacter, "Als du vor den Toren ankommst, bildet sich trotz des frühen Morgens davor bereits eine Schlange. Stimmen, Hufgeklapper und das Scheppern von Kisten, die die Leute auf ihren Wägen gestapelt haben, tönen durch die Luft.");
     await ƒS.Speech.tell(characters.maincharacter, "Dir bleibt nichts anderen übrig, als dich auch anzustellen. Während du wartest, beobachtest du die anderen Menschen. Die meisten von ihnen tragen satte, glitzernde Klamotten. Sind hier etwa alle reich? Und wieso sieht es so aus, als wären die Klamotten an manchen Stellen ausgepolstert?");
@@ -111,10 +112,10 @@ namespace Spiegel_VN {
     }
 
     await ƒS.Speech.tell(characters.Flynn, '"Wie heißt du denn?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin"' + dataForSave.nameProtagonist);
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist);
     await ƒS.Speech.tell(characters.Flynn, '"Freut mich!"');
 
-    await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an. Eigentlich sieht er aus wie ein normaler Junge. Bist du wirklich am richtigen Ort? Und wieso hat er ausgerechnet dich angequatscht?");
+    await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an. Eigentlich sieht er aus wie ein normaler Junge. Wieso hat er ausgerechnet dich angequatscht?");
     await ƒS.Speech.tell(characters.maincharacter, "Ihr passiert die Tore ohne Probleme. Die Wachen beobachten die Menge aufmerksam, aber ihr fallt – zum Glück! – nicht auf.");
     await ƒS.Speech.tell(characters.maincharacter, "Allerdings bemerkst du die Blicke der Leute. Ihre Blicke bleiben an deinen alten Stiefeln und dem braunen Hemd, dass du über einer ausgeblichenen Hose trägst, hängen. Wie fühlst du dich?");
 

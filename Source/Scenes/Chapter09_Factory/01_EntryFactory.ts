@@ -3,7 +3,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp08_HidingPlace);
         ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-    await ƒS.Speech.tell(characters.maincharacter,"Zum zweiten Mal innerhalb weniger Tage wachst du auf und weißt zuerst nicht, wo du bist. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Und Kailani ganz nahe. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
+    await ƒS.Speech.tell(characters.maincharacter,"Zum zweiten Mal innerhalb weniger Tage wachst du auf und weißt zuerst nicht, wo du bist. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
 
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
     ƒS.update();
@@ -19,7 +19,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Flynn, '"Ganz früh heute Morgen sind sie auch reingelaufen, da habe ich sie gesehen."');
     await ƒS.Speech.tell(characters.maincharacter, '"Wieso hast du mich nicht geweckt? Wir hätten sie abfangen können!"');
     await ƒS.Speech.tell(characters.Flynn, '"Ach, das ging zu schnell und du hast so tief geschlafen …"');
-    await ƒS.Speech.tell(characters.maincharacter, "Misstrauisch betrachtest du ihn. Er hätte dich wecken sollen. Wer weiß, ob er wirklich die Menschen gesehen hat? Aber daran kannst du nun nichts ändern.");
+    await ƒS.Speech.tell(characters.maincharacter, "Misstrauisch betrachtest du ihn. Er hätte dich wecken sollen.");
     await ƒS.Speech.tell(characters.maincharacter, '"Komm, wir gehen!"');
 
     ƒS.Character.hideAll();

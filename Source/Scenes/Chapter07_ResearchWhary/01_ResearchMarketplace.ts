@@ -20,7 +20,7 @@ namespace Spiegel_VN {
     switch (Chp07DiscoverMarketplaceElement) {
       case Chp07DiscoverMarketplaceElementAnswers.iSayListenToVillagers:
         dataForSave.pickedChp07DiscoverSpeakToVillagers = true;
-    await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand. Die Händlerin wirft einen kurzen Blick auf dich, beurteilt dich als keine Gefahr für ihre Ware, und wendet sich wieder Kundschaft zu.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand.");
         await ƒS.Speech.tell("Dorfbewohnende 1", '"... mehr Farbe bekommen…!"');
     await ƒS.Speech.tell(characters.maincharacter, "Mehr Farbe? Du näherst dich den Leuten, die um die Apfelkisten stehen, unbemerkt.");
         await ƒS.Speech.tell("Dorfbewohnende 1", '"Ja ja, mein Nachbar, der Heinrich, hat eine ordentliche Portion bekommen. Seine Hemden glitzern wie die Sterne! Er sieht so viel jünger und stärker aus."');
@@ -40,8 +40,8 @@ namespace Spiegel_VN {
         
         await ƒS.Speech.tell(characters.MerchantWhary, "Was darf ich Ihnen anbieten? Diese Beeren sind im Angebot, 8 kg für den Preis von 7!");
         await ƒS.Speech.tell(characters.maincharacter, "Was! Wer brauch schon 8 kg Beeren?");
-        await ƒS.Speech.tell(characters.maincharacter, '"Nein, danke. Ich wollte wissen, ob Sie ein Mädchen gesehen haben. Sie trägt ein braunes Kleid und ist seit vorgestern verschw–"');
-        await ƒS.Speech.tell("Handelnde", '"Siehst du hier irgendjemanden, der braun trägt? So etwas gibt es, seit wir alle Farbe bekommen, gar nicht mehr. Abgesehen davon habe ich keine Zeit für so etwas!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Nein, danke. Ich wollte wissen, ob Sie ein Mädchen gesehen haben. Sie trägt ein braunes Kleid und–"');
+        await ƒS.Speech.tell("Handelnde", '"Siehst du hier irgendjemanden, der braun trägt? So etwas gibt es, seit wir alle Farbe bekommen, nicht mehr. Abgesehen davon habe ich keine Zeit für so etwas!"');
         await ƒS.Speech.tell(characters.maincharacter, "Die Leute bekommen Farbe? Du würdest gerne noch weiterfragen, doch der Händler hat sich schon abgewandt.");
         ƒS.Character.hideAll();
         ƒS.Speech.clear();

@@ -4,6 +4,18 @@
   cursor: pointer;
 }
 
+speech content {
+  color: rgb(255 255 255);
+  position: relative;
+  width: 70%;
+  display: block;
+  FONT-VARIANT: JIS04;
+  FONT-VARIANT: JIS04;
+  top: 40px;
+  left: 128px;
+  font-size: 2.5vmin;
+}
+
 #hit0.lake {
   /*lighthouse*/
   width: 8%;

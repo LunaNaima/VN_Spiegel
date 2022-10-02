@@ -38,8 +38,8 @@ namespace Spiegel_VN {
         break;
     }
   
-    await ƒS.Speech.tell(characters.maincharacter, "Kailani ist heute wirklich schlecht drauf. Sonst redet sie wenigstens etwas mit dir. Eure Beziehung war immer gut, nur ist sie jetzt in der Pubertät.");
-    await ƒS.Speech.tell(characters.maincharacter, "Es verändert sich also einiges! Hat sie vielleicht schlecht geschlafen? Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr beim Wasserholen auf den Zahn zu fühlen.");
+    await ƒS.Speech.tell(characters.maincharacter, "Kailani ist heute wirklich schlecht drauf. Dabei ist eure Beziehung eigentlich gut.");
+    await ƒS.Speech.tell(characters.maincharacter, "Hat sie vielleicht schlecht geschlafen? Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr beim Wasserholen auf den Zahn zu fühlen.");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani, geht`s dir gut? Treibt dich etwas um?"');
     ƒS.Character.hide(characters.Kailani);
@@ -60,11 +60,11 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp03ChoresKailaniElement1) {
       case Chp03ChoresKailaniElementAnswers1.iSayWorried:
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir nur Sorgen um dich. Ich habe das Gefühl, dass dir irgendetwas schlaflose Nächte bereitet. Gibt es etwas, worüber du dir Gedanken machst?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir nur Sorgen um dich. Gibt es etwas, worüber du dir Gedanken machst?"');
         await ƒS.Speech.tell(characters.Kailani, '"Nö."');
         await ƒS.Speech.tell(characters.maincharacter, '"Ach Kailani, lass den Quatsch. Ich sehe doch, dass es dir nicht gut geht! Also, spuck’s aus. Ich erzähle unseren Eltern auch nichts davon, wenn du das nicht willst."');
         await ƒS.Speech.tell(characters.Kailani, '"Hm. Naja, also. Ich …"');
-        await ƒS.Speech.tell(characters.maincharacter, "Du wartest geduldig auf ihre Antwort. Hoffentlich vertraut sie sich dir an.");
+        await ƒS.Speech.tell(characters.maincharacter, "Hoffentlich vertraut sie sich dir an.");
         ƒS.Character.hide(characters.Kailani);
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_smile, ƒS.positionPercent(45, 100));
         ƒS.update();
@@ -95,7 +95,7 @@ namespace Spiegel_VN {
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Naja, schon. Das stimmt. Das gefällt mir einfach so gut. Die Farben sind superschön und ich kann mich beobachten, wie ich diese ganzen tollen Sachen mache."');
+            await ƒS.Speech.tell(characters.Kailani, '"Naja, schon. Das stimmt. Das gefällt mir einfach. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
             await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
             ƒS.Character.hideAll();
@@ -109,7 +109,7 @@ namespace Spiegel_VN {
             ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Wie schade, dass sie so über sich denkt! Warte – Ist das Kleid in der Wäsche verblichen? Ist dir noch gar nicht aufgefallen.");
+            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen"');
             ƒS.Speech.clear();
         break;
@@ -120,9 +120,7 @@ namespace Spiegel_VN {
             ƒS.update();
 
             await ƒS.Speech.tell(characters.maincharacter, '"Und was stört dich daran?"');
-            await ƒS.Speech.tell(characters.Kailani, '"Gar nichts, das macht einfach Spaß. Die Farben sind superschön und ich kann mich beobachten, wie ich diese ganzen tollen Sachen mache."');
-
-            await ƒS.Speech.tell(characters.maincharacter, "Wenn ich etwas mache, was mir Spaß macht, dann sehe ich aber nicht so traurig aus, denkst du dir.");
+            await ƒS.Speech.tell(characters.Kailani, '"Gar nichts, das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
 
             await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
@@ -137,14 +135,13 @@ namespace Spiegel_VN {
             ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Wie schade, dass sie so über sich denkt! Warte – Ist das Kleid in der Wäsche verblichen? Ist dir noch gar nicht aufgefallen.");
+            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen"');
             ƒS.Speech.clear();
         break;
 
           case Chp03ChoresKailaniElementAnswers11.iSaySilent:
-            await ƒS.Speech.tell(characters.Kailani, '"Das macht einfach Spaß. Die Farben sind superschön und ich kann mich beobachten, wie ich diese ganzen tollen Sachen mache."');
-            await ƒS.Speech.tell(characters.maincharacter, "Wenn ich etwas mache, was mir Spaß macht, dann sehe ich aber nicht so traurig aus, denkst du dir.");
+            await ƒS.Speech.tell(characters.Kailani, '"Das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
             await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
             ƒS.Character.hideAll();
@@ -157,7 +154,7 @@ namespace Spiegel_VN {
            ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Wie schade, dass sie so über sich denkt! Warte – Ist das Kleid in der Wäsche verblichen? Ist dir noch gar nicht aufgefallen.");
+            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen"');
             ƒS.Speech.clear();
             break;

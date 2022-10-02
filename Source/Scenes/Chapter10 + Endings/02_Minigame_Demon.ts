@@ -1,8 +1,9 @@
 namespace Spiegel_VN {
   export async function Chp10_MinigameDemon(): ƒS.SceneReturn {
-        ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
-    ƒS.Sound.fade(music.theme_DemonMinigame, 0.8, 1, true);
     ƒS.Character.hideAll();
+    ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
+    await ƒS.Sound.fade(music.theme_DemonMinigame, 0.8, 1, true);
+    ƒS.update();
 
     let Demontunnel= {
       name: "Tunnel",
@@ -139,7 +140,7 @@ namespace Spiegel_VN {
         nodeDemon = nodeDemonNormal;
       }
       if (demonMood < -4000 && nodeDemon == nodeDemonNormal) {
-        console.log("Watch out!");
+          console.log("Watch out!");
         ƒS.Character.hide(demon);
         ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
         nodeDemon = nodeDemonAttack;
@@ -169,8 +170,7 @@ namespace Spiegel_VN {
         demonMood += 10;
       }
       ƒS.update(0);
-      ƒS.Sound.fade(music.theme_DemonMinigame, 0, 0, false);
-    ƒS.update();
+      
     }
   }
 }

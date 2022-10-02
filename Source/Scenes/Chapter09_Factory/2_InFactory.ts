@@ -15,14 +15,14 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp09_InFactoryWK);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani!!! Da ist sie! KAILANI!"');
-    await ƒS.Speech.tell(characters.maincharacter, "Deine Schwester steht in der Schlange mit den anderen Kuttentragenden. Sie sieht nicht auf, als du ihren Namen rufst. Du kannst es gar nicht glauben, Kailani zu sehen. Sie sieht erschöpft und fast gebrochen aus, Zustände, in denen du sie noch nie gesehen hast. Du willst losrennen und sie holen, doch Flynn hält deinen Ärmel fest.");
+    await ƒS.Speech.tell(characters.maincharacter, "Deine Schwester steht in der Schlange mit den anderen Kuttentragenden. Sie sieht nicht auf, als du ihren Namen rufst. Sie sieht erschöpft und fast gebrochen aus, Zustände, in denen du sie noch nie gesehen hast. Du willst losrennen und sie holen, doch Flynn hält deinen Ärmel fest.");
     
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(85, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Shh! Siehst du nicht die Wachen da drüben? Du kannst hier nicht einfach so durchrennen! Wir brauchen einen Plan."');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich will keinen Plan! Meine Schwester ist dort drüben! Ich kann sie sehen und will sie holen!"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich will keinen Plan! Meine Schwester ist dort drüben!"');
     await ƒS.Speech.tell(characters.Flynn, '"Aber siehst du denn nicht, wie gefährlich das ist? Was ist, wenn wir gefasst werden? Wenn wir hier ins Gefängnis geworfen werden? Dann kannst du deiner Schwester erst recht nicht helfen!"');
     await ƒS.Speech.tell(characters.maincharacter, "Verzweifelt siehst du zu, wie sich Kailani in der Schlange vorwärtsbewegt und in einem Tunnel verschwindet.");
 
@@ -38,7 +38,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Du schaust ungläubig auf. Kailani steht wieder im Raum. Nur: sie sieht komplett anders aus. Eine lange Perücke bedeckt ihre schulterlangen, braunen Haare. Sie trägt ein pinkes Kleid und – es kann nicht anders sein – ein ausgestopftes Hinterteil. Sie geht in eine der Kabinen und beginnt, sich ebenfalls hin und her zu wiegen.");
     await ƒS.Speech.tell(characters.maincharacter, '"Was macht sie denn? Das ist doch so komisch! Ihr geht es nicht gut! Warum muss sie sich hier anziehen und –"');
 
-    await ƒS.Speech.tell(characters.maincharacter, "Und da fällt es dir wie Schuppen von den Augen: Sie ist das Spiegelbild! Das Spiegelbild, das man sich mit dem Handspiegel wünschen kann! Du starrst Kailani an. In deinem Kopf schwirrt es.");
+    await ƒS.Speech.tell(characters.maincharacter, "Und da fällt es dir wie Schuppen von den Augen: Sie ist das Spiegelbild! Das Spiegelbild, das man sich mit dem Handspiegel wünschen kann! In deinem Kopf schwirrt es.");
     await ƒS.Speech.tell(characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen."');
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani hat diesen Szenen zugeschaut, jeden Tag! Sie hat sich selbst im Spiegel gesehen – aber warte, das war nicht sie. Sondern jemand, der sie imitiert und getäuscht hat. Der Spiegel hat diese Kabine gezeigt!"');
 
@@ -48,7 +48,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Flynn, '"Meinst du, das Spiegelbild in deinem Handspiegel? Diese Halle ist also eine Spiegelbild-Fabrik?"');
     await ƒS.Speech.tell(characters.maincharacter, '"Genau, in dem magischen Spiegel! Warte mal – woher weißt du denn, dass ich einen Handspiegel habe?"');
-    await ƒS.Speech.tell(characters.maincharacter, "Flynn tut so, als hätte er dich nicht gehört und schaut weiter angestrengt den Arbeitenden zu. Er kann gar nichts von deinem Spiegel wissen! Das Misstrauen, das heute Morgen erwacht ist, wächst. Du beschließt, ihn später auszuhorchen. Zuerst musst du dich um Kailani kümmern.");
+    await ƒS.Speech.tell(characters.maincharacter, "Flynn tut so, als hätte er dich nicht gehört und schaut weiter angestrengt den Arbeitenden zu. Er kann gar nichts von deinem Spiegel wissen! Das Misstrauen, das heute Morgen erwacht ist, wächst.");
 
     
     do {
@@ -63,11 +63,11 @@ namespace Spiegel_VN {
         case Chp09InFactoryElementAnswers.iSayListenToGuards:
           await ƒS.Speech.tell(characters.maincharacter, "Geduckt schleichst du dich näher an die Wachen heran. Vielleicht kannst du ein paar Informationen heraushören?");
           await ƒS.Speech.tell("Wache 1", '"... und da meinte sie zu mir, der nächste Schwung komme wohl morgen. Platz hat’s hier noch genug."');
-          await ƒS.Speech.tell("Wache 2", '"Die Neuen können in den rechten Tunnel. Sollen sie da für uns schuften! Hauptsache, ich kann am Wochenende wieder ‘rüber und der Mann im Turm ist glücklich. Hast gehört, was Getliw neulich passiert ist?"');
+          await ƒS.Speech.tell("Wache 2", '"Die Neuen können in den rechten Tunnel. Hauptsache, ich kann am Wochenende wieder ‘rüber und der Mann im Turm ist glücklich. Hast gehört, was Getliw neulich passiert ist?"');
           await ƒS.Speech.tell("Wache 1", '"Nee! Ich war doch im Urlaub. Was ist passiert?"');
           await ƒS.Speech.tell("Wache 2", '"Naja, Getliw hatte schon immer ein zu weiches Herz, weißt ja. Er wollte wohl einem Sklaven das Sixpack-Polster zubinden, weil er das nicht richtig gemacht hatte. Aber Kontakt mit den Sklaven ist ja verboten, dann wurde der Alarm ausgelöst. Er wurde erwischt und musste hoch in den Turm. Seitdem hat ihn niemand mehr gesehen …"');
           await ƒS.Speech.tell("Wache 1", '"Das ist ja was! Würde ich niemals tun. Hätte er doch …"');
-          await ƒS.Speech.tell(characters.maincharacter, "Du überlegst fieberhaft. Mit den Sklaven darf man also nicht sprechen! Gut, dass du vorhin nicht Kailani holen wolltest. Und im Turm sitzt ein Mann. Flynn hatte also Recht! Da muss etwas Wichtiges sein. Vielleicht der Dämon, von dem der Koch gesprochen hatte?");
+          await ƒS.Speech.tell(characters.maincharacter, "Du überlegst fieberhaft. Mit den Sklaven darf man also nicht sprechen! Gut, dass du vorhin nicht Kailani holen wolltest. Und im Turm sitzt ein Mann. Vielleicht der Dämon, von dem der Koch gesprochen hatte?");
           ƒS.Speech.clear();
           break;
         
@@ -85,6 +85,6 @@ namespace Spiegel_VN {
           ƒS.Character.hideAll();
           return "09_Scout Tower";
       }
-    } while (!dataForSave.pickedChp08HidingPlaceContinue);
+    } while (!dataForSave.pickedChp09InFactoryContinue);
   }
 }

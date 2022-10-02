@@ -1,15 +1,12 @@
 namespace Spiegel_VN {
   export async function Chp01_01_IntroMarketplace(): ƒS.SceneReturn {
-    await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); //unsere locations, die szenen. nach dem Punkt sind die Methoden! also tell und show ist eine Methode. Die klammer dahinter ist eine Methodenaufruf, also eine Variable. Der Hingergrund sollte da angezeigt werden
-    ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
+    await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); 
+        await ƒS.Sound.fade(soundeffects.cracklingfire, 0, 0, false)
 
-    // await ƒS.update(2, "./Assets/Transitions/Black.png", 1);
+    await ƒS.Sound.fade(music.theme_ordinaryworld, 0.5, 1, true);
 
-    await ƒS.update(
-      transitions.fade.duration,
-      transitions.fade.alpha,
-      transitions.fade.edge //edge ist der Härtegrad
-    );
+
+    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
     
     // ***TEST-INVENTORY***
     // ƒS.Inventory.add(inventory.apple);
@@ -75,33 +72,12 @@ namespace Spiegel_VN {
         break;
     }
 
-    // await ƒS.Speech.tell(
-    //   characters.maincharacter.name,
-    //   dlg_scn_01.maincharacter.T0000
-    // );
-    // await ƒS.Speech.tell(characters.Mama.name, dlg_scn_01.Mama.T0000);
-
-    // await ƒS.update(
-    //   transition.puzzle.duration,
-    //   transition.puzzle.alpha,
-    //   transition.puzzle.edge //edge ist der Härtegrad
-    // );
-
-    // await ƒS.Character.show(
-    //   characters.Mama,
-    //   characters.Mama.pose.angry, // pose muss in der main sein
-    //   ƒS.positions.bottomcenter //bei positions: gibts die normalen angaben (topleft ..) bei positionpercentage: gebe ich koordinaten an in pixel 70 in x und 100 in y
-    //   // ƒS.positionPercent(70,100)
-    // );
-
     // *** SCENE OPTIONS ***
     let Chp01PickSceneElementAnswers = {
       PickSceneConvoMother: "Rede mit Mama.",
       PickSceneMirrorMerchant: "Was glitzert so da hinten?",
-      PickSceneExploreFlowerMerchant:
-        "(Erkunden) Was gibt es Neues beim Blumenhändler?",
-      PickSceneExploreLeatherMerchant:
-        "(Erkunden) Was gibt es Neues beim Lederhändler?",
+      PickSceneExploreFlowerMerchant:"(Erkunden) Was gibt es Neues beim Blumenhändler?",
+      PickSceneExploreLeatherMerchant: "(Erkunden) Was gibt es Neues beim Lederhändler?",
       PickSceneContinue: "Weiter",
     };
 
@@ -110,13 +86,8 @@ namespace Spiegel_VN {
       !dataForSave.pickedChp01_MirrorMerchant
     ) {
       delete Chp01PickSceneElementAnswers.PickSceneContinue;
-      // return Chp01_CS_ArrivalHome();
     }
 
-    // let pickediSayTalkToMama: boolean;
-    // let pickediSayTalkToMirrorMerchant: boolean;
-
-    // do {
     if (dataForSave.pickedChp01_ConvoMother) {
       delete Chp01PickSceneElementAnswers.PickSceneConvoMother;
     }
@@ -139,7 +110,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
-        await ƒS.Speech.tell(characters.maincharacter.name,'"Ich schau mir noch schnell etwas an!"');
+        await ƒS.Speech.tell(characters.maincharacter.name,'"Ich schau´ mir noch schnell etwas an!"');
         ƒS.Speech.clear();
         ƒS.Character.hide(characters.Mama);
         return "01_03 MirrorMerchant";
@@ -166,6 +137,5 @@ namespace Spiegel_VN {
         return "01_CS PerchaseMirror";
         break;
     }
-    // } while (dataForSave.pickedChoice);
   }
 }

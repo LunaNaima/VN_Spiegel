@@ -10,7 +10,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_laugh, ƒS.positionPercent(55,100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Mama, '"Hey"' + dataForSave.nameProtagonist + '"da bist du! Setz’ dich hin. Wir warten schon."');
+    await ƒS.Speech.tell(characters.Mama, '"Hey ' + dataForSave.nameProtagonist + ' da bist du! Setz’ dich hin. Wir warten schon."');
     await ƒS.Speech.tell(characters.Mutti, '"Möchtest du Karotten, mein Schatz?"');
     ƒS.Character.hide(characters.Evarius);
     ƒS.Character.hide(characters.Kailani);
@@ -122,14 +122,14 @@ namespace Spiegel_VN {
     ƒS.Character.hide(characters.Mutti);
     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_laugh, ƒS.positionPercent(55, 100));
     ƒS.update();
-    await ƒS.Speech.tell(characters.Mutti, '"Warum macht ihr Kinder das nicht zuerst allein? Ich komme nach dem Abwasch gleich dazu"');
+    await ƒS.Speech.tell(characters.Mutti, '"Warum macht ihr Kinder das nicht zuerst allein? Ich komme nach dem Abwasch gleich dazu."');
 
     ƒS.Character.hide(characters.Mutti);
     ƒS.Character.hide(characters.Mama);
 
     let Chp02TestMirrorElementAnswers = {
-      iSayTestWithKailani: "Mit Kailani testen.",
-      iSayTestWithEvarius: "Mit Evarius ausprobieren.",
+      iSayTestWithKailani: "Mit Kailani testen",
+      iSayTestWithEvarius: "Mit Evarius testen",
     };
 
     let Chp02TestMirrorElement = await ƒS.Menu.getInput(

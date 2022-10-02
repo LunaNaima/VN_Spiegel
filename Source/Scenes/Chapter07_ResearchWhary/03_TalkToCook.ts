@@ -21,7 +21,7 @@ namespace Spiegel_VN {
       
       case Chp07CookElementAnswers.iSaySad:
         await ƒS.Speech.tell(characters.maincharacter, '"Ich vermisse sie unglaublich und mache mir sehr große Sorgen."');
-        await ƒS.Speech.tell(characters.Cook, '"Ich hab’ auch ‘ne kleine Schwester. Kann das echt nachvollziehen. Weißt du, ob sie wirklich in der Stadt ist?"');
+        await ƒS.Speech.tell(characters.Cook, '"Ich hab’ auch ‘ne kleine Schwester. Weißt du, ob sie wirklich in der Stadt ist?"');
         await ƒS.Speech.tell(characters.maincharacter, '"Ich habe keine Ahnung. Vermutlich ist sie hier irgendwo gefangen. Habe ich zumindest gehört."');
 
         ƒS.Character.hideAll();
@@ -36,7 +36,7 @@ namespace Spiegel_VN {
         await ƒS.Character.show(characters.Cook, characters.Cook.pose.pos1_concerned, ƒS.positionPercent(65, 100));
         ƒS.update();
 
-        await ƒS.Speech.tell(characters.Cook, '"Ich weiß nicht, ob du’s wusstest, aber seit ewigen Zeiten war unser Leben ziemlich grau. Die letzte Königin, Annabelle II., hatte dann die Schnauze voll. Sie wollte ihre Kleider unbedingt in Farbe sehen. Die war eitel, heiliger Strohsack! Aber nun gut, lässt sich ja nichts ändern."');
+        await ƒS.Speech.tell(characters.Cook, '"Ich weiß nicht, ob du’s wusstest, aber seit ewigen Zeiten war unser Leben ziemlich grau. Die letzte Königin, Annabelle II., hatte dann die Schnauze voll. Sie wollte ihre Kleider unbedingt in Farbe sehen. Die war eitel, heiliger Strohsack!"');
         await ƒS.Speech.tell(characters.Cook, '"Deshalb hatte sie ein paar Magierinnen und Zauberer von weit weg über den Ozean zu sich geholt. Diese Zaubernde haben jahrelang hinter verschlossenen Schlosstüren gewerkelt. Fast hatten wir das Ganze schon vergessen und uns mit dem Gedanken abgefunden, dass wir eben für immer grau sein werden. Doch dann … plötzlich war die erste Blume tatsächlich gelb."');
 
         ƒS.Character.hideAll();
@@ -45,7 +45,7 @@ namespace Spiegel_VN {
 
         await ƒS.Speech.tell(characters.Cook, '"Alles sehr hübsch, und so weiter. Aber: Annabelle, unsere Königin, die wurde nie wieder gesehen. Niemand weiß, wer wirklich hinter den Schlosstüren hockt und regiert. Meine Freunde und ich, wir haben da aber ‘ne Vermutung …"');
         await ƒS.Speech.tell(characters.maincharacter, "Er beugt sich verschwörerisch zu dir herunter. Du hast den Eindruck, dass er es liebt, Geschichten zu erzählen, wenn er erstmal in Schwung ist.");
-        await ƒS.Speech.tell(characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert und entscheidet. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen? Auch wenn sie vorher nicht die volksnahe Königin war, wie ihre Mutter, hat sie uns trotzdem immer mal wieder die Toren für Audienzen geöffnet."');
+        await ƒS.Speech.tell(characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert und entscheidet. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen?"');
         await ƒS.Speech.tell(characters.Cook, '"Aber jetzt – in Luft aufgelöst. Die meisten wollen davon aber nichts hören. Solange die ihre Farbe kriegen und sich aufpolstern und im Spiegel anglotzen können, ist denen alles egal. Aber nicht mir und meinem Kreis!"');
         ƒS.Speech.clear();
         break;

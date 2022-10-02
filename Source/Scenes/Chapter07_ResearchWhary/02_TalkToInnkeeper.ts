@@ -51,8 +51,8 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_neutral, ƒS.positionPercent(70, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Innkeeper, '"Das mit den Farben … is’ alles nich’ so einfach, ne. Wir waren früher alle grau. Das kannste dir jetzt gar nicht vorstellen. Aber so war’s! Dann kam, so nach und nach, ein bisschen Farbe in die Pflanzen. Wie schön das war, die farbigen Blumen das erste Mal zu sehen! Ich kann mich genau erinnern …"');
-        await ƒS.Speech.tell(characters.Innkeeper, '"Naja, dann hat sich etwas im Palast getan. Auf einmal gab’ es auch Menschen, die farbig waren! Wie wir alle gestaunt haben, kannste dir nich’ vorstellen. Die trugen gelben Hemden und rosa Haare und sonstigen Schnickschnack, den wir vorher gar nicht gekannt hatten. Zuerst hatten die Reichen die meisten Farben. Dann sickerte es irgendwie zu uns ‘runter."');
+        await ƒS.Speech.tell(characters.Innkeeper, '"Das mit den Farben … is’ alles nich’ so einfach, ne. Wir waren früher alle grau. Das kannste dir jetzt gar nicht vorstellen. Aber so war’s! Dann kam, so nach und nach, ein bisschen Farbe in die Pflanzen. Wie schön das war, die farbigen Blumen das erste Mal zu sehen!"');
+        await ƒS.Speech.tell(characters.Innkeeper, '"Naja, dann hat sich etwas im Palast getan. Auf einmal gab’ es auch Menschen, die farbig waren! Wie wir alle gestaunt haben, kannste dir nich’ vorstellen. Die trugen gelben Hemden und rosa Haare und sonstigen Schnickschnack. Zuerst hatten die Reichen die meisten Farben. Dann sickerte es irgendwie zu uns ‘runter."');
         await ƒS.Speech.tell(characters.Innkeeper, '"Wie du siehst, mach’ ich da mittlerweile nich’ mehr so mit. Mir gefällt’s, wenn’s bisschen natürlicher is’. Aber diese ganze Farbe, die muss  ja von irgendwo herkommen, ne? Das darf man nich’ so laut fragen. Die haben das gar nich’ gern, wenn man danach fragt."');
 
         ƒS.Speech.clear();

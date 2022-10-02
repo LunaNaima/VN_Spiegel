@@ -1,14 +1,11 @@
 namespace Spiegel_VN {
   export async function Chp01_02_ConvoMother(): ƒS.SceneReturn {
     dataForSave.pickedChp01_ConvoMother = true;
-    // await ƒS.Location.show(locations.black);
     ƒS.Character.hideAll();
     await ƒS.Location.show(locations.Chp01_02_ConvoMother);
     ƒS.update();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(70, 100));
     ƒS.update();
-
-    // await ƒS.update(2, transitions.fade.alpha, transitions.fade.edge);
 
     // *** BEGIN DIALOGUE ***
     await ƒS.Speech.tell(characters.Mama.name,dlg_scn_02.Mama.T0000);

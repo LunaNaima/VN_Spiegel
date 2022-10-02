@@ -1,12 +1,9 @@
 namespace Spiegel_VN {
   export async function Chp01_E_LeatherMerchant(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp01_E_LeatherMerchant);
-
-    // await ƒS.update(2, transitions.fade.alpha, transitions.fade.edge);
-
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     
-    let randomTextChp01LeatherMerchant = ƒ.Random.default.getRangeFloored(1, 3); //gerundet
+    let randomTextChp01LeatherMerchant = ƒ.Random.default.getRangeFloored(1, 3);
     switch (randomTextChp01LeatherMerchant) {
       case 1:
         await ƒS.Speech.tell(characters.leatherMerchant,'"Suchst du etwas Bestimmtes?"');
@@ -17,8 +14,7 @@ namespace Spiegel_VN {
         break;
 
       case 3:
-        await ƒS.Speech.tell(characters.leatherMerchant,'"Heute im Angebot: Gelb getönte Schafswolle!"'
-        );
+        await ƒS.Speech.tell(characters.leatherMerchant,'"Heute im Angebot: Gelb getönte Schafswolle!"');
         break;
 
       default:
@@ -50,7 +46,7 @@ namespace Spiegel_VN {
       case Chp01LeatherMerchantDialogueElementAnswers.iSayAskAboutTrip:
         await ƒS.Speech.tell(characters.maincharacter,'"Ihr habt auf der Reise bestimmt Interessantes erlebt!"');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Oh, aber wie! Die Leute haben uns mitten auf der Straße angehalten und wollten unsere Ware kaufen. Das ist uns noch nie passiert."'); 
-        await ƒS.Speech.tell(characters.leatherMerchant, '"Etwas ungewöhnlich, das Ganze. Ganz gesund sahen sie nicht aus.Aber du, du siehst sehr gesund aus! Dir würde sicherlich diese Schafswolle stehen"');
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Etwas ungewöhnlich, das Ganze. Ganz gesund sahen sie nicht aus."');
         ƒS.Speech.clear();
         return Chp01_E_LeatherMerchant();
         break;
@@ -58,7 +54,7 @@ namespace Spiegel_VN {
       case Chp01LeatherMerchantDialogueElementAnswers.iSayAskAboutClothes:
         await ƒS.Speech.tell(characters.maincharacter,'"Letztes Jahr hattet Ihr andere Ware dabei, oder?"');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Tatsächlich haben viele nach den neuen Modetönen aus der Hauptstadt gefragt. Normalerweise benötigen wir für das Färben einige Monate, aber die Nachfrage war so stark, dass wir unser Verfahren kurzerhand umstellen mussten."');
-        await ƒS.Speech.tell(characters.leatherMerchant, '"Die Farben sind dafür schön satt, halten aber leider nicht lange.Das war unseren Kunden aber egal! Nun gut."');
+        await ƒS.Speech.tell(characters.leatherMerchant, '"Die Farben sind dafür schön satt, halten aber leider nicht lange."');
         ƒS.Speech.clear();
         // await ƒS.Character.show(characters.Mama, characters.aisaka.pose.happy, ƒS.positions.bottomcenter);
         // ƒS.Character.hide(characters.Mama);

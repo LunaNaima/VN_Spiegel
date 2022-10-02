@@ -310,12 +310,12 @@ WitchInTheWoods: {
     Chp07_Barn: {
       name: "Barn",
       background:
-        "./Assets/Backgrounds/Chapter07/InnKitchen.png"
+        "./Assets/Backgrounds/Chapter07/Barn.png"
     },
     Chp07_InnKitchen: {
       name: "Kitchen inn",
       background:
-        "./Assets/Backgrounds/Chapter07/Barn.png"
+        "./Assets/Backgrounds/Chapter07/InnKitchen.png"
     },
     Chp07_MarketplaceWhary: {
       name: "Marketplace Whary",
@@ -380,6 +380,11 @@ WitchInTheWoods: {
       background:
         "./Assets/Backgrounds/Chapter08/Path_2ways.png"
     },
+    Chp08_ForestPathHammer: {
+      name: "Forest path",
+      background:
+        "./Assets/Backgrounds/Chapter08/Path_2ways_hammer.png"
+    },
     Chp08_HidingPlace: {
       name: "Hiding place",
       background:
@@ -440,7 +445,7 @@ WitchInTheWoods: {
         "./Assets/Backgrounds/Chapter10/Portrait.png"
     },
     Chp10_MinigameInstructions: {
-      name: "Portrait",
+      name: "Minigame instructions",
       background:
         "./Assets/Backgrounds/Chapter10/Minigame_Instructions.png"
     },

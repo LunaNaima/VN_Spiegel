@@ -29,7 +29,7 @@ namespace Spiegel_VN {
 
       case Chp05ConvoTreeElementAnswers.iSaySick:
         dataForSave.pickedChp05Sick = true;
-        await ƒS.Speech.tell(characters.wishtree, '"Die Erkrankten zeigen unterschiedliche Symptome. Sie sind übermüdet, bedrückt und, am auffälligsten: sie verlieren ihre Farbe. Sie werden also grau."');
+        await ƒS.Speech.tell(characters.wishtree, '"Die Erkrankten zeigen unterschiedliche Symptome. Sie sind bedrückt und: sie verlieren ihre Farbe. Sie werden also grau."');
         ƒS.Speech.clear();
         return "05_02 Convo Tree";
         break;
@@ -57,7 +57,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp05_WishtreeBirds);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-    await ƒS.Speech.tell(characters.maincharacter, "Die Vögel zwitschern um dich herum. Wie willst du dich mit ihnen verbinden?");
+    await ƒS.Speech.tell(characters.maincharacter, "Wie willst du dich mit ihnen verbinden?");
 
     let Chp05ConvoTreeElementAnswers2 = {
       iSaySing: "Zu Vögeln singen",
@@ -69,7 +69,7 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp05ConvoTreeElement2) {
       case Chp05ConvoTreeElementAnswers2.iSaySing:
-        await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast. In deiner Stimmt liegt Trauer um deine kleine Schwester, aber auch Wut und Verzweiflung.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast.");
         ƒS.Speech.clear();
         break;
       
@@ -80,7 +80,7 @@ namespace Spiegel_VN {
           await ƒS.Speech.tell(characters.maincharacter, "Leider hast du deine übrigen Sonnenblumenkerne im Garten verpflanzt. "); 
 
         }
-        await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast. In deiner Stimmt liegt Trauer um deine kleine Schwester, aber auch Wut und Verzweiflung.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast.");
         ƒS.Speech.clear();
         break;
     }
@@ -100,7 +100,7 @@ namespace Spiegel_VN {
 
     let Chp05ConvoTreeElement3 = await ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
       await ƒS.Speech.tell(characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? In einer dunklen Nacht bei hellstem Mondlicht? Dir dämmert, dass die Zeit für die Abreise naht.");
-      await ƒS.Speech.tell(characters.maincharacter, "Langsam trittst du deinen Heimweg an. Wie konnte das passieren? Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
+      await ƒS.Speech.tell(characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
 
     return "05_ConvoMother";
   }

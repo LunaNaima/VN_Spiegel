@@ -27,7 +27,7 @@ namespace Spiegel_VN {
 
     let Chp03DressmakerElementAnswers = {
       iSayNo: "Hauptsache, warm.",
-      iSayYes: "Das Asssehen zählt.",
+      iSayYes: "Das Aussehen zählt.",
     };
 
     let Chp03DressmakerElement = await ƒS.Menu.getInput(Chp03DressmakerElementAnswers, "choicesCSSclass");
