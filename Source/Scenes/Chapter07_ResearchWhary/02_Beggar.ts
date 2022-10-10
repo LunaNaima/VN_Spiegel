@@ -98,7 +98,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Beggar, characters.Beggar.pose.shocked, ƒS.positionPercent(30, 120));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln."');
+    await ƒS.Speech.tell(characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln. Über den See!"');
 
     await ƒS.Speech.tell(characters.maincharacter, '"Was bedeutet das, mit den Spiegeln?"');
     await ƒS.Speech.tell(characters.maincharacter, "Statt zu antworten, schaut sie über deine Schulter. Du folgst ihrem Blick, weil du denkst, sie hätte etwas entdeckt. Als du dich wieder umdrehst, ist die Bettlerin verschwunden.");

@@ -28,7 +28,7 @@ namespace Spiegel_VN {
         }
 
         let Chp04PickSceneElementAnswers = {
-            PickSceneTalkToFamily: "Mit Familie sprechen",
+            PickSceneTalkToFamily: "Mit Mutti sprechen",
             PickSceneResearchLibrary: "Zur Bücherei",
             PickSceneExamineMirror: "Nochmal in Kailanis Schlafzimmer",
             PickSceneContinue: "Weiter",

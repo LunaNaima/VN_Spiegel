@@ -31,15 +31,15 @@ namespace Spiegel_VN {
       PickSceneResearchMarketplace: "Recherche am Marktplatz",
       PickSceneSpeakToInnkeeper: "Mit Gastwirtin sprechen",
       PickSceneSpeakToCook: "Mit Koch sprechen",
-      PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
+      // PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
       PickSceneContinue: "Weiter",
     };
 
     if (
       !dataForSave.pickedChp07ResearchMarketplace ||
       !dataForSave.pickedChp07TalkToCook ||
-      !dataForSave.pickedChp07TalkToInnkeeper ||
-      !dataForSave.pickedChp07TalkToStablehand
+      !dataForSave.pickedChp07TalkToInnkeeper
+      // !dataForSave.pickedChp07TalkToStablehand
     ) {
       delete Chp07PickSceneElementAnswers.PickSceneContinue;
     }
@@ -53,9 +53,9 @@ namespace Spiegel_VN {
     if (dataForSave.pickedChp07TalkToCook) {
       delete Chp07PickSceneElementAnswers.PickSceneSpeakToCook
     }
-    if (dataForSave.pickedChp07TalkToStablehand) {
-      delete Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand
-    }
+    // if (dataForSave.pickedChp07TalkToStablehand) {
+    //   delete Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand
+    // }
 
     let Chp07PickSceneElement = await ƒS.Menu.getInput(Chp07PickSceneElementAnswers,"choicesCSSclass");
 
@@ -123,45 +123,45 @@ namespace Spiegel_VN {
         return "07_TalkToInnkeeper";
         break;
 
-      case Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand:
-        dataForSave.pickedChp07TalkToStablehand = true;
-        await ƒS.Speech.tell(characters.maincharacter, "Vielleicht ist jemand bei den Pferden?");
-        await ƒS.Location.show(locations.Chp07_Barn);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        await ƒS.Speech.tell(characters.maincharacter, "Das Schnauben der Pferde erinnert dich an zuhause.");
+      // case Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand:
+      //   dataForSave.pickedChp07TalkToStablehand = true;
+      //   await ƒS.Speech.tell(characters.maincharacter, "Vielleicht ist jemand bei den Pferden?");
+      //   await ƒS.Location.show(locations.Chp07_Barn);
+      //   await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+      //   await ƒS.Speech.tell(characters.maincharacter, "Das Schnauben der Pferde erinnert dich an zuhause.");
 
-        ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_laugh, ƒS.positionPercent(30, 100));
-        ƒS.update();
+      //   ƒS.Character.hideAll();
+      //   await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_laugh, ƒS.positionPercent(30, 100));
+      //   ƒS.update();
         
-        await ƒS.Speech.tell(characters.maincharacter, '"Hallo! Darf ich dich kurz stören?"');
-        await ƒS.Speech.tell(characters.Stablehand, '"Mh."');
-        await ƒS.Speech.tell(characters.maincharacter, "Du zögerst, unsicher, wo du anfangen sollst. Du erzählst von deiner Schwester Kailani und wie sie war, bevor sie verschwand. Das Schweigen deines Gegenübers lässt die Wörter nur so herauspurzeln, und ehe du dich versiehst, hast du ihr dein ganzes Herz ausgeschüttet.");
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich komme einfach nicht weiter, weißt du? Wo könnte sie denn sein?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Das Mädchen schweigt. Sie sieht nachdenklich aus.");
-        await ƒS.Speech.tell(characters.Stablehand, '"Es gibt da etwas …"');
+      //   await ƒS.Speech.tell(characters.maincharacter, '"Hallo! Darf ich dich kurz stören?"');
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Mh."');
+      //   await ƒS.Speech.tell(characters.maincharacter, "Du zögerst, unsicher, wo du anfangen sollst. Du erzählst von deiner Schwester Kailani und wie sie war, bevor sie verschwand. Das Schweigen deines Gegenübers lässt die Wörter nur so herauspurzeln, und ehe du dich versiehst, hast du ihr dein ganzes Herz ausgeschüttet.");
+      //   await ƒS.Speech.tell(characters.maincharacter, '"Ich komme einfach nicht weiter, weißt du? Wo könnte sie denn sein?"');
+      //   await ƒS.Speech.tell(characters.maincharacter, "Das Mädchen schweigt. Sie sieht nachdenklich aus.");
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Es gibt da etwas …"');
 
-        ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_afraid, ƒS.positionPercent(30, 100));
-        ƒS.update();
+      //   ƒS.Character.hideAll();
+      //   await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_afraid, ƒS.positionPercent(30, 100));
+      //   ƒS.update();
 
-        await ƒS.Speech.tell(characters.Stablehand, '"Ich habe mal von etwas gehört, als ich die Pferde zum Wasser geführt habe. Zwei Wachen aus dem Schloss sind an mir vorbeigeritten. Die eine sagte zur Anderen: ‘Wird er dann auch über den See verfrachtet?’ Daraufhin meinte die Zweite: Ich glaube nicht, dass er gleich rein muss. Aber wenn er sich nochmal so verhält, gibt’s wohl keine Gnade …’ Die Wachen lachten gehässig, als sie wegritten."');
-        await ƒS.Speech.tell(characters.maincharacter, "Sie verfällt wieder ins Schweigen.");
-        await ƒS.Speech.tell(characters.Stablehand, '"Kennst du den großen See am Rande der Stadt?"');
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Ich habe mal von etwas gehört, als ich die Pferde zum Wasser geführt habe. Zwei Wachen aus dem Schloss sind an mir vorbeigeritten. Die eine sagte zur Anderen: ‘Wird er dann auch über den See verfrachtet?’ Daraufhin meinte die Zweite: Ich glaube nicht, dass er gleich rein muss. Aber wenn er sich nochmal so verhält, gibt’s wohl keine Gnade …’ Die Wachen lachten gehässig, als sie wegritten."');
+      //   await ƒS.Speech.tell(characters.maincharacter, "Sie verfällt wieder ins Schweigen.");
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Kennst du den großen See am Rande der Stadt?"');
 
-        let Chp07StablehandElementAnswers = {
-          iSayYes: '"Ja!"',
-        };
+      //   let Chp07StablehandElementAnswers = {
+      //     iSayYes: '"Ja!"',
+      //   };
 
-        let Chp07StablehandElement = await ƒS.Menu.getInput(Chp07StablehandElementAnswers, "choicesCSSclass");
+      //   let Chp07StablehandElement = await ƒS.Menu.getInput(Chp07StablehandElementAnswers, "choicesCSSclass");
 
-        await ƒS.Speech.tell(characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt."');
-        await ƒS.Speech.tell(characters.Stablehand, '"Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
-        await ƒS.Speech.tell(characters.maincharacter, "Sie verschwindet in einem der Ställe, ehe du dich recht bedanken kannst. Ihre Worte machen dir Bange. Einen See, den man nicht umrunden kann? Auch wenn Kailani auf der anderen Seite ist, wie sollst du ihn überqueren?");
-        ƒS.Speech.clear();
-        ƒS.Character.hideAll();
-        return "06_new day";
-        break;
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt."');
+      //   await ƒS.Speech.tell(characters.Stablehand, '"Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
+      //   await ƒS.Speech.tell(characters.maincharacter, "Sie verschwindet in einem der Ställe, ehe du dich recht bedanken kannst. Ihre Worte machen dir Bange. Einen See, den man nicht umrunden kann? Auch wenn Kailani auf der anderen Seite ist, wie sollst du ihn überqueren?");
+      //   ƒS.Speech.clear();
+      //   ƒS.Character.hideAll();
+      //   return "06_new day";
+      //   break;
       
       case Chp07PickSceneElementAnswers.PickSceneContinue:
         await ƒS.Location.show(locations.Chp06_Inn_int)

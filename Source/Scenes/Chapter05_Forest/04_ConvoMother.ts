@@ -30,15 +30,15 @@ namespace Spiegel_VN {
 
     switch (Chp05PickSceneElement) {
       case Chp05ConvoMotherElementAnswers.iSayLie:
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich habe gehört, Pantro wurde in Ulaser gesehen. Das liegt einige -"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich habe gehört, Kailani wurde in Ulaser gesehen. Das liegt einige -"');
         await ƒS.Speech.tell(characters.Mama, '"Ich weiß, wo das liegt. Wir fahren morgen zusammen hin und schauen nach, in Ordnung ?"');
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss allein los!"');
         ƒS.Speech.clear();
         break;
       
       case Chp05ConvoMotherElementAnswers.iSayDistract:
-        await ƒS.Speech.tell(characters.maincharacter, '"Was habt ihr denn bei Anna herausgefunden?"');
-        await ƒS.Speech.tell(characters.Mama, '"Nur, dass Pantro auch seit Stunden weg ist. Als wir vorhin gegangen sind, war er noch nicht daheim. Ich glaube trotzdem, dass die beiden wieder heim kommen. Aber jetzt geh’ bitte ins Bett."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Was habt ihr denn im Dorf herausgefunden?"');
+        await ƒS.Speech.tell(characters.Mama, '"Nur, dass Annas Sohn Pantro auch seit Stunden weg ist. Als wir vorhin gegangen sind, war er noch nicht daheim. Ich glaube trotzdem, dass die beiden wieder heim kommen. Aber jetzt geh’ bitte ins Bett."');
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss jetzt los."');
         ƒS.Speech.clear();
         break;
@@ -66,7 +66,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Mama, '"Du hast recht. Ich sehe dich noch als Kind, und nicht als starke und mutige Person."');
     await ƒS.Speech.tell(characters.Mama, '"Wenn du unbedingt gehen willst, dann tu es. Ich vertraue dir, in Ordnung? Aber bitte komme zurück, Liebling."');
-    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Hammer-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
+    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Eisen-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
 
     let Chp05ConvoMotherElementAnswers2 = {
       iSayTake: "Annehmen",

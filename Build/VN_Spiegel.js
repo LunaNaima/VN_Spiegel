@@ -2597,7 +2597,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Lieblingsort in diesem Dorf: die Bücherei. Hier versteckst du dich gerne, wenn es draußen zu laut wird.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, " Das Besondere ist das Bücherregal der Alten Zeit. Da stehen die wenigen Bücher, die von früher überlebt haben. Die Schrift kannst du kaum noch lesen, trotzdem blätterst du gerne durch, weil dich die Alte Welt fasziniert.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Früher wurden die Erdteile durch unsichtbare Kräfte zusammengehalten, bis die Kraft zerstört wurde und sie auseinanderbrachen. Mehr kannst du von den zerfallenen Seiten jedoch nicht erfahren.");
-        return "02_CS New day";
+        return "03_00 New day";
     }
     Spiegel_VN.Chp03_E_DiscoverLibrary = Chp03_E_DiscoverLibrary;
 })(Spiegel_VN || (Spiegel_VN = {}));
@@ -2776,7 +2776,7 @@ var Spiegel_VN;
                 break;
         }
         let Chp04PickSceneElementAnswers = {
-            PickSceneTalkToFamily: "Mit Familie sprechen",
+            PickSceneTalkToFamily: "Mit Mutti sprechen",
             PickSceneResearchLibrary: "Zur Bücherei",
             PickSceneExamineMirror: "Nochmal in Kailanis Schlafzimmer",
             PickSceneContinue: "Weiter",
@@ -2828,63 +2828,69 @@ var Spiegel_VN;
         Spiegel_VN.dataForSave.pickedChp04TalkToFamily = true;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_02_LivingRoom);
         Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_angry2, Spiegel_VN.ƒS.positionPercent(80, 100));
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos3_neutral, Spiegel_VN.ƒS.positionPercent(30, 100));
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress2_basket_frown, Spiegel_VN.ƒS.positionPercent(55, 100));
+        // await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_angry2, ƒS.positionPercent(80, 100));
+        //     await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_neutral, ƒS.positionPercent(30, 100));
+        //     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_frown, ƒS.positionPercent(55,100));
+        //     ƒS.update();
+        //     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+        //     dataForSave.pickedChp04TalkToFamily = true;
+        //     await ƒS.Speech.tell(characters.Evarius, '"Also. Es ist etwas passiert. Pantro, mein Klassenkamerad, ist auch wie vom Boden verschluckt."');
+        //     await ƒS.Speech.tell(characters.maincharacter, '"Es muss etwas Schlimmes passiert sein!"');
+        //     ƒS.Character.hide(characters.Mutti);
+        //     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress1_basket_frown, ƒS.positionPercent(55,100));
+        //     ƒS.update();
+        //     await ƒS.Speech.tell(characters.Mutti, '"Pantro ist auch weg?"');
+        //     await ƒS.Speech.tell(characters.Mama, '"Woher weißt du das denn? Bist du dir sicher, dass er nicht auch kurz in den Wald ist?"');
+        //     await ƒS.Speech.tell(characters.Mutti, '"Leijla, meinst du, es ist der richtige Zeitpunkt, zweifelnd zu sein?"');
+        //      let Chp04TalkFamilyElementAnswers = {
+        //       iSayCoincidence: "Das ist kein Zufall.",
+        //       iSayPointless: "Es ist sinnlos.",
+        //       iSayMirror: "Hat es was mit dem Spiegel zu tun?",
+        //     };
+        //     let Chp04TalkFamilyElement = await ƒS.Menu.getInput(Chp04TalkFamilyElementAnswers,"choicesCSSclass");
+        //     // *** RESPONSES ***
+        //     switch (Chp04TalkFamilyElement) {
+        //       case Chp04TalkFamilyElementAnswers.iSayCoincidence:
+        //         await ƒS.Speech.tell(characters.Evarius, '"Pantro war auch bleich! Und zurückgezogen! So hat das zumindest seine Mutter gesagt."');
+        //         await ƒS.Speech.tell(characters.Mutti, '"Bleich? Was meinst du damit?"');
+        //         await ƒS.Speech.tell(characters.maincharacter, '"Heute Mittag war ich doch mit Kailani unterwegs. Jetzt im Nachhinein fällt mir auf, wie grau sie war. Sie war wirklich blasser als sonst. Aber sie wollte mir nicht erzählen, was sie bedrückt hat."');
+        //         ƒS.Character.hide(characters.Mama);
+        //         await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_hand_laugh, ƒS.positionPercent(80, 100));
+        //         ƒS.update();
+        //         await ƒS.Speech.tell(characters.Mama, '"Vielleicht ist sie gar nicht weg. Beruhige dich doch erstmal."');
+        //         await ƒS.Speech.tell(characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
+        //         ƒS.Speech.clear();
+        //         break;
+        //       case Chp04TalkFamilyElementAnswers.iSayPointless:
+        //         await ƒS.Speech.tell(characters.maincharacter, '"Ach, ich weiß auch nicht weiter. Was ist, wenn sie schon über alle Berge ist?"');
+        //         await ƒS.Speech.tell(characters.Evarius, '"Kaili taucht schon noch auf!"');
+        //         await ƒS.Speech.tell(characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
+        //         ƒS.Speech.clear();
+        //         break;
+        //       case Chp04TalkFamilyElementAnswers.iSayMirror:
+        //         await ƒS.Speech.tell(characters.Evarius, '"Pantros Mutter hat erzählt, dass er kurz vor seinem Verschwinden ziemlich abweisend war. Dazu war er seltsam blass."');
+        //         await ƒS.Speech.tell(characters.maincharacter, '"Und den gleichen Eindruck hatte ich von Kailani, als ich heute Mittag mit ihr unterwegs war! Sie hat nur von diesem Spiegel erzählt …"');
+        //         await ƒS.Speech.tell(characters.Mama, '"Der Spiegel, den wir letzte Woche zusammen gekauft haben? Hat sie ihn etwa benutzt?"');
+        //         ƒS.Character.hide(characters.Mutti);
+        //         await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smirk, ƒS.positionPercent(55, 100));
+        //         ƒS.update();
+        //         await ƒS.Speech.tell(characters.Mutti, '"Ich habe ihn ihr gegeben, weil sie so gern damit gespielt hat… "');
+        //         ƒS.Character.hide(characters.Mama);
+        //         await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_laugh2, ƒS.positionPercent(80, 100));
+        //         ƒS.update();
+        //         await ƒS.Speech.tell(characters.Mama, '"Was soll denn der Spiegel damit zu tun haben, dass sie verschwunden ist? Ich glaube immer noch an ein großes Missverständnis. Vielleicht ist sie mit Pantro zusammen und hat sich heimlich mit ihm getroffen?"');
+        //         await ƒS.Speech.tell(characters.Mutti, '"Das könnte eine Möglichkeit sein…"');
+        //         ƒS.Speech.clear();
+        //         break;
+        //     }
+        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_laugh2, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        Spiegel_VN.dataForSave.pickedChp04TalkToFamily = true;
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Also. Es ist etwas passiert. Pantro, mein Klassenkamerad, ist auch wie vom Boden verschluckt."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Es muss etwas Schlimmes passiert sein!"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mutti);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress1_basket_frown, Spiegel_VN.ƒS.positionPercent(55, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress2_basket_smirk, Spiegel_VN.ƒS.positionPercent(55, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Pantro ist auch weg?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Woher weißt du das denn? Bist du dir sicher, dass er nicht auch kurz in den Wald ist?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Leijla, meinst du, es ist der richtige Zeitpunkt, zweifelnd zu sein?"');
-        let Chp04TalkFamilyElementAnswers = {
-            iSayCoincidence: "Das ist kein Zufall.",
-            iSayPointless: "Es ist sinnlos.",
-            iSayMirror: "Hat es was mit dem Spiegel zu tun?",
-        };
-        let Chp04TalkFamilyElement = await Spiegel_VN.ƒS.Menu.getInput(Chp04TalkFamilyElementAnswers, "choicesCSSclass");
-        // *** RESPONSES ***
-        switch (Chp04TalkFamilyElement) {
-            case Chp04TalkFamilyElementAnswers.iSayCoincidence:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Pantro war auch bleich! Und zurückgezogen! So hat das zumindest seine Mutter gesagt."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Bleich? Was meinst du damit?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Heute Mittag war ich doch mit Kailani unterwegs. Jetzt im Nachhinein fällt mir auf, wie grau sie war. Sie war wirklich blasser als sonst. Aber sie wollte mir nicht erzählen, was sie bedrückt hat."');
-                Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
-                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_hand_laugh, Spiegel_VN.ƒS.positionPercent(80, 100));
-                Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Vielleicht ist sie gar nicht weg. Beruhige dich doch erstmal."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp04TalkFamilyElementAnswers.iSayPointless:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ach, ich weiß auch nicht weiter. Was ist, wenn sie schon über alle Berge ist?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Kaili taucht schon noch auf!"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Wurde Kailani von jemandem mitgenommen? Ist sie abgehauen? Hat Pantro damit etwas zu tun?"');
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp04TalkFamilyElementAnswers.iSayMirror:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Pantros Mutter hat erzählt, dass er kurz vor seinem Verschwinden ziemlich abweisend war. Dazu war er seltsam blass."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und den gleichen Eindruck hatte ich von Kailani, als ich heute Mittag mit ihr unterwegs war! Sie hat nur von diesem Spiegel erzählt …"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Der Spiegel, den wir letzte Woche zusammen gekauft haben? Hat sie ihn etwa benutzt?"');
-                Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mutti);
-                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress2_basket_smirk, Spiegel_VN.ƒS.positionPercent(55, 100));
-                Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Ich habe ihn ihr gegeben, weil sie so gern damit gespielt hat… "');
-                Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
-                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_laugh2, Spiegel_VN.ƒS.positionPercent(80, 100));
-                Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Was soll denn der Spiegel damit zu tun haben, dass sie verschwunden ist? Ich glaube immer noch an ein großes Missverständnis. Vielleicht ist sie mit Pantro zusammen und hat sich heimlich mit ihm getroffen?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Das könnte eine Möglichkeit sein…"');
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-        }
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Warum gehen wir nicht zu Anna und fragen sie nach ihrem Sohn? Stell dir vor, wir machen hier ein großes Drama und später spazieren die beiden seelenruhig zur Tür rein."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit"' + Spiegel_VN.dataForSave.nameProtagonist + '"sprechen."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Warum gehen wir sie nicht im Dorf suchen? Stell dir vor, wir machen hier ein großes Drama und später spaziert sie seelenruhig zur Tür rein."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit' + Spiegel_VN.dataForSave.nameProtagonist + 'sprechen."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Evarius);
         Spiegel_VN.ƒS.update();
@@ -3755,13 +3761,14 @@ var Spiegel_VN;
             PickSceneResearchMarketplace: "Recherche am Marktplatz",
             PickSceneSpeakToInnkeeper: "Mit Gastwirtin sprechen",
             PickSceneSpeakToCook: "Mit Koch sprechen",
-            PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
+            // PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
             PickSceneContinue: "Weiter",
         };
         if (!Spiegel_VN.dataForSave.pickedChp07ResearchMarketplace ||
             !Spiegel_VN.dataForSave.pickedChp07TalkToCook ||
-            !Spiegel_VN.dataForSave.pickedChp07TalkToInnkeeper ||
-            !Spiegel_VN.dataForSave.pickedChp07TalkToStablehand) {
+            !Spiegel_VN.dataForSave.pickedChp07TalkToInnkeeper
+        // !dataForSave.pickedChp07TalkToStablehand
+        ) {
             delete Chp07PickSceneElementAnswers.PickSceneContinue;
         }
         if (Spiegel_VN.dataForSave.pickedChp07ResearchMarketplace) {
@@ -3773,9 +3780,9 @@ var Spiegel_VN;
         if (Spiegel_VN.dataForSave.pickedChp07TalkToCook) {
             delete Chp07PickSceneElementAnswers.PickSceneSpeakToCook;
         }
-        if (Spiegel_VN.dataForSave.pickedChp07TalkToStablehand) {
-            delete Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand;
-        }
+        // if (dataForSave.pickedChp07TalkToStablehand) {
+        //   delete Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand
+        // }
         let Chp07PickSceneElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07PickSceneElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
         switch (Chp07PickSceneElement) {
@@ -3828,38 +3835,38 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Speech.clear();
                 return "07_TalkToInnkeeper";
                 break;
-            case Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand:
-                Spiegel_VN.dataForSave.pickedChp07TalkToStablehand = true;
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Vielleicht ist jemand bei den Pferden?");
-                await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp07_Barn);
-                await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Schnauben der Pferde erinnert dich an zuhause.");
-                Spiegel_VN.ƒS.Character.hideAll();
-                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Stablehand, Spiegel_VN.characters.Stablehand.pose.pos2_laugh, Spiegel_VN.ƒS.positionPercent(30, 100));
-                Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Hallo! Darf ich dich kurz stören?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Mh."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du zögerst, unsicher, wo du anfangen sollst. Du erzählst von deiner Schwester Kailani und wie sie war, bevor sie verschwand. Das Schweigen deines Gegenübers lässt die Wörter nur so herauspurzeln, und ehe du dich versiehst, hast du ihr dein ganzes Herz ausgeschüttet.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich komme einfach nicht weiter, weißt du? Wo könnte sie denn sein?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Mädchen schweigt. Sie sieht nachdenklich aus.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Es gibt da etwas …"');
-                Spiegel_VN.ƒS.Character.hideAll();
-                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Stablehand, Spiegel_VN.characters.Stablehand.pose.pos2_afraid, Spiegel_VN.ƒS.positionPercent(30, 100));
-                Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Ich habe mal von etwas gehört, als ich die Pferde zum Wasser geführt habe. Zwei Wachen aus dem Schloss sind an mir vorbeigeritten. Die eine sagte zur Anderen: ‘Wird er dann auch über den See verfrachtet?’ Daraufhin meinte die Zweite: Ich glaube nicht, dass er gleich rein muss. Aber wenn er sich nochmal so verhält, gibt’s wohl keine Gnade …’ Die Wachen lachten gehässig, als sie wegritten."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sie verfällt wieder ins Schweigen.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Kennst du den großen See am Rande der Stadt?"');
-                let Chp07StablehandElementAnswers = {
-                    iSayYes: '"Ja!"',
-                };
-                let Chp07StablehandElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07StablehandElementAnswers, "choicesCSSclass");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Stablehand, '"Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sie verschwindet in einem der Ställe, ehe du dich recht bedanken kannst. Ihre Worte machen dir Bange. Einen See, den man nicht umrunden kann? Auch wenn Kailani auf der anderen Seite ist, wie sollst du ihn überqueren?");
-                Spiegel_VN.ƒS.Speech.clear();
-                Spiegel_VN.ƒS.Character.hideAll();
-                return "06_new day";
-                break;
+            // case Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand:
+            //   dataForSave.pickedChp07TalkToStablehand = true;
+            //   await ƒS.Speech.tell(characters.maincharacter, "Vielleicht ist jemand bei den Pferden?");
+            //   await ƒS.Location.show(locations.Chp07_Barn);
+            //   await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+            //   await ƒS.Speech.tell(characters.maincharacter, "Das Schnauben der Pferde erinnert dich an zuhause.");
+            //   ƒS.Character.hideAll();
+            //   await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_laugh, ƒS.positionPercent(30, 100));
+            //   ƒS.update();
+            //   await ƒS.Speech.tell(characters.maincharacter, '"Hallo! Darf ich dich kurz stören?"');
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Mh."');
+            //   await ƒS.Speech.tell(characters.maincharacter, "Du zögerst, unsicher, wo du anfangen sollst. Du erzählst von deiner Schwester Kailani und wie sie war, bevor sie verschwand. Das Schweigen deines Gegenübers lässt die Wörter nur so herauspurzeln, und ehe du dich versiehst, hast du ihr dein ganzes Herz ausgeschüttet.");
+            //   await ƒS.Speech.tell(characters.maincharacter, '"Ich komme einfach nicht weiter, weißt du? Wo könnte sie denn sein?"');
+            //   await ƒS.Speech.tell(characters.maincharacter, "Das Mädchen schweigt. Sie sieht nachdenklich aus.");
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Es gibt da etwas …"');
+            //   ƒS.Character.hideAll();
+            //   await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_afraid, ƒS.positionPercent(30, 100));
+            //   ƒS.update();
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Ich habe mal von etwas gehört, als ich die Pferde zum Wasser geführt habe. Zwei Wachen aus dem Schloss sind an mir vorbeigeritten. Die eine sagte zur Anderen: ‘Wird er dann auch über den See verfrachtet?’ Daraufhin meinte die Zweite: Ich glaube nicht, dass er gleich rein muss. Aber wenn er sich nochmal so verhält, gibt’s wohl keine Gnade …’ Die Wachen lachten gehässig, als sie wegritten."');
+            //   await ƒS.Speech.tell(characters.maincharacter, "Sie verfällt wieder ins Schweigen.");
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Kennst du den großen See am Rande der Stadt?"');
+            //   let Chp07StablehandElementAnswers = {
+            //     iSayYes: '"Ja!"',
+            //   };
+            //   let Chp07StablehandElement = await ƒS.Menu.getInput(Chp07StablehandElementAnswers, "choicesCSSclass");
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Schon als Kind durfte ich nicht darin schwimmen. Dann hole mich der Klabautermann, wurde mir gesagt."');
+            //   await ƒS.Speech.tell(characters.Stablehand, '"Auf der anderen Seite scheint etwas zu sein, dass verborgen bleiben soll. Ich weiß nicht, ob dir das bei der Suche nach deiner Schwester hilft"');
+            //   await ƒS.Speech.tell(characters.maincharacter, "Sie verschwindet in einem der Ställe, ehe du dich recht bedanken kannst. Ihre Worte machen dir Bange. Einen See, den man nicht umrunden kann? Auch wenn Kailani auf der anderen Seite ist, wie sollst du ihn überqueren?");
+            //   ƒS.Speech.clear();
+            //   ƒS.Character.hideAll();
+            //   return "06_new day";
+            //   break;
             case Chp07PickSceneElementAnswers.PickSceneContinue:
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_int);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
@@ -4025,7 +4032,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Beggar);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Beggar, Spiegel_VN.characters.Beggar.pose.shocked, Spiegel_VN.ƒS.positionPercent(30, 120));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln. Über den See!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was bedeutet das, mit den Spiegeln?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Statt zu antworten, schaut sie über deine Schulter. Du folgst ihrem Blick, weil du denkst, sie hätte etwas entdeckt. Als du dich wieder umdrehst, ist die Bettlerin verschwunden.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Beggar);
