@@ -323,6 +323,8 @@ namespace Spiegel_VN {
             ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
         ƒS.Character.hideAll();
         ƒS.update();
+        
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(80, 100));
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit1_neutral_happy, ƒS.positionPercent(45, 100));
         await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_laugh, ƒS.positionPercent(10, 100));
