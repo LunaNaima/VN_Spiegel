@@ -43,7 +43,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_neutral, ƒS.positionPercent(80, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Mama, '"Alles in Ordnung? Du bist heute noch stiller als sonst?"');
+    await ƒS.Speech.tell(characters.Mama, '"Alles in Ordnung?"');
 
     await ƒS.Speech.tell(characters.maincharacter, "Du musst lächeln.");
 

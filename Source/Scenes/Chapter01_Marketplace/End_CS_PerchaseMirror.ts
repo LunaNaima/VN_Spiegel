@@ -19,12 +19,12 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.mirrorMerchant, '"Schauen Sie, wie brillant die Farben sind! Was meinen Sie, für nur zwei Goldstücke?"');
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70, 100));
     ƒS.update();
-    await ƒS.Speech.tell(characters.Mama, '"Für mich ist so eine Spielerei nichts! Aber vielleicht für Mutti …?"');
+    await ƒS.Speech.tell(characters.Mama, '"Für mich ist so eine Spielerei nichts! Aber vielleicht für Mutti? Sie ist doch Künstlerin."');
     await ƒS.Location.show(locations.Chp01_03_IntroMirror);
     ƒS.update();
     await ƒS.Speech.tell(characters.mirrorMerchant, '"Die Spiegel eignen sich wunderbar als Geschenk für Ihre Frau!"');
-    await ƒS.Speech.tell(characters.Mama, '"Sie ist Künstlerin, wissen Sie; mit diesem Spiegel könnte sie vielleicht ihre Gedanken besser visualisieren, manchmal fehlt ihr das."');
-    await ƒS.Speech.tell(characters.mirrorMerchant, '"Das denke ich doch auch! Als Inspiration dient der Spiegel geradezu vorzüglich!"');
+    // await ƒS.Speech.tell(characters.Mama, '"Sie ist Künstlerin, wissen Sie; mit diesem Spiegel könnte sie vielleicht ihre Gedanken besser visualisieren, manchmal fehlt ihr das."');
+    // await ƒS.Speech.tell(characters.mirrorMerchant, '"Das denke ich doch auch! Als Inspiration dient der Spiegel geradezu vorzüglich!"');
     await ƒS.Speech.tell(characters.Mama, '"Na gut, wir probieren es mal aus! Dann nehmen wir diesen hier."');
     await ƒS.Speech.tell(characters.maincharacter, "Mama überreicht dem Händler die Goldstücke aus ihrer Geldbörse. Der strahlende Händler packt den Spiegel vorsichtig in glitzerndes Papier und steckt ihn Mama in die Tasche. Du hast ein komisches Gefühl dabei, schüttelst es aber ab und denkst, es ist bestimmt nur dein knurrender Magen.");
     await ƒS.Speech.tell(characters.Mama, '"So, alles erledigt, ab nach Hause!"');
