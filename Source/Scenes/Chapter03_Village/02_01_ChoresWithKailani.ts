@@ -39,7 +39,7 @@ namespace Spiegel_VN {
     }
   
     await ƒS.Speech.tell(characters.maincharacter, "Kailani ist heute wirklich schlecht drauf. Dabei ist eure Beziehung eigentlich gut.");
-    await ƒS.Speech.tell(characters.maincharacter, "Hat sie vielleicht schlecht geschlafen? Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr beim Wasserholen auf den Zahn zu fühlen.");
+    await ƒS.Speech.tell(characters.maincharacter, "Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr auf den Zahn zu fühlen.");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani, geht`s dir gut? Treibt dich etwas um?"');
     ƒS.Character.hide(characters.Kailani);
@@ -62,7 +62,7 @@ namespace Spiegel_VN {
       case Chp03ChoresKailaniElementAnswers1.iSayWorried:
         await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir nur Sorgen um dich. Gibt es etwas, worüber du dir Gedanken machst?"');
         await ƒS.Speech.tell(characters.Kailani, '"Nö."');
-        await ƒS.Speech.tell(characters.maincharacter, '"Ach Kailani, lass den Quatsch. Ich sehe doch, dass es dir nicht gut geht! Also, spuck’s aus. Ich erzähle unseren Eltern auch nichts davon, wenn du das nicht willst."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ach Kailani, ich sehe doch, dass es dir nicht gut geht! Also, spuck’s aus. Ich erzähle unseren Eltern auch nichts davon, wenn du das nicht willst."');
         await ƒS.Speech.tell(characters.Kailani, '"Hm. Naja, also. Ich …"');
         await ƒS.Speech.tell(characters.maincharacter, "Hoffentlich vertraut sie sich dir an.");
         ƒS.Character.hide(characters.Kailani);

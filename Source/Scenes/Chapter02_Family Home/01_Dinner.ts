@@ -30,14 +30,14 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_frown, ƒS.positionPercent(55,100));
     ƒS.update();
     
-    await ƒS.Speech.tell(characters.Mutti, '"Nur ein bisschen, ihr zwei, in Ordnung?"');
+    // await ƒS.Speech.tell(characters.Mutti, '"Nur ein bisschen, ihr zwei, in Ordnung?"');
 
     ƒS.Character.hide(characters.Evarius);
     await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_frown, ƒS.positionPercent(10, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Evarius, '"Ach, Mutti …"');
-    await ƒS.Speech.tell(characters.maincharacter, "Das übliche Chaos beim Essen. Evarius gibt den Ton an und Kailani folgt ihm. Mutti lässt sich auch immer so schnell erweichen! Mama schaut dich von der Seite an.");
+    await ƒS.Speech.tell(characters.maincharacter, "Das übliche Chaos beim Essen. Mutti lässt sich auch immer so schnell erweichen! Mama schaut dich von der Seite an.");
 
     ƒS.Character.hide(characters.Mama);
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_neutral, ƒS.positionPercent(80, 100));
@@ -45,7 +45,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Mama, '"Alles in Ordnung?"');
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du musst lächeln.");
+    // await ƒS.Speech.tell(characters.maincharacter, "Du musst lächeln.");
 
     // *** SCENE OPTIONS ***
     let Chp02PickSceneElementAnswersDinner = {
@@ -89,19 +89,19 @@ namespace Spiegel_VN {
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_shocked, ƒS.positionPercent(80, 100));
         ƒS.update();
         await ƒS.Speech.tell(characters.Mama, '"Die haben sich schon heute Morgen gestritten. Aber gerade eben habe ich nichts mitbekommen. Was war denn los?"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Ach, vielleicht war es nichts Ernstes. Henri ärgerte sich über Balduin, weil er wohl dauernd in den Spiegel schaut, den gleichen Spiegel, den wir heute gekauft haben. Das ist doch komisch, nicht?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ach, vielleicht war es nichts Ernstes. Henri ärgerte sich über Balduin, weil er wohl dauernd in den magischen Spiegel schaut. Das ist doch komisch, nicht?"');
         ƒS.Character.hide(characters.Mama);
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_angry, ƒS.positionPercent(80, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Mama, '"Das wäre ja ein arger Zufall. Worüber sollte man sich denn bei dem Spiegel streiten? Vielleicht hast du dich verhört."');
-        await ƒS.Speech.tell(characters.maincharacter, "Mama dreht sich um und mahnt Evarius ab, weil er mit den Karotten Fange gespielt hat. Du hast schon fertig gegessen, hast aber immer noch dieses komische Gefühl im Bauch.");
+        await ƒS.Speech.tell(characters.Mama, '"Worüber sollte man sich denn bei dem Spiegel streiten? Vielleicht hast du dich verhört."');
+        // await ƒS.Speech.tell(characters.maincharacter, "Mama dreht sich um und mahnt Evarius ab, weil er mit den Karotten Fange gespielt hat. Du hast schon fertig gegessen, hast aber immer noch dieses komische Gefühl im Bauch.");
         ƒS.Speech.clear();
         // return "02_021 Test Mirror";
         break;
 
       case Chp02PickSceneElementAnswersDinner.iSaySilent:
         await ƒS.Speech.tell(characters.Mama, '"Na gut! Wenn du nicht reden willst. Vielleicht kommen Mutti und ich heute Abend mit einer heißen Schokolade in deinem Zimmer vorbei?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Du weißt, sie will es dir nur recht machen. Du bist eben von dem Trubel heute erschöpft. Trotzdem willst du noch den Spiegel austesten. Stimmt das wirklich, was der Händler gesagt hat?");
+        await ƒS.Speech.tell(characters.maincharacter, "Du weißt, sie will es dir nur recht machen. Trotzdem willst du noch den Spiegel austesten. Stimmt das wirklich, was der Händler gesagt hat?");
         ƒS.Speech.clear();
         // return "02_021 Test Mirror";
         break;
@@ -112,7 +112,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mutti, '"Hat es euch denn geschmeckt?"');
-    await ƒS.Speech.tell(characters.maincharacter, "Alle stimmen lautstark mit ein. Gegen Muttis vorzügliches Kochen hat keiner aus der Familie etwas einzuwenden.");
+    await ƒS.Speech.tell(characters.maincharacter, "Alle stimmen lautstark mit ein. Gegen Muttis vorzügliches Kochen hat keiner etwas einzuwenden.");
 
     ƒS.Character.hide(characters.Kailani);
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit2_dress1_angry, ƒS.positionPercent(45, 100));

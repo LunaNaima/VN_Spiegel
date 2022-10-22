@@ -47,8 +47,8 @@ namespace Spiegel_VN {
         dataForSave.pickedChp03_SearchGarden = true;
         await ƒS.Location.show(locations.Chp02_03_PickHerbs);
         ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Hat sie sich vielleicht im Garten versteckt? Aber das wäre untypisch. Schließlich verbringt sie gerade die meiste Zeit in ihrem Zimmer.");
-        await ƒS.Speech.tell(characters.maincharacter, "Du schaust in jede Ecke, während die Vögel zwitschern und der Wind unschuldig durch die Blätter streift. Doch verstecken kann man sich in dem kleinen Kräutergarten eigentlich nicht.");
+        await ƒS.Speech.tell(characters.maincharacter, "Sie kann eigentlich nicht hier sein. Schließlich verbringt sie gerade die meiste Zeit in ihrem Zimmer.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du schaust in jede Ecke, während die Vögel unschuldig zwitschern. Keine Kailani.");
 
         ƒS.Speech.clear();
         break;
@@ -73,7 +73,7 @@ namespace Spiegel_VN {
         
         switch (Chp03SearchKailaniElement1) {
           case Chp03SearchKailaniElementAnswers1.iSayPanicked:
-            await ƒS.Speech.tell(characters.maincharacter, '"Sie ist weg! Oh Gott, was ist, wenn sie weggelaufen ist? Vorhin hatte ich noch mit ihr gesprochen. Und irgendetwas hat mit ihr nicht gestimmt."');
+            await ƒS.Speech.tell(characters.maincharacter, '"Sie ist weg! Oh Gott, was ist, wenn sie weggelaufen ist? Vorhin hat irgendetwas hat mit ihr nicht gestimmt."');
             await ƒS.Speech.tell(characters.Mutti, '"Jetzt beruhige dich erst mal. Suchen wir doch zuerst nach ihr!"');
             if (dataForSave.pickedChp03_SearchGarden) {
               await ƒS.Speech.tell(characters.maincharacter, '"Da habe ich schon geschaut! Sie ist einfach weg!"');
@@ -101,7 +101,7 @@ namespace Spiegel_VN {
             } else {
               await ƒS.Speech.tell(characters.maincharacter, '"Noch nicht, aber ich weiß, dass sie da nicht ist!"');
             }
-            await ƒS.Speech.tell(characters.Mutti, '"Rufe doch mal Evarius herunter, dann kannst du dich mit ihm besprechen. Dass sie nicht aufzufinden ist, ist ungewöhnlich …"');
+            await ƒS.Speech.tell(characters.Mutti, '"Rufe doch mal Evarius herunter, dann kannst du dich mit ihm besprechen."');
             ƒS.Speech.clear();
             break;
         }
@@ -114,8 +114,8 @@ namespace Spiegel_VN {
         await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_frown, ƒS.positionPercent(55,100));
         ƒS.update();
         await ƒS.Speech.tell(characters.maincharacter, '"Ich finde Kailani nirgends. Habt ihr sie nicht gesehen?"');
-        await ƒS.Speech.tell(characters.Mama, '"Ich komme gerade von der Arbeit und habe nichts gesehen! Ist alles in Ordnung."');
-        await ƒS.Speech.tell(characters.maincharacter, '"Vorhin habe ich noch mit ihr Hausarbeiten gemacht. Da war noch alles okay! Oder, nicht wirklich. Irgendetwas hat sie gestört, aber sie wollte es mir nicht sagen. Was ist, wenn sie weggelaufen ist?"');
+        await ƒS.Speech.tell(characters.Mama, '"Ich komme gerade von der Arbeit! Ist alles in Ordnung?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Vorhin habe ich noch mit ihr Hausarbeiten gemacht. Irgendetwas hat sie gestört, aber sie wollte es mir nicht sagen. Was ist, wenn sie weggelaufen ist?"');
         ƒS.Character.hide(characters.Mama);
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_hand_angry, ƒS.positionPercent(80, 100));
         ƒS.update();

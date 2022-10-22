@@ -69,7 +69,7 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.Chp07_MarketplaceWhary);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-        await ƒS.Speech.tell(characters.maincharacter, "Ihr folgt den kleinen Gassen, bis sich ein bunter Marktplatz vor euch auftut. Genau wie daheim wuselt er vor Menschen, Waren und der einen oder anderen streunenden Katze. Du hast Heimweh, auch wenn du nie dachtest, dass du dein kleines Dorf mal so sehr vermissen würdest. Aber Kailani wartet irgendwo auf dich. Wenigstens schaut dich, dank deinem neuen Outfit, niemand schräg von der Seite an.");
+        await ƒS.Speech.tell(characters.maincharacter, "Ihr folgt den kleinen Gassen, bis sich ein bunter Marktplatz vor euch auftut. Genau wie daheim wuselt er vor Menschen, Waren und der einen oder anderen streunenden Katze. Du hast Heimweh, auch wenn du nie dachtest, dass du dein kleines Dorf mal so sehr vermissen würdest. Aber Kailani wartet irgendwo auf dich.");
         ƒS.Speech.clear();
         return "07_Research Marketplace";
         break;
@@ -112,7 +112,7 @@ namespace Spiegel_VN {
         dataForSave.pickedChp07TalkToInnkeeper = true;
 
         await ƒS.Speech.tell(characters.Innkeeper, '"Kann ich dir weiterhelfen?"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Sie ist vor ein paar Tagen verschwunden und ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
     
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_frown, ƒS.positionPercent(70, 100));
@@ -169,9 +169,9 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_confused, ƒS.positionPercent(40, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Flynn, '"Du warst aber lange weg? Ist alles in Ordnung?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Du erzählst ihm aufgeregt von den Hinweisen, die dir die Wirtsleute gegeben haben.");
-        await ƒS.Speech.tell(characters.maincharacter, '"Und weil die Farbe etwas mit einem Ort zu tun hat, der auf der anderen Seite des Sees liegt, muss ich dort hin! Kailani wird dort vielleicht gefangen gehalten!"');
+        await ƒS.Speech.tell(characters.Flynn, '"Und, was hast du rausgefunden?"');
+        await ƒS.Speech.tell(characters.maincharacter, "Du erzählst ihm aufgeregt von den Hinweisen.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Und weil die Farbe etwas mit einem Ort zu tun hat, der auf der anderen Seite des Sees liegt, muss ich dort hin!"');
         
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral, ƒS.positionPercent(40, 100));
@@ -204,7 +204,7 @@ namespace Spiegel_VN {
         }
       
         await ƒS.Speech.tell(characters.maincharacter, '"Ich gehe sofort los! Wenn du mitkommen willst, musst du dich beeilen. Ich will nicht noch länger herum warten."');
-        await ƒS.Speech.tell(characters.maincharacter, '"Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer."');
+        await ƒS.Speech.tell(characters.maincharacter, "Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer.");
         await ƒS.Speech.tell(characters.Flynn, '"Natürlich lasse ich mir das nicht entgehen! Auf zum See!"');
 
         return "08_Arrival lake";

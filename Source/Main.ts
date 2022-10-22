@@ -301,7 +301,7 @@ namespace Spiegel_VN {
 
       {id: "06_CS Arrival Meadow", scene: Chp06_CS_ArrivalMeadow, name: "Arrival meadow"},
       {id: "06_In Whary", scene: Chp06_InWhary, name: "In Whary"},
-      {id: "06_ClothingStore", scene: Chp06_ClothingStore, name: "In Whary"},
+      // {id: "06_ClothingStore", scene: Chp06_ClothingStore, name: "In Whary"},
       {id: "06_Inn", scene: Chp06_Inn, name: "Inn"},
       {id: "06_new day", scene: Chp06_NewDay, name: "New day"},
 

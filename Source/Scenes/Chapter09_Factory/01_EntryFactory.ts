@@ -3,7 +3,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp08_HidingPlace);
         ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-    await ƒS.Speech.tell(characters.maincharacter,"Zum zweiten Mal innerhalb weniger Tage wachst du auf und weißt zuerst nicht, wo du bist. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
+    await ƒS.Speech.tell(characters.maincharacter,"Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
 
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
     ƒS.update();
@@ -36,7 +36,7 @@ await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy
     
         await ƒS.Speech.tell(characters.maincharacter, '"Wie sollen wir da reinkommen? Es gibt keine Türen!"');
     await ƒS.Speech.tell(characters.Flynn, '"Schau mal, dahinten ist ein Fenster geöffnet! Vielleicht können wir da einbrechen?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich steht dort ein kleines Fenster offen. Vorsichtig schleicht ihr euch heran und öffnet es einen Spalt. Schnell quetscht ihr euch hindurch.");
+        await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich steht dort ein kleines Fenster offen. Vorsichtig schleicht ihr euch heran und quetscht euch hindurch.");
     return "09_In Factory";
     
   }

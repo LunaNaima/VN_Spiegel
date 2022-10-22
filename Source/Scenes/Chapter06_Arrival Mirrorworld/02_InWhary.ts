@@ -41,26 +41,26 @@ namespace Spiegel_VN {
           dataForSave.pickedChp06Villagers = true;
           await ƒS.Location.show(locations.Chp06_InWharyPeople)
           ƒS.update();
-          await ƒS.Speech.tell(characters.maincharacter, '"Ich will mich hier kurz etwas umschauen."');
+          // await ƒS.Speech.tell(characters.maincharacter, '"Ich will mich hier kurz etwas umschauen."');
           ƒS.Character.hideAll();
           await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_smile2, ƒS.positionPercent(70, 100))
           ƒS.update();
-          await ƒS.Speech.tell(characters.Flynn, '"Ich zeige dir alles, was du willst! Komm, wir gehen –"');
-          await ƒS.Speech.tell(characters.maincharacter, "Du unterbrichst ihn.");
+          // await ƒS.Speech.tell(characters.Flynn, '"Ich zeige dir alles, was du willst! Komm, wir gehen –"');
+          // await ƒS.Speech.tell(characters.maincharacter, "Du unterbrichst ihn.");
           await ƒS.Speech.tell(characters.maincharacter, '"Weißt du denn, warum die Leute hier so, eh, na, eben so aussehen, wie sie aussehen?"');
           await ƒS.Speech.tell(characters.Flynn, '"Was meinst du denn?"');
           await ƒS.Speech.tell(characters.maincharacter, '"Naja, viele sehen so … aufgeplustert aus"');
           await ƒS.Speech.tell(characters.Flynn, '"Ah so! Ja. Das ist mir noch gar nicht aufgefallen. Die finden das vermutlich schön. Du bist nicht wirklich aufgeplustert."');
-          await ƒS.Speech.tell(characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Komisch, dass die Leute gleich aussehen möchten. Zuhause tragen alle, was sie wollen. Ein Stich fährt durchs Herz, wenn du an zuhause denkst.");
+          await ƒS.Speech.tell(characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Komisch, dass die Leute gleich aussehen möchten. Zuhause tragen alle, was sie wollen.");
           ƒS.Speech.clear();
           return "06_In Whary";
           break;
     
         case Chp06EntryWharyElementAnswers.iSayInn:
           await ƒS.Speech.tell(characters.maincharacter, '"Ich glaube, ich möchte erst eine Bleibe suchen."');
-          await ƒS.Speech.tell(characters.Flynn, '"Aaaber – bevor du das tust, sollten wir dich neu einkleiden, meinst du nicht?"');
+          // await ƒS.Speech.tell(characters.Flynn, '"Aaaber – bevor du das tust, sollten wir dich neu einkleiden, meinst du nicht?"');
           ƒS.Speech.clear();
-          return "06_ClothingStore";
+          return "06_Inn";
       }
     }
 }
