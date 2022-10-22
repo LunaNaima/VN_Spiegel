@@ -729,11 +729,19 @@ declare namespace Spiegel_VN {
             name: string;
             background: string;
         };
+        Chp10_TowerOutsideSlavesGrey: {
+            name: string;
+            background: string;
+        };
         Chp10_TowerOutsideSlaves: {
             name: string;
             background: string;
         };
         Chp10_GroundFloorTower: {
+            name: string;
+            background: string;
+        };
+        Chp10_GroundFloorTowerGrey: {
             name: string;
             background: string;
         };
@@ -749,7 +757,15 @@ declare namespace Spiegel_VN {
             name: string;
             background: string;
         };
+        Chp10_MirrorroomGrey: {
+            name: string;
+            background: string;
+        };
         Chp10_Demontunnel: {
+            name: string;
+            background: string;
+        };
+        Chp10_DemontunnelGrey: {
             name: string;
             background: string;
         };
@@ -812,7 +828,6 @@ declare namespace Spiegel_VN {
             T0001: string;
             T0002: string;
             T0003: string;
-            T0004: string;
             T0005: string;
             T0006: string;
             T0007: string;

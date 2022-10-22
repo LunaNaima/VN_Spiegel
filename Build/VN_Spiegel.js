@@ -261,7 +261,7 @@ var Spiegel_VN;
             // // // *** CHAPTER 06: WHARY
             { id: "06_CS Arrival Meadow", scene: Spiegel_VN.Chp06_CS_ArrivalMeadow, name: "Arrival meadow" },
             { id: "06_In Whary", scene: Spiegel_VN.Chp06_InWhary, name: "In Whary" },
-            { id: "06_ClothingStore", scene: Spiegel_VN.Chp06_ClothingStore, name: "In Whary" },
+            // {id: "06_ClothingStore", scene: Chp06_ClothingStore, name: "In Whary"},
             { id: "06_Inn", scene: Spiegel_VN.Chp06_Inn, name: "Inn" },
             { id: "06_new day", scene: Spiegel_VN.Chp06_NewDay, name: "New day" },
             // // // // *** CHAPTER 07:
@@ -1102,6 +1102,10 @@ var Spiegel_VN;
             name: "Tower outside birds",
             background: "./Assets/Backgrounds/Chapter10/OutsideTowerBirds.png"
         },
+        Chp10_TowerOutsideSlavesGrey: {
+            name: "Tower outside slaves grey",
+            background: "./Assets/Backgrounds/Chapter10/OutsideTowerSlaves_grey.png"
+        },
         Chp10_TowerOutsideSlaves: {
             name: "Tower outside slaves",
             background: "./Assets/Backgrounds/Chapter10/OutsideTowerSlaves.png"
@@ -1109,6 +1113,10 @@ var Spiegel_VN;
         Chp10_GroundFloorTower: {
             name: "Tunnel 1",
             background: "./Assets/Backgrounds/Chapter10/Tunnel1.png"
+        },
+        Chp10_GroundFloorTowerGrey: {
+            name: "Tunnel 1 grey",
+            background: "./Assets/Backgrounds/Chapter10/Tunnel1_grey.png"
         },
         Chp10_ExplorePortrait: {
             name: "Portrait",
@@ -1119,12 +1127,20 @@ var Spiegel_VN;
             background: "./Assets/Backgrounds/Chapter10/Minigame_Instructions.png"
         },
         Chp10_Mirrorroom: {
-            name: "Portrait",
+            name: "Mirrorroom",
             background: "./Assets/Backgrounds/Chapter10/Mirrorroom.png"
+        },
+        Chp10_MirrorroomGrey: {
+            name: "Mirrorroom grey",
+            background: "./Assets/Backgrounds/Chapter10/Mirrorroom_grey.png"
         },
         Chp10_Demontunnel: {
             name: "Demon tunnel",
             background: "./Assets/Backgrounds/Chapter10/Demontunnel.png"
+        },
+        Chp10_DemontunnelGrey: {
+            name: "Demon tunnel grey",
+            background: "./Assets/Backgrounds/Chapter10/Demontunnel_grey.png"
         },
         // *** TRANSITION BETWEEN CHAPTERS ***
         black: {
@@ -1200,7 +1216,6 @@ var Spiegel_VN;
             T0001: '"Ja, so ist es schon besser. Du bist ja schließlich hergekommen, um meiner Geschichte zu lauschen, nicht wahr?"',
             T0002: '"Wie heißt du denn?"',
             T0003: '"Schau, dass du es dir gemütlich machst. Das Märchen, das ich dir heute Abend erzähle, dauert etwas länger."',
-            T0004: '"Bevor es aber losgeht, musst du mir eine wichtige Frage beantworten: Welche Eigenschaft ist dir am wichtigsten? Wähle mit Bedacht aus, denn deine Antwort kann auf den Verlauf der Geschichte Einfluss nehmen …"',
             T0005: '"Schließe nun die Augen und lass dich von mir in eine Welt entführen, die nicht viel anders ist als deine hier. Nur mit etwas mehr … Magie!"',
             T0006: '"Es war einmal …."',
             T0007: '"... ein geschäftiger Marktplatz in einer kleinen Stadt am Rande des Bezirks, bevor der dunkle Wald begann."',
@@ -1304,7 +1319,6 @@ var Spiegel_VN;
         Spiegel_VN.dataForSave.nameProtagonist = await Spiegel_VN.ƒS.Speech.getInput();
         Spiegel_VN.characters.maincharacter.name = Spiegel_VN.dataForSave.nameProtagonist;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0003);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0004);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0005);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator.name, Spiegel_VN.dlg_scn_00_IntroNarrator.narratorEntry.T0006);
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_01_IntroMarketplace);
@@ -1769,12 +1783,12 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.mirrorMerchant, '"Schauen Sie, wie brillant die Farben sind! Was meinen Sie, für nur zwei Goldstücke?"');
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Für mich ist so eine Spielerei nichts! Aber vielleicht für Mutti …?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Für mich ist so eine Spielerei nichts! Aber vielleicht für Mutti? Sie ist doch Künstlerin."');
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_03_IntroMirror);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.mirrorMerchant, '"Die Spiegel eignen sich wunderbar als Geschenk für Ihre Frau!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Sie ist Künstlerin, wissen Sie; mit diesem Spiegel könnte sie vielleicht ihre Gedanken besser visualisieren, manchmal fehlt ihr das."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.mirrorMerchant, '"Das denke ich doch auch! Als Inspiration dient der Spiegel geradezu vorzüglich!"');
+        // await ƒS.Speech.tell(characters.Mama, '"Sie ist Künstlerin, wissen Sie; mit diesem Spiegel könnte sie vielleicht ihre Gedanken besser visualisieren, manchmal fehlt ihr das."');
+        // await ƒS.Speech.tell(characters.mirrorMerchant, '"Das denke ich doch auch! Als Inspiration dient der Spiegel geradezu vorzüglich!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Na gut, wir probieren es mal aus! Dann nehmen wir diesen hier."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mama überreicht dem Händler die Goldstücke aus ihrer Geldbörse. Der strahlende Händler packt den Spiegel vorsichtig in glitzerndes Papier und steckt ihn Mama in die Tasche. Du hast ein komisches Gefühl dabei, schüttelst es aber ab und denkst, es ist bestimmt nur dein knurrender Magen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"So, alles erledigt, ab nach Hause!"');
@@ -1883,17 +1897,17 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mutti);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress5_frown, Spiegel_VN.ƒS.positionPercent(55, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Nur ein bisschen, ihr zwei, in Ordnung?"');
+        // await ƒS.Speech.tell(characters.Mutti, '"Nur ein bisschen, ihr zwei, in Ordnung?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Evarius);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos3_frown, Spiegel_VN.ƒS.positionPercent(10, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Ach, Mutti …"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das übliche Chaos beim Essen. Evarius gibt den Ton an und Kailani folgt ihm. Mutti lässt sich auch immer so schnell erweichen! Mama schaut dich von der Seite an.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das übliche Chaos beim Essen. Mutti lässt sich auch immer so schnell erweichen! Mama schaut dich von der Seite an.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_neutral, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Alles in Ordnung? Du bist heute noch stiller als sonst?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du musst lächeln.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Alles in Ordnung?"');
+        // await ƒS.Speech.tell(characters.maincharacter, "Du musst lächeln.");
         // *** SCENE OPTIONS ***
         let Chp02PickSceneElementAnswersDinner = {
             iSayDistract: "Ablenken.",
@@ -1928,18 +1942,18 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_shocked, Spiegel_VN.ƒS.positionPercent(80, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Die haben sich schon heute Morgen gestritten. Aber gerade eben habe ich nichts mitbekommen. Was war denn los?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ach, vielleicht war es nichts Ernstes. Henri ärgerte sich über Balduin, weil er wohl dauernd in den Spiegel schaut, den gleichen Spiegel, den wir heute gekauft haben. Das ist doch komisch, nicht?"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ach, vielleicht war es nichts Ernstes. Henri ärgerte sich über Balduin, weil er wohl dauernd in den magischen Spiegel schaut. Das ist doch komisch, nicht?"');
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_angry, Spiegel_VN.ƒS.positionPercent(80, 100));
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Das wäre ja ein arger Zufall. Worüber sollte man sich denn bei dem Spiegel streiten? Vielleicht hast du dich verhört."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mama dreht sich um und mahnt Evarius ab, weil er mit den Karotten Fange gespielt hat. Du hast schon fertig gegessen, hast aber immer noch dieses komische Gefühl im Bauch.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Worüber sollte man sich denn bei dem Spiegel streiten? Vielleicht hast du dich verhört."');
+                // await ƒS.Speech.tell(characters.maincharacter, "Mama dreht sich um und mahnt Evarius ab, weil er mit den Karotten Fange gespielt hat. Du hast schon fertig gegessen, hast aber immer noch dieses komische Gefühl im Bauch.");
                 Spiegel_VN.ƒS.Speech.clear();
                 // return "02_021 Test Mirror";
                 break;
             case Chp02PickSceneElementAnswersDinner.iSaySilent:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Na gut! Wenn du nicht reden willst. Vielleicht kommen Mutti und ich heute Abend mit einer heißen Schokolade in deinem Zimmer vorbei?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du weißt, sie will es dir nur recht machen. Du bist eben von dem Trubel heute erschöpft. Trotzdem willst du noch den Spiegel austesten. Stimmt das wirklich, was der Händler gesagt hat?");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du weißt, sie will es dir nur recht machen. Trotzdem willst du noch den Spiegel austesten. Stimmt das wirklich, was der Händler gesagt hat?");
                 Spiegel_VN.ƒS.Speech.clear();
                 // return "02_021 Test Mirror";
                 break;
@@ -1948,7 +1962,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress5_smile, Spiegel_VN.ƒS.positionPercent(55, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Hat es euch denn geschmeckt?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Alle stimmen lautstark mit ein. Gegen Muttis vorzügliches Kochen hat keiner aus der Familie etwas einzuwenden.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Alle stimmen lautstark mit ein. Gegen Muttis vorzügliches Kochen hat keiner etwas einzuwenden.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.outfit2_dress1_angry, Spiegel_VN.ƒS.positionPercent(45, 100));
         Spiegel_VN.ƒS.update();
@@ -1983,11 +1997,10 @@ var Spiegel_VN;
     async function Chp02_021_TestMirrorE() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_02_LivingRoom);
         Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos3_neutral, Spiegel_VN.ƒS.positionPercent(45, 100));
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Evarius);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos2_laugh, Spiegel_VN.ƒS.positionPercent(45, 100));
+        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
+        // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
+        // ƒS.Character.hide(characters.Evarius);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Auja!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er packt den Spiegel und hebt ihn sich vors Gesicht.");
@@ -2088,7 +2101,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_02_LivingRoom);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
+        // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.outfit2_dress1_happy, Spiegel_VN.ƒS.positionPercent(45, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Auja!"');
@@ -2206,7 +2219,7 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_E_DiscoverKitchenOven);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Holz muss nachgelegt werden. Dieses Jahr müsst ihr besonders viel Holz sammeln und hacken, weil der Winter ziemlich kalt werden soll. Das sagen zumindest die Bauern, weil die Vögel so früh zwitschern.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Holz muss nachgelegt werden.");
                 Spiegel_VN.ƒS.Speech.clear();
                 Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.cracklingfire, 0, 0, false);
                 return "02_Kitchen";
@@ -2227,7 +2240,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         Spiegel_VN.dataForSave.pickedChp02_PickHerbsGarden = true;
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Drinnen wird es gerade laut, wie immer um die Essenszeit. Deshalb schlüpfst du schnell in den Garten, um etwas allein zu sein.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Drinnen wird es gerade laut, wie immer um die Essenszeit. Deshalb schlüpfst du schnell in den Garten.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du kramst in deiner Hosentasche und findest ein paar übrig gebliebene Sonnenblumenkerne vom Hühnerfüttern gestern. Streust du sie über den Boden oder behältst du sie in der Tasche?");
         let Chp02ElementAnswersPickHerbs = {
             iSaySprinkle: "Streuen",
@@ -2244,16 +2257,16 @@ var Spiegel_VN;
                 break;
             case Chp02ElementAnswersPickHerbs.iSayKeep:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du steckst die Samen wieder in die Tasche. Wer weiß, ob du sie noch für etwas gebrauchen kannst.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Kräuter sehen für die Jahreszeit schon gut aus. Du bückst dich, um ein paar Basilikumblätter abzuzupfen, als du eine Tür knallen hörst.");
                 Spiegel_VN.ƒS.Speech.clear();
                 // return "02_03 Pick Herbs";
                 break;
         }
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Kräuter sehen für die Jahreszeit schon gut aus. Du bückst dich, um ein paar Basilikumblätter abzuzupfen, als du eine Tür knallen hörst.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_04_FightNeighborNeighbors);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell("Nachbar", '"Henri! Henri, bleib’ doch hier!"');
         await Spiegel_VN.ƒS.Speech.tell("Nachbarin", '"Mir reichts, Balduin! Den ganzen Tag starrst du schon auf das Ding!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ach, die Nachbarn streiten schon wieder. Es vergeht kaum ein Tag, an dem du sie nicht herumschreien hörst.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ach, die Nachbarn streiten schon wieder.");
         await Spiegel_VN.ƒS.Speech.tell("Nachbar", '"Es tut mir ja leid! Aber Henri, der Spiegel ist doch so schön."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Spiegel? Redet Balduin etwa von dem magischen Spiegel, den es heute auf dem Markt zu kaufen gab?");
         await Spiegel_VN.ƒS.Speech.tell("Nachbarin", '"Ja, der ist schön. Das ist doch das Problem. Seit heute Morgen sitzt du davor und tust nichts anderes, als den schönen Spiegel anzustarren."');
@@ -2477,7 +2490,7 @@ var Spiegel_VN;
                 break;
         }
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Kailani ist heute wirklich schlecht drauf. Dabei ist eure Beziehung eigentlich gut.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Hat sie vielleicht schlecht geschlafen? Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr beim Wasserholen auf den Zahn zu fühlen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr auf den Zahn zu fühlen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani, geht`s dir gut? Treibt dich etwas um?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_angry, Spiegel_VN.ƒS.positionPercent(45, 100));
@@ -2494,7 +2507,7 @@ var Spiegel_VN;
             case Chp03ChoresKailaniElementAnswers1.iSayWorried:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich mache mir nur Sorgen um dich. Gibt es etwas, worüber du dir Gedanken machst?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Nö."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ach Kailani, lass den Quatsch. Ich sehe doch, dass es dir nicht gut geht! Also, spuck’s aus. Ich erzähle unseren Eltern auch nichts davon, wenn du das nicht willst."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ach Kailani, ich sehe doch, dass es dir nicht gut geht! Also, spuck’s aus. Ich erzähle unseren Eltern auch nichts davon, wenn du das nicht willst."');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Hm. Naja, also. Ich …"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Hoffentlich vertraut sie sich dir an.");
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
@@ -2583,8 +2596,8 @@ var Spiegel_VN;
     async function Chp03_E_DiscoverForest() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Forestpath);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald hinter eurem Haus ist trotz der fahlen Sonne noch dunkel. Ein leichter Wind fegt durch die Blätter und lässt die Zweige wie winkende Arme hin und her streifen. Deine Eltern haben euch Kinder jeden Tag im Wald spielen lassen. Ihr durftet immer so weit rausgehen, wie ihr wolltet.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Aber eine natürliche Grenze gab es doch: an einer bestimmten Stelle im Wald wachsen die Bäume so dicht zusammen, dass man gar nicht durchschauen kann. Als kleines Kind standest du davor, hast angestrengt versucht, in das Dunkle hineinzuschauen und dich gefragt, was dahinter wohl verborgen ist ...");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ein leichter Wind fegt durch die Blätter und lässt die Zweige wie winkende Arme hin und her streifen. Deine Eltern haben euch Kinder jeden Tag im Wald spielen lassen. Ihr durftet immer so weit rausgehen, wie ihr wolltet.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Aber eine natürliche Grenze gab es doch: an einer bestimmten Stelle im Wald wachsen die Bäume so dicht zusammen, dass man gar nicht durchschauen kann. Als kleines Kind hast du dich gefragt, was dahinter wohl verborgen ist ...");
         return "03_00 New day";
     }
     Spiegel_VN.Chp03_E_DiscoverForest = Chp03_E_DiscoverForest;
@@ -2596,7 +2609,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Lieblingsort in diesem Dorf: die Bücherei. Hier versteckst du dich gerne, wenn es draußen zu laut wird.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, " Das Besondere ist das Bücherregal der Alten Zeit. Da stehen die wenigen Bücher, die von früher überlebt haben. Die Schrift kannst du kaum noch lesen, trotzdem blätterst du gerne durch, weil dich die Alte Welt fasziniert.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Früher wurden die Erdteile durch unsichtbare Kräfte zusammengehalten, bis die Kraft zerstört wurde und sie auseinanderbrachen. Mehr kannst du von den zerfallenen Seiten jedoch nicht erfahren.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Früher wurden die Erdteile durch unsichtbare Kräfte zusammengehalten, bis die Kraft zerstört wurde und sie auseinanderbrachen. Mehr kannst du von den zerfallenen Seiten jedoch nicht erfahren.");
         return "03_00 New day";
     }
     Spiegel_VN.Chp03_E_DiscoverLibrary = Chp03_E_DiscoverLibrary;
@@ -2640,8 +2653,8 @@ var Spiegel_VN;
                 Spiegel_VN.dataForSave.pickedChp03_SearchGarden = true;
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_03_PickHerbs);
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Hat sie sich vielleicht im Garten versteckt? Aber das wäre untypisch. Schließlich verbringt sie gerade die meiste Zeit in ihrem Zimmer.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaust in jede Ecke, während die Vögel zwitschern und der Wind unschuldig durch die Blätter streift. Doch verstecken kann man sich in dem kleinen Kräutergarten eigentlich nicht.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sie kann eigentlich nicht hier sein. Schließlich verbringt sie gerade die meiste Zeit in ihrem Zimmer.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaust in jede Ecke, während die Vögel unschuldig zwitschern. Keine Kailani.");
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
@@ -2660,7 +2673,7 @@ var Spiegel_VN;
         let Chp03SearchKailaniElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp03SearchKailaniElementAnswers1, "choicesCSSclass");
         switch (Chp03SearchKailaniElement1) {
             case Chp03SearchKailaniElementAnswers1.iSayPanicked:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie ist weg! Oh Gott, was ist, wenn sie weggelaufen ist? Vorhin hatte ich noch mit ihr gesprochen. Und irgendetwas hat mit ihr nicht gestimmt."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie ist weg! Oh Gott, was ist, wenn sie weggelaufen ist? Vorhin hat irgendetwas hat mit ihr nicht gestimmt."');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Jetzt beruhige dich erst mal. Suchen wir doch zuerst nach ihr!"');
                 if (Spiegel_VN.dataForSave.pickedChp03_SearchGarden) {
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Da habe ich schon geschaut! Sie ist einfach weg!"');
@@ -2688,7 +2701,7 @@ var Spiegel_VN;
                 else {
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Noch nicht, aber ich weiß, dass sie da nicht ist!"');
                 }
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Rufe doch mal Evarius herunter, dann kannst du dich mit ihm besprechen. Dass sie nicht aufzufinden ist, ist ungewöhnlich …"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Rufe doch mal Evarius herunter, dann kannst du dich mit ihm besprechen."');
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
@@ -2700,8 +2713,8 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress2_basket_frown, Spiegel_VN.ƒS.positionPercent(55, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich finde Kailani nirgends. Habt ihr sie nicht gesehen?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Ich komme gerade von der Arbeit und habe nichts gesehen! Ist alles in Ordnung."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Vorhin habe ich noch mit ihr Hausarbeiten gemacht. Da war noch alles okay! Oder, nicht wirklich. Irgendetwas hat sie gestört, aber sie wollte es mir nicht sagen. Was ist, wenn sie weggelaufen ist?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Ich komme gerade von der Arbeit! Ist alles in Ordnung?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Vorhin habe ich noch mit ihr Hausarbeiten gemacht. Irgendetwas hat sie gestört, aber sie wollte es mir nicht sagen. Was ist, wenn sie weggelaufen ist?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_hand_angry, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
@@ -2890,11 +2903,11 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mutti, Spiegel_VN.characters.Mutti.pose.dress2_basket_smirk, Spiegel_VN.ƒS.positionPercent(55, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Warum gehen wir sie nicht im Dorf suchen? Stell dir vor, wir machen hier ein großes Drama und später spaziert sie seelenruhig zur Tür rein."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit' + Spiegel_VN.dataForSave.nameProtagonist + 'sprechen."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit ' + Spiegel_VN.dataForSave.nameProtagonist + ' sprechen."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Evarius);
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt. Ich sage dir das nur, weil ich glaube dass wirklich etwas Schlimmes mit Kailani geschehen ist."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Also: wie du weißt, beschäftige ich mich gerne mit der Vergangenheit und Magie. Ich bin der festen Überzeugung, dass Magie noch heute existiert."');
         let Chp04TalkFamilyElementAnswers1 = {
             iSayBelieve: "Glauben.",
@@ -2939,7 +2952,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_E_DiscoverLibrary);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Etwas ratlos stehst du vor der Bücherei. Wie sollen dir diese alten, staubigen Bücher helfen?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Etwas ratlos stehst du vor der Bücherei.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp04_Library_Interior);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "In der Bücherei ist es ganz still. Du schaust dich um und gehst zielstrebig zu der etwas versteckten Ecke, in dem die uralten Bücher stehen.");
@@ -2971,7 +2984,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du blätterst durch und seufzt. Die Seiten sind beinahe unlesbar. Manche fallen sogar auseinander. Damit hattest du gerechnet. Doch halt – hier hinten, da ist eine Ecke eingeknickt. Du streichst die Seite glatt und kneifst die Augen zusammen. Du kannst gerade so einen gezeichneten Baum und etwas Text daneben erkennen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"In … tiefen Wald … Baum der Wünsche. …, werden Wünsche … Beweisen … sonst verbannt."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Steht da Baum der Wünsche? Ein Baum, der sich in den Tiefen des Waldes verbirgt? Mehr kannst du aber auf der Seite nicht erkennen. Du klappst das Buch zu. Staub wirbelt auf und verteilt sich in alle Richtungen. Bevor er sich gelegt hat, bist du schon weg. Endlich eine Spur!");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Steht da Baum der Wünsche? Ein Baum, der sich in den Tiefen des Waldes verbirgt? Mehr kannst du aber auf der Seite nicht erkennen. Endlich eine Spur!");
         return "04_00_Research Options";
     }
     Spiegel_VN.Chp04_03_ResearchLibrary = Chp04_03_ResearchLibrary;
@@ -2983,8 +2996,8 @@ var Spiegel_VN;
         Spiegel_VN.dataForSave.pickedChp04ExamineMirror = true;
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du willst dir nochmal Kailanis Schlafzimmer und den Spiegel genauer anschauen. Und vielleicht findest du doch eine Spur von ihr.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Zimmer ist so still. Du schaust dich um. Eigentlich fühlst du dich unwohl, hier zu sein, weil Kailanis Privatsphäre ihr sehr am Herzen liegt und sie bestimmt etwas dagegen hätte, wenn du durch ihre Sachen schnüffelst.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du willst dir nochmal Kailanis Schlafzimmer und den Spiegel genauer anschauen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das Zimmer ist so still. Du schaust dich um. Eigentlich fühlst du dich unwohl, hier zu sein, weil sie bestimmt etwas dagegen hätte, wenn du durch ihre Sachen schnüffelst.");
         let Chp04ExamineMirrorElementAnswers = {
             iSayMirror: "(Erkunden) Spiegel nehmen",
             iSayDiary: "(Erkunden) Tagebuch lesen",
@@ -2997,7 +3010,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_KailaniBedroomMirror);
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Spiegel glitzert und glänzt. Du schaust hinein, siehst aber nichts. Wahrscheinlich ist er noch im Wünsche-Modus. Moment mal – Wünsche-Modus? Kannst du anschauen, was sich Kailani zuletzt gewünscht hat?");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Spieglein, Spieglein, weise mir mein Träumlein: Ich wünsche mir Kailanis letzten Wunsch!");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Spieglein, Spieglein, weise mir mein Träumlein: Ich wünsche mir Kailanis letzten Wunsch!"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Aber nichts passiert. Du probierst es mit verschiedenen Varianten, aber jedes Mal bleibt der Spiegel blank. Seltsam, du siehst nicht einmal dein eigenes Gesicht darin.");
                 Spiegel_VN.ƒS.Speech.clear();
                 return "04_E_Examine mirror";
@@ -3007,7 +3020,7 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Unter normalen Umständen würdest du Kailanis Tagebuch niemals lesen. Jetzt bleibt dir allerdings nichts anderes übrig.");
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich kann nicht schlafen. Bleibe bis morgens wach und bin dann in der Schule total müde. Mutti nervt mich, dass ich mehr essen soll, habe aber eigentlich gar keinen Hunger."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich hab’ nix dagegen, wenn ich bisschen dünner werde! Frage mich nur, wie lange das dauert. Mein Spiegelbild ist so schön dünn. Und große Brüste hab’ ich im Spiegel auch. Wie lange, bis meine endlich wachsen?’"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Mein Spiegelbild ist so schön dünn. Und große Brüste hab’ ich im Spiegel auch. Wie lange, bis meine endlich wachsen?’"');
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_KailaniBedroom);
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du klappst das Tagebuch zu und spürst, wie sich ein kribbelndes Schamgefühl in deinem Bauch verbreitet. Es ist dir nicht wohl dabei, Kailanis intimste Gedanken so zu lesen. Allerdings offenbaren die Zeilen mehr, als sie dir heute verraten wollte: sie hat sich doch unwohl gefühlt. Und so wie es scheint, hat der Spiegel damit etwas zu tun!");
@@ -3031,11 +3044,11 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Forestpath);
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.forest, 0.3, 1, true);
         await Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du betrittst den dunkeln Wald. Dich überkommt ein Gefühl der Zielstrebigkeit, das dir nach den unsicheren Stunden guttut. Du gehst in die Richtung deines alten ‘Spielplatzes’.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du betrittst den dunkeln Wald. Du gehst in die Richtung deines alten ‘Spielplatzes’.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als Kind hast du dir jeden Tag zwischen den hohen Bäumen Szenen ausgedacht und die nachgespielt. Dabei bist du kreuz und quer durch das ganze Waldstück gerannt. Doch du bist nie weiter hineingegangen. Erinnerst du dich?");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Trees);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "An der Stelle angekommen, schaust du hoch in die schwarzen Baumkronen. Auch wenn die Sonne erst untergeht, ist es hier schon Nacht. Du nimmst einen tiefen Atemzug und trittst über die Schwelle. Die Bäume rascheln, als würden sie vor dir, dem Eindringling, warnen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "An der Stelle angekommen, schaust du hoch in die schwarzen Baumkronen. Auch wenn die Sonne erst untergeht, ist es hier schon Nacht. Du trittst über die Schwelle. Die Bäume rascheln, als würden sie vor dir, dem Eindringling, warnen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du läufst weiter und weiter, bis die Bäume so eng zusammenstehen, dass du kaum durchkommst. An was denkst du?");
         let Chp05PickSceneElementAnswers = {
             iSaySave: "Ich muss Kailani retten!",
@@ -3043,18 +3056,18 @@ var Spiegel_VN;
             iSayMistake: "War das alles ein Fehler?",
         };
         let Chp05PickSceneElement = await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers, "choicesCSSclass");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schnaufend schleppst du dich von Stamm zu Stamm, über Wurzeln und Gebüsch. Du hältst kurz an, und stehst plötzlich inmitten einer Lichtung.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schnaufend schleppst du dich von Stamm zu Stamm, über Wurzeln und Gebüsch. Plötzlich stehst du inmitten einer Lichtung.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Wishtree);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Willkommen, Kind."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Was war das? Wer hat da gesprochen?");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Komm’ nur näher."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ist das etwa der Baum? Ungläubig und fasziniert zugleich näherst du dich dem beträchtlichen Stamm. Er ist so groß, dass sich alle Menschen des Dorfes zusammenschließen müssten, um ihn zu umgreifen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ist das etwa der Baum? Ungläubig und fasziniert zugleich näherst du dich dem beträchtlichen Stamm. Hier ist es schon fast Nacht.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ich weiß, wieso du hier bist. Und ich weiß auch, wo deine Schwester ist. "');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Also ist es wahr: es gibt einen echten Baum der Wünsche? Deine Stimme ist heiser, als du sprechen willst.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Das brauchst du nicht. Ich spüre deine Gedanken. Nur, weil dein Herz offen war, habe ich dich zu mir durchgelassen."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du nickst stumm und starrst mit offenem Mund zu den dichten Ästen empor.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ich weiß, dass du deine Antworten willst. Zuerst musst du dich aber beweisen. Gelingt es dir, erhältst du, was sich dein Herz wünscht. Gelingt es dir nicht, wirst du für immer verbannt."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ich weiß, dass du mehr wissen willst. Zuerst musst du dich aber beweisen. Gelingt es dir, erhältst du, was sich dein Herz wünscht. Gelingt es dir nicht, wirst du für immer verbannt."');
         let Chp05PickSceneElementAnswers2 = {
             iSayFear: "Ich habe Angst",
             iSayBest: "Ich gebe mein Bestes",
@@ -3062,7 +3075,7 @@ var Spiegel_VN;
         };
         let Chp05PickSceneElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Also gut."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Baum raschelt und ächzt. Um dich herum säuselt der Wind.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Der Baum raschelt und ächzt. Um dich herum säuselt der Wind.");
         return "TextRiddle";
     }
     Spiegel_VN.Chp04_CS_EntryForest = Chp04_CS_EntryForest;
@@ -3108,7 +3121,6 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ich habe ein Bett, doch ich find keine Ruh.<br>Ich habe einen Mund, doch ich kann nicht sprechen.<br>Ich bewege mich rasend schnell, doch ich verlasse niemals einen Ort.<br>Wer oder was bin ich? Tipp: Es hat etwas mit Wasser zu tun!<br/>"', false);
                 let answer1 = await Spiegel_VN.ƒS.Speech.getInput();
                 if (answer1.toLowerCase() == "fluss") {
-                    console.log("RICHTIG!");
                     await Spiegel_VN.ƒS.Speech.tell("Baum der Wünsche", "Das erste Rätsel geschafft!");
                 }
                 else {
@@ -3121,7 +3133,6 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Geisterstunde ist um ... ?", false);
                 let answer2 = await Spiegel_VN.ƒS.Speech.getInput();
                 if (answer2.toLowerCase() == "mitternacht") {
-                    console.log("RICHTIG!");
                     await Spiegel_VN.ƒS.Speech.tell("Baum der Wünsche", "Schon das zweite Rätsel gelöst.");
                 }
                 else {
@@ -3134,7 +3145,6 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "An welchem Ort musst du stehen, damit dein rechts als mein links zu sehen ist?<br>Und doch bin ich nicht wirklich da, sondern nur visuell, wie sonderbar.<br>Kennst du diesen Ort?", false);
                 let answer3 = await Spiegel_VN.ƒS.Speech.getInput();
                 if (answer3.toLowerCase() == "spiegel") {
-                    console.log("RICHTIG!");
                     await Spiegel_VN.ƒS.Speech.tell("Baum der Wünsche", "Tatsächlich, du hast dich bewiesen ... ");
                 }
                 else {
@@ -3145,7 +3155,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
             case Chp05TextRiddleElementAnswers.iSayProven:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Kailani besaß einen Spiegel, richtig? Er ist kein gewöhnlicher Spiegel, wie du sicher schon bemerkt hast."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie, die sich nach offenen Herzen richtet, verstärkt sich die Magie des Spiegels bei negativen Empfindungen."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie ist die Spiegelmagie dunkel."');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Der Spiegel sorgt dafür, dass die Menschen, die in ihn hineinblicken, krank werden. Sind sie erkrankt, zieht sie der Spiegel in sein Innerstes. Dort werden sie gefangen gehalten."');
                 return "05_02 Convo Tree";
         }
@@ -3171,7 +3181,7 @@ var Spiegel_VN;
         switch (Chp05ConvoTreeElement) {
             case Chp05ConvoTreeElementAnswers.iSayInner:
                 Spiegel_VN.dataForSave.pickedChp05Inner = true;
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ja, sie werden in den Spiegel hineingesogen. In dieser Spiegelwelt werden sie als Sklaven gehalten."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Ja, sie werden in den Spiegel hineingesogen."');
                 Spiegel_VN.ƒS.Speech.clear();
                 return "05_02 Convo Tree";
                 break;
@@ -3201,7 +3211,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_WishtreeBirds);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wie willst du dich mit ihnen verbinden?");
+        await Spiegel_VN.ƒS.Speech.tell("", "Wie willst du dich mit ihnen verbinden?");
         let Chp05ConvoTreeElementAnswers2 = {
             iSaySing: "Zu Vögeln singen",
             iSayFeed: "Füttern",
@@ -3225,18 +3235,18 @@ var Spiegel_VN;
                 break;
         }
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das war eine gute, ehrliche Bindung. Sie werden dich nun begleiten und dir stets zur Seite stehen. Die Reise wird nicht einfach. Denke daran, dass in der Spiegelwelt nicht alles so ist, wie es scheint. Ein letzter Hinweis noch: Ehrliches Material führt dein Herz zum Ziel.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Nun muss ich eine Weile ruhen, bevor ich wieder erwachen kann. Diese Begegnung hat mich sehr viel Kraft gekostet …");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Nun muss ich eine Weile ruhen. Diese Begegnung hat mich sehr viel Kraft gekostet …");
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.birds, 0, 0, false);
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.forest, 0, 0, false);
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wind, der durch die Blätter raschelte, klingt ab. Die Vögel sind verschwunden. Auf einmal ist es sehr ruhig und du bemerkst erst jetzt, welch ungeheure Kraft dir der Baum gab.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wind, der durch die Blätter raschelte, klingt ab. Die Vögel sind verschwunden. Auf einmal ist es sehr ruhig.");
         let Chp05ConvoTreeElementAnswers3 = {
             iSayHello: "Hallo?",
             iSayQuestions: "Ich habe noch so viele Fragen!",
             iSayNeed: "Ich brauche Sie!",
         };
         let Chp05ConvoTreeElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? In einer dunklen Nacht bei hellstem Mondlicht? Dir dämmert, dass die Zeit für die Abreise naht.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
         return "05_ConvoMother";
     }
@@ -3258,8 +3268,8 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_angry2, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Mitten in der Nacht gehst du nirgends hin. Komm, wir besprechen das morgen!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Du verstehst nicht, ich muss los! Ich muss Kailani retten!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Du hast mit deiner Mutter gesprochen, nicht wahr … Ich weiß nicht, was sie dir gesagt hat. Aber du kannst nicht einfach losziehen."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Du verstehst nicht, ich muss Kailani retten!"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Aber du kannst nicht einfach so losziehen!"');
         let Chp05ConvoMotherElementAnswers = {
             iSayLie: "Lügen",
             iSayDistract: "Ablenken",
@@ -3268,25 +3278,25 @@ var Spiegel_VN;
         let Chp05PickSceneElement = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers, "choicesCSSclass");
         switch (Chp05PickSceneElement) {
             case Chp05ConvoMotherElementAnswers.iSayLie:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich habe gehört, Pantro wurde in Ulaser gesehen. Das liegt einige -"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich habe gehört, Kailani wurde in Ulaser gesehen. Das liegt einige -"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Ich weiß, wo das liegt. Wir fahren morgen zusammen hin und schauen nach, in Ordnung ?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Nein, ich muss allein los!"');
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
             case Chp05ConvoMotherElementAnswers.iSayDistract:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was habt ihr denn bei Anna herausgefunden?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Nur, dass Pantro auch seit Stunden weg ist. Als wir vorhin gegangen sind, war er noch nicht daheim. Ich glaube trotzdem, dass die beiden wieder heim kommen. Aber jetzt geh’ bitte ins Bett."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was habt ihr denn im Dorf herausgefunden?"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Nicht viel, niemand hat Kailani gesehen. Komm jetzt ins Bett!"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Nein, ich muss jetzt los."');
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
             case Chp05ConvoMotherElementAnswers.iSayExplain:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani ist in dem Spiegel gefangen! Ich muss dorthin reisen, sie rausholen und –"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Schon wieder dieser Spiegel! Woher willst du das wissen? Wir sind doch nicht im Märchen! Das geht nicht. Auf ins Bett jetzt."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Schon wieder dieser Spiegel! Woher willst du das wissen? Wir sind doch nicht im Märchen! Auf ins Bett jetzt."');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich muss aber los, Mama!"');
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Bitte glaub’ und vertrau’ mir doch, Mama! Ich bin kein Kind mehr und weiß, was ich tue! Nur weil du es nicht mitkriegst, heißt es nicht, dass ich nicht erwachsen werde!"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Bitte glaub’ und vertrau’ mir doch, Mama! Ich bin kein Kind mehr und weiß, was ich tue. Nur weil du es nicht mitkriegst, heißt es nicht, dass ich nicht erwachsen werde!"');
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_shocked, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
@@ -3297,7 +3307,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Du hast recht. Ich sehe dich noch als Kind, und nicht als starke und mutige Person."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Wenn du unbedingt gehen willst, dann tu es. Ich vertraue dir, in Ordnung? Aber bitte komme zurück, Liebling."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Hier, nimm meine Hammer-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Hier, nimm meine Eisen-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
         let Chp05ConvoMotherElementAnswers2 = {
             iSayTake: "Annehmen",
             iSayRefuse: "Nicht annehmen",
@@ -3314,8 +3324,8 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sag Mutti, dass sie nicht zu viel weinen soll. Ich bin bald wieder da und bringe Kailani nach Hause."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Bitte pass’ auf dich auf. Und komm zurück. Wir warten auf euch!"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich bin bald wieder da und bringe Kailani nach Hause."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Bitte pass’ auf dich auf. Wir warten auf euch!"');
         Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");
@@ -3374,7 +3384,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0, 0, false);
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_whary, 0.5, 1, true);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Alles ist so farbig! Du staunst über kräftige Rot-, Grün und Blautöne.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Du staunst über kräftige Rot-, Grün und Blautöne.");
         do {
             let Chp06ArrivalMeadowElementAnswers = {
                 iSayFlowers: "(Erkunden) Blumen anschauen",
@@ -3403,9 +3413,10 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als du vor den Toren ankommst, bildet sich trotz des frühen Morgens davor bereits eine Schlange. Stimmen, Hufgeklapper und das Scheppern von Kisten, die die Leute auf ihren Wägen gestapelt haben, tönen durch die Luft.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dir bleibt nichts anderen übrig, als dich auch anzustellen. Während du wartest, beobachtest du die anderen Menschen. Die meisten von ihnen tragen satte, glitzernde Klamotten. Sind hier etwa alle reich? Und wieso sieht es so aus, als wären die Klamotten an manchen Stellen ausgepolstert?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Auf einmal tritt dir jemand schmerzhaft auf den Fuß.");
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos1_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Hi! Du siehst so aus, als hättest du eine weite Reise hinter dir. Von wo kommst du denn?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Oh, sorry! Huch, du siehst so aus, als hättest du eine weite Reise hinter dir. Von wo kommst du denn?"');
         let Chp06EntryGatesElementAnswers = {
             iSayLie: "Lügen",
             iSayDistract: "Ablenken",
@@ -3458,7 +3469,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wie heißt du denn?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich bin ' + Spiegel_VN.dataForSave.nameProtagonist);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Freut mich!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an. Eigentlich sieht er aus wie ein normaler Junge. Wieso hat er ausgerechnet dich angequatscht?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr passiert die Tore ohne Probleme. Die Wachen beobachten die Menge aufmerksam, aber ihr fallt – zum Glück! – nicht auf.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Allerdings bemerkst du die Blicke der Leute. Ihre Blicke bleiben an deinen alten Stiefeln und dem braunen Hemd, dass du über einer ausgeblichenen Hose trägst, hängen. Wie fühlst du dich?");
         let Chp06EntryGatesElementAnswers2 = {
@@ -3523,25 +3534,25 @@ var Spiegel_VN;
                 Spiegel_VN.dataForSave.pickedChp06Villagers = true;
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_InWharyPeople);
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich will mich hier kurz etwas umschauen."');
+                // await ƒS.Speech.tell(characters.maincharacter, '"Ich will mich hier kurz etwas umschauen."');
                 Spiegel_VN.ƒS.Character.hideAll();
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos1_smile2, Spiegel_VN.ƒS.positionPercent(70, 100));
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich zeige dir alles, was du willst! Komm, wir gehen –"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du unterbrichst ihn.");
+                // await ƒS.Speech.tell(characters.Flynn, '"Ich zeige dir alles, was du willst! Komm, wir gehen –"');
+                // await ƒS.Speech.tell(characters.maincharacter, "Du unterbrichst ihn.");
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Weißt du denn, warum die Leute hier so, eh, na, eben so aussehen, wie sie aussehen?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Was meinst du denn?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Naja, viele sehen so … aufgeplustert aus"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ah so! Ja. Das ist mir noch gar nicht aufgefallen. Die finden das vermutlich schön. Du bist nicht wirklich aufgeplustert."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Komisch, dass die Leute gleich aussehen möchten. Zuhause tragen alle, was sie wollen. Ein Stich fährt durchs Herz, wenn du an zuhause denkst.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Komisch, dass die Leute gleich aussehen möchten. Zuhause tragen alle, was sie wollen.");
                 Spiegel_VN.ƒS.Speech.clear();
                 return "06_In Whary";
                 break;
             case Chp06EntryWharyElementAnswers.iSayInn:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich glaube, ich möchte erst eine Bleibe suchen."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Aaaber – bevor du das tust, sollten wir dich neu einkleiden, meinst du nicht?"');
+                // await ƒS.Speech.tell(characters.Flynn, '"Aaaber – bevor du das tust, sollten wir dich neu einkleiden, meinst du nicht?"');
                 Spiegel_VN.ƒS.Speech.clear();
-                return "06_ClothingStore";
+                return "06_Inn";
         }
     }
     Spiegel_VN.Chp06_InWhary = Chp06_InWhary;
@@ -3674,7 +3685,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_ext);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn führt dich durch kleine Gassen zu einem pinken Gasthof, der an der Ecke einer Kreuzung steht. Du bist mittlerweile so müde, dass du dich kaum auf den Beinen halten kannst. So viel ist in den letzten Tagen passiert, dass du einfach kurz die Augen schließen und die Welt ausblenden möchtest.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn führt dich durch kleine Gassen zu einem pinken Gasthof, der an der Ecke einer Kreuzung steht. So viel ist in den letzten Tagen passiert, dass du einfach kurz die Augen schließen und die Welt ausblenden möchtest.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_int);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Innkeeper, Spiegel_VN.characters.Innkeeper.pose.pos1_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
@@ -3705,17 +3716,17 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Das ist ja gemütlich! Viel gemütlicher als das letzte Mal. Da musste ich mir ein Zimmer mit einem teilen, der hat ganz schlimm nach Fisch gestunken."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Fisch-Mann war sicherlich auch von Flynns Redeschwall genervt, denkst du dir. Du darfst aber auch nicht zu streng sein: schließlich hatte dir Flynn in einem Anfall von Gutmenschlichkeit seine Hilfe angeboten.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Und wenn du ehrlich bist, bist du darüber ziemlich erleichtert. Du beschließt, dir später weitere Gedanken über deinen neuen Gefährten zu machen. Du kannst dich kaum mehr auf den Beinen halten.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Und wenn du ehrlich bist, bist du darüber ziemlich erleichtert. Du beschließt, dir später weitere Gedanken über deinen neuen Gefährten zu machen.");
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_room);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du blinzelst. Wo bist du denn? Du liegst in einem fremden Zimmer. Panik macht sich in deiner Brust breit, bis dir einfällt, dass du In der Spiegelwelt bist.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "So richtig traust du dich noch nicht, darüber nachzudenken. Das ist hier also die Welt, in der die Menschen hineingesaugt werden. Aber wo gehen sie stattdessen hin?");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn hast du auch noch nichts Genaueres erzählt. Vielleicht würde er dir aber sowieso nicht glauben. Du bist dir noch nicht sicher, was du über ihn denkst.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du blinzelst. Wo bist du denn? Panik macht sich in deiner Brust breit, bis dir einfällt, dass du in der Spiegelwelt bist.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "So richtig traust du dich noch nicht, darüber nachzudenken. Das ist hier also die Welt, in der die Menschen hineingesaugt werden. Aber wo gehen sie dann hin?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn hast du auch noch nichts Genaueres erzählt. Vielleicht würde er dir aber sowieso nicht glauben.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Einerseits hat er dich hier willkommen geheißen, auch wenn auf eine spezielle Art. Andererseits kennst du ihn und seine Motivationen kaum. Er spielt gern den Unterhalter und lässt nicht viel von seinem Inneren durchblicken.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du musst das Ganze weiter beobachten. Du beschließt, nach unten zu gehen. Vielleicht ist es bald Zeit für das Abendessen?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du beschließt, nach unten zu gehen. Vielleicht ist es bald Zeit für das Abendessen?");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_int);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als du unten ankommst, flutet eine helle Sonne das Zimmer. Du schaust genauer hin und entdeckst, dass die Gäste frühstücken. Hast du etwa den ganzen Tag verschlafen?");
@@ -3793,7 +3804,7 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp07_MarketplaceWhary);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr folgt den kleinen Gassen, bis sich ein bunter Marktplatz vor euch auftut. Genau wie daheim wuselt er vor Menschen, Waren und der einen oder anderen streunenden Katze. Du hast Heimweh, auch wenn du nie dachtest, dass du dein kleines Dorf mal so sehr vermissen würdest. Aber Kailani wartet irgendwo auf dich. Wenigstens schaut dich, dank deinem neuen Outfit, niemand schräg von der Seite an.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr folgt den kleinen Gassen, bis sich ein bunter Marktplatz vor euch auftut. Genau wie daheim wuselt er vor Menschen, Waren und der einen oder anderen streunenden Katze. Du hast Heimweh, auch wenn du nie dachtest, dass du dein kleines Dorf mal so sehr vermissen würdest. Aber Kailani wartet irgendwo auf dich.");
                 Spiegel_VN.ƒS.Speech.clear();
                 return "07_Research Marketplace";
                 break;
@@ -3827,7 +3838,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                 Spiegel_VN.dataForSave.pickedChp07TalkToInnkeeper = true;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Kann ich dir weiterhelfen?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Sie ist vor ein paar Tagen verschwunden und ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
                 Spiegel_VN.ƒS.Character.hideAll();
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Innkeeper, Spiegel_VN.characters.Innkeeper.pose.pos2_frown, Spiegel_VN.ƒS.positionPercent(70, 100));
                 Spiegel_VN.ƒS.update();
@@ -3873,9 +3884,9 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Character.hideAll();
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos1_confused, Spiegel_VN.ƒS.positionPercent(40, 100));
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Du warst aber lange weg? Ist alles in Ordnung?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erzählst ihm aufgeregt von den Hinweisen, die dir die Wirtsleute gegeben haben.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und weil die Farbe etwas mit einem Ort zu tun hat, der auf der anderen Seite des Sees liegt, muss ich dort hin! Kailani wird dort vielleicht gefangen gehalten!"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und, was hast du rausgefunden?"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erzählst ihm aufgeregt von den Hinweisen.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und weil die Farbe etwas mit einem Ort zu tun hat, der auf der anderen Seite des Sees liegt, muss ich dort hin!"');
                 Spiegel_VN.ƒS.Character.hideAll();
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral, Spiegel_VN.ƒS.positionPercent(40, 100));
                 Spiegel_VN.ƒS.update();
@@ -3901,7 +3912,7 @@ var Spiegel_VN;
                         break;
                 }
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich gehe sofort los! Wenn du mitkommen willst, musst du dich beeilen. Ich will nicht noch länger herum warten."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer.");
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Natürlich lasse ich mir das nicht entgehen! Auf zum See!"');
                 return "08_Arrival lake";
         }
@@ -3914,27 +3925,28 @@ var Spiegel_VN;
         Spiegel_VN.dataForSave.pickedChp07ResearchMarketplace = true;
         Spiegel_VN.ƒS.Character.hideAll();
         let Chp07DiscoverMarketplaceElementAnswers = {
-            iSayListenToVillagers: "(Erkunden) Bewohnern zuhören",
+            // iSayListenToVillagers: "(Erkunden) Bewohnern zuhören",
             iSayMerchants: "(Erkunden) Mit den Händlern sprechen",
         };
-        if (Spiegel_VN.dataForSave.pickedChp07DiscoverMerchants &&
-            Spiegel_VN.dataForSave.pickedChp07DiscoverSpeakToVillagers) {
+        if (Spiegel_VN.dataForSave.pickedChp07DiscoverMerchants
+        // dataForSave.pickedChp07DiscoverSpeakToVillagers
+        ) {
             return "07_Beggar";
         }
         let Chp07DiscoverMarketplaceElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07DiscoverMarketplaceElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
         switch (Chp07DiscoverMarketplaceElement) {
-            case Chp07DiscoverMarketplaceElementAnswers.iSayListenToVillagers:
-                Spiegel_VN.dataForSave.pickedChp07DiscoverSpeakToVillagers = true;
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand.");
-                await Spiegel_VN.ƒS.Speech.tell("Dorfbewohnende 1", '"... mehr Farbe bekommen…!"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mehr Farbe? Du näherst dich den Leuten, die um die Apfelkisten stehen, unbemerkt.");
-                await Spiegel_VN.ƒS.Speech.tell("Dorfbewohnende 1", '"Ja ja, mein Nachbar, der Heinrich, hat eine ordentliche Portion bekommen. Seine Hemden glitzern wie die Sterne! Er sieht so viel jünger und stärker aus."');
-                await Spiegel_VN.ƒS.Speech.tell("Dorfbewohnende 2", '"Ich meine, so viel wird das nicht ausmachen, oder? Heinrich war schon vorher nicht, naja, besonders ansprechend."');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wieherndes Gelächter. Die Gruppe zerstreut sich und lässt dich mit vielen Fragezeichen im Kopf zurück. Farbe kriegen? Jung und stark?");
-                Spiegel_VN.ƒS.Speech.clear();
-                return "07_Research Marketplace";
-                break;
+            //   case Chp07DiscoverMarketplaceElementAnswers.iSayListenToVillagers:
+            //     dataForSave.pickedChp07DiscoverSpeakToVillagers = true;
+            // await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand.");
+            //     await ƒS.Speech.tell("Dorfbewohnende 1", '"... mehr Farbe bekommen…!"');
+            // await ƒS.Speech.tell(characters.maincharacter, "Mehr Farbe? Du näherst dich den Leuten, die um die Apfelkisten stehen, unbemerkt.");
+            //     await ƒS.Speech.tell("Dorfbewohnende 1", '"Ja ja, mein Nachbar, der Heinrich, hat eine ordentliche Portion bekommen. Seine Hemden glitzern wie die Sterne! Er sieht so viel jünger und stärker aus."');
+            //     await ƒS.Speech.tell("Dorfbewohnende 2", '"Ich meine, so viel wird das nicht ausmachen, oder? Heinrich war schon vorher nicht, naja, besonders ansprechend."');
+            // await ƒS.Speech.tell(characters.maincharacter, "Wieherndes Gelächter. Die Gruppe zerstreut sich und lässt dich mit vielen Fragezeichen im Kopf zurück. Farbe kriegen? Jung und stark?");
+            //     ƒS.Speech.clear();
+            //     return "07_Research Marketplace";
+            //     break;
             case Chp07DiscoverMarketplaceElementAnswers.iSayMerchants:
                 Spiegel_VN.dataForSave.pickedChp07DiscoverMerchants = true;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du näherst dich einem der Händler.");
@@ -4027,13 +4039,13 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Beggar, Spiegel_VN.characters.Beggar.pose.anguish, Spiegel_VN.ƒS.positionPercent(30, 120));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Beggar, '"Manche Menschen … manche werden eingepackt. Versteckt. Festgehalten."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Als Sklavin?"');
+        // await ƒS.Speech.tell(characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums.");
+        // await ƒS.Speech.tell(characters.maincharacter, '"Als Sklavin?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Beggar);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Beggar, Spiegel_VN.characters.Beggar.pose.shocked, Spiegel_VN.ƒS.positionPercent(30, 120));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln. Über den See!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was bedeutet das, mit den Spiegeln?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was bedeutet das, mit den Spiegeln? Was ist über dem See?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Statt zu antworten, schaut sie über deine Schulter. Du folgst ihrem Blick, weil du denkst, sie hätte etwas entdeckt. Als du dich wieder umdrehst, ist die Bettlerin verschwunden.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Beggar);
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
@@ -4041,12 +4053,12 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wo ist sie denn hin?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie ist einfach weg? Sie wusste so viel! Ich wollte sich doch noch so viel fragen …"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Verzweifelt suchst du nach ihr in der Menschenmenge, doch die Bettlerin scheint, wie vom Erdboden verschluckt.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Verzweifelt suchst du nach ihr in der Menschenmenge, doch die Bettlerin scheint wie vom Erdboden verschluckt.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Das gibt’s doch nicht! Wie kann sie so schnell weg sein?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos3_arms_happy, Spiegel_VN.ƒS.positionPercent(60, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Aber wir haben eine Spur! Menschen werden irgendwo festgehalten, gegen ihren Willen, um zu produzieren …"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Aber wir haben eine Spur! Menschen werden irgendwo festgehalten, gegen ihren Willen, und arbeiten ..."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Klingt fast wie … wie eine Fabrik!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als du es aussprichst, tauchen Bilder von Kailani in deinem Kopf auf: Kailani in einem Riesenkäfig, gepeitscht von bösen Wärtern.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Hast du etwas rausgefunden, Flynn?"');
@@ -4098,7 +4110,7 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Sie war grau? Bis’ du dir da sicher? Hm, …"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Hör’ zu. Es is’ nämlich so, dass wir hier ein kleines Farbenproblem haben, Vielleicht is’ dir das auch schon aufgefallen?"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du nickst schnell und holst tief Luft, um weiterzusprechen. Die Wirtin unterbricht dich.");
+                // await ƒS.Speech.tell(characters.maincharacter, "Du nickst schnell und holst tief Luft, um weiterzusprechen. Die Wirtin unterbricht dich.");
                 Spiegel_VN.ƒS.Character.hideAll();
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Innkeeper, Spiegel_VN.characters.Innkeeper.pose.pos2_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
                 Spiegel_VN.ƒS.update();
@@ -4194,8 +4206,8 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Cook, Spiegel_VN.characters.Cook.pose.pos2_unknowing, Spiegel_VN.ƒS.positionPercent(65, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Cook, '"Alles sehr hübsch, und so weiter. Aber: Annabelle, unsere Königin, die wurde nie wieder gesehen. Niemand weiß, wer wirklich hinter den Schlosstüren hockt und regiert. Meine Freunde und ich, wir haben da aber ‘ne Vermutung …"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er beugt sich verschwörerisch zu dir herunter. Du hast den Eindruck, dass er es liebt, Geschichten zu erzählen, wenn er erstmal in Schwung ist.");
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert und entscheidet. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen?"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er beugt sich verschwörerisch zu dir herunter.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen?"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Cook, '"Aber jetzt – in Luft aufgelöst. Die meisten wollen davon aber nichts hören. Solange die ihre Farbe kriegen und sich aufpolstern und im Spiegel anglotzen können, ist denen alles egal. Aber nicht mir und meinem Kreis!"');
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
@@ -4258,9 +4270,9 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_Lake);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Weg zum See war nicht weit, schließlich liegt die Stadt direkt am Ufer. Als ihr dort ankommt, ist der See tiefblau und gefühlt endlos.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Weg zum See war nicht weit. Als ihr dort ankommt, ist der See tiefblau und gefühlt endlos.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Der ist ja riesig! So nahe war ich noch nie. Jetzt müssen wir nur noch rüberkommen."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Suche im Bild nach Möglichkeiten zur Überfahrt! Klicke dabei auf die Stellen, bei denen sich der Mauszeiger ändert.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Suche im Bild nach Möglichkeiten zur Überfahrt! Klicke dabei auf die Stellen, bei denen sich der Mauszeiger ändert. Wenn du einen Weg gefunden hast, tippe auf die Leertaste.");
         Spiegel_VN.ƒS.Speech.clear();
         return "08_ImageRiddle";
     }
@@ -4344,7 +4356,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_OnBoat);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_uncertain, Spiegel_VN.ƒS.positionPercent(70, 100));
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Auf dem See ist es ruhig. Du atmest tief durch und lässt das Geschehen der letzten zwei Tage auf dich wirken. Eine graue Welt, eine verschwundene Königin, Spiegel und ganz viel Farbe … und irgendwo mittendrin ist Kailani. Du kannst dir immer noch nicht vorstellen, was ihr geschehen ist.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Auf dem See ist es ruhig. Eine graue Welt, eine verschwundene Königin, Spiegel und ganz viel Farbe … und irgendwo mittendrin ist Kailani.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn verspürt wohl auch die veränderte Atmosphäre, denn das erste Mal, seit du ihn kennst (was ja auch wirklich keine lange Zeit ist), ist er still und paddelt vor sich hin. Du beschließt, ihn ein bisschen auszuhorchen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Also, Flynn, es ist ja wirklich nicht zu übersehen, dass die Leute hier sehr auf ihr Äußeres achten."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Naja, wer will nicht schön aussehen?"');
@@ -4370,7 +4382,7 @@ var Spiegel_VN;
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_shocked2, Spiegel_VN.ƒS.positionPercent(50, 100));
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Angst vor was?"');
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Angst vor Verurteilung! Wenn Personen anders aussehen, als die Leute in Whary, werden sie von ihnen verurteilt. Nur, weil sie nicht schlank genug oder keine Muskeln an der richtigen Stelle haben. Das ist doch kein schönes Gefühl."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Angst vor Verurteilung! Wenn jemand anders aussieht, als die Leute in Whary, werden sie von ihnen verurteilt. Nur, weil sie nicht schlank genug oder keine Muskeln an der richtigen Stelle haben. Das ist doch kein schönes Gefühl."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn schweigt und paddelt.");
                     Spiegel_VN.ƒS.Character.hideAll();
                     Spiegel_VN.ƒS.Speech.clear();
@@ -4389,7 +4401,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.Character.hideAll();
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_angry, Spiegel_VN.ƒS.positionPercent(50, 100));
                     Spiegel_VN.ƒS.update();
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich glaube, wenn es manche vormachen, wollen es alle anderen nachmachen. So hat der Koch das gesagt! Manche haben die Farbe zuerst bekommen, dann wollten sie alle anderen auch. Die Leute wollten genauso aussehen."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich glaube, wenn es manche vormachen, wollen es alle anderen nachmachen. So hat der Koch das gesagt! Manche haben die Farbe zuerst bekommen, dann wollten sie alle anderen auch."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ach, wer weiß wie das Ganze angefangen hat! Kannst du es aber den Leuten verübeln?"');
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
@@ -4404,7 +4416,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0.8, 1, true);
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Euer Boot driftet näher an die Häuser heran, die direkt am Ufer des Sees stehen. Du reibst dir die Augen, aber – alles ist grau! Du schaust an dir herunter – auch grau. Flynns buntes Outfit hat nun alle Farbe verloren. Einzig der Turm, der bedrohlich in die Höhe ragt, ist in knallorange.");
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Euer Boot driftet näher an die Häuser heran, die direkt am Ufer des Sees stehen. Du reibst dir die Augen, aber – alles ist grau! Du schaust an dir herunter – auch grau. Einzig der Turm, der bedrohlich in die Höhe ragt, ist in knallorange.");
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Warum ist alles grau?"');
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_angry, Spiegel_VN.ƒS.positionPercent(50, 100));
                     Spiegel_VN.ƒS.update();
@@ -4447,7 +4459,7 @@ var Spiegel_VN;
         // *** RESPONSES ***
         switch (Chp08ArrivalOtherSideElement) {
             case Chp08ArrivalOtherSideElementAnswers.iSayDiscoverTower:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du beugst den Kopf in den Nacken und starrst hinauf zur Spitze. Der Turm ist deutlich höher als alle anderen Gebäude in diesem Dorf. Das orange ist beinahe unheimlich grell, im Vergleich zu den farblosen Häusern. Wozu ist dieser Turm?");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du beugst den Kopf in den Nacken und starrst hinauf zur Spitze. Der Turm ist deutlich höher als alle anderen Gebäude in diesem Dorf. Das orange ist beinahe unheimlich grell, im Vergleich zu den farblosen Häusern. Was wohl da drin ist?");
                 Spiegel_VN.ƒS.Speech.clear();
                 return "08_Arrival other side";
                 break;
@@ -4478,12 +4490,12 @@ var Spiegel_VN;
             case Chp08HidingPlaceFactoryElementAnswers.iSayExploreVillage:
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_E_FactoryVillage);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du wanderst in eine Gasse, um dich genauer umzusehen. Es rührt sich nichts – keine Vögel, Menschen oder andere Lebewesen sind in Sicht. Komisch, wenn die Häuser nicht bewohnt sind, wozu sind sie dann da? Es sieht nicht so aus, als ob ihr hier irgendwo unterkommen könnt.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du wanderst in eine Gasse, um dich genauer umzusehen. Es rührt sich nichts – keine Vögel, Menschen oder andere Lebewesen sind in Sicht. Es sieht nicht so aus, als ob ihr hier irgendwo unterkommen könnt.");
                 Spiegel_VN.ƒS.Speech.clear();
                 return "08_Search hiding place";
                 break;
             case Chp08HidingPlaceFactoryElementAnswers.iSayContinue:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr lauft weiter. Im Dorf herrscht eine drückende Atmosphäre, die dir nicht geheuer ist. Dein Bauch zieht sich vor Reue zusammen. War es ein Fehler gewesen, hier her zu reisen? Neben dir ist Flynn wohl auch in innerer Aufruhr. In seinem Gesicht sind rote Flecken, und er zuckt hektisch mit den Armen. Was ist denn mit dem los?");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr lauft weiter. Im Dorf herrscht eine drückende Atmosphäre, die dir nicht geheuer ist. Dein Bauch zieht sich zusammen. War es ein Fehler gewesen, hier her zu reisen?");
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
@@ -4513,7 +4525,7 @@ var Spiegel_VN;
                 case Chp08HidingPlaceFactoryElementAnswers2.iSayRight:
                     Spiegel_VN.dataForSave.pickedChp08Right = true;
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich finde, wir sollten nach rechts!"');
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Na gut, ist mir egal! Hauptsache wir kommen irgendwo unter. Auf jetzt!"');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Na gut, ist mir egal! Hauptsache wir kommen irgendwo unter."');
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
                 case Chp08HidingPlaceFactoryElementAnswers2.iSayHammer:
@@ -4548,7 +4560,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Perfekt! Hier können wir uns auf die Lauer legen und beobachten."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr macht es euch, so gut es geht, auf dem Felsen gemütlich.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Ihr macht es euch, so gut es geht, auf dem Felsen gemütlich.");
         do {
             let Chp08HidingPlaceFactoryElementAnswers3 = {
                 iSayThinkAboutVillage: '"(Erkunden) Was denkst du über das Dorf?"',
@@ -4562,7 +4574,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.Character.hideAll();
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
                     Spiegel_VN.ƒS.update();
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Puh, ich weiß nicht. Schon komisch! Und warum es hier keine Farbe gibt, versteh’ ich auch nicht."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Puh, ich weiß nicht. Schon komisch!"');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erklärst ihm nochmal, dass niemand genau weiß, woher die Farbe stammt. Flynn wirkt aber desinteressiert und zupft an einem Grashalm.");
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
@@ -4632,14 +4644,14 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
             case Chp08HidingPlaceFactoryElementAnswers4.iSaySilent:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schweigst. Natürlich hat er recht. Trotzdem würdest du ohne ihn sofort, ohne eine Sekunde zu zögern, zurück in das Dorf und nach Kailani suchen.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schweigst. Natürlich hat er recht.");
                 Spiegel_VN.ƒS.Speech.clear();
                 break;
         }
         Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Aber Whary ist weit weg. Du bist dir sicher, Kailani hier, auf der anderen Seite des Sees, näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du bist dir sicher, Kailani hier näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         return "09_Enter factory";
@@ -4652,7 +4664,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_HidingPlace);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Zum zweiten Mal innerhalb weniger Tage wachst du auf und weißt zuerst nicht, wo du bist. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Na, auch schon wach?"');
@@ -4677,7 +4689,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Wie sollen wir da reinkommen? Es gibt keine Türen!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Schau mal, dahinten ist ein Fenster geöffnet! Vielleicht können wir da einbrechen?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Tatsächlich steht dort ein kleines Fenster offen. Vorsichtig schleicht ihr euch heran und öffnet es einen Spalt. Schnell quetscht ihr euch hindurch.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Tatsächlich steht dort ein kleines Fenster offen. Vorsichtig schleicht ihr euch heran und quetscht euch hindurch.");
         return "09_In Factory";
     }
     Spiegel_VN.Chp09_EnterFactory = Chp09_EnterFactory;
@@ -4724,7 +4736,7 @@ var Spiegel_VN;
                     break;
             }
         } while (!Spiegel_VN.dataForSave.pickedChp09ScoutTowerBirds);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du rufst die Vögel mit dem Schlaflied. Als sie angeflogen kommen, fühlst du dich etwas leichter.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du rufst deine Vögelfreunde.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_TowerOutsideBirds);
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.birds, 0.1, 1, true);
         Spiegel_VN.ƒS.update();
@@ -4732,13 +4744,13 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Bitte, schaut doch mal nach, was sich in dem Turm verbirgt! Wir glauben, dort liegt der Schlüssel zu Kailanis Befreiung."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Vögel zwitschern und fliegen hoch, um den Turm zu umkreisen. Drei Mal umrunden sie den Turm und landen wieder vor deinen Füßen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Welche Worte kannst du durch das Gezwitscher hören? Schreibe die Worte mit Komma dazwischen in das Feld.");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_demon, 0.5, 1, false);
+        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_demon, 1, 1, false);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Was hast du gehört?");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_mirror, 0.5, 1, false);
+        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_mirror, 1, 1, false);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Vögel haben etwas gesagt!");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_destroy, 0.5, 1, false);
+        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_destroy, 1, 1, false);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wie war das?");
         let answerBirds = await Spiegel_VN.ƒS.Speech.getInput();
@@ -4749,7 +4761,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Die Spiegel zerstören? Eh– ja, auf jeden Fall! Kailani, wir kommen!"');
         Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er stürmt Richtung Turm. Du schaust ihm verwirrt hinterher. Er klang nicht so euphorisch und erleichtert, eher beklommen. Eigentlich wolltest du ihn ja ausfragen. Das muss wohl warten.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er stürmt Richtung Turm. Du schaust ihm verwirrt hinterher. Er klang nicht so euphorisch und erleichtert, eher beklommen.");
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.birds, 0, 0, false);
     }
     Spiegel_VN.Chp09_ScoutTower = Chp09_ScoutTower;
@@ -4760,7 +4772,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp09_InFactory);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen. Trotzdem herrscht eine angespannte Stille.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen.");
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(85, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Das ist … die Fabrik! Von der die Bettlerin gesprochen hat! Was ist hier los?"');
@@ -4779,7 +4791,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Verzweifelt siehst du zu, wie sich Kailani in der Schlange vorwärtsbewegt und in einem Tunnel verschwindet.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp09_InFactory);
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Tränen laufen dir über das Gesicht. Trotzdem hat Flynn Recht; es wäre unsinnig gewesen, euch in Gefahr zu bringen. Trotzdem kannst du es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Tränen laufen dir über das Gesicht. Du kannst es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(85, 100));
         Spiegel_VN.ƒS.update();
@@ -4787,7 +4799,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaust ungläubig auf. Kailani steht wieder im Raum. Nur: sie sieht komplett anders aus. Eine lange Perücke bedeckt ihre schulterlangen, braunen Haare. Sie trägt ein pinkes Kleid und – es kann nicht anders sein – ein ausgestopftes Hinterteil. Sie geht in eine der Kabinen und beginnt, sich ebenfalls hin und her zu wiegen.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was macht sie denn? Das ist doch so komisch! Ihr geht es nicht gut! Warum muss sie sich hier anziehen und –"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Und da fällt es dir wie Schuppen von den Augen: Sie ist das Spiegelbild! Das Spiegelbild, das man sich mit dem Handspiegel wünschen kann! In deinem Kopf schwirrt es.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen. Sie tut so, als wäre sie die Person, die gerade hineinschaut!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani hat diesen Szenen zugeschaut, jeden Tag! Sie hat sich selbst im Spiegel gesehen – aber warte, das war nicht sie. Sondern jemand, der sie imitiert und getäuscht hat. Der Spiegel hat diese Kabine gezeigt!"');
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused, Spiegel_VN.ƒS.positionPercent(80, 100));
@@ -4804,7 +4816,7 @@ var Spiegel_VN;
             let Chp09InFactoryElement = await Spiegel_VN.ƒS.Menu.getInput(Chp09InFactoryElementAnswers, "choicesCSSclass");
             switch (Chp09InFactoryElement) {
                 case Chp09InFactoryElementAnswers.iSayListenToGuards:
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Geduckt schleichst du dich näher an die Wachen heran. Vielleicht kannst du ein paar Informationen heraushören?");
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Geduckt schleichst du dich näher an die Wachen heran.");
                     await Spiegel_VN.ƒS.Speech.tell("Wache 1", '"... und da meinte sie zu mir, der nächste Schwung komme wohl morgen. Platz hat’s hier noch genug."');
                     await Spiegel_VN.ƒS.Speech.tell("Wache 2", '"Die Neuen können in den rechten Tunnel. Hauptsache, ich kann am Wochenende wieder ‘rüber und der Mann im Turm ist glücklich. Hast gehört, was Getliw neulich passiert ist?"');
                     await Spiegel_VN.ƒS.Speech.tell("Wache 1", '"Nee! Ich war doch im Urlaub. Was ist passiert?"');
@@ -4833,7 +4845,7 @@ var Spiegel_VN;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp10_IntoTower() {
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Es ist soweit! Du zitterst erwartungsvoll. Du würdest alles für deine kleine Schwester tun. Was ist aber, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Es ist soweit! Du zitterst erwartungsvoll. Was ist aber, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Hättest du einen Plan machen sollen, wie Flynn es vorgeschlagen hat? Mit leeren Händen und nur deinem ‘offenen Herzen’, wie es der Wünschebaum sagen würde, trittst du nun dem Bösen entgegen. Ob das reicht?.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTower);
         Spiegel_VN.ƒS.Character.hideAll();
@@ -4864,8 +4876,8 @@ var Spiegel_VN;
                     Spiegel_VN.dataForSave.pickedChp10IntoTowerContinue = true;
                     await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTower);
                     Spiegel_VN.ƒS.update();
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks."');
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Du hast Sorge, dass etwas aus dem Dunklen herab geflogen kommt, als du den ersten Schritt tust. Doch nichts passiert. Vorsichtig schleicht ihr euch hoch.");
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Der Dämon ist sicherlich ein Klacks."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Vorsichtig schleicht ihr euch hoch.");
                     await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
                     await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                     await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_MinigameInstructions);
@@ -4874,7 +4886,7 @@ var Spiegel_VN;
                     await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_Demontunnel);
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Demon, Spiegel_VN.characters.Demon.pose.pos2_angry, Spiegel_VN.ƒS.positionPercent(100, 100));
                     await Spiegel_VN.ƒS.update();
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Demon, "Dich kriege ich schon noch!");
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Demon, "Wer wagt es, mich zu stören!");
                     return "10_MinigameDemon";
                     break;
             }
@@ -5037,30 +5049,31 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0.8, 1, true);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du hast es geschafft! Der Dämon war ein paar Mal knapp dran, dich zu fangen, doch du bist ihm entwischt. Jetzt bist du in dem Spiegelzimmer angelangt. Tatsächlich stehen sechs große Spiegel aneinandergereiht in dem runden Raum.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du hast es geschafft! Der Dämon war ein paar Mal knapp dran, dich zu fangen, doch du bist ihm entwischt. Jetzt bist du in dem Spiegelzimmer angelangt.");
         if (!Spiegel_VN.dataForSave.pickedIron) {
             return "Semi Good Ending";
         }
         ;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Instinktiv greifst du zu dem Hammer. Was für ein Glück, dass du ihn eingesteckt hast! Du schwingst ihn und triffst damit den ersten Spiegel.");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, true);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– ein Krachen ertönt, so laut, dass du dir die Ohren zuhalten musst –");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
-        Spiegel_VN.ƒS.update();
+        // await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– noch ein Spiegel kaputt! –");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
-        Spiegel_VN.ƒS.update();
+        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– schon die Hälfte zerstört! –");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
-        Spiegel_VN.ƒS.update();
+        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– der vierte Spiegel geht zu Bruch –");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
-        Spiegel_VN.ƒS.update();
+        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– fast geschafft –");
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, false);
+        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0, 0, false);
+        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_MirrorroomGrey);
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Alle Spiegel sind zerstört! Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_confused_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
@@ -5069,23 +5082,23 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Alle sechs Spiegel? Musste das wirklich sein?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, bist du verrückt! Die Spiegel haben doch böse Magie durchgelassen. Wo warst du denn eigentlich?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ach, nirgends … "');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er bückt sich und schaut die Splitter genauer an. Für ihn hast du jetzt aber keine Zeit mehr. Du gehst vorsichtig um die Splitter herum und trittst auf den Balkon, um herunterzuschauen.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Welt hat den kleinen Rest an Farbe, den sie noch besaß, verloren. Du schaust hoch. Du kannst sogar bis ganz über den See nach Whary schauen. Offensichtlich wollte der Dämon seine Augen überall haben. Der See, der vorher ein tiefes Blau war, ist nun – grau. Soweit dein Auge reicht, siehst du keine Farben. Whary hat seine bunten Fassaden durch trübe Hauswände eingetauscht. Die Zerstörung der Spiegel muss die Verbindungen zur Farbwelt gekappt haben!");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Das ist ja Wahnsinn! So schlimm sieht es gar nicht aus, finde ich …"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn ist, aus unerfindlichen Gründen, ziemlich heiter. Er strahlt und schaut herunter.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er bückt sich und schaut die Splitter genauer an.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dir fällt auf, dass hier drin nun auch alles grau ist. Die Zerstörung der Spiegel muss die Verbindungen zur Farbwelt gekappt haben!");
+        // await ƒS.Speech.tell(characters.Flynn, '"Das ist ja Wahnsinn! So schlimm sieht es gar nicht aus, finde ich …"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn ist, aus unerfindlichen Gründen, ziemlich heiter. Er strahlt und schaut aus dem Fenster");
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Schau mal, dort unten versammeln sich Leute! Die sehen ziemlich verwirrt aus."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Und tatsächlich ist ein kleiner Kreis von Menschen auf dem Platz vor dem Turm zusammengekommen. Ratlos stehen sie beieinander und beraten sich. Manche schütteln sich oder schauen sich um, wie wenn sie aus einer Trance erwacht sind.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, das sind die Sklaven! Sie sind wieder wach! Schnell, vielleicht is Kailani unter ihnen?"');
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_Demontunnel);
+        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_DemontunnelGrey);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Du hetzt zurück durch den leeren Tunnel zurück nach unten."');
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTower);
+        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_GroundFloorTowerGrey);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Vorbei an den Portraits, deren tote Augen dich im Halbdunklen verfolgen."');
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_TowerOutsideSlaves);
+        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_TowerOutsideSlavesGrey);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
@@ -5095,18 +5108,18 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani! KAILANI! Du bist wieder da! Ich kann es kaum fassen… Wie geht’s dir? Was ist passiert? Ich bin so erleichtert!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal. Wie geht’s dir?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal!"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ich bin dir so unendlich dankbar. Wirklich! Die Zeit hier war richtig schlimm. Also, wo fange ich an. Jetzt geht’s mir besser, nachdem ich befreit wurde. Aber vorher, puh, das war nicht einfach."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich. Der hat mir alles gezeigt, was ich wollte."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich."');
+        // await ƒS.Speech.tell(characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ich weiß auch nicht, war irgendwie peinlich, weißt. Weil ich doch so schön war im Spiegel und in echt nicht. Im Spiegel hatte ich ganz lange Haare, die haben toll geglänzt! Und eine schmale Taille. Große Brüste und einen super Hintern."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Aber der tat mir nicht gut. War mir echt peinlich. Weil ich doch so schön war im Spiegel und in echt nicht. Im Spiegel hatte ich ganz lange Haare, die haben toll geglänzt! Und eine schmale Taille. Große Brüste und einen super Hintern."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"So sehe ich ja gar nicht in echt aus. Aber im Spiegel fand’ ich das einfach schön. Und deshalb konnte ich nicht aufhören, zu schauen! Aber wie soll ich euch das erklären? Ihr sagt ja bloß, ich bin in echt hübsch. Aber das hat mir nicht wirklich was gebracht."');
         do {
             let Chp10GoodEndingElementAnswers1 = {
@@ -5130,7 +5143,7 @@ var Spiegel_VN;
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Dann hat er mehr und mehr geblinkt, ich konnte gar nicht wegschauen, dann wurde alles schwarz. Aufgewacht bin ich dann in diesem Haus da drüben. Dort war alles grau und alle hatten große Angst. Wir haben gar nicht verstanden, was mit uns passiert."');
                 case Chp10GoodEndingElementAnswers1.iSayContinue:
                     Spiegel_VN.dataForSave.pickedChp10GoodEndingContinue1 = true;
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Dann kam eine, die hat uns, wie soll ich sagen? betäubt. Sie hat mit den Armen gewedelt, dann sind wir alle schläfrig geworden. Mir war alles egal, was um mich herum passiert. Mitgekriegt haben wir das natürlich trotzdem."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Dann kam eine, die hat uns, wie soll ich sagen? betäubt. Mir war dann alles egal, was um mich herum passiert. Mitgekriegt haben wir das natürlich trotzdem."');
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
             }
@@ -5140,11 +5153,12 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Ja, wir haben dann gearbeitet. Das war das Verrückteste: Die Bilder, die ich daheim im Spiegel gesehen hab’, die musste ich dann selbst produzieren! Ich musste Perücken anziehen und mich in ein Korsett einschnüren. Dann hab’ ich Polster um Brüste und Hintern bekommen. Tagein, tagaus, standen wir in diesen Kabinen. Die Jungs haben sich Sixpack- und Schulterpolster umgeschnürt. Ich weiß aber einfach nicht, wieso …"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erklärst ihr, dass es irgendwie mit den Farben zusammenhängt. Bis Flynn dich unterbricht.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und du hast das alles mitgekriegt?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn, der sich bis jetzt bei diesem Familientreffen zurückgehalten hat, mischt sich in das Gespräch ein. Als er sich euch zuwendet, siehst du etwas aus seiner Tasche aufblitzen. Das war vorher nicht da, da bist du dir sicher! Stellst du ihn zur Rede?");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als er sich euch zuwendet, siehst du etwas aus seiner Tasche aufblitzen. Das war vorher nicht da, da bist du dir sicher! Stellst du ihn zur Rede?");
         let Chp10GoodEndingElementAnswers2 = {
             iSayCareful: "Vorsichtig",
             iSayAccusing: "Vorwurfsvoll",
@@ -5170,7 +5184,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_shocked, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Naja, es ist ein Splitter aus dem Spiegelzimmer. Ich fand die so schön und –"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, was für ein Blödsinn! Seit Tagen verhältst du dich komisch. Ich hatte immer den Eindruck, als wärst du eher an den Spiegeln interessiert, statt an Kailani. Und du hast dich so schnell bereitwillig erklärt, mir zu helfen, statt deine Ausbildung zu beginnen. Was ist denn mit dir los?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Seit Tagen verhältst du dich komisch! Ich hatte immer den Eindruck, als wärst du eher an den Spiegeln interessiert, statt an Kailani. Und du hast dich so schnell bereitwillig erklärt, mir zu helfen, statt deine Ausbildung zu beginnen. Was ist denn mit dir los?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Natürlich wollte ich Kailani auch retten! Nur haben mich die Spiegel auch interessiert und –"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Rück’ schon raus damit! Wir kennen uns zwar nicht lange, aber trotzdem haben wir einiges zusammen hinter uns. Ist dir unsere Freundschaft nichts wert?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
@@ -5183,7 +5197,7 @@ var Spiegel_VN;
             let Chp10GoodEndingElementAnswers3 = {
                 iSayUsed: '"(Erkunden) Du hast mich also nur benutzt?"',
                 iSayHome: "(Erkunden) Wo ist deine Heimat?",
-                iSayTechnology: "(Erkudnen) Wozu die Technologie stehlen?",
+                iSayTechnology: "(Erkunden) Wozu die Technologie stehlen?",
                 iSayContinue: "Weiter"
             };
             let Chp10GoodEndingElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers3, "choicesCSSclass");
@@ -5200,7 +5214,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.update();
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich komme von einer Welt namens Valde. Dort lebe ich in einer großen Stadt und habe die Mission erhalten, die Spiegeltechnologie von dieser Welt, Norovia, zu klauen."');
                     await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Kopf schwirrt. Es gibt mehr Welten als nur deine und die Spiegelwelt? Flynn scheint deine Frage schon zu ahnen.");
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Es gibt nämlich sieben verschiedene Welten! Erinnerst du dich an die sechs Spiegel im Spiegelzimmer? Das waren die Verbindungen zu den Welten."');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Es gibt nämlich sieben verschiedene Welten! Erinnerst du dich an die sechs Spiegel im Spiegelzimmer? Das waren die Verbindungen zu den Welten. Sie haben die Farben durchgelassen, von denen sich der Dämon ernährt hat. Den Rest hat er an das Volk weitergegeben."');
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
                 case Chp10GoodEndingElementAnswers3.iSayTechnology:
@@ -5208,7 +5222,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
                     await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
                     Spiegel_VN.ƒS.update();
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Mir wurde beauftragt, die Technologie mitzubringen. Damit wir in Varunomo, meiner Stadt, die Farbe benutzen können"');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Mir wurde beauftragt, die Technologie mitzubringen. Damit wir in Varunomo, meiner Stadt, auch Farbe haben können. Dort ist nämlich auch alles grau ..."');
                     Spiegel_VN.ƒS.Speech.clear();
                     break;
                 case Chp10GoodEndingElementAnswers3.iSayContinue:
@@ -5228,13 +5242,13 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_shrug_eyeroll, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Schau dich um, Flynn. Ich kenne dich zwar nicht und weiß auch nicht, was deine Leute mit dem Spiegel vorhaben. Aber ich muss dir wirklich sagen: wenn du diese Technologie mitnimmst und in deinem Land weiterführst, werden nur noch mehr Menschen verzweifeln. Ich wurde in eine Fabrik gesteckt und musste Bilder erzeugen, die anderen krank machten. Willst du das wirklich? Ich hab’ gelernt: Wir sollten mit uns selbst zufrieden sein, so wie wir aussehen. Das macht uns doch Besonders, diese kleinen Macken."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wow, was für eine Rede! Du bist unglaublich stolz auf deine kleine Schwester. Nicht nur die Tortur hat sie überstanden, sondern auch verstanden, was es mit ihr gemacht hat. Offensichtlich kämpft Flynn mit unterschiedlichen Gefühlen. Er ist sichtlich betroffen von euren Reaktionen.");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Schau dich um, Flynn. Ich kenne dich zwar nicht und weiß auch nicht, was deine Leute mit dem Spiegel vorhaben. Aber ich muss dir wirklich sagen: wenn du diese Technologie mitnimmst und in deinem Land weiterführst, werden nur noch mehr Menschen verzweifeln. Ich hab’ gelernt: Wir sollten mit uns selbst zufrieden sein, so wie wir aussehen. Das macht uns doch besonders, diese kleinen Macken."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du bist unglaublich stolz auf deine kleine Schwester. Nicht nur die Tortur hat sie überstanden, sondern auch verstanden, was es mit ihr gemacht hat. Offensichtlich kämpft Flynn mit unterschiedlichen Gefühlen. Er ist sichtlich betroffen von euren Reaktionen.");
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_blue_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Da, wo ich herkomme, ist so vieles so anders und doch gleich. Die Überheblichkeit der Leute, das Verurteilen wegen Äußeren, ich dachte das wäre normal!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deshalb hatte ich auch immer diese Polster an."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deshalb hatte ich auch immer diese Polster an. Aber nun kann ich die auch ablegen."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_I_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
@@ -5243,8 +5257,8 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_II_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deshalb funktioniert die Technologie so, dass zuerst die Menschen traurig werden, wenn sie in den Spiegel schauen. Gleichzeitig sollen sie aber immer öfter reinschauen, damit nach und nach die Farbe entzogen werden kann. So gelangt die Farbe über den Spiegel zu den Menschen und die können sich dann bunt anziehen, wie wir in Whary gesehen haben."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums: ‘Die Magie verstärkt sich bei schlechten Gefühlen’ … das hatte er also damit gemeint!");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums: 'Die dunkle Magie' ... das hatte er also damit gemeint!");
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt. Die Spiegel sind nun ein für alle mal zerstört. Wir können endlich nach Hause!"');
         let Chp10GoodEndingElementAnswers4 = {
             iSayTakeFlynn: '"Flynn mitnehmen"',
             iSayNotTakeFlynn: "Flynn wegbringen",
@@ -5282,6 +5296,7 @@ var Spiegel_VN;
                 Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.8, 1, true);
                 Spiegel_VN.ƒS.Character.hideAll();
                 Spiegel_VN.ƒS.update();
+                await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.grey_wo_I_skeptical, Spiegel_VN.ƒS.positionPercent(70, 100));
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_laugh, Spiegel_VN.ƒS.positionPercent(80, 100));
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.outfit1_neutral_happy, Spiegel_VN.ƒS.positionPercent(45, 100));
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos3_laugh, Spiegel_VN.ƒS.positionPercent(10, 100));
@@ -5330,7 +5345,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani! KAILANI! Du bist wieder da! Ich kann es kaum fassen… Wie geht’s dir? Was ist passiert? Ich bin so erleichtert!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal. Wie geht’s dir?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal."');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
@@ -5478,7 +5493,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und jetzt muss ich schnell nach Hause! Ich kann es kaum erwarten, die Technologie daheim vorzustellen!"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"FLYNN, warte! Nicht! Das ist alles ein großer Fehler!"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"FLYNN, NEIN! warte! Nicht! Das ist alles ein großer Fehler!"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_crossed_angry, Spiegel_VN.ƒS.positionPercent(40, 100));
         Spiegel_VN.ƒS.update();
@@ -5612,7 +5627,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function End() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.WitchInTheWoods);
-        await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.cracklingfire, 0.1, 1, false);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.cracklingfire, 0.1, 1, false);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
