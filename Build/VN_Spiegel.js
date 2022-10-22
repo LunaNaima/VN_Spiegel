@@ -2073,7 +2073,7 @@ var Spiegel_VN;
                     break;
                 case Chp02TestMirrorScenesOptionsE.iSayContinue:
                     Spiegel_VN.dataForSave.pickedChp02MirrorScenesContinue = true;
-                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Wie toll, oder?"');
+                    await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Wie toll, oder?"');
                     break;
             }
         } while (!Spiegel_VN.dataForSave.pickedChp02MirrorScenesContinue);
@@ -2090,7 +2090,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Gute Nacht!");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ein paar Tage später ...");
+        await Spiegel_VN.ƒS.Speech.tell("", "Ein paar Tage später ...");
         return "03_00 New day";
     }
     Spiegel_VN.Chp02_021_TestMirrorE = Chp02_021_TestMirrorE;
@@ -2187,7 +2187,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Gute Nacht!");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ein paar Tage später ...");
+        await Spiegel_VN.ƒS.Speech.tell("", "Ein paar Tage später ...");
         return "03_00 New day";
     }
     Spiegel_VN.Chp02_021_TestMirrorK = Chp02_021_TestMirrorK;
@@ -2812,7 +2812,7 @@ var Spiegel_VN;
         // *** RESPONSES ***
         switch (Chp04PickSceneElement) {
             case Chp04PickSceneElementAnswers.PickSceneTalkToFamily:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Hallo? Könnt ihr alle mal herkommen?"');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Mutti?"');
                 Spiegel_VN.ƒS.Speech.clear();
                 return "04_01 Talk with family";
                 break;
@@ -3361,6 +3361,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald ist still. Das Knacken deiner Schuhe auf Ästen ist das einzige Geräusch, das du hörst.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_River);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.water, 0.5, 1, false);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Beim Fluss angekommen, hältst du an. Du ziehst den Spiegel aus deiner Tasche und schaust hinein. Er ist immer noch blank.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mit dem Spiegel gerüstet kniest du dich an das Flussufer. Du versuchst, das Spiegelbild des Mondes im Wasser damit einzufangen. Wie soll das denn gehen, wenn der Spiegel blank ist?");
@@ -3382,6 +3383,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_ArrivalMeadow);
         Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0, 0, false);
+        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.water, 0, 0, false);
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_whary, 0.5, 1, true);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Du staunst über kräftige Rot-, Grün und Blautöne.");
@@ -3689,25 +3691,25 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_Inn_int);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Innkeeper, Spiegel_VN.characters.Innkeeper.pose.pos1_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral2, Spiegel_VN.ƒS.positionPercent(90, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral2, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Kann ich helfen?"');
         let Chp06InnElementAnswers = {
             iSayRoom: '"Haben Sie noch ein Zimmer frei?"',
         };
         let Chp06InnElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
-        if (Spiegel_VN.dataForSave.pickedChp06TrustFlynn) {
-            await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ich vertraue Flynn.");
-        }
-        if (!Spiegel_VN.dataForSave.pickedChp06TrustFlynn) {
-            await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ich vertraue ihm nicht. So kann ich ein Auge auf ihn haben.");
-        }
+        // if (dataForSave.pickedChp06TrustFlynn) {
+        //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue Flynn.");
+        // }
+        // if (!dataForSave.pickedChp06TrustFlynn) {
+        //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue ihm nicht. So kann ich ein Auge auf ihn haben.");
+        // }
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Innkeeper);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Innkeeper, Spiegel_VN.characters.Innkeeper.pose.pos2_laugh, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Ja, tatsächlich. Ist noch eins da. Ihr habt Glück. Pro Nacht zahlt ihr 10 Schilling und Abendessen gibt’s um 8. Das Essen is’ mit drin. Alles klar?"');
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral, Spiegel_VN.ƒS.positionPercent(90, 100));
+        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Danke! Ich war schon mal hier, da hat’s mir sehr gefallen. Nur die Gemüsesuppe war etwas dünn."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du verdrehst die Augen.");
