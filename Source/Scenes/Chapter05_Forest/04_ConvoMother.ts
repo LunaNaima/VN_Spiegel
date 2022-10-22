@@ -137,6 +137,7 @@ await ƒS.Location.show(locations.Chp01_CS_ArrivalHomeNight);
         await ƒS.Speech.tell(characters.maincharacter, "Der Wald ist still. Das Knacken deiner Schuhe auf Ästen ist das einzige Geräusch, das du hörst.");
 
     await ƒS.Location.show(locations.Chp05_River);
+    ƒS.Sound.fade(soundeffects.water, 0.5, 1, false);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 

@@ -9,7 +9,7 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos1_neutral, ƒS.positionPercent(70, 100));
-    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral2, ƒS.positionPercent(90, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral2, ƒS.positionPercent(80, 100));
     ƒS.update();
     
         await ƒS.Speech.tell(characters.Innkeeper, '"Kann ich helfen?"');
@@ -20,12 +20,12 @@ namespace Spiegel_VN {
 
     let Chp06InnElement = await ƒS.Menu.getInput(Chp06InnElementAnswers,"choicesCSSclass");
 
-    if (dataForSave.pickedChp06TrustFlynn) {
-      await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue Flynn.");
-    }
-    if (!dataForSave.pickedChp06TrustFlynn) {
-      await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue ihm nicht. So kann ich ein Auge auf ihn haben.");
-    }
+    // if (dataForSave.pickedChp06TrustFlynn) {
+    //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue Flynn.");
+    // }
+    // if (!dataForSave.pickedChp06TrustFlynn) {
+    //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue ihm nicht. So kann ich ein Auge auf ihn haben.");
+    // }
     ƒS.Character.hide(characters.Innkeeper);
       await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_laugh, ƒS.positionPercent(70, 100))
     ƒS.update();
@@ -33,7 +33,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Innkeeper, '"Ja, tatsächlich. Ist noch eins da. Ihr habt Glück. Pro Nacht zahlt ihr 10 Schilling und Abendessen gibt’s um 8. Das Essen is’ mit drin. Alles klar?"');
     
     ƒS.Character.hide(characters.Flynn);
-    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral, ƒS.positionPercent(90, 100))
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral, ƒS.positionPercent(80, 100))
     ƒS.update();
    
     await ƒS.Speech.tell(characters.Flynn, '"Danke! Ich war schon mal hier, da hat’s mir sehr gefallen. Nur die Gemüsesuppe war etwas dünn."');

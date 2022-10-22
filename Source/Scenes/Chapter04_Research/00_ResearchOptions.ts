@@ -56,7 +56,7 @@ namespace Spiegel_VN {
         // *** RESPONSES ***
         switch (Chp04PickSceneElement) {
             case Chp04PickSceneElementAnswers.PickSceneTalkToFamily:
-                await ƒS.Speech.tell(characters.maincharacter, '"Hallo? Könnt ihr alle mal herkommen?"');
+                await ƒS.Speech.tell(characters.maincharacter, '"Mutti?"');
                 ƒS.Speech.clear();
                 return "04_01 Talk with family";
                 break;
