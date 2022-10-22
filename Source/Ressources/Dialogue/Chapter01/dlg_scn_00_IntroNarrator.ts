@@ -7,8 +7,6 @@ namespace Spiegel_VN {
       T0002: '"Wie heißt du denn?"',
       T0003:
         '"Schau, dass du es dir gemütlich machst. Das Märchen, das ich dir heute Abend erzähle, dauert etwas länger."',
-      T0004:
-        '"Bevor es aber losgeht, musst du mir eine wichtige Frage beantworten: Welche Eigenschaft ist dir am wichtigsten? Wähle mit Bedacht aus, denn deine Antwort kann auf den Verlauf der Geschichte Einfluss nehmen …"',
       T0005:
         '"Schließe nun die Augen und lass dich von mir in eine Welt entführen, die nicht viel anders ist als deine hier. Nur mit etwas mehr … Magie!"',
       T0006: '"Es war einmal …."',

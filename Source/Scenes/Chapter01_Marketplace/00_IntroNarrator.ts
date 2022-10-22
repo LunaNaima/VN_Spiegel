@@ -27,10 +27,6 @@ namespace Spiegel_VN {
     );
     await ƒS.Speech.tell(
       characters.narrator.name,
-      dlg_scn_00_IntroNarrator.narratorEntry.T0004
-    );
-    await ƒS.Speech.tell(
-      characters.narrator.name,
       dlg_scn_00_IntroNarrator.narratorEntry.T0005
     );
     await ƒS.Speech.tell(
