@@ -91,8 +91,8 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Beggar, '"Manche Menschen … manche werden eingepackt. Versteckt. Festgehalten."');
-    await ƒS.Speech.tell(characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums.");
-    await ƒS.Speech.tell(characters.maincharacter, '"Als Sklavin?"');
+    // await ƒS.Speech.tell(characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums.");
+    // await ƒS.Speech.tell(characters.maincharacter, '"Als Sklavin?"');
 
     ƒS.Character.hide(characters.Beggar);
     await ƒS.Character.show(characters.Beggar, characters.Beggar.pose.shocked, ƒS.positionPercent(30, 120));
@@ -100,7 +100,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Beggar, '"Sklave … ja. Festgehalten. Gezwungen, zu produzieren. Die Farbe, überall! Überall Farbe. Mit den Spiegeln. Über den See!"');
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Was bedeutet das, mit den Spiegeln?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Was bedeutet das, mit den Spiegeln? Was ist über dem See?"');
     await ƒS.Speech.tell(characters.maincharacter, "Statt zu antworten, schaut sie über deine Schulter. Du folgst ihrem Blick, weil du denkst, sie hätte etwas entdeckt. Als du dich wieder umdrehst, ist die Bettlerin verschwunden.");
 
     ƒS.Character.hide(characters.Beggar);
@@ -110,7 +110,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Flynn, '"Wo ist sie denn hin?"');
     await ƒS.Speech.tell(characters.maincharacter, '"Sie ist einfach weg? Sie wusste so viel! Ich wollte sich doch noch so viel fragen …"');
-    await ƒS.Speech.tell(characters.maincharacter, "Verzweifelt suchst du nach ihr in der Menschenmenge, doch die Bettlerin scheint, wie vom Erdboden verschluckt.");
+    await ƒS.Speech.tell(characters.maincharacter, "Verzweifelt suchst du nach ihr in der Menschenmenge, doch die Bettlerin scheint wie vom Erdboden verschluckt.");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Das gibt’s doch nicht! Wie kann sie so schnell weg sein?"');
 
@@ -118,7 +118,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos3_arms_happy, ƒS.positionPercent(60, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Flynn, '"Aber wir haben eine Spur! Menschen werden irgendwo festgehalten, gegen ihren Willen, um zu produzieren …"');
+    await ƒS.Speech.tell(characters.Flynn, '"Aber wir haben eine Spur! Menschen werden irgendwo festgehalten, gegen ihren Willen, und arbeiten ..."');
     await ƒS.Speech.tell(characters.maincharacter, '"Klingt fast wie … wie eine Fabrik!"');
     await ƒS.Speech.tell(characters.maincharacter, "Als du es aussprichst, tauchen Bilder von Kailani in deinem Kopf auf: Kailani in einem Riesenkäfig, gepeitscht von bösen Wärtern.");
   

@@ -53,7 +53,6 @@ let Chp05TextRiddleElementAnswers = {
         let answer1: String = await ƒS.Speech.getInput();
     
         if (answer1.toLowerCase() == "fluss") {
-          console.log("RICHTIG!");
           await ƒS.Speech.tell("Baum der Wünsche", "Das erste Rätsel geschafft!")
       
         }
@@ -69,7 +68,6 @@ let Chp05TextRiddleElementAnswers = {
         let answer2: String = await ƒS.Speech.getInput();
     
         if (answer2.toLowerCase() == "mitternacht") {
-          console.log("RICHTIG!");
           await ƒS.Speech.tell("Baum der Wünsche", "Schon das zweite Rätsel gelöst.")
         }
         else {
@@ -84,7 +82,6 @@ let Chp05TextRiddleElementAnswers = {
         let answer3: String = await ƒS.Speech.getInput();
     
         if (answer3.toLowerCase() == "spiegel") {
-          console.log("RICHTIG!");
           await ƒS.Speech.tell("Baum der Wünsche", "Tatsächlich, du hast dich bewiesen ... ")
       
         }
@@ -99,7 +96,7 @@ let Chp05TextRiddleElementAnswers = {
       
       case Chp05TextRiddleElementAnswers.iSayProven:
         await ƒS.Speech.tell(characters.wishtree, '"Kailani besaß einen Spiegel, richtig? Er ist kein gewöhnlicher Spiegel, wie du sicher schon bemerkt hast."');
-    await ƒS.Speech.tell(characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie, die sich nach offenen Herzen richtet, verstärkt sich die Magie des Spiegels bei negativen Empfindungen."');
+    await ƒS.Speech.tell(characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie ist die Spiegelmagie dunkel."');
     await ƒS.Speech.tell(characters.wishtree, '"Der Spiegel sorgt dafür, dass die Menschen, die in ihn hineinblicken, krank werden. Sind sie erkrankt, zieht sie der Spiegel in sein Innerstes. Dort werden sie gefangen gehalten."');
 
       return "05_02 Convo Tree";

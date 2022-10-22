@@ -3,13 +3,13 @@ namespace Spiegel_VN {
     dataForSave.pickedChp07ResearchMarketplace = true;
     ƒS.Character.hideAll();
     let Chp07DiscoverMarketplaceElementAnswers = {
-      iSayListenToVillagers: "(Erkunden) Bewohnern zuhören",
+      // iSayListenToVillagers: "(Erkunden) Bewohnern zuhören",
       iSayMerchants: "(Erkunden) Mit den Händlern sprechen",
     };
 
     if (
-      dataForSave.pickedChp07DiscoverMerchants &&
-      dataForSave.pickedChp07DiscoverSpeakToVillagers
+      dataForSave.pickedChp07DiscoverMerchants
+      // dataForSave.pickedChp07DiscoverSpeakToVillagers
     ) {
       return "07_Beggar";
     }
@@ -18,17 +18,17 @@ namespace Spiegel_VN {
 
     // *** RESPONSES ***
     switch (Chp07DiscoverMarketplaceElement) {
-      case Chp07DiscoverMarketplaceElementAnswers.iSayListenToVillagers:
-        dataForSave.pickedChp07DiscoverSpeakToVillagers = true;
-    await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand.");
-        await ƒS.Speech.tell("Dorfbewohnende 1", '"... mehr Farbe bekommen…!"');
-    await ƒS.Speech.tell(characters.maincharacter, "Mehr Farbe? Du näherst dich den Leuten, die um die Apfelkisten stehen, unbemerkt.");
-        await ƒS.Speech.tell("Dorfbewohnende 1", '"Ja ja, mein Nachbar, der Heinrich, hat eine ordentliche Portion bekommen. Seine Hemden glitzern wie die Sterne! Er sieht so viel jünger und stärker aus."');
-        await ƒS.Speech.tell("Dorfbewohnende 2", '"Ich meine, so viel wird das nicht ausmachen, oder? Heinrich war schon vorher nicht, naja, besonders ansprechend."');
-    await ƒS.Speech.tell(characters.maincharacter, "Wieherndes Gelächter. Die Gruppe zerstreut sich und lässt dich mit vielen Fragezeichen im Kopf zurück. Farbe kriegen? Jung und stark?");
-        ƒS.Speech.clear();
-        return "07_Research Marketplace";
-        break;
+    //   case Chp07DiscoverMarketplaceElementAnswers.iSayListenToVillagers:
+    //     dataForSave.pickedChp07DiscoverSpeakToVillagers = true;
+    // await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, dich unauffällig unter die Leute zu mischen und lauschen. Da kriegst du sicher mehr mit als im direkten Gespräch. Du wanderst zu dem ersten Gemüsestand.");
+    //     await ƒS.Speech.tell("Dorfbewohnende 1", '"... mehr Farbe bekommen…!"');
+    // await ƒS.Speech.tell(characters.maincharacter, "Mehr Farbe? Du näherst dich den Leuten, die um die Apfelkisten stehen, unbemerkt.");
+    //     await ƒS.Speech.tell("Dorfbewohnende 1", '"Ja ja, mein Nachbar, der Heinrich, hat eine ordentliche Portion bekommen. Seine Hemden glitzern wie die Sterne! Er sieht so viel jünger und stärker aus."');
+    //     await ƒS.Speech.tell("Dorfbewohnende 2", '"Ich meine, so viel wird das nicht ausmachen, oder? Heinrich war schon vorher nicht, naja, besonders ansprechend."');
+    // await ƒS.Speech.tell(characters.maincharacter, "Wieherndes Gelächter. Die Gruppe zerstreut sich und lässt dich mit vielen Fragezeichen im Kopf zurück. Farbe kriegen? Jung und stark?");
+    //     ƒS.Speech.clear();
+    //     return "07_Research Marketplace";
+    //     break;
 
       case Chp07DiscoverMarketplaceElementAnswers.iSayMerchants:
         dataForSave.pickedChp07DiscoverMerchants = true;

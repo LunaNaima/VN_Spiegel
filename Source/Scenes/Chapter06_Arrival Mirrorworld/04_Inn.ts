@@ -3,7 +3,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp06_Inn_ext);
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-    await ƒS.Speech.tell(characters.maincharacter, "Flynn führt dich durch kleine Gassen zu einem pinken Gasthof, der an der Ecke einer Kreuzung steht. Du bist mittlerweile so müde, dass du dich kaum auf den Beinen halten kannst. So viel ist in den letzten Tagen passiert, dass du einfach kurz die Augen schließen und die Welt ausblenden möchtest.");
+    await ƒS.Speech.tell(characters.maincharacter, "Flynn führt dich durch kleine Gassen zu einem pinken Gasthof, der an der Ecke einer Kreuzung steht. So viel ist in den letzten Tagen passiert, dass du einfach kurz die Augen schließen und die Welt ausblenden möchtest.");
 
     await ƒS.Location.show(locations.Chp06_Inn_int);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -46,7 +46,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Flynn, '"Das ist ja gemütlich! Viel gemütlicher als das letzte Mal. Da musste ich mir ein Zimmer mit einem teilen, der hat ganz schlimm nach Fisch gestunken."');
         await ƒS.Speech.tell(characters.maincharacter, "Der Fisch-Mann war sicherlich auch von Flynns Redeschwall genervt, denkst du dir. Du darfst aber auch nicht zu streng sein: schließlich hatte dir Flynn in einem Anfall von Gutmenschlichkeit seine Hilfe angeboten.");
         
-    await ƒS.Speech.tell(characters.maincharacter, "Und wenn du ehrlich bist, bist du darüber ziemlich erleichtert. Du beschließt, dir später weitere Gedanken über deinen neuen Gefährten zu machen. Du kannst dich kaum mehr auf den Beinen halten.");
+    await ƒS.Speech.tell(characters.maincharacter, "Und wenn du ehrlich bist, bist du darüber ziemlich erleichtert. Du beschließt, dir später weitere Gedanken über deinen neuen Gefährten zu machen.");
     
     ƒS.Character.hideAll();
    
@@ -55,11 +55,11 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp06_Inn_room);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du blinzelst. Wo bist du denn? Du liegst in einem fremden Zimmer. Panik macht sich in deiner Brust breit, bis dir einfällt, dass du In der Spiegelwelt bist.");
-    await ƒS.Speech.tell(characters.maincharacter, "So richtig traust du dich noch nicht, darüber nachzudenken. Das ist hier also die Welt, in der die Menschen hineingesaugt werden. Aber wo gehen sie stattdessen hin?");
-    await ƒS.Speech.tell(characters.maincharacter, "Flynn hast du auch noch nichts Genaueres erzählt. Vielleicht würde er dir aber sowieso nicht glauben. Du bist dir noch nicht sicher, was du über ihn denkst.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du blinzelst. Wo bist du denn? Panik macht sich in deiner Brust breit, bis dir einfällt, dass du in der Spiegelwelt bist.");
+    await ƒS.Speech.tell(characters.maincharacter, "So richtig traust du dich noch nicht, darüber nachzudenken. Das ist hier also die Welt, in der die Menschen hineingesaugt werden. Aber wo gehen sie dann hin?");
+    await ƒS.Speech.tell(characters.maincharacter, "Flynn hast du auch noch nichts Genaueres erzählt. Vielleicht würde er dir aber sowieso nicht glauben.");
     await ƒS.Speech.tell(characters.maincharacter, "Einerseits hat er dich hier willkommen geheißen, auch wenn auf eine spezielle Art. Andererseits kennst du ihn und seine Motivationen kaum. Er spielt gern den Unterhalter und lässt nicht viel von seinem Inneren durchblicken.");
-    await ƒS.Speech.tell(characters.maincharacter, "Du musst das Ganze weiter beobachten. Du beschließt, nach unten zu gehen. Vielleicht ist es bald Zeit für das Abendessen?");
+    await ƒS.Speech.tell(characters.maincharacter, "Du beschließt, nach unten zu gehen. Vielleicht ist es bald Zeit für das Abendessen?");
 
     await ƒS.Location.show(locations.Chp06_Inn_int);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);

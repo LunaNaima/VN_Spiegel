@@ -429,6 +429,11 @@ WitchInTheWoods: {
       background:
         "./Assets/Backgrounds/Chapter10/OutsideTowerBirds.png"
     },
+    Chp10_TowerOutsideSlavesGrey: {
+      name: "Tower outside slaves grey",
+      background:
+        "./Assets/Backgrounds/Chapter10/OutsideTowerSlaves_grey.png"
+    },
     Chp10_TowerOutsideSlaves: {
       name: "Tower outside slaves",
       background:
@@ -438,6 +443,11 @@ WitchInTheWoods: {
       name: "Tunnel 1",
       background:
         "./Assets/Backgrounds/Chapter10/Tunnel1.png"
+    },
+    Chp10_GroundFloorTowerGrey: {
+      name: "Tunnel 1 grey",
+      background:
+        "./Assets/Backgrounds/Chapter10/Tunnel1_grey.png"
     },
     Chp10_ExplorePortrait: {
       name: "Portrait",
@@ -450,15 +460,26 @@ WitchInTheWoods: {
         "./Assets/Backgrounds/Chapter10/Minigame_Instructions.png"
     },
     Chp10_Mirrorroom: {
-      name: "Portrait",
+      name: "Mirrorroom",
       background:
         "./Assets/Backgrounds/Chapter10/Mirrorroom.png"
+    },
+    Chp10_MirrorroomGrey: {
+      name: "Mirrorroom grey",
+      background:
+        "./Assets/Backgrounds/Chapter10/Mirrorroom_grey.png"
     },
     Chp10_Demontunnel: {
       name: "Demon tunnel",
       background:
         "./Assets/Backgrounds/Chapter10/Demontunnel.png"
     },
+    Chp10_DemontunnelGrey: {
+      name: "Demon tunnel grey",
+      background:
+        "./Assets/Backgrounds/Chapter10/Demontunnel_grey.png"
+    },
+
     // *** TRANSITION BETWEEN CHAPTERS ***
     black: {
       name: "Black_BG",

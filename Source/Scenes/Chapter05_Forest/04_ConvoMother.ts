@@ -17,8 +17,8 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mama, '"Mitten in der Nacht gehst du nirgends hin. Komm, wir besprechen das morgen!"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Du verstehst nicht, ich muss los! Ich muss Kailani retten!"');
-    await ƒS.Speech.tell(characters.Mama, '"Du hast mit deiner Mutter gesprochen, nicht wahr … Ich weiß nicht, was sie dir gesagt hat. Aber du kannst nicht einfach losziehen."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Du verstehst nicht, ich muss Kailani retten!"');
+    await ƒS.Speech.tell(characters.Mama, '"Aber du kannst nicht einfach so losziehen!"');
 
     let Chp05ConvoMotherElementAnswers = {
       iSayLie: "Lügen",
@@ -38,20 +38,20 @@ namespace Spiegel_VN {
       
       case Chp05ConvoMotherElementAnswers.iSayDistract:
         await ƒS.Speech.tell(characters.maincharacter, '"Was habt ihr denn im Dorf herausgefunden?"');
-        await ƒS.Speech.tell(characters.Mama, '"Nur, dass Annas Sohn Pantro auch seit Stunden weg ist. Als wir vorhin gegangen sind, war er noch nicht daheim. Ich glaube trotzdem, dass die beiden wieder heim kommen. Aber jetzt geh’ bitte ins Bett."');
+        await ƒS.Speech.tell(characters.Mama, '"Nicht viel, niemand hat Kailani gesehen. Komm jetzt ins Bett!"');
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss jetzt los."');
         ƒS.Speech.clear();
         break;
       
       case Chp05ConvoMotherElementAnswers.iSayExplain:
         await ƒS.Speech.tell(characters.maincharacter, '"Kailani ist in dem Spiegel gefangen! Ich muss dorthin reisen, sie rausholen und –"');
-        await ƒS.Speech.tell(characters.Mama, '"Schon wieder dieser Spiegel! Woher willst du das wissen? Wir sind doch nicht im Märchen! Das geht nicht. Auf ins Bett jetzt."');
+        await ƒS.Speech.tell(characters.Mama, '"Schon wieder dieser Spiegel! Woher willst du das wissen? Wir sind doch nicht im Märchen! Auf ins Bett jetzt."');
         await ƒS.Speech.tell(characters.maincharacter, '"Ich muss aber los, Mama!"');
         ƒS.Speech.clear();
         break;
     }
     
-    await ƒS.Speech.tell(characters.maincharacter, '"Bitte glaub’ und vertrau’ mir doch, Mama! Ich bin kein Kind mehr und weiß, was ich tue! Nur weil du es nicht mitkriegst, heißt es nicht, dass ich nicht erwachsen werde!"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Bitte glaub’ und vertrau’ mir doch, Mama! Ich bin kein Kind mehr und weiß, was ich tue. Nur weil du es nicht mitkriegst, heißt es nicht, dass ich nicht erwachsen werde!"');
       
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_shocked, ƒS.positionPercent(80, 100));
@@ -88,8 +88,8 @@ namespace Spiegel_VN {
         break;
     }
 
-        await ƒS.Speech.tell(characters.maincharacter, '"Sag Mutti, dass sie nicht zu viel weinen soll. Ich bin bald wieder da und bringe Kailani nach Hause."');
-    await ƒS.Speech.tell(characters.Mama, '"Bitte pass’ auf dich auf. Und komm zurück. Wir warten auf euch!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich bin bald wieder da und bringe Kailani nach Hause."');
+    await ƒS.Speech.tell(characters.Mama, '"Bitte pass’ auf dich auf. Wir warten auf euch!"');
     ƒS.Character.hideAll();
     ƒS.update();
         await ƒS.Speech.tell(characters.maincharacter, "Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");

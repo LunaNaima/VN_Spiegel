@@ -46,7 +46,7 @@ namespace Spiegel_VN {
         
         await ƒS.Speech.tell(characters.Innkeeper, '"Sie war grau? Bis’ du dir da sicher? Hm, …"');
         await ƒS.Speech.tell(characters.Innkeeper, '"Hör’ zu. Es is’ nämlich so, dass wir hier ein kleines Farbenproblem haben, Vielleicht is’ dir das auch schon aufgefallen?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Du nickst schnell und holst tief Luft, um weiterzusprechen. Die Wirtin unterbricht dich.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Du nickst schnell und holst tief Luft, um weiterzusprechen. Die Wirtin unterbricht dich.");
 
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_neutral, ƒS.positionPercent(70, 100));

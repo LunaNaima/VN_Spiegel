@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
     export async function End(): ƒS.SceneReturn {
         await ƒS.Location.show(locations.WitchInTheWoods);
-            await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, false)
+            ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, false)
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
         ƒS.Character.hideAll();

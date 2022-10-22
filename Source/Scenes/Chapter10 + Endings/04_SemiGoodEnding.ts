@@ -43,7 +43,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
 
     await ƒS.Speech.tell(characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal. Wie geht’s dir?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal."');
         
     ƒS.Character.hide(characters.Kailani);
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
@@ -230,7 +230,7 @@ namespace Spiegel_VN {
     ƒS.Character.hide(characters.Flynn);
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.maincharacter, '"FLYNN, warte! Nicht! Das ist alles ein großer Fehler!"');
+    await ƒS.Speech.tell(characters.maincharacter, '"FLYNN, NEIN! warte! Nicht! Das ist alles ein großer Fehler!"');
     
     ƒS.Character.hide(characters.Kailani);
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(40, 100));

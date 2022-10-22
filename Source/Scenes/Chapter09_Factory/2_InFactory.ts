@@ -4,7 +4,7 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen. Trotzdem herrscht eine angespannte Stille.");
+    await ƒS.Speech.tell(characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen.");
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_shocked, ƒS.positionPercent(85, 100));
     ƒS.update();
     
@@ -28,7 +28,7 @@ namespace Spiegel_VN {
 
     await ƒS.Location.show(locations.Chp09_InFactory);
     ƒS.update();
-    await ƒS.Speech.tell(characters.maincharacter, "Tränen laufen dir über das Gesicht. Trotzdem hat Flynn Recht; es wäre unsinnig gewesen, euch in Gefahr zu bringen. Trotzdem kannst du es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
+    await ƒS.Speech.tell(characters.maincharacter, "Tränen laufen dir über das Gesicht. Du kannst es nicht fassen, dass du Kailani einfach so hast gehen lassen.");
 
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(85, 100));
@@ -39,7 +39,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Was macht sie denn? Das ist doch so komisch! Ihr geht es nicht gut! Warum muss sie sich hier anziehen und –"');
 
     await ƒS.Speech.tell(characters.maincharacter, "Und da fällt es dir wie Schuppen von den Augen: Sie ist das Spiegelbild! Das Spiegelbild, das man sich mit dem Handspiegel wünschen kann! In deinem Kopf schwirrt es.");
-    await ƒS.Speech.tell(characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Sie gibt vor, jemand anderes zu sein. Eine Person, die jetzt, in diesem Moment, auf der anderen Seite des Spiegels sitzt und sich wünscht, zu fliegen. Sie tut so, als wäre sie die Person, die gerade hineinschaut!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani hat diesen Szenen zugeschaut, jeden Tag! Sie hat sich selbst im Spiegel gesehen – aber warte, das war nicht sie. Sondern jemand, der sie imitiert und getäuscht hat. Der Spiegel hat diese Kabine gezeigt!"');
 
     ƒS.Character.hideAll();
@@ -61,7 +61,7 @@ namespace Spiegel_VN {
 
       switch (Chp09InFactoryElement) {
         case Chp09InFactoryElementAnswers.iSayListenToGuards:
-          await ƒS.Speech.tell(characters.maincharacter, "Geduckt schleichst du dich näher an die Wachen heran. Vielleicht kannst du ein paar Informationen heraushören?");
+          await ƒS.Speech.tell(characters.maincharacter, "Geduckt schleichst du dich näher an die Wachen heran.");
           await ƒS.Speech.tell("Wache 1", '"... und da meinte sie zu mir, der nächste Schwung komme wohl morgen. Platz hat’s hier noch genug."');
           await ƒS.Speech.tell("Wache 2", '"Die Neuen können in den rechten Tunnel. Hauptsache, ich kann am Wochenende wieder ‘rüber und der Mann im Turm ist glücklich. Hast gehört, was Getliw neulich passiert ist?"');
           await ƒS.Speech.tell("Wache 1", '"Nee! Ich war doch im Urlaub. Was ist passiert?"');

@@ -47,7 +47,7 @@ namespace Spiegel_VN {
       }
     } while (!dataForSave.pickedChp09ScoutTowerBirds);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du rufst die Vögel mit dem Schlaflied. Als sie angeflogen kommen, fühlst du dich etwas leichter.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du rufst deine Vögelfreunde.");
     await ƒS.Location.show(locations.Chp10_TowerOutsideBirds)
     await ƒS.Sound.fade(soundeffects.birds, 0.1, 1, true);
     ƒS.update();
@@ -58,15 +58,15 @@ namespace Spiegel_VN {
     
     
 
-    await ƒS.Sound.fade(soundeffects.listeningriddle_demon, 0.5, 1, false);
+    await ƒS.Sound.fade(soundeffects.listeningriddle_demon, 1, 1, false);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Was hast du gehört?");
 
-    await ƒS.Sound.fade(soundeffects.listeningriddle_mirror, 0.5, 1, false);
+    await ƒS.Sound.fade(soundeffects.listeningriddle_mirror, 1, 1, false);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Die Vögel haben etwas gesagt!");
 
-    await ƒS.Sound.fade(soundeffects.listeningriddle_destroy, 0.5, 1, false);
+    await ƒS.Sound.fade(soundeffects.listeningriddle_destroy, 1, 1, false);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Wie war das?");
 
@@ -82,7 +82,7 @@ namespace Spiegel_VN {
     
     await ƒS.Speech.tell(characters.Flynn, '"Die Spiegel zerstören? Eh– ja, auf jeden Fall! Kailani, wir kommen!"');
     ƒS.Character.hideAll();
-    await ƒS.Speech.tell(characters.maincharacter, "Er stürmt Richtung Turm. Du schaust ihm verwirrt hinterher. Er klang nicht so euphorisch und erleichtert, eher beklommen. Eigentlich wolltest du ihn ja ausfragen. Das muss wohl warten.");
+    await ƒS.Speech.tell(characters.maincharacter, "Er stürmt Richtung Turm. Du schaust ihm verwirrt hinterher. Er klang nicht so euphorisch und erleichtert, eher beklommen.");
 
 
     ƒS.Sound.fade(soundeffects.birds, 0, 0, false);

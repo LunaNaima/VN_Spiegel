@@ -18,13 +18,13 @@ namespace Spiegel_VN {
             case Chp08HidingPlaceFactoryElementAnswers.iSayExploreVillage:
                 await ƒS.Location.show(locations.Chp08_E_FactoryVillage);
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-                await ƒS.Speech.tell(characters.maincharacter, "Du wanderst in eine Gasse, um dich genauer umzusehen. Es rührt sich nichts – keine Vögel, Menschen oder andere Lebewesen sind in Sicht. Komisch, wenn die Häuser nicht bewohnt sind, wozu sind sie dann da? Es sieht nicht so aus, als ob ihr hier irgendwo unterkommen könnt.");
+                await ƒS.Speech.tell(characters.maincharacter, "Du wanderst in eine Gasse, um dich genauer umzusehen. Es rührt sich nichts – keine Vögel, Menschen oder andere Lebewesen sind in Sicht. Es sieht nicht so aus, als ob ihr hier irgendwo unterkommen könnt.");
                 ƒS.Speech.clear();
                 return "08_Search hiding place";
                 break;
               
             case Chp08HidingPlaceFactoryElementAnswers.iSayContinue:
-                await ƒS.Speech.tell(characters.maincharacter, "Ihr lauft weiter. Im Dorf herrscht eine drückende Atmosphäre, die dir nicht geheuer ist. Dein Bauch zieht sich vor Reue zusammen. War es ein Fehler gewesen, hier her zu reisen? Neben dir ist Flynn wohl auch in innerer Aufruhr. In seinem Gesicht sind rote Flecken, und er zuckt hektisch mit den Armen. Was ist denn mit dem los?");
+                await ƒS.Speech.tell(characters.maincharacter, "Ihr lauft weiter. Im Dorf herrscht eine drückende Atmosphäre, die dir nicht geheuer ist. Dein Bauch zieht sich zusammen. War es ein Fehler gewesen, hier her zu reisen?");
                 ƒS.Speech.clear();
                 break;
         }
@@ -62,7 +62,7 @@ namespace Spiegel_VN {
                 case Chp08HidingPlaceFactoryElementAnswers2.iSayRight:
                     dataForSave.pickedChp08Right = true;
                     await ƒS.Speech.tell(characters.maincharacter, '"Ich finde, wir sollten nach rechts!"');
-                    await ƒS.Speech.tell(characters.Flynn, '"Na gut, ist mir egal! Hauptsache wir kommen irgendwo unter. Auf jetzt!"');
+                    await ƒS.Speech.tell(characters.Flynn, '"Na gut, ist mir egal! Hauptsache wir kommen irgendwo unter."');
                     ƒS.Speech.clear();
                     break;
 
@@ -102,7 +102,7 @@ namespace Spiegel_VN {
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Perfekt! Hier können wir uns auf die Lauer legen und beobachten."');
-        await ƒS.Speech.tell(characters.maincharacter, "Ihr macht es euch, so gut es geht, auf dem Felsen gemütlich.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Ihr macht es euch, so gut es geht, auf dem Felsen gemütlich.");
 
         do {
             let Chp08HidingPlaceFactoryElementAnswers3 = {
@@ -118,7 +118,7 @@ namespace Spiegel_VN {
                     ƒS.Character.hideAll();
                     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(70, 100));
                     ƒS.update();
-                    await ƒS.Speech.tell(characters.Flynn, '"Puh, ich weiß nicht. Schon komisch! Und warum es hier keine Farbe gibt, versteh’ ich auch nicht."');
+                    await ƒS.Speech.tell(characters.Flynn, '"Puh, ich weiß nicht. Schon komisch!"');
                     await ƒS.Speech.tell(characters.maincharacter, "Du erklärst ihm nochmal, dass niemand genau weiß, woher die Farbe stammt. Flynn wirkt aber desinteressiert und zupft an einem Grashalm.");
                     ƒS.Speech.clear();
                     break;
@@ -199,15 +199,15 @@ namespace Spiegel_VN {
                             break;
                         
                         case Chp08HidingPlaceFactoryElementAnswers4.iSaySilent:
-                            await ƒS.Speech.tell(characters.maincharacter, "Du schweigst. Natürlich hat er recht. Trotzdem würdest du ohne ihn sofort, ohne eine Sekunde zu zögern, zurück in das Dorf und nach Kailani suchen.");
+                            await ƒS.Speech.tell(characters.maincharacter, "Du schweigst. Natürlich hat er recht.");
                             ƒS.Speech.clear();
                             break;
                      
                     }
         ƒS.Character.hideAll();
-                    await ƒS.Speech.tell(characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet.");
-                    await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
-                    await ƒS.Speech.tell(characters.maincharacter, "Aber Whary ist weit weg. Du bist dir sicher, Kailani hier, auf der anderen Seite des Sees, näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
+                    await ƒS.Speech.tell(characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
+                    // await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
+                    await ƒS.Speech.tell(characters.maincharacter, "Du bist dir sicher, Kailani hier näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
 
             await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);

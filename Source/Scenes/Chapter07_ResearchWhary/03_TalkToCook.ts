@@ -44,8 +44,8 @@ namespace Spiegel_VN {
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Cook, '"Alles sehr hübsch, und so weiter. Aber: Annabelle, unsere Königin, die wurde nie wieder gesehen. Niemand weiß, wer wirklich hinter den Schlosstüren hockt und regiert. Meine Freunde und ich, wir haben da aber ‘ne Vermutung …"');
-        await ƒS.Speech.tell(characters.maincharacter, "Er beugt sich verschwörerisch zu dir herunter. Du hast den Eindruck, dass er es liebt, Geschichten zu erzählen, wenn er erstmal in Schwung ist.");
-        await ƒS.Speech.tell(characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert und entscheidet. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen?"');
+        await ƒS.Speech.tell(characters.maincharacter, "Er beugt sich verschwörerisch zu dir herunter.");
+        await ƒS.Speech.tell(characters.Cook, '"Ich glaube, da ist ein böser Geist! Ein Geist im Schloss, der über uns alle regiert. Und der hat Annabelle getötet. Warum sonst sollte sie sich nicht mehr zeigen?"');
         await ƒS.Speech.tell(characters.Cook, '"Aber jetzt – in Luft aufgelöst. Die meisten wollen davon aber nichts hören. Solange die ihre Farbe kriegen und sich aufpolstern und im Spiegel anglotzen können, ist denen alles egal. Aber nicht mir und meinem Kreis!"');
         ƒS.Speech.clear();
         break;

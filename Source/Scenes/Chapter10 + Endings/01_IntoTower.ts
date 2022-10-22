@@ -2,7 +2,7 @@ namespace Spiegel_VN {
   export async function Chp10_IntoTower(): ƒS.SceneReturn {
     
 
-    await ƒS.Speech.tell(characters.maincharacter, "Es ist soweit! Du zitterst erwartungsvoll. Du würdest alles für deine kleine Schwester tun. Was ist aber, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
+    await ƒS.Speech.tell(characters.maincharacter, "Es ist soweit! Du zitterst erwartungsvoll. Was ist aber, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
     await ƒS.Speech.tell(characters.maincharacter, "Hättest du einen Plan machen sollen, wie Flynn es vorgeschlagen hat? Mit leeren Händen und nur deinem ‘offenen Herzen’, wie es der Wünschebaum sagen würde, trittst du nun dem Bösen entgegen. Ob das reicht?.");
 
     await ƒS.Location.show(locations.Chp10_GroundFloorTower);
@@ -39,8 +39,8 @@ namespace Spiegel_VN {
           dataForSave.pickedChp10IntoTowerContinue = true;
 await ƒS.Location.show(locations.Chp10_GroundFloorTower);
           ƒS.update();
-          await ƒS.Speech.tell(characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Ich lass’ mich aber durch nichts abschrecken! Der Dämon ist sicherlich ein Klacks."');
-          await ƒS.Speech.tell(characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Du hast Sorge, dass etwas aus dem Dunklen herab geflogen kommt, als du den ersten Schritt tust. Doch nichts passiert. Vorsichtig schleicht ihr euch hoch.");
+          await ƒS.Speech.tell(characters.Flynn, '"Wie schön es hier ist! Schau mal, wie das glitzert! Von außen sah der Turm gar nicht so breit aus? Der Dämon ist sicherlich ein Klacks."');
+          await ƒS.Speech.tell(characters.maincharacter, "Schön kommt dir der Turm ganz und gar nicht vor, eher unheimlich und ziemlich bedrohlich. Ihr bewegt euch auf leisen Sohlen nach vorne, bis ihr eine kleine Wendeltreppe am Ende des Gangs seht. Vorsichtig schleicht ihr euch hoch.");
           await ƒS.Location.show(locations.black);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
@@ -51,7 +51,7 @@ await ƒS.Location.show(locations.Chp10_GroundFloorTower);
           await ƒS.Location.show(locations.Chp10_Demontunnel);
           await ƒS.Character.show(characters.Demon, characters.Demon.pose.pos2_angry, ƒS.positionPercent(100, 100));
           await ƒS.update();
-          await ƒS.Speech.tell(characters.Demon, "Dich kriege ich schon noch!");
+          await ƒS.Speech.tell(characters.Demon, "Wer wagt es, mich zu stören!");
           return "10_MinigameDemon";
           break;         
          

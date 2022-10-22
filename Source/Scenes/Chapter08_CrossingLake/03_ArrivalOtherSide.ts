@@ -33,7 +33,7 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp08ArrivalOtherSideElement) {
       case Chp08ArrivalOtherSideElementAnswers.iSayDiscoverTower:
-        await ƒS.Speech.tell(characters.maincharacter, "Du beugst den Kopf in den Nacken und starrst hinauf zur Spitze. Der Turm ist deutlich höher als alle anderen Gebäude in diesem Dorf. Das orange ist beinahe unheimlich grell, im Vergleich zu den farblosen Häusern. Wozu ist dieser Turm?");
+        await ƒS.Speech.tell(characters.maincharacter, "Du beugst den Kopf in den Nacken und starrst hinauf zur Spitze. Der Turm ist deutlich höher als alle anderen Gebäude in diesem Dorf. Das orange ist beinahe unheimlich grell, im Vergleich zu den farblosen Häusern. Was wohl da drin ist?");
         ƒS.Speech.clear();
         return "08_Arrival other side"; 
         break;

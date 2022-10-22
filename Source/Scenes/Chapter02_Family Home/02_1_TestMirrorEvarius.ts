@@ -2,12 +2,12 @@ namespace Spiegel_VN {
   export async function Chp02_021_TestMirrorE(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp02_02_LivingRoom);
     ƒS.Character.hideAll();
-    await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_neutral, ƒS.positionPercent(45, 100));
+        await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos2_laugh, ƒS.positionPercent(45, 100));
+
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
-    ƒS.Character.hide(characters.Evarius);
-    await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos2_laugh, ƒS.positionPercent(45, 100));
+    // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
+    // ƒS.Character.hide(characters.Evarius);
     ƒS.update();
     await ƒS.Speech.tell(characters.Evarius, '"Auja!"');
     await ƒS.Speech.tell(characters.maincharacter, "Er packt den Spiegel und hebt ihn sich vors Gesicht.");

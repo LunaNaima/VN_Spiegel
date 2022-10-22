@@ -7,7 +7,7 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du hast es geschafft! Der Dämon war ein paar Mal knapp dran, dich zu fangen, doch du bist ihm entwischt. Jetzt bist du in dem Spiegelzimmer angelangt. Tatsächlich stehen sechs große Spiegel aneinandergereiht in dem runden Raum.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du hast es geschafft! Der Dämon war ein paar Mal knapp dran, dich zu fangen, doch du bist ihm entwischt. Jetzt bist du in dem Spiegelzimmer angelangt.");
     
     if (!dataForSave.pickedIron) {
       return "Semi Good Ending";
@@ -16,29 +16,30 @@ namespace Spiegel_VN {
     
     await ƒS.Speech.tell(characters.maincharacter, "Instinktiv greifst du zu dem Hammer. Was für ein Glück, dass du ihn eingesteckt hast! Du schwingst ihn und triffst damit den ersten Spiegel.");
     
-    await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+    ƒS.Sound.fade(soundeffects.glass, 0.5, 1, true);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– ein Krachen ertönt, so laut, dass du dir die Ohren zuhalten musst –");
 
-    await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-    ƒS.update();
+    // await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+    // ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– noch ein Spiegel kaputt! –");
 
-        await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-ƒS.update();
+//         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+// ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– schon die Hälfte zerstört! –");
 
-        await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-ƒS.update();
+//         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+// ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– der vierte Spiegel geht zu Bruch –");
 
-        await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-ƒS.update();
+//         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+// ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– fast geschafft –");
 
-        await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
+    await ƒS.Sound.fade(soundeffects.glass, 0, 0, false);
+    await ƒS.Location.show(locations.Chp10_MirrorroomGrey)
 ƒS.update();
-    await ƒS.Speech.tell(characters.maincharacter, "Alle Spiegel sind zerstört! Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
+    await ƒS.Speech.tell(characters.maincharacter, "Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
 
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused_sad, ƒS.positionPercent(70, 100));
@@ -48,11 +49,11 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Flynn, '"Alle sechs Spiegel? Musste das wirklich sein?"');
     await ƒS.Speech.tell(characters.maincharacter, '"Flynn, bist du verrückt! Die Spiegel haben doch böse Magie durchgelassen. Wo warst du denn eigentlich?"');
     await ƒS.Speech.tell(characters.Flynn, '"Ach, nirgends … "');
-    await ƒS.Speech.tell(characters.maincharacter, "Er bückt sich und schaut die Splitter genauer an. Für ihn hast du jetzt aber keine Zeit mehr. Du gehst vorsichtig um die Splitter herum und trittst auf den Balkon, um herunterzuschauen.");
+    await ƒS.Speech.tell(characters.maincharacter, "Er bückt sich und schaut die Splitter genauer an.");
     
-    await ƒS.Speech.tell(characters.maincharacter, "Die Welt hat den kleinen Rest an Farbe, den sie noch besaß, verloren. Du schaust hoch. Du kannst sogar bis ganz über den See nach Whary schauen. Offensichtlich wollte der Dämon seine Augen überall haben. Der See, der vorher ein tiefes Blau war, ist nun – grau. Soweit dein Auge reicht, siehst du keine Farben. Whary hat seine bunten Fassaden durch trübe Hauswände eingetauscht. Die Zerstörung der Spiegel muss die Verbindungen zur Farbwelt gekappt haben!");
-    await ƒS.Speech.tell(characters.Flynn, '"Das ist ja Wahnsinn! So schlimm sieht es gar nicht aus, finde ich …"');
-    await ƒS.Speech.tell(characters.maincharacter, "Flynn ist, aus unerfindlichen Gründen, ziemlich heiter. Er strahlt und schaut herunter.");
+    await ƒS.Speech.tell(characters.maincharacter, "Dir fällt auf, dass hier drin nun auch alles grau ist. Die Zerstörung der Spiegel muss die Verbindungen zur Farbwelt gekappt haben!");
+    // await ƒS.Speech.tell(characters.Flynn, '"Das ist ja Wahnsinn! So schlimm sieht es gar nicht aus, finde ich …"');
+    await ƒS.Speech.tell(characters.maincharacter, "Flynn ist, aus unerfindlichen Gründen, ziemlich heiter. Er strahlt und schaut aus dem Fenster");
 
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
@@ -62,17 +63,17 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Und tatsächlich ist ein kleiner Kreis von Menschen auf dem Platz vor dem Turm zusammengekommen. Ratlos stehen sie beieinander und beraten sich. Manche schütteln sich oder schauen sich um, wie wenn sie aus einer Trance erwacht sind.");
     await ƒS.Speech.tell(characters.maincharacter, '"Flynn, das sind die Sklaven! Sie sind wieder wach! Schnell, vielleicht is Kailani unter ihnen?"');
 
-    await ƒS.Location.show(locations.Chp10_Demontunnel);
+    await ƒS.Location.show(locations.Chp10_DemontunnelGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.maincharacter, '"Du hetzt zurück durch den leeren Tunnel zurück nach unten."');
 
-    await ƒS.Location.show(locations.Chp10_GroundFloorTower);
+    await ƒS.Location.show(locations.Chp10_GroundFloorTowerGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.maincharacter, '"Vorbei an den Portraits, deren tote Augen dich im Halbdunklen verfolgen."');
     
-    await ƒS.Location.show(locations.Chp10_TowerOutsideSlaves);
+    await ƒS.Location.show(locations.Chp10_TowerOutsideSlavesGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
@@ -85,20 +86,20 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
 
     await ƒS.Speech.tell(characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal. Wie geht’s dir?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal!"');
         
     ƒS.Character.hide(characters.Kailani);
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Kailani, '"Ich bin dir so unendlich dankbar. Wirklich! Die Zeit hier war richtig schlimm. Also, wo fange ich an. Jetzt geht’s mir besser, nachdem ich befreit wurde. Aber vorher, puh, das war nicht einfach."');
-    await ƒS.Speech.tell(characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich. Der hat mir alles gezeigt, was ich wollte."');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
+    await ƒS.Speech.tell(characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich."');
+    // await ƒS.Speech.tell(characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
 
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(40, 100));
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(70, 100));
     ƒS.update();
-    await ƒS.Speech.tell(characters.Kailani, '"Ich weiß auch nicht, war irgendwie peinlich, weißt. Weil ich doch so schön war im Spiegel und in echt nicht. Im Spiegel hatte ich ganz lange Haare, die haben toll geglänzt! Und eine schmale Taille. Große Brüste und einen super Hintern."');
+    await ƒS.Speech.tell(characters.Kailani, '"Aber der tat mir nicht gut. War mir echt peinlich. Weil ich doch so schön war im Spiegel und in echt nicht. Im Spiegel hatte ich ganz lange Haare, die haben toll geglänzt! Und eine schmale Taille. Große Brüste und einen super Hintern."');
     await ƒS.Speech.tell(characters.Kailani, '"So sehe ich ja gar nicht in echt aus. Aber im Spiegel fand’ ich das einfach schön. Und deshalb konnte ich nicht aufhören, zu schauen! Aber wie soll ich euch das erklären? Ihr sagt ja bloß, ich bin in echt hübsch. Aber das hat mir nicht wirklich was gebracht."');
 
     do {
@@ -127,7 +128,7 @@ namespace Spiegel_VN {
 
         case Chp10GoodEndingElementAnswers1.iSayContinue:
           dataForSave.pickedChp10GoodEndingContinue1 = true;
-          await ƒS.Speech.tell(characters.Kailani, '"Dann kam eine, die hat uns, wie soll ich sagen? betäubt. Sie hat mit den Armen gewedelt, dann sind wir alle schläfrig geworden. Mir war alles egal, was um mich herum passiert. Mitgekriegt haben wir das natürlich trotzdem."');
+          await ƒS.Speech.tell(characters.Kailani, '"Dann kam eine, die hat uns, wie soll ich sagen? betäubt. Mir war dann alles egal, was um mich herum passiert. Mitgekriegt haben wir das natürlich trotzdem."');
           ƒS.Speech.clear();
           break;
           
@@ -142,12 +143,13 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Kailani, '"Ja, wir haben dann gearbeitet. Das war das Verrückteste: Die Bilder, die ich daheim im Spiegel gesehen hab’, die musste ich dann selbst produzieren! Ich musste Perücken anziehen und mich in ein Korsett einschnüren. Dann hab’ ich Polster um Brüste und Hintern bekommen. Tagein, tagaus, standen wir in diesen Kabinen. Die Jungs haben sich Sixpack- und Schulterpolster umgeschnürt. Ich weiß aber einfach nicht, wieso …"');
+    await ƒS.Speech.tell(characters.maincharacter, "Du erklärst ihr, dass es irgendwie mit den Farben zusammenhängt. Bis Flynn dich unterbricht.");
 
     ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Flynn, '"Und du hast das alles mitgekriegt?"');
-    await ƒS.Speech.tell(characters.maincharacter, "Flynn, der sich bis jetzt bei diesem Familientreffen zurückgehalten hat, mischt sich in das Gespräch ein. Als er sich euch zuwendet, siehst du etwas aus seiner Tasche aufblitzen. Das war vorher nicht da, da bist du dir sicher! Stellst du ihn zur Rede?");
+    await ƒS.Speech.tell(characters.maincharacter, "Als er sich euch zuwendet, siehst du etwas aus seiner Tasche aufblitzen. Das war vorher nicht da, da bist du dir sicher! Stellst du ihn zur Rede?");
 
     
     let Chp10GoodEndingElementAnswers2 = {
@@ -179,7 +181,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Naja, es ist ein Splitter aus dem Spiegelzimmer. Ich fand die so schön und –"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Flynn, was für ein Blödsinn! Seit Tagen verhältst du dich komisch. Ich hatte immer den Eindruck, als wärst du eher an den Spiegeln interessiert, statt an Kailani. Und du hast dich so schnell bereitwillig erklärt, mir zu helfen, statt deine Ausbildung zu beginnen. Was ist denn mit dir los?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Seit Tagen verhältst du dich komisch! Ich hatte immer den Eindruck, als wärst du eher an den Spiegeln interessiert, statt an Kailani. Und du hast dich so schnell bereitwillig erklärt, mir zu helfen, statt deine Ausbildung zu beginnen. Was ist denn mit dir los?"');
     await ƒS.Speech.tell(characters.Flynn, '"Natürlich wollte ich Kailani auch retten! Nur haben mich die Spiegel auch interessiert und –"');
     await ƒS.Speech.tell(characters.maincharacter, '"Rück’ schon raus damit! Wir kennen uns zwar nicht lange, aber trotzdem haben wir einiges zusammen hinter uns. Ist dir unsere Freundschaft nichts wert?"');
 
@@ -195,7 +197,7 @@ namespace Spiegel_VN {
       let Chp10GoodEndingElementAnswers3 = {
         iSayUsed: '"(Erkunden) Du hast mich also nur benutzt?"',
         iSayHome: "(Erkunden) Wo ist deine Heimat?",
-        iSayTechnology: "(Erkudnen) Wozu die Technologie stehlen?",
+        iSayTechnology: "(Erkunden) Wozu die Technologie stehlen?",
         iSayContinue: "Weiter"
       };
       let Chp10GoodEndingElement3 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers3, "choicesCSSclass");
@@ -214,7 +216,7 @@ namespace Spiegel_VN {
           ƒS.update();
           await ƒS.Speech.tell(characters.Flynn, '"Ich komme von einer Welt namens Valde. Dort lebe ich in einer großen Stadt und habe die Mission erhalten, die Spiegeltechnologie von dieser Welt, Norovia, zu klauen."');
           await ƒS.Speech.tell(characters.maincharacter, "Dein Kopf schwirrt. Es gibt mehr Welten als nur deine und die Spiegelwelt? Flynn scheint deine Frage schon zu ahnen.");
-          await ƒS.Speech.tell(characters.Flynn, '"Es gibt nämlich sieben verschiedene Welten! Erinnerst du dich an die sechs Spiegel im Spiegelzimmer? Das waren die Verbindungen zu den Welten."');
+          await ƒS.Speech.tell(characters.Flynn, '"Es gibt nämlich sieben verschiedene Welten! Erinnerst du dich an die sechs Spiegel im Spiegelzimmer? Das waren die Verbindungen zu den Welten. Sie haben die Farben durchgelassen, von denen sich der Dämon ernährt hat. Den Rest hat er an das Volk weitergegeben."');
           ƒS.Speech.clear();
           break;
         
@@ -224,7 +226,7 @@ namespace Spiegel_VN {
           await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
           ƒS.update();
 
-          await ƒS.Speech.tell(characters.Flynn, '"Mir wurde beauftragt, die Technologie mitzubringen. Damit wir in Varunomo, meiner Stadt, die Farbe benutzen können"');
+          await ƒS.Speech.tell(characters.Flynn, '"Mir wurde beauftragt, die Technologie mitzubringen. Damit wir in Varunomo, meiner Stadt, auch Farbe haben können. Dort ist nämlich auch alles grau ..."');
           ƒS.Speech.clear();
           break;
         
@@ -254,15 +256,15 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_shrug_eyeroll, ƒS.positionPercent(40, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Kailani, '"Schau dich um, Flynn. Ich kenne dich zwar nicht und weiß auch nicht, was deine Leute mit dem Spiegel vorhaben. Aber ich muss dir wirklich sagen: wenn du diese Technologie mitnimmst und in deinem Land weiterführst, werden nur noch mehr Menschen verzweifeln. Ich wurde in eine Fabrik gesteckt und musste Bilder erzeugen, die anderen krank machten. Willst du das wirklich? Ich hab’ gelernt: Wir sollten mit uns selbst zufrieden sein, so wie wir aussehen. Das macht uns doch Besonders, diese kleinen Macken."');
-    await ƒS.Speech.tell(characters.maincharacter, "Wow, was für eine Rede! Du bist unglaublich stolz auf deine kleine Schwester. Nicht nur die Tortur hat sie überstanden, sondern auch verstanden, was es mit ihr gemacht hat. Offensichtlich kämpft Flynn mit unterschiedlichen Gefühlen. Er ist sichtlich betroffen von euren Reaktionen.");
+    await ƒS.Speech.tell(characters.Kailani, '"Schau dich um, Flynn. Ich kenne dich zwar nicht und weiß auch nicht, was deine Leute mit dem Spiegel vorhaben. Aber ich muss dir wirklich sagen: wenn du diese Technologie mitnimmst und in deinem Land weiterführst, werden nur noch mehr Menschen verzweifeln. Ich hab’ gelernt: Wir sollten mit uns selbst zufrieden sein, so wie wir aussehen. Das macht uns doch besonders, diese kleinen Macken."');
+    await ƒS.Speech.tell(characters.maincharacter, "Du bist unglaublich stolz auf deine kleine Schwester. Nicht nur die Tortur hat sie überstanden, sondern auch verstanden, was es mit ihr gemacht hat. Offensichtlich kämpft Flynn mit unterschiedlichen Gefühlen. Er ist sichtlich betroffen von euren Reaktionen.");
 
     ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Da, wo ich herkomme, ist so vieles so anders und doch gleich. Die Überheblichkeit der Leute, das Verurteilen wegen Äußeren, ich dachte das wäre normal!"');
-    await ƒS.Speech.tell(characters.Flynn, '"Deshalb hatte ich auch immer diese Polster an."');
+    await ƒS.Speech.tell(characters.Flynn, '"Deshalb hatte ich auch immer diese Polster an. Aber nun kann ich die auch ablegen."');
 
     ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
@@ -275,8 +277,8 @@ namespace Spiegel_VN {
     ƒS.update();
     
     await ƒS.Speech.tell(characters.Flynn, '"Deshalb funktioniert die Technologie so, dass zuerst die Menschen traurig werden, wenn sie in den Spiegel schauen. Gleichzeitig sollen sie aber immer öfter reinschauen, damit nach und nach die Farbe entzogen werden kann. So gelangt die Farbe über den Spiegel zu den Menschen und die können sich dann bunt anziehen, wie wir in Whary gesehen haben."');
-    await ƒS.Speech.tell(characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums: ‘Die Magie verstärkt sich bei schlechten Gefühlen’ … das hatte er also damit gemeint!");
-    await ƒS.Speech.tell(characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt."');
+    await ƒS.Speech.tell(characters.maincharacter, "Du erinnerst dich an die Worte des Wünschebaums: 'Die dunkle Magie' ... das hatte er also damit gemeint!");
+    await ƒS.Speech.tell(characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt. Die Spiegel sind nun ein für alle mal zerstört. Wir können endlich nach Hause!"');
 
     let Chp10GoodEndingElementAnswers4 = {
       iSayTakeFlynn: '"Flynn mitnehmen"',

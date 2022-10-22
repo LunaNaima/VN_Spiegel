@@ -77,7 +77,7 @@ namespace Spiegel_VN {
     ƒS.Character.hide(characters.Evarius);
     ƒS.update();
 
-            await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt. Ich sage dir das nur, weil ich glaube dass wirklich etwas Schlimmes mit Kailani geschehen ist."');
+            await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt."');
             await ƒS.Speech.tell(characters.Mutti, '"Also: wie du weißt, beschäftige ich mich gerne mit der Vergangenheit und Magie. Ich bin der festen Überzeugung, dass Magie noch heute existiert."');
 
     let Chp04TalkFamilyElementAnswers1 = {

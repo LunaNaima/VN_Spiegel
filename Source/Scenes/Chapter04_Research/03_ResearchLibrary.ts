@@ -5,7 +5,7 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Etwas ratlos stehst du vor der Bücherei. Wie sollen dir diese alten, staubigen Bücher helfen?");
+    await ƒS.Speech.tell(characters.maincharacter, "Etwas ratlos stehst du vor der Bücherei.");
  
     await ƒS.Location.show(locations.Chp04_Library_Interior);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);   
@@ -48,7 +48,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Du blätterst durch und seufzt. Die Seiten sind beinahe unlesbar. Manche fallen sogar auseinander. Damit hattest du gerechnet. Doch halt – hier hinten, da ist eine Ecke eingeknickt. Du streichst die Seite glatt und kneifst die Augen zusammen. Du kannst gerade so einen gezeichneten Baum und etwas Text daneben erkennen.");
     await ƒS.Speech.tell(characters.maincharacter, '"In … tiefen Wald … Baum der Wünsche. …, werden Wünsche … Beweisen … sonst verbannt."');
 
-    await ƒS.Speech.tell(characters.maincharacter, "Steht da Baum der Wünsche? Ein Baum, der sich in den Tiefen des Waldes verbirgt? Mehr kannst du aber auf der Seite nicht erkennen. Du klappst das Buch zu. Staub wirbelt auf und verteilt sich in alle Richtungen. Bevor er sich gelegt hat, bist du schon weg. Endlich eine Spur!");
+    await ƒS.Speech.tell(characters.maincharacter, "Steht da Baum der Wünsche? Ein Baum, der sich in den Tiefen des Waldes verbirgt? Mehr kannst du aber auf der Seite nicht erkennen. Endlich eine Spur!");
 
     return "04_00_Research Options";
   }

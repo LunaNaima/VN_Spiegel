@@ -6,7 +6,7 @@ namespace Spiegel_VN {
         ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.5, 1, true);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Alles ist so farbig! Du staunst über kräftige Rot-, Grün und Blautöne.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Du staunst über kräftige Rot-, Grün und Blautöne.");
 
     do {
       let Chp06ArrivalMeadowElementAnswers = {
@@ -40,10 +40,11 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.maincharacter, "Als du vor den Toren ankommst, bildet sich trotz des frühen Morgens davor bereits eine Schlange. Stimmen, Hufgeklapper und das Scheppern von Kisten, die die Leute auf ihren Wägen gestapelt haben, tönen durch die Luft.");
     await ƒS.Speech.tell(characters.maincharacter, "Dir bleibt nichts anderen übrig, als dich auch anzustellen. Während du wartest, beobachtest du die anderen Menschen. Die meisten von ihnen tragen satte, glitzernde Klamotten. Sind hier etwa alle reich? Und wieso sieht es so aus, als wären die Klamotten an manchen Stellen ausgepolstert?");
+    await ƒS.Speech.tell(characters.maincharacter, "Auf einmal tritt dir jemand schmerzhaft auf den Fuß.");
 
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_happy, ƒS.positionPercent(70, 100))
     ƒS.update();
-    await ƒS.Speech.tell(characters.Flynn, '"Hi! Du siehst so aus, als hättest du eine weite Reise hinter dir. Von wo kommst du denn?"');
+    await ƒS.Speech.tell(characters.Flynn, '"Oh, sorry! Huch, du siehst so aus, als hättest du eine weite Reise hinter dir. Von wo kommst du denn?"');
 
     let Chp06EntryGatesElementAnswers = {
       iSayLie: "Lügen",
@@ -115,7 +116,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist);
     await ƒS.Speech.tell(characters.Flynn, '"Freut mich!"');
 
-    await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an. Eigentlich sieht er aus wie ein normaler Junge. Wieso hat er ausgerechnet dich angequatscht?");
+    await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an.");
     await ƒS.Speech.tell(characters.maincharacter, "Ihr passiert die Tore ohne Probleme. Die Wachen beobachten die Menge aufmerksam, aber ihr fallt – zum Glück! – nicht auf.");
     await ƒS.Speech.tell(characters.maincharacter, "Allerdings bemerkst du die Blicke der Leute. Ihre Blicke bleiben an deinen alten Stiefeln und dem braunen Hemd, dass du über einer ausgeblichenen Hose trägst, hängen. Wie fühlst du dich?");
 
