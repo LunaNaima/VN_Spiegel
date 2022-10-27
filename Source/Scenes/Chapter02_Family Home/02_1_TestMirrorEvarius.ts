@@ -122,7 +122,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.black)
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell("", "Ein paar Tage später ...");
+    await ƒS.Speech.tell(characters.narrator, "Ein paar Tage später ...");
 
     return "03_00 New day";
   }

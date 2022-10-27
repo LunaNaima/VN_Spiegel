@@ -3,9 +3,9 @@ namespace Spiegel_VN {
     dataForSave.pickedChp07TalkToCook = true;
    
     let Chp07CookElementAnswers = {
-      iSayOffended: '"Beleidigt"',
-      iSaySad: '"Traurig"',
-      iSayAngry: '"Wütend"',
+      iSayOffended: "Beleidigt",
+      iSaySad: "Traurig",
+      iSayAngry: "Wütend",
     };
 
     let Chp07CookElement = await ƒS.Menu.getInput(Chp07CookElementAnswers, "choicesCSSclass");
@@ -66,13 +66,13 @@ namespace Spiegel_VN {
         iSayContinue: "Weiter",
       };
 
-      if (
-        !dataForSave.pickedChp07CookpickedGhost ||
-        !dataForSave.pickedChp07CookpickedColor ||
-        !dataForSave.pickedChp07CookpickedPeople
-      ) {
-        delete Chp07CookElementAnswers2.iSayContinue;
-      }
+      // if (
+      //   !dataForSave.pickedChp07CookpickedGhost ||
+      //   !dataForSave.pickedChp07CookpickedColor ||
+      //   !dataForSave.pickedChp07CookpickedPeople
+      // ) {
+      //   delete Chp07CookElementAnswers2.iSayContinue;
+      // }
 
       let Chp07CookElement2 = await ƒS.Menu.getInput(Chp07CookElementAnswers2, "choicesCSSclass");
 

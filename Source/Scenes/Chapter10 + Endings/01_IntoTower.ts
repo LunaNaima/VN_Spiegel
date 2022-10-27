@@ -13,7 +13,7 @@ namespace Spiegel_VN {
 
     do {
       let Chp10InTowerElementAnswers = {
-        iSayPortrait: '"(Erkunden) Portrait anschauen"',
+        iSayPortrait: "(Erkunden) Portrait anschauen",
         // iSayWindow: '"(Erkunden) Fenster"',
         iSayContinue: "Weiter",
       };

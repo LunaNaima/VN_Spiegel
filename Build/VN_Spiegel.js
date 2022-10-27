@@ -752,7 +752,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     // *** RANDOMIZER ***
     function func_RandomNumberRange(// random nr zw 0-10. macht
-    min = 0, max = 10) {
+        min = 0, max = 10) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -2366,8 +2366,8 @@ var Spiegel_VN;
             PickSceneContinue: "Weiter",
         };
         if (
-        // !dataForSave.pickedChp03_Dressmaker ||
-        !Spiegel_VN.dataForSave.pickedChp03_ChoresWithKailani) {
+            // !dataForSave.pickedChp03_Dressmaker ||
+            !Spiegel_VN.dataForSave.pickedChp03_ChoresWithKailani) {
             delete Chp03PickSceneElementAnswers.PickSceneContinue;
         }
         // if (dataForSave.pickedChp03_Dressmaker) {
@@ -3211,7 +3211,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_WishtreeBirds);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-        await Spiegel_VN.ƒS.Speech.tell("", "Wie willst du dich mit ihnen verbinden?");
+        await Spiegel_VN.ƒS.Speech.tell(characters.narrator, "Wie willst du dich mit ihnen verbinden?");
         let Chp05ConvoTreeElementAnswers2 = {
             iSaySing: "Zu Vögeln singen",
             iSayFeed: "Füttern",
@@ -3780,7 +3780,7 @@ var Spiegel_VN;
         if (!Spiegel_VN.dataForSave.pickedChp07ResearchMarketplace ||
             !Spiegel_VN.dataForSave.pickedChp07TalkToCook ||
             !Spiegel_VN.dataForSave.pickedChp07TalkToInnkeeper
-        // !dataForSave.pickedChp07TalkToStablehand
+            // !dataForSave.pickedChp07TalkToStablehand
         ) {
             delete Chp07PickSceneElementAnswers.PickSceneContinue;
         }
@@ -3931,7 +3931,7 @@ var Spiegel_VN;
             iSayMerchants: "(Erkunden) Mit den Händlern sprechen",
         };
         if (Spiegel_VN.dataForSave.pickedChp07DiscoverMerchants
-        // dataForSave.pickedChp07DiscoverSpeakToVillagers
+            // dataForSave.pickedChp07DiscoverSpeakToVillagers
         ) {
             return "07_Beggar";
         }
