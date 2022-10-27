@@ -41,31 +41,31 @@ namespace Spiegel_VN {
       switch ((<HTMLSpanElement>_event.target).id) {
         case "hit0":
           console.log("Leuchtturm");
-          ƒS.Speech.tell("", "Auf dem Leuchtturm könnten wir Ausschau nach Schiffen halten? Aber wie kommen wir dahin?");
+          ƒS.Speech.tell(characters.maincharacter, "Auf dem Leuchtturm könntet wir Ausschau nach Schiffen halten? Aber wie kommen wir dahin?");
           break;
         case "hit1":
           console.log("Steine");
-          ƒS.Speech.tell("", "Ich weiß nicht, ob über die Steine hüpfen so eine gute Idee ist.");
+          ƒS.Speech.tell(characters.narrator, "Ich weiß nicht, ob über die Steine hüpfen so eine gute Idee ist.");
           break;
         case "hit2":
           console.log("Wasser");
-          ƒS.Speech.tell("", "Willst du wirklich rüber schwimmen? Das würde ich mir nochmal überlegen!");
+          ƒS.Speech.tell(characters.narrator, "Willst du wirklich rüber schwimmen? Das würde ich mir nochmal überlegen!");
           break;
         case "hit3":
           console.log("Schildkröten");
-          ƒS.Speech.tell("", "Die Schildkröten lassen uns sicher nicht auf ihnen reiten!");
+          ƒS.Speech.tell(characters.maincharacter, "Die Schildkröten lassen uns sicher nicht auf ihnen reiten!");
           break;
         case "hit4":
           console.log("Schilf");
-          ƒS.Speech.tell("", "Perfekt. Hinter dem Schilf liegt ein Boot. Drücke die Leertaste.");
+          ƒS.Speech.tell(characters.narrator, "Perfekt. Hinter dem Schilf liegt ein Boot. Drücke die Leertaste.");
           break;
         case "hit5":
           console.log("Vögel");
-          ƒS.Speech.tell("", "Ich würde auch sofort rüber fliegen! Aber das klappt nicht.");
+          ƒS.Speech.tell(characters.narrator, "Ich würde auch sofort rüber fliegen! Aber das klappt nicht.");
           break;
         case "hit6":
           console.log("Wald");
-          ƒS.Speech.tell("", "Ein Floß bauen könntet ihr auch. Wo kriegt ihr aber das Werkzeug her?");
+          ƒS.Speech.tell(characters.narrator, "Ein Floß bauen könntet ihr auch. Wo kriegt ihr aber das Werkzeug her?");
           break;
       }
     }

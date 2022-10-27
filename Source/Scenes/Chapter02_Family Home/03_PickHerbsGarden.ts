@@ -21,13 +21,13 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp02Element) {
       case Chp02ElementAnswersPickHerbs.iSaySprinkle:
-        dataForSave.pickedSeeds = true;
         await ƒS.Speech.tell(characters.maincharacter, "Du streust sie über den Boden und freust dich schon auf den kleinen Sonnenblumenwald, der bald entsteht.");
         ƒS.Speech.clear();
         // return "02_03 Pick Herbs";
         break;
           
       case Chp02ElementAnswersPickHerbs.iSayKeep:
+        dataForSave.pickedSeeds = true;
         await ƒS.Speech.tell(characters.maincharacter, "Du steckst die Samen wieder in die Tasche. Wer weiß, ob du sie noch für etwas gebrauchen kannst.");
         ƒS.Speech.clear();
         // return "02_03 Pick Herbs";

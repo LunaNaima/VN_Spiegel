@@ -35,7 +35,7 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(70, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Ich würde nach links! Links ist immer richtig.");
+        await ƒS.Speech.tell(characters.Flynn, "Ich würde nach links! Links ist immer richtig.");
 
 
         do {

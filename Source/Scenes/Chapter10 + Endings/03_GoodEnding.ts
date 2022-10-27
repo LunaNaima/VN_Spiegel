@@ -281,7 +281,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt. Die Spiegel sind nun ein für alle mal zerstört. Wir können endlich nach Hause!"');
 
     let Chp10GoodEndingElementAnswers4 = {
-      iSayTakeFlynn: '"Flynn mitnehmen"',
+      iSayTakeFlynn: "Flynn mitnehmen",
       iSayNotTakeFlynn: "Flynn wegbringen",
     };
     let Chp10GoodEndingElement4 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers4, "choicesCSSclass");
@@ -307,6 +307,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Kailani, '"Ich bin so froh, wieder heimzugehen. Dort ist zwar alles langweilig und niemand hat schicke Klamotten an. Dafür lieben wir uns, so wie wir sind!"');
 
         await ƒS.Location.show(locations.Chp08_ArrivalFactory);
+        ƒS.update();
         await ƒS.Speech.tell(characters.maincharacter, "Die Mittagssonne strahlt vom Himmel. Du fragst dich, ob ein Reisen mit dem Handspiegel auch bei Mittag, statt bei Mitternacht möglich ist. Schließlich ist in dieser Welt – wie hat Flynn sie nochmal genannt, Norovia? – alles Andersherum.");
           
         let Chp10GoodEndingElementAnswers5 = {
@@ -327,6 +328,68 @@ namespace Spiegel_VN {
         ƒS.update();
         
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
+        await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(80, 100));
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit1_neutral_happy, ƒS.positionPercent(45, 100));
+        await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_laugh, ƒS.positionPercent(10, 100));
+        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_laugh, ƒS.positionPercent(55, 100));
+        ƒS.update();
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+          
+        await ƒS.Speech.tell(characters.maincharacter, "Endlich zuhause! Kailani ruft schon nach euren Eltern. Mama und Mutti kommen aus dem Haus gestürmt, dicht gefolgt von Evarius. Alle strahlen über das ganze Gesicht und umarmen sich. Geschnatter von allen Seiten prasselt auf dich und Kailani ein. Flynn wird einfach mit umarmt. Er strahlt auch. Du schaust in die Gesichter deiner Familie und siehst dort Liebe, Akzeptanz und Glück.");
+        ƒS.Speech.clear();
+        return "End";
+        break;
+      
+      case Chp10GoodEndingElementAnswers4.iSayNotTakeFlynn:
+        await ƒS.Speech.tell(characters.maincharacter, '"Sollen wir dich über den See begleiten? In Whary können Kailani und ich heimreisen, und du kannst weiterreisen?"');
+          
+        ƒS.Character.hide(characters.Flynn);
+          await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
+         ƒS.Character.hide(characters.Kailani);
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_smile, ƒS.positionPercent(40, 100));
+        ƒS.update();
+
+        await ƒS.Speech.tell(characters.Flynn, '"Das ist eine gute Idee! Vielleicht kann ich beim Gasthof als Kellner anheuern. Mal etwas anderes, als nur kämpfen."');
+await ƒS.Location.show(locations.Chp08_ArrivalFactory);
+        ƒS.update();
+
+        await ƒS.Speech.tell(characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn steht am Bug und schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Hier sind wir! Vielen Dank für deine Hilfe, Flynn. Vielleicht komm’ ich dich mal besuchen! Und halte die Ohren steif!"');
+
+        ƒS.Character.hide(characters.Flynn);
+          await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_shocked, ƒS.positionPercent(70, 100));
+       ƒS.Character.hide(characters.Kailani);
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
+         ƒS.update();
+
+        await ƒS.Speech.tell(characters.Flynn, '"Das wäre schön! Ich versuche es. Ich sehe die Welt nun mit anderen Augen. Alles wird gut! Bis bald!"');
+        
+        ƒS.Character.hide(characters.Flynn);
+        ƒS.update();
+
+        await ƒS.Speech.tell(characters.Kailani, '"Ich bin so froh, wieder heimzugehen. Dort ist zwar alles langweilig und niemand hat schicke Klamotten an. Dafür lieben wir uns, so wie wir sind!"');
+
+        await ƒS.Location.show(locations.Chp08_ArrivalFactory);
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, "Die Mittagssonne strahlt vom Himmel. Du fragst dich, ob ein Reisen mit dem Handspiegel auch bei Mittag, statt bei Mitternacht möglich ist. Schließlich ist in dieser Welt – wie hat Flynn sie nochmal genannt, Norovia? – alles Andersherum.");
+          
+        let Chp10GoodEndingElementAnswers6 = {
+          iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
+          iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
+          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+
+        };
+        let Chp10GoodEndingElement6 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
+
+        await ƒS.Location.show(locations.black);
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge,);
+
+        await ƒS.Location.show(locations.Chp01_CS_ArrivalHome);
+            ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
+            ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
+        ƒS.Character.hideAll();
+        ƒS.update();
+        
         await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(80, 100));
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit1_neutral_happy, ƒS.positionPercent(45, 100));
         await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_laugh, ƒS.positionPercent(10, 100));
