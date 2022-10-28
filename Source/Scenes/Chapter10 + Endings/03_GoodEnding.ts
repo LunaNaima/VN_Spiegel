@@ -399,6 +399,8 @@ await ƒS.Location.show(locations.Chp08_ArrivalFactory);
           
         await ƒS.Speech.tell(characters.maincharacter, "Endlich zuhause! Kailani ruft schon nach euren Eltern. Mama und Mutti kommen aus dem Haus gestürmt, dicht gefolgt von Evarius. Alle strahlen über das ganze Gesicht und umarmen sich. Geschnatter von allen Seiten prasselt auf dich und Kailani ein. Flynn wird einfach mit umarmt. Er strahlt auch. Du schaust in die Gesichter deiner Familie und siehst dort Liebe, Akzeptanz und Glück.");
         ƒS.Speech.clear();
+        ƒS.Character.hideAll();
+        ƒS.update();
         return "End";
         break;
 
