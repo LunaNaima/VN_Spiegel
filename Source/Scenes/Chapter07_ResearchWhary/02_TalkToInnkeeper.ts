@@ -75,13 +75,13 @@ namespace Spiegel_VN {
         iSayContinue: "Weiter",
       };
 
-       if (
-      !dataForSave.pickedChp07pickedColor ||
-      !dataForSave.pickedChp07pickedGrey ||
-      !dataForSave.pickedChp07pickedWhatHappened
-    ) {
-      delete Chp07InnkeeperElementAnswers2.iSayContinue;
-    }
+    //    if (
+    //   !dataForSave.pickedChp07pickedColor ||
+    //   !dataForSave.pickedChp07pickedGrey ||
+    //   !dataForSave.pickedChp07pickedWhatHappened
+    // ) {
+    //   delete Chp07InnkeeperElementAnswers2.iSayContinue;
+    // }
 
       let Chp07InnkeeperElement2 = await ƒS.Menu.getInput(Chp07InnkeeperElementAnswers2, "choicesCSSclass");
 
