@@ -8,7 +8,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     // *** BEGIN DIALOGUE ***
-    await ƒS.Speech.tell(characters.Mama.name,dlg_scn_02.Mama.T0000);
+    await ƒS.Speech.tell(characters.Mama.name, dlg_scn_02.Mama.T0000);
     await ƒS.Speech.tell(characters.maincharacter.name, dlg_scn_02.maincharacter.T0001);
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_shocked, ƒS.positionPercent(70, 100));
@@ -18,7 +18,7 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(70, 100));
     ƒS.update();
-    await ƒS.Speech.tell(characters.Mama.name,dlg_scn_02.Mama.T0003);
+    await ƒS.Speech.tell(characters.Mama.name, dlg_scn_02.Mama.T0003);
 
     //*** OPTIONS *//
     let chp01ConvoMotherElementAnswers = {

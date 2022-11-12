@@ -4,7 +4,7 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70, 100));
     ƒS.update();
-    
+
     //*** BEGIN DIALOGUE */
     await ƒS.Speech.tell(characters.mirrorMerchant, '"Ah, Sie sind bestimmt die Schwester!"');
     ƒS.update();

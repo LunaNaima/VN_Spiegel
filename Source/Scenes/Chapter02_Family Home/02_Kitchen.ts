@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
     export async function Chp02_Kitchen(): ƒS.SceneReturn {
         await ƒS.Location.show(locations.Chp02_E_DiscoverKitchen);
-            ƒS.Character.hideAll();
+        ƒS.Character.hideAll();
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         dataForSave.pickedChp02_Kitchen = true;
 
@@ -10,11 +10,11 @@ namespace Spiegel_VN {
         let Chp02PickSceneElementAnswersKitchen = {
             PickScenePantry: "(Erkunden) In die Speisekammer",
             PickSceneOven: "(Erkunden) Ofen beheizen",
-            PickSceneContinue: "Zurück ins Wohnzimmer",
+            PickSceneContinue: "Zurück ins Wohnzimmer"
         };
 
         let Chp02PickSceneElementAnswers = await ƒS.Menu.getInput(Chp02PickSceneElementAnswersKitchen, "choicesCSSclass");
-    
+
         switch (Chp02PickSceneElementAnswers) {
             case Chp02PickSceneElementAnswersKitchen.PickScenePantry:
                 await ƒS.Location.show(locations.Chp02_E_DiscoverKitchenPantry);
@@ -23,7 +23,7 @@ namespace Spiegel_VN {
                 ƒS.Speech.clear();
                 return "02_Kitchen";
                 break;
-            
+
             case Chp02PickSceneElementAnswersKitchen.PickSceneOven:
                 await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, true);
                 ƒS.update();
@@ -43,4 +43,3 @@ namespace Spiegel_VN {
         }
     }
 }
-      

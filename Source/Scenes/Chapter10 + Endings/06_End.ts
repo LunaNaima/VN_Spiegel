@@ -1,8 +1,8 @@
 namespace Spiegel_VN {
     export async function End(): ƒS.SceneReturn {
         await ƒS.Location.show(locations.WitchInTheWoods);
-            await ƒS.Sound.fade(soundeffects.cracklingfire, 0.2, 1, true)
-                await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+        await ƒS.Sound.fade(soundeffects.cracklingfire, 0.2, 1, true);
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
         await ƒS.Speech.tell(characters.narrator, "Na, und die Moral von der Geschicht'? Die weißt du bestimmt selbst. Denke immer an dein offenes Herz! Das wird dein Schutzschild sein.");
         await ƒS.Speech.tell(characters.narrator, "Und nun, mach’, dass du fort kommst! Du warst lange genug hier im dunklen Wald.");

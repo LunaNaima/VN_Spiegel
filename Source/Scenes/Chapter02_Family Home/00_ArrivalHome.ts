@@ -33,10 +33,10 @@ namespace Spiegel_VN {
         let Chp02PickSceneElementAnswers = {
             PickScenePickHerbs: "Kräuter ernten",
             PickSceneKitchen: "Einkäufe wegbringen",
-            PickSceneDiscoverBedroom: "(Erkunden) Dein Schlafzimmer anschauen", 
-            PickSceneContinue: "Weiter",
+            PickSceneDiscoverBedroom: "(Erkunden) Dein Schlafzimmer anschauen",
+            PickSceneContinue: "Weiter"
         };
-        
+
         if (
             !dataForSave.pickedChp02_PickHerbsGarden ||
             !dataForSave.pickedChp02_Kitchen
@@ -46,11 +46,11 @@ namespace Spiegel_VN {
         }
 
         if (dataForSave.pickedChp02_PickHerbsGarden) {
-      delete Chp02PickSceneElementAnswers.PickScenePickHerbs;
-    }
-    if (dataForSave.pickedChp02_Kitchen) {
-      delete Chp02PickSceneElementAnswers.PickSceneKitchen;
-    }
+            delete Chp02PickSceneElementAnswers.PickScenePickHerbs;
+        }
+        if (dataForSave.pickedChp02_Kitchen) {
+            delete Chp02PickSceneElementAnswers.PickSceneKitchen;
+        }
 
         let Chp01PickSceneElement = await ƒS.Menu.getInput(
             Chp02PickSceneElementAnswers,
@@ -64,7 +64,7 @@ namespace Spiegel_VN {
                 ƒS.Speech.clear();
                 return "02_03 Pick Herbs";
                 break;
-            
+
             case Chp02PickSceneElementAnswers.PickSceneKitchen:
                 await ƒS.Speech.tell(characters.maincharacter, "Zuerst schnell die Einkäufe wegbringen.");
                 ƒS.Speech.clear();
@@ -79,7 +79,7 @@ namespace Spiegel_VN {
                 return "02_E Discover bedroom";
                 break;
 
-            
+
             case Chp02PickSceneElementAnswers.PickSceneContinue:
                 await ƒS.Speech.tell(characters.maincharacter, "Jetzt gibt's Essen!");
                 ƒS.Speech.clear();

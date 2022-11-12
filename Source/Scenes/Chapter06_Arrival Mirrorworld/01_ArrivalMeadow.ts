@@ -5,7 +5,7 @@ namespace Spiegel_VN {
     ƒS.Sound.fade(music.theme_ordinaryworld, 0, 0, false);
     ƒS.Sound.fade(soundeffects.water, 0, 0, false);
 
-        ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.5, 1, true);
+    ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.5, 1, true);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.maincharacter, "Du öffnest die Augen und blinzelst in der frühen Morgensonne. Rasch setzt du dich auf und kannst deinen Augen nicht trauen. Du staunst über kräftige Rot-, Grün und Blautöne.");
@@ -13,7 +13,7 @@ namespace Spiegel_VN {
     do {
       let Chp06ArrivalMeadowElementAnswers = {
         iSayFlowers: "(Erkunden) Blumen anschauen",
-        iSayLeave: "Auf den Weg machen",
+        iSayLeave: "Auf den Weg machen"
       };
 
       let Chp06ArrivalMeadowElement = await ƒS.Menu.getInput(Chp06ArrivalMeadowElementAnswers, "choicesCSSclass");
@@ -27,7 +27,7 @@ namespace Spiegel_VN {
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
           ƒS.Speech.clear();
           break;
-      
+
         case Chp06ArrivalMeadowElementAnswers.iSayLeave:
           dataForSave.pickedChp06Leave = true;
           await ƒS.Speech.tell(characters.maincharacter, "Du rappelst dich auf. Neben dir liegt ein See, und auf der anderen Seite eine Straße.");
@@ -44,7 +44,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Dir bleibt nichts anderen übrig, als dich auch anzustellen. Während du wartest, beobachtest du die anderen Menschen. Die meisten von ihnen tragen satte, glitzernde Klamotten. Sind hier etwa alle reich? Und wieso sieht es so aus, als wären die Klamotten an manchen Stellen ausgepolstert?");
     await ƒS.Speech.tell(characters.maincharacter, "Auf einmal tritt dir jemand schmerzhaft auf den Fuß.");
 
-    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_happy, ƒS.positionPercent(70, 100))
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_happy, ƒS.positionPercent(70, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Flynn, '"Oh, sorry! Huch, du siehst so aus, als hättest du eine weite Reise hinter dir. Von wo kommst du denn?"');
 
@@ -52,7 +52,7 @@ namespace Spiegel_VN {
       iSayLie: "Lügen",
       iSayDistract: "Ablenken",
       iSayTruth: "Die Wahrheit sagen",
-      iSaySilent: "Schweigen",
+      iSaySilent: "Schweigen"
 
     };
 
@@ -63,50 +63,50 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Eh– stimmt gar nicht! Ich wohne hier um die Ecke, in dem Dorf da hinten. Wer bist du überhaupt?"');
         await ƒS.Speech.tell(characters.maincharacter, "Du gestikulierst wage in die rechte Richtung. Der Fremde hebt die Augenbrauen.");
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_smile, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_smile, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"So so. Du willst es mir nicht sagen. Na gut. Vielleicht erzähle ich erst etwas über mich."');
 
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Ich bin Flynn! Und nach Whary gereist, um eine Ausbildung als Glasmacher zu beginnen. Aber jetzt bist du wieder dran."');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp06EntryGatesElementAnswers.iSayDistract:
         await ƒS.Speech.tell(characters.maincharacter, '"Du fragst mich einfach etwas, ohne dich selbst vorzustellen?"');
 
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Du hast ja recht! Ich bin Flynn! Und nach Whary gereist, um eine Ausbildung als Glasmacher zu beginnen. Aber jetzt bist du wieder dran."');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp06EntryGatesElementAnswers.iSayTruth:
         await ƒS.Speech.tell(characters.maincharacter, '"Ehrlich gesagt, komme ich sogar von sehr weit weg. Ich bin aus einer anderen Welt hierhergereist, um meine Schwester zu finden."');
 
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Aus einer anderen Welt? Ha! So habe ich Whary noch nie gesehen, als ‘andere Welt’. Heißt, du warst noch nie in der großen Stadt! Ui ui ui. Ich kann dir so vieles zeigen!"');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp06EntryGatesElementAnswers.iSaySilent:
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_smile, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_smile, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, "So so. Du willst es mir nicht sagen. Na gut. Vielleicht erzähle ich erst etwas über mich.");
 
         ƒS.Character.hideAll();
-        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100))
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_happy2, ƒS.positionPercent(70, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Ich bin Flynn! Und nach Whary gereist, um eine Ausbildung als Glasmacher zu beginnen. Aber jetzt bist du wieder dran."');
@@ -125,27 +125,27 @@ namespace Spiegel_VN {
     let Chp06EntryGatesElementAnswers2 = {
       iSayShame: "Beschämt",
       iSayDontCare: "Gleichgültig",
-      iSayAngry: "Verärgert",
+      iSayAngry: "Verärgert"
     };
 
     let Chp06EntryGatesElement2 = await ƒS.Menu.getInput(Chp06EntryGatesElementAnswers2, "choicesCSSclass");
 
     switch (Chp06EntryGatesElement2) {
       case Chp06EntryGatesElementAnswers2.iSayShame:
-    await ƒS.Speech.tell(characters.maincharacter, "Du senkst den Kopf und schaust beschämt zu Boden. Natürlich passt du hier mit deinen Dorfklamotten nicht rein.");
-ƒS.Speech.clear();
+        await ƒS.Speech.tell(characters.maincharacter, "Du senkst den Kopf und schaust beschämt zu Boden. Natürlich passt du hier mit deinen Dorfklamotten nicht rein.");
+        ƒS.Speech.clear();
         break;
-      
+
       case Chp06EntryGatesElementAnswers2.iSayDontCare:
-    await ƒS.Speech.tell(characters.maincharacter, "Sollen die Leute schauen, mir doch egal!");
-ƒS.Speech.clear();
+        await ƒS.Speech.tell(characters.maincharacter, "Sollen die Leute schauen, mir doch egal!");
+        ƒS.Speech.clear();
         break;
-      
+
       case Chp06EntryGatesElementAnswers2.iSayAngry:
-    await ƒS.Speech.tell(characters.maincharacter, "Was fällt denen ein? Es sieht eben nicht jede Person gleich aus. Wütend schaust du zurück, bis die Leute sich abwenden.");
-ƒS.Speech.clear();
+        await ƒS.Speech.tell(characters.maincharacter, "Was fällt denen ein? Es sieht eben nicht jede Person gleich aus. Wütend schaust du zurück, bis die Leute sich abwenden.");
+        ƒS.Speech.clear();
         break;
-        
+
     }
 
     await ƒS.Location.show(locations.Chp06_InWharyPeople);
@@ -153,6 +153,6 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Flynn, '"Ich merke schon, du bist ziemlich abgelenkt. Hast du mir überhaupt zugehört? Echt unhöflich! Aber gut. Wir sind in Whary! Willkommen! Was hast du denn jetzt vor?"');
 
-    
+
   }
 }

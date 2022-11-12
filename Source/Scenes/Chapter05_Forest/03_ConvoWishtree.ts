@@ -6,7 +6,7 @@ namespace Spiegel_VN {
       iSayInner: "(Erkunden) Sein Innerstes?",
       iSaySick: "(Erkunden) Wie werden sie krank?",
       iSayFree: "(Erkunden) Wie kann Kailani befreit werden?",
-      iSayRiddleWords: "Die Rätselwörter!",
+      iSayRiddleWords: "Die Rätselwörter!"
     };
 
     if (
@@ -61,7 +61,7 @@ namespace Spiegel_VN {
 
     let Chp05ConvoTreeElementAnswers2 = {
       iSaySing: "Zu Vögeln singen",
-      iSayFeed: "Füttern",
+      iSayFeed: "Füttern"
     };
 
     let Chp05ConvoTreeElement2 = await ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers2, "choicesCSSclass");
@@ -84,23 +84,23 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         break;
     }
-        await ƒS.Speech.tell(characters.maincharacter, "Das war eine gute, ehrliche Bindung. Sie werden dich nun begleiten und dir stets zur Seite stehen. Die Reise wird nicht einfach. Denke daran, dass in der Spiegelwelt nicht alles so ist, wie es scheint. Ein letzter Hinweis noch: Ehrliches Material führt dein Herz zum Ziel.");
-        await ƒS.Speech.tell(characters.maincharacter, "Nun muss ich eine Weile ruhen. Diese Begegnung hat mich sehr viel Kraft gekostet …");
+    await ƒS.Speech.tell(characters.maincharacter, "Das war eine gute, ehrliche Bindung. Sie werden dich nun begleiten und dir stets zur Seite stehen. Die Reise wird nicht einfach. Denke daran, dass in der Spiegelwelt nicht alles so ist, wie es scheint. Ein letzter Hinweis noch: Ehrliches Material führt dein Herz zum Ziel.");
+    await ƒS.Speech.tell(characters.maincharacter, "Nun muss ich eine Weile ruhen. Diese Begegnung hat mich sehr viel Kraft gekostet …");
     ƒS.Sound.fade(soundeffects.birds, 0, 0, false);
-        ƒS.Sound.fade(soundeffects.forest, 0, 0, false);
+    ƒS.Sound.fade(soundeffects.forest, 0, 0, false);
 
     ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Der Wind, der durch die Blätter raschelte, klingt ab. Die Vögel sind verschwunden. Auf einmal ist es sehr ruhig.");
+    await ƒS.Speech.tell(characters.maincharacter, "Der Wind, der durch die Blätter raschelte, klingt ab. Die Vögel sind verschwunden. Auf einmal ist es sehr ruhig.");
 
     let Chp05ConvoTreeElementAnswers3 = {
       iSayHello: "Hallo?",
       iSayQuestions: "Ich habe noch so viele Fragen!",
-      iSayNeed: "Ich brauche Sie!",
+      iSayNeed: "Ich brauche Sie!"
     };
 
     let Chp05ConvoTreeElement3 = await ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
-      await ƒS.Speech.tell(characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
-      await ƒS.Speech.tell(characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
+    await ƒS.Speech.tell(characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
+    await ƒS.Speech.tell(characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
 
     return "05_ConvoMother";
   }

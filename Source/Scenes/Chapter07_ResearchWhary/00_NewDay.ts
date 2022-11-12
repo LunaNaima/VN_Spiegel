@@ -32,7 +32,7 @@ namespace Spiegel_VN {
       PickSceneSpeakToInnkeeper: "Mit Gastwirtin sprechen",
       PickSceneSpeakToCook: "Mit Koch sprechen",
       // PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
-      PickSceneContinue: "Weiter",
+      PickSceneContinue: "Weiter"
     };
 
     if (
@@ -45,19 +45,19 @@ namespace Spiegel_VN {
     }
 
     if (dataForSave.pickedChp07ResearchMarketplace) {
-      delete Chp07PickSceneElementAnswers.PickSceneResearchMarketplace
+      delete Chp07PickSceneElementAnswers.PickSceneResearchMarketplace;
     }
     if (dataForSave.pickedChp07TalkToInnkeeper) {
-      delete Chp07PickSceneElementAnswers.PickSceneSpeakToInnkeeper
+      delete Chp07PickSceneElementAnswers.PickSceneSpeakToInnkeeper;
     }
     if (dataForSave.pickedChp07TalkToCook) {
-      delete Chp07PickSceneElementAnswers.PickSceneSpeakToCook
+      delete Chp07PickSceneElementAnswers.PickSceneSpeakToCook;
     }
     // if (dataForSave.pickedChp07TalkToStablehand) {
     //   delete Chp07PickSceneElementAnswers.PickSceneSpeakToStablehand
     // }
 
-    let Chp07PickSceneElement = await ƒS.Menu.getInput(Chp07PickSceneElementAnswers,"choicesCSSclass");
+    let Chp07PickSceneElement = await ƒS.Menu.getInput(Chp07PickSceneElementAnswers, "choicesCSSclass");
 
     // *** RESPONSES ***
     switch (Chp07PickSceneElement) {
@@ -81,7 +81,7 @@ namespace Spiegel_VN {
         await ƒS.Character.show(characters.Cook, characters.Cook.pose.pos2_concerned, ƒS.positionPercent(65, 100));
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    
+
         await ƒS.Speech.tell(characters.Cook, '"Du kommst gerade richtig! Ich brauche dringend eine Pause."');
         await ƒS.Speech.tell(characters.maincharacter, "Nanu? Hat ausgerechnet der Koch für mich Zeit?");
         await ƒS.Speech.tell(characters.Cook, '"Hat es dir denn gestern geschmeckt?"');
@@ -91,9 +91,9 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Cook, characters.Cook.pose.pos1_neutral, ƒS.positionPercent(65, 100));
         ƒS.update();
-    
+
         await ƒS.Speech.tell(characters.Cook, '"Ich weiß leider gar nichts über deine Schwester, Kleines. Bin doch hier, von morgens bis abends."');
-    
+
         await ƒS.Speech.tell(characters.maincharacter, "Er gestikuliert in Richtung Herd.");
         await ƒS.Speech.tell(characters.maincharacter, '"Trotzdem haben Sie vielleicht etwas gehört? Sie heißt Kailani und ist seit zwei Tagen weg. Ich hatte gehofft, dass Sie –"');
         await ƒS.Speech.tell(characters.Cook, '"Jetzt lass’ mal das Sie weg. Wie gesagt, kann ich dir nichts erzählen."');
@@ -104,7 +104,7 @@ namespace Spiegel_VN {
       case Chp07PickSceneElementAnswers.PickSceneSpeakToInnkeeper:
         await ƒS.Speech.tell(characters.maincharacter, "Wo ist die Inhaberin?");
         await ƒS.Speech.tell(characters.maincharacter, '"Ich frage mal die Wirtin. Schließlich sieht sie so viele Leute jeden Tag, die hier durchspazieren."');
-        ƒS.Location.show(locations.Chp06_Inn_int)
+        ƒS.Location.show(locations.Chp06_Inn_int);
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos1_laugh, ƒS.positionPercent(70, 100));
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -113,11 +113,11 @@ namespace Spiegel_VN {
 
         await ƒS.Speech.tell(characters.Innkeeper, '"Kann ich dir weiterhelfen?"');
         await ƒS.Speech.tell(characters.maincharacter, '"Ja… zumindest hoffe ich es! Ich bin auf der Suche nach meiner Schwester. Ich hatte gehofft, sie wäre hier in der Spie– eh, in Whary gelandet."');
-    
+
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Innkeeper, characters.Innkeeper.pose.pos2_frown, ƒS.positionPercent(70, 100));
         ƒS.update();
-    
+
         await ƒS.Speech.tell(characters.Innkeeper, '"Entschuldige, Ich habe gerade nicht wirklich Zeit. Machst es kurz?"');
         ƒS.Speech.clear();
         return "07_TalkToInnkeeper";
@@ -133,7 +133,7 @@ namespace Spiegel_VN {
       //   ƒS.Character.hideAll();
       //   await ƒS.Character.show(characters.Stablehand, characters.Stablehand.pose.pos2_laugh, ƒS.positionPercent(30, 100));
       //   ƒS.update();
-        
+
       //   await ƒS.Speech.tell(characters.maincharacter, '"Hallo! Darf ich dich kurz stören?"');
       //   await ƒS.Speech.tell(characters.Stablehand, '"Mh."');
       //   await ƒS.Speech.tell(characters.maincharacter, "Du zögerst, unsicher, wo du anfangen sollst. Du erzählst von deiner Schwester Kailani und wie sie war, bevor sie verschwand. Das Schweigen deines Gegenübers lässt die Wörter nur so herauspurzeln, und ehe du dich versiehst, hast du ihr dein ganzes Herz ausgeschüttet.");
@@ -162,9 +162,9 @@ namespace Spiegel_VN {
       //   ƒS.Character.hideAll();
       //   return "06_new day";
       //   break;
-      
+
       case Chp07PickSceneElementAnswers.PickSceneContinue:
-        await ƒS.Location.show(locations.Chp06_Inn_int)
+        await ƒS.Location.show(locations.Chp06_Inn_int);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_confused, ƒS.positionPercent(40, 100));
@@ -172,7 +172,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Flynn, '"Und, was hast du rausgefunden?"');
         await ƒS.Speech.tell(characters.maincharacter, "Du erzählst ihm aufgeregt von den Hinweisen.");
         await ƒS.Speech.tell(characters.maincharacter, '"Und weil die Farbe etwas mit einem Ort zu tun hat, der auf der anderen Seite des Sees liegt, muss ich dort hin!"');
-        
+
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral, ƒS.positionPercent(40, 100));
         ƒS.update();
@@ -182,27 +182,27 @@ namespace Spiegel_VN {
         let Chp07PickContinueElementAnswers = {
           iSayCertain: "Bestimmt",
           iSayIgnore: "Ignorieren",
-          iSayAngry: "Verärgert",
+          iSayAngry: "Verärgert"
         };
         let Chp07PickContinueElement = await ƒS.Menu.getInput(Chp07PickContinueElementAnswers, "choicesCSSclass");
-        
+
         switch (Chp07PickContinueElement) {
           case Chp07PickContinueElementAnswers.iSayCertain:
             await ƒS.Speech.tell(characters.maincharacter, '"Ist mir egal, was du denkst! Ich muss es versuchen."');
             ƒS.Speech.clear();
             break;
-          
+
           case Chp07PickContinueElementAnswers.iSayIgnore:
             await ƒS.Speech.tell(characters.maincharacter, "Du ignorierst seine Einwände.");
             ƒS.Speech.clear();
             break;
-          
+
           case Chp07PickContinueElementAnswers.iSayAngry:
             await ƒS.Speech.tell(characters.maincharacter, '"Glaubst du mir etwa nicht, nur, weil du dich hier besser auskennst?"');
             ƒS.Speech.clear();
             break;
         }
-      
+
         await ƒS.Speech.tell(characters.maincharacter, '"Ich gehe sofort los! Wenn du mitkommen willst, musst du dich beeilen. Ich will nicht noch länger herum warten."');
         await ƒS.Speech.tell(characters.maincharacter, "Flynn murrt etwas, doch dann kommt sein Abenteuergeist hervor und er packt blitzschnell seine wenigen Sachen aus dem Zimmer.");
         await ƒS.Speech.tell(characters.Flynn, '"Natürlich lasse ich mir das nicht entgehen! Auf zum See!"');

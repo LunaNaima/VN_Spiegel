@@ -37,7 +37,6 @@
 		"no-conditional-assignment": true,
 		"no-shadowed-variable": false,
 		"one-line": [true, "check-open-brace", "check-catch", "check-whitespace"],
-		"quotemark": [true, "double"],
 		"radix": false,
 		"semicolon": true,
 		"switch-default": false,
@@ -52,7 +51,6 @@
 			}
 		],
 		"use-strict": [false, "check-module", "check-function"],
-		"variable-name": [true, "check-format", "allow-leading-underscore"],
 		"whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
 		"file-header": [false, "Autor: Jirka Dell'Oro-Friedl"]
 	}

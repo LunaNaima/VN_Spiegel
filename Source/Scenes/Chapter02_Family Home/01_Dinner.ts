@@ -1,13 +1,13 @@
 namespace Spiegel_VN {
   export async function Chp02_01_Dinner(): ƒS.SceneReturn {
-    await ƒS.Location.show(locations.Chp02_01_Dinner); 
+    await ƒS.Location.show(locations.Chp02_01_Dinner);
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-    
+
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_laugh, ƒS.positionPercent(80, 100));
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit2_dress3_smile, ƒS.positionPercent(45, 100));
     await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.pos3_laugh, ƒS.positionPercent(10, 100));
-    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_laugh, ƒS.positionPercent(55,100));
+    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_laugh, ƒS.positionPercent(55, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mama, '"Hey ' + dataForSave.nameProtagonist + ' da bist du! Setz’ dich hin. Wir warten schon."');
@@ -27,9 +27,9 @@ namespace Spiegel_VN {
     ƒS.update();
     await ƒS.Speech.tell(characters.Mama, '"Ihr esst, was Mutti gekocht hat, sonst gibt es nichts! Still jetzt."');
     ƒS.Character.hide(characters.Mutti);
-    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_frown, ƒS.positionPercent(55,100));
+    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress5_frown, ƒS.positionPercent(55, 100));
     ƒS.update();
-    
+
     // await ƒS.Speech.tell(characters.Mutti, '"Nur ein bisschen, ihr zwei, in Ordnung?"');
 
     ƒS.Character.hide(characters.Evarius);
@@ -51,11 +51,11 @@ namespace Spiegel_VN {
     let Chp02PickSceneElementAnswersDinner = {
       iSayDistract: "Ablenken.",
       iSayFight: "Streit ansprechen.",
-      iSaySilent: "Nicken und Schweigen.",
+      iSaySilent: "Nicken und Schweigen."
     };
 
     // if (
-    //   !dataForSave.pickedChp02_DinnerScene || // ! heißt not: es wird nach entgegengesetztem Zustand gefragt // || = oder; && = und
+    //   !dataForSave.pickedChp02_DinnerScene || 
     //   !dataForSave.pickedChp02_PickHerbsGarden ||
     //   !dataForSave.pickedChp02_TestWithElena ||
     //   !dataForSave.pickedChp02_FightNeighbor
@@ -82,7 +82,7 @@ namespace Spiegel_VN {
         // return "02_021 Test Mirror";
         break;
 
-      
+
       case Chp02PickSceneElementAnswersDinner.iSayFight:
         await ƒS.Speech.tell(characters.maincharacter, '"Klar, Mama. Ich habe nur eben diesen seltsamen Streit von Henri und Balduin mitbekommen. Hast du es auch gehört?"');
         ƒS.Character.hide(characters.Mama);
@@ -129,7 +129,7 @@ namespace Spiegel_VN {
 
     let Chp02TestMirrorElementAnswers = {
       iSayTestWithKailani: "Mit Kailani testen",
-      iSayTestWithEvarius: "Mit Evarius testen",
+      iSayTestWithEvarius: "Mit Evarius testen"
     };
 
     let Chp02TestMirrorElement = await ƒS.Menu.getInput(
@@ -143,7 +143,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
         return "02_021 Test Mirror Kailani";
         break;
-            
+
       case Chp02TestMirrorElementAnswers.iSayTestWithEvarius:
         await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
         return "02_021 Test Mirror Evarius";

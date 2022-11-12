@@ -15,7 +15,7 @@ namespace Spiegel_VN {
     }
 
     await ƒS.Location.show(locations.Chp03_01_Dressmaker);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Location.show(locations.Chp03_01_DressmakerMan);
     ƒS.update();
@@ -27,7 +27,7 @@ namespace Spiegel_VN {
 
     let Chp03DressmakerElementAnswers = {
       iSayNo: "Hauptsache, warm.",
-      iSayYes: "Das Aussehen zählt.",
+      iSayYes: "Das Aussehen zählt."
     };
 
     let Chp03DressmakerElement = await ƒS.Menu.getInput(Chp03DressmakerElementAnswers, "choicesCSSclass");
@@ -35,20 +35,20 @@ namespace Spiegel_VN {
       case Chp03DressmakerElementAnswers.iSayNo:
         await ƒS.Speech.tell(characters.maincharacter, '"Mir ist das eigentlich egal, wie die Jacke aussieht. Hauptsache, sie ist wieder warm!"');
         break;
-      
+
       case Chp03DressmakerElementAnswers.iSayYes:
         await ƒS.Speech.tell(characters.maincharacter, '"Mir ist das eigentlich egal, wie die Jacke aussieht. Aber für Kailani ist es sicherlich wichtig, dass ihre Winterjacke nicht verfranzt ist."');
         await ƒS.Speech.tell("Schneider", '"Ah, sehr gut! Gut aussehen ist sehr wichtig, ja ja."');
         break;
     }
 
-        await ƒS.Speech.tell("Schneider", '"Dann sind wir uns einig. So viele Aufträge! Und so viele Ablenkungen, ja ja. Ich bin auch nicht mehr so jung wie du!"');
+    await ƒS.Speech.tell("Schneider", '"Dann sind wir uns einig. So viele Aufträge! Und so viele Ablenkungen, ja ja. Ich bin auch nicht mehr so jung wie du!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Das ist in Ordnung. Kann ich sie nächste Woche abholen?"');
-      await ƒS.Speech.tell("Schneider", '"Ja, ja ja. Nächste Woche. Bis dahin sind sie auf jeden Fall fertig. Ich rasche, ich rasche! Auf bald!"');
+    await ƒS.Speech.tell("Schneider", '"Ja, ja ja. Nächste Woche. Bis dahin sind sie auf jeden Fall fertig. Ich rasche, ich rasche! Auf bald!"');
 
     await ƒS.Location.show(locations.Chp03_01_Dressmaker);
     ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Was für ein komischer Kauz. Es gibt zwar eine andere Schneiderin im Dorf, aber Mutti kennt ihn noch von früher. Was macht er denn den ganzen Tag? So viel kann er gar nicht zu tun haben, weil die meisten Leute ihre Kleider woanders hinbringen. Wirklich seltsam.");
+    await ƒS.Speech.tell(characters.maincharacter, "Was für ein komischer Kauz. Es gibt zwar eine andere Schneiderin im Dorf, aber Mutti kennt ihn noch von früher. Was macht er denn den ganzen Tag? So viel kann er gar nicht zu tun haben, weil die meisten Leute ihre Kleider woanders hinbringen. Wirklich seltsam.");
 
     return "03_00 New day";
   }

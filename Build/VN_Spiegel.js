@@ -794,12 +794,12 @@ var Spiegel_VN;
         },
         Chp01_CS_ArrivalHome: {
             name: "House from outside",
-            background: "./Assets/Backgrounds/Chapter02/Cottage_Outside.png",
+            background: "./Assets/Backgrounds/Chapter02/Cottage_Outside.png"
             // night: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
         },
         Chp01_CS_ArrivalHomeNight: {
             name: "House from outside",
-            background: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
+            background: "./Assets/Backgrounds/Chapter05/House_ext_night.png"
         },
         // *** CHAPTER 02 ***
         Chp02_01_Dinner: {
@@ -808,12 +808,12 @@ var Spiegel_VN;
         },
         Chp02_02_LivingRoom: {
             name: "Living room",
-            background: "./Assets/Backgrounds/Chapter02/LivingRoom.png",
+            background: "./Assets/Backgrounds/Chapter02/LivingRoom.png"
             // night: "./Assets/Backgrounds/Chapter02/LivingRoom_night.png"
         },
         Chp02_02_LivingRoomNight: {
             name: "Living room",
-            background: "./Assets/Backgrounds/Chapter05/LivingRoom_night.png",
+            background: "./Assets/Backgrounds/Chapter05/LivingRoom_night.png"
         },
         Chp02_03_PickHerbs: {
             name: "Garden",
@@ -1149,7 +1149,6 @@ var Spiegel_VN;
         }
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
-;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     Spiegel_VN.music = {
@@ -2625,8 +2624,8 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mutti, '"Ja, gerade ist sie etwas gereizt. Das wird bestimmt wieder. Ich muss noch etwas arbeiten, dann können wir später zusammen kochen, ja? Mama sollte auch bald nach Hause kommen."');
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du willst nur schnell nach Kailani schauen, bevor du dich zurückziehst.");
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_KailaniBedroom);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
+        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_KailaniBedroom);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Kailani? Bist du da?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Spiegel liegt glitzernd auf dem Bett. Von Kailani fehlt aber jede Spur. Ist sie vielleicht bei Evarius?");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Evarius?"');
@@ -4135,11 +4134,13 @@ var Spiegel_VN;
                 iSayWhatHappened: '"(Erkunden) Was, denken Sie, ist mit Kailani geschehen?"',
                 iSayContinue: "Weiter",
             };
-            if (!Spiegel_VN.dataForSave.pickedChp07pickedColor ||
-                !Spiegel_VN.dataForSave.pickedChp07pickedGrey ||
-                !Spiegel_VN.dataForSave.pickedChp07pickedWhatHappened) {
-                delete Chp07InnkeeperElementAnswers2.iSayContinue;
-            }
+            //    if (
+            //   !dataForSave.pickedChp07pickedColor ||
+            //   !dataForSave.pickedChp07pickedGrey ||
+            //   !dataForSave.pickedChp07pickedWhatHappened
+            // ) {
+            //   delete Chp07InnkeeperElementAnswers2.iSayContinue;
+            // }
             let Chp07InnkeeperElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp07InnkeeperElementAnswers2, "choicesCSSclass");
             // *** RESPONSES ***
             switch (Chp07InnkeeperElement2) {
@@ -5358,6 +5359,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Endlich zuhause! Kailani ruft schon nach euren Eltern. Mama und Mutti kommen aus dem Haus gestürmt, dicht gefolgt von Evarius. Alle strahlen über das ganze Gesicht und umarmen sich. Geschnatter von allen Seiten prasselt auf dich und Kailani ein. Flynn wird einfach mit umarmt. Er strahlt auch. Du schaust in die Gesichter deiner Familie und siehst dort Liebe, Akzeptanz und Glück.");
                 Spiegel_VN.ƒS.Speech.clear();
                 Spiegel_VN.ƒS.Character.hideAll();
+                Spiegel_VN.ƒS.update();
                 return "End";
                 break;
         }

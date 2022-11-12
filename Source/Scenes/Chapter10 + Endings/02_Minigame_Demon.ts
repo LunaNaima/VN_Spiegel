@@ -5,7 +5,7 @@ namespace Spiegel_VN {
     await ƒS.Sound.fade(music.theme_DemonMinigame, 0.8, 1, true);
     ƒS.update();
 
-    let Demontunnel= {
+    let Demontunnel = {
       name: "Tunnel",
       background: "./Assets/Backgrounds/Chapter10/Demontunnel.png"
     };
@@ -83,17 +83,17 @@ namespace Spiegel_VN {
       dataForSave.tunnelFailed += 1;
 
       ƒS.Speech.tell("", "Mist, der Dämon hat dich erwischt! " + dataForSave.tunnelFailed + " Mal, probier's nochmal.<br/>Drücke dazu die Leertaste");
-    };
+    }
 
     if (dataForSave.tunnelFailed == 3) {
       ƒS.Speech.clear();
-      ƒS.Speech.tell("Dämon", "Ha! Hab' ich dich!")
+      ƒS.Speech.tell("Dämon", "Ha! Hab' ich dich!");
       return "Bad Ending";
-    };
+    }
 
     if (event.type == "tunnelSuccess") {
       return "Good Ending";
-    };
+    }
     // for testing, stop NV from starting
     await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
     await Chp10_MinigameDemon();
@@ -140,7 +140,7 @@ namespace Spiegel_VN {
         nodeDemon = nodeDemonNormal;
       }
       if (demonMood < -4000 && nodeDemon == nodeDemonNormal) {
-          console.log("Watch out!");
+        console.log("Watch out!");
         ƒS.Character.hide(demon);
         ƒS.Character.show(demon, demon.pose.attack, nodeDemon.mtxLocal.translation.toVector2());
         nodeDemon = nodeDemonAttack;
@@ -170,7 +170,7 @@ namespace Spiegel_VN {
         demonMood += 10;
       }
       ƒS.update(0);
-      
+
     }
   }
 }

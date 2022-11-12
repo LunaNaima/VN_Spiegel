@@ -14,7 +14,7 @@ namespace Spiegel_VN {
         iSayExploreTheyAreAfraid: "(Erkunden) Vielleicht haben sie Angst?",
         iSayExploreAttention: "(Erkunden) Sie brauchen die Aufmerksamkeit",
         iSayExploreAll: "(Erkunden) Wenn alle so sind ...",
-        iSayContinue: "Weiter",
+        iSayContinue: "Weiter"
       };
 
       // if (
@@ -27,7 +27,7 @@ namespace Spiegel_VN {
       // }
 
       let Chp08ConvoFlynnElement = await ƒS.Menu.getInput(Chp08ConvoFlynnElementAnswers, "choicesCSSclass");
-      
+
       switch (Chp08ConvoFlynnElement) {
         case Chp08ConvoFlynnElementAnswers.iSayExploreTheyAreAfraid:
           ƒS.Character.hideAll();
@@ -41,7 +41,7 @@ namespace Spiegel_VN {
           break;
 
         case Chp08ConvoFlynnElementAnswers.iSayExploreAttention:
-                    ƒS.Character.hideAll();
+          ƒS.Character.hideAll();
           await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_angry, ƒS.positionPercent(50, 100));
           ƒS.update();
           await ƒS.Speech.tell(characters.Flynn, '"Achwas! Das hat doch damit nichts zu tun."');
@@ -63,10 +63,10 @@ namespace Spiegel_VN {
         case Chp08ConvoFlynnElementAnswers.iSayContinue:
           dataForSave.pickedChp08ConvoContinue = true;
           await ƒS.Location.show(locations.black);
-    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+          await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
           await ƒS.Location.show(locations.Chp08_ArrivalFactory);
-              await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+          await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
           ƒS.Character.hideAll();
           ƒS.Sound.fade(music.theme_mirrorworld_whary, 0, 0, false);
@@ -82,7 +82,7 @@ namespace Spiegel_VN {
           await ƒS.Speech.tell(characters.Flynn, '"Komm, lass uns andocken und erkunden!"');
           return "08_Arrival other side";
           break;
-      };
+      }
     } while (!dataForSave.pickedChp08ConvoContinue);
   }
 }

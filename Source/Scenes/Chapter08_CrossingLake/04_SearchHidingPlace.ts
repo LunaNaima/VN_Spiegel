@@ -9,9 +9,9 @@ namespace Spiegel_VN {
 
         let Chp08HidingPlaceFactoryElementAnswers = {
             iSayExploreVillage: "(Erkunden) Dorf erkunden",
-            iSayContinue: "Weiter suchen",
+            iSayContinue: "Weiter suchen"
         };
-    
+
         let Chp08HidingPlaceFactoryElement = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers, "choicesCSSclass");
 
         switch (Chp08HidingPlaceFactoryElement) {
@@ -22,13 +22,13 @@ namespace Spiegel_VN {
                 ƒS.Speech.clear();
                 return "08_Search hiding place";
                 break;
-              
+
             case Chp08HidingPlaceFactoryElementAnswers.iSayContinue:
                 await ƒS.Speech.tell(characters.maincharacter, "Ihr lauft weiter. Im Dorf herrscht eine drückende Atmosphäre, die dir nicht geheuer ist. Dein Bauch zieht sich zusammen. War es ein Fehler gewesen, hier her zu reisen?");
                 ƒS.Speech.clear();
                 break;
         }
-        
+
         await ƒS.Location.show(locations.Chp08_ForestPath);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         await ƒS.Speech.tell(characters.maincharacter, "Überraschend endet das Dorf und die Straße wird zum schmalen Waldweg.");
@@ -42,14 +42,14 @@ namespace Spiegel_VN {
             let Chp08HidingPlaceFactoryElementAnswers2 = {
                 iSayLeft: "Links",
                 iSayRight: "Rechts",
-                iSayHammer: "Was glänzt da?",
+                iSayHammer: "Was glänzt da?"
             };
-        
+
             if (dataForSave.pickedIron) {
                 delete Chp08HidingPlaceFactoryElementAnswers2.iSayHammer;
             }
 
-    
+
             let Chp08HidingPlaceFactoryElement2 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers2, "choicesCSSclass");
 
             switch (Chp08HidingPlaceFactoryElement2) {
@@ -72,26 +72,26 @@ namespace Spiegel_VN {
                     ƒS.update();
                     let Chp08HidingPlaceFactoryElementAnswers3 = {
                         iSayTake: "Einstecken",
-                        iSayNotTake: "Liegen lassen",
-                    }
-                     let Chp08HidingPlaceFactoryElement3 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers3, "choicesCSSclass");
+                        iSayNotTake: "Liegen lassen"
+                    };
+                    let Chp08HidingPlaceFactoryElement3 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers3, "choicesCSSclass");
                     switch (Chp08HidingPlaceFactoryElement3) {
                         case Chp08HidingPlaceFactoryElementAnswers3.iSayTake:
                             dataForSave.pickedIron = true;
                             await ƒS.Speech.tell(characters.maincharacter, "Du steckst ihn ein. Ein Werkzeug kann schließlich nie schaden.");
                             ƒS.Speech.clear();
                             break;
-                            
+
                         case Chp08HidingPlaceFactoryElementAnswers3.iSayNotTake:
                             await ƒS.Speech.tell(characters.maincharacter, "Brauchst du hier einen Hammer? Eher nicht. Du legst ihn wieder ins Gras.");
                             ƒS.Speech.clear();
                             break;
-                    }     
-                        ƒS.Speech.clear();
-                        break;
+                    }
+                    ƒS.Speech.clear();
+                    break;
             }
         } while (!dataForSave.pickedChp08Left && !dataForSave.pickedChp08Right);
-        
+
         await ƒS.Location.show(locations.Chp08_HidingPlace);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         await ƒS.Speech.tell(characters.maincharacter, "Schnaufend kommt ihr oben an einem Überhang an. Der Hügel war doch nicht so mühelos. Dafür habt ihr jetzt eine Aussicht auf das Dorf, die atemberaubend wäre …");
@@ -109,7 +109,7 @@ namespace Spiegel_VN {
                 iSayThinkAboutVillage: '"(Erkunden) Was denkst du über das Dorf?"',
                 iSayThinkAboutTower: '"(Erkunden) Wie findest du den Turm?"',
                 iSayAskAboutPeople: "(Erkunden) Wo sind alle?",
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp08HidingPlaceFactoryElement3 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers3, "choicesCSSclass");
 
@@ -122,7 +122,7 @@ namespace Spiegel_VN {
                     await ƒS.Speech.tell(characters.maincharacter, "Du erklärst ihm nochmal, dass niemand genau weiß, woher die Farbe stammt. Flynn wirkt aber desinteressiert und zupft an einem Grashalm.");
                     ƒS.Speech.clear();
                     break;
-                
+
                 case Chp08HidingPlaceFactoryElementAnswers3.iSayThinkAboutTower:
                     ƒS.Character.hideAll();
                     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
@@ -136,7 +136,7 @@ namespace Spiegel_VN {
                     await ƒS.Speech.tell(characters.maincharacter, "Kailani scheint nicht seine erste Priorität zu sein.");
                     ƒS.Speech.clear();
                     break;
-                
+
                 case Chp08HidingPlaceFactoryElementAnswers3.iSayAskAboutPeople:
                     ƒS.Character.hideAll();
                     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(70, 100));
@@ -168,52 +168,51 @@ namespace Spiegel_VN {
                     ƒS.Speech.clear();
                     break;
             }
-            } while (!dataForSave.pickedChp08HidingPlaceContinue);
+        } while (!dataForSave.pickedChp08HidingPlaceContinue);
 
-                    await ƒS.Speech.tell(characters.maincharacter, "Flynn zeigt aufgeregt in die Tiefe. Weit unten, neben dem Turm, strömen Menschen aus einem großen Gebäude.");
-                    await ƒS.Speech.tell(characters.maincharacter, '"Die sind auch alle grau! Guck mal, wie viele da herauskommen. Was haben die da drin wohl gemacht?"');
-                    await ƒS.Speech.tell(characters.maincharacter, "Du und Flynn schaut verwundert zu, wie immer mehr graue Menschen aus dem Bau kommen.");
-                    await ƒS.Speech.tell(characters.maincharacter, '"Die gehen alle in die Häuser! Siehst du das auch?"');
-                    await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich verschwinden die kleinen Figuren, eine nach der anderen, in den Häuschen, die vorhin so still und leer wirkten.");
-                    await ƒS.Speech.tell(characters.Flynn, '"Da wohnen sie also! Schau, ist doch alles in Ordnung. In den Turm ist aber niemand gegangen …"');
-                    await ƒS.Speech.tell(characters.maincharacter, '"Viel interessanter ist doch, dass Kailani vielleicht unter diesen Menschen war! Sie ist womöglich jetzt in einem der Häuser? Ich muss sofort von hier runter!"');
-                    await ƒS.Speech.tell(characters.Flynn, '"Okay, warte mal. Wir sind doch erst hier hochgekrochen und haben uns ein Lager gemacht. Außerdem wird es gleich dunkel, und nachts will ich eigentlich nicht durch das Geisterdorf streichen, auch wenn wir nun wissen, dass es Menschen gibt."');
-                    await ƒS.Speech.tell(characters.Flynn, '"Wer weiß, wie die drauf sind? Lieber legen wir uns etwas hin und ruhen uns aus."');
+        await ƒS.Speech.tell(characters.maincharacter, "Flynn zeigt aufgeregt in die Tiefe. Weit unten, neben dem Turm, strömen Menschen aus einem großen Gebäude.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Die sind auch alle grau! Guck mal, wie viele da herauskommen. Was haben die da drin wohl gemacht?"');
+        await ƒS.Speech.tell(characters.maincharacter, "Du und Flynn schaut verwundert zu, wie immer mehr graue Menschen aus dem Bau kommen.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Die gehen alle in die Häuser! Siehst du das auch?"');
+        await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich verschwinden die kleinen Figuren, eine nach der anderen, in den Häuschen, die vorhin so still und leer wirkten.");
+        await ƒS.Speech.tell(characters.Flynn, '"Da wohnen sie also! Schau, ist doch alles in Ordnung. In den Turm ist aber niemand gegangen …"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Viel interessanter ist doch, dass Kailani vielleicht unter diesen Menschen war! Sie ist womöglich jetzt in einem der Häuser? Ich muss sofort von hier runter!"');
+        await ƒS.Speech.tell(characters.Flynn, '"Okay, warte mal. Wir sind doch erst hier hochgekrochen und haben uns ein Lager gemacht. Außerdem wird es gleich dunkel, und nachts will ich eigentlich nicht durch das Geisterdorf streichen, auch wenn wir nun wissen, dass es Menschen gibt."');
+        await ƒS.Speech.tell(characters.Flynn, '"Wer weiß, wie die drauf sind? Lieber legen wir uns etwas hin und ruhen uns aus."');
 
-                    let Chp08HidingPlaceFactoryElementAnswers4 = {
-                        iSayDefiant: "Trotzig",
-                        iSayGiveIn: "Einlenken",
-                        iSaySilent: "Schweigen",
-            };
-                        let Chp08HidingPlaceFactoryElement4 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers4, "choicesCSSclass");
+        let Chp08HidingPlaceFactoryElementAnswers4 = {
+            iSayDefiant: "Trotzig",
+            iSayGiveIn: "Einlenken",
+            iSaySilent: "Schweigen"
+        };
+        let Chp08HidingPlaceFactoryElement4 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers4, "choicesCSSclass");
 
-                    switch (Chp08HidingPlaceFactoryElement4) {
-                        case Chp08HidingPlaceFactoryElementAnswers4.iSayDefiant:
-                            await ƒS.Speech.tell(characters.maincharacter, '"Meine Schwester ist da unten! Und ich soll sie nicht suchen gehen? Das ist doch Blödsinn!"');
-                            ƒS.Speech.clear();
-                            break;
-                        
-                        case Chp08HidingPlaceFactoryElementAnswers4.iSayGiveIn:
-                            await ƒS.Speech.tell(characters.maincharacter, '"Hast ja recht … müde bin ich schon. Und ganz geheuer ist mir das Dorf immer noch nicht."');
-                            ƒS.Speech.clear();
-                            break;
-                        
-                        case Chp08HidingPlaceFactoryElementAnswers4.iSaySilent:
-                            await ƒS.Speech.tell(characters.maincharacter, "Du schweigst. Natürlich hat er recht.");
-                            ƒS.Speech.clear();
-                            break;
-                     
-                    }
+        switch (Chp08HidingPlaceFactoryElement4) {
+            case Chp08HidingPlaceFactoryElementAnswers4.iSayDefiant:
+                await ƒS.Speech.tell(characters.maincharacter, '"Meine Schwester ist da unten! Und ich soll sie nicht suchen gehen? Das ist doch Blödsinn!"');
+                ƒS.Speech.clear();
+                break;
+
+            case Chp08HidingPlaceFactoryElementAnswers4.iSayGiveIn:
+                await ƒS.Speech.tell(characters.maincharacter, '"Hast ja recht … müde bin ich schon. Und ganz geheuer ist mir das Dorf immer noch nicht."');
+                ƒS.Speech.clear();
+                break;
+
+            case Chp08HidingPlaceFactoryElementAnswers4.iSaySilent:
+                await ƒS.Speech.tell(characters.maincharacter, "Du schweigst. Natürlich hat er recht.");
+                ƒS.Speech.clear();
+                break;
+
+        }
         ƒS.Character.hideAll();
-                    await ƒS.Speech.tell(characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
-                    // await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
-                    await ƒS.Speech.tell(characters.maincharacter, "Du bist dir sicher, Kailani hier näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
+        await ƒS.Speech.tell(characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
+        // await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du bist dir sicher, Kailani hier näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
 
-            await ƒS.Location.show(locations.black);
+        await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         return "09_Enter factory";
-        } 
     }
+}
 
 
-      

@@ -9,7 +9,7 @@ namespace Spiegel_VN {
 
     let Chp03ChoresKailaniElementAnswers = {
       PickSceneWaterwell: "Wasser holen gehen.",
-      PickSceneWoodChopping: "Holz hacken.",
+      PickSceneWoodChopping: "Holz hacken."
     };
 
     let Chp03ChoresKailaniElement = await ƒS.Menu.getInput(
@@ -28,7 +28,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp03ChoresKailaniElementAnswers.PickSceneWoodChopping:
-        await ƒS.Sound.fade(soundeffects.wood, 0.8, 1, false)
+        await ƒS.Sound.fade(soundeffects.wood, 0.8, 1, false);
         await ƒS.Location.show(locations.Chp03_021_FirewoodKailani);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
@@ -46,16 +46,16 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_angry, ƒS.positionPercent(45, 100));
     ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Ach, lass mich in Ruhe!"');
+    await ƒS.Speech.tell(characters.Kailani, '"Ach, lass mich in Ruhe!"');
     await ƒS.Speech.tell(characters.maincharacter, "Oh je. Da musst du wohl anders ran.");
 
 
     let Chp03ChoresKailaniElementAnswers1 = {
       iSayWorried: "Besorgt",
-      iSayTrusting: "Vertraut",
+      iSayTrusting: "Vertraut"
     };
 
-    let Chp03ChoresKailaniElement1 = await ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers1,"choicesCSSclass");
+    let Chp03ChoresKailaniElement1 = await ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers1, "choicesCSSclass");
 
     // *** RESPONSES ***
     switch (Chp03ChoresKailaniElement1) {
@@ -77,18 +77,18 @@ namespace Spiegel_VN {
         break;
     }
 
-      await ƒS.Speech.tell(characters.Kailani, '"Also, dieser Spiegel. Der von Mutti. Der ist halt echt toll. Ich kann mir so viel wünschen, wie ich will, und er zeigt es mir! Verstehst du, was ich meine?"');
+    await ƒS.Speech.tell(characters.Kailani, '"Also, dieser Spiegel. Der von Mutti. Der ist halt echt toll. Ich kann mir so viel wünschen, wie ich will, und er zeigt es mir! Verstehst du, was ich meine?"');
 
-      let Chp03ChoresKailaniElementAnswers11 = {
+    let Chp03ChoresKailaniElementAnswers11 = {
           iSayGood: '"Klingt gut"',
           iSayBother: '"Stört dich etwas?"',
-          iSaySilent: "Nicken und schweigen",
+          iSaySilent: "Nicken und schweigen"
         };
 
-        let Chp03ChoresKailaniElement11 = await ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers11,"choicesCSSclass");
+    let Chp03ChoresKailaniElement11 = await ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers11, "choicesCSSclass");
 
         // *** RESPONSES ***
-        switch (Chp03ChoresKailaniElement11) {
+    switch (Chp03ChoresKailaniElement11) {
           case Chp03ChoresKailaniElementAnswers11.iSayGood:
             await ƒS.Speech.tell(characters.maincharacter, '"Das klingt doch gut, oder? Dann macht er genau das, was er soll."');
             ƒS.Character.hideAll();
@@ -112,7 +112,7 @@ namespace Spiegel_VN {
             await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
             ƒS.Speech.clear();
-        break;
+            break;
 
           case Chp03ChoresKailaniElementAnswers11.iSayBother:
             ƒS.Character.hideAll();
@@ -138,7 +138,7 @@ namespace Spiegel_VN {
             await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
             ƒS.Speech.clear();
-        break;
+            break;
 
           case Chp03ChoresKailaniElementAnswers11.iSaySilent:
             await ƒS.Speech.tell(characters.Kailani, '"Das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
@@ -151,7 +151,7 @@ namespace Spiegel_VN {
             await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
             await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
             await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
-           ƒS.Character.hideAll();
+            ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
             await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
@@ -162,4 +162,4 @@ namespace Spiegel_VN {
     
     return "03_00 New day";
     }
-  };
+  }

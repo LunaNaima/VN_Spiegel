@@ -32,12 +32,12 @@ WitchInTheWoods: {
     },
     Chp01_CS_ArrivalHome: {
       name: "House from outside",
-      background: "./Assets/Backgrounds/Chapter02/Cottage_Outside.png",
+      background: "./Assets/Backgrounds/Chapter02/Cottage_Outside.png"
       // night: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
     },
     Chp01_CS_ArrivalHomeNight: {
       name: "House from outside",
-      background: "./Assets/Backgrounds/Chapter05/House_ext_night.png",
+      background: "./Assets/Backgrounds/Chapter05/House_ext_night.png"
     },
 
     // *** CHAPTER 02 ***
@@ -49,12 +49,12 @@ WitchInTheWoods: {
 
     Chp02_02_LivingRoom: {
       name: "Living room",
-      background: "./Assets/Backgrounds/Chapter02/LivingRoom.png",
+      background: "./Assets/Backgrounds/Chapter02/LivingRoom.png"
       // night: "./Assets/Backgrounds/Chapter02/LivingRoom_night.png"
     },
     Chp02_02_LivingRoomNight: {
       name: "Living room",
-      background: "./Assets/Backgrounds/Chapter05/LivingRoom_night.png",
+      background: "./Assets/Backgrounds/Chapter05/LivingRoom_night.png"
     },
 
     Chp02_03_PickHerbs: {
@@ -486,5 +486,5 @@ WitchInTheWoods: {
       background: "./Assets/Transitions/Black.png"
     }
   };
-};
+}
 

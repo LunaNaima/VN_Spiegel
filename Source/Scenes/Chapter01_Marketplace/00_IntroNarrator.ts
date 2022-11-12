@@ -1,8 +1,8 @@
 namespace Spiegel_VN {
   export async function Chp01_00_IntroNarration(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.WitchInTheWoods);
-    await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, false)
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.Sound.fade(soundeffects.cracklingfire, 0.1, 1, false);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(
       characters.narrator.name,
@@ -36,7 +36,7 @@ namespace Spiegel_VN {
 
     await ƒS.Location.show(locations.Chp01_01_IntroMarketplace);
 
-    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(
       characters.narrator.name,

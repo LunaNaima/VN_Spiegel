@@ -1,13 +1,13 @@
 namespace Spiegel_VN {
   export async function Chp01_01_IntroMarketplace(): ƒS.SceneReturn {
-    await ƒS.Location.show(locations.Chp01_01_IntroMarketplace); 
-        await ƒS.Sound.fade(soundeffects.cracklingfire, 0, 0, false)
+    await ƒS.Location.show(locations.Chp01_01_IntroMarketplace);
+    await ƒS.Sound.fade(soundeffects.cracklingfire, 0, 0, false);
 
     await ƒS.Sound.fade(music.theme_ordinaryworld, 0.5, 1, true);
 
 
-    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
-    
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+
     // ***TEST-INVENTORY***
     // ƒS.Inventory.add(inventory.apple);
     // await ƒS.Inventory.open;
@@ -24,7 +24,7 @@ namespace Spiegel_VN {
     // );
 
     // ***BEGINN SZENE***
-    await ƒS.Character.show(characters.Mama,characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70,115));
+    await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70, 115));
     ƒS.update();
 
     let randomTextChp01Marketplace = ƒ.Random.default.getRangeFloored(1, 5); //gerundet
@@ -76,13 +76,13 @@ namespace Spiegel_VN {
     let Chp01PickSceneElementAnswers = {
       PickSceneConvoMother: "Rede mit Mama.",
       PickSceneMirrorMerchant: "Was glitzert so da hinten?",
-      PickSceneExploreFlowerMerchant:"(Erkunden) Was gibt es Neues beim Blumenhändler?",
+      PickSceneExploreFlowerMerchant: "(Erkunden) Was gibt es Neues beim Blumenhändler?",
       PickSceneExploreLeatherMerchant: "(Erkunden) Was gibt es Neues beim Lederhändler?",
-      PickSceneContinue: "Weiter",
+      PickSceneContinue: "Weiter"
     };
 
     if (
-      !dataForSave.pickedChp01_ConvoMother || 
+      !dataForSave.pickedChp01_ConvoMother ||
       !dataForSave.pickedChp01_MirrorMerchant
     ) {
       delete Chp01PickSceneElementAnswers.PickSceneContinue;
@@ -103,14 +103,14 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (Chp01SceneElement) {
       case Chp01PickSceneElementAnswers.PickSceneConvoMother:
-        await ƒS.Speech.tell(characters.maincharacter.name,'"Warte kurz, Mama!"');
+        await ƒS.Speech.tell(characters.maincharacter.name, '"Warte kurz, Mama!"');
         // dataForSave.scoreEmpathyPoints += 10;
         ƒS.Speech.clear();
         return "01_02 Conversation Mama";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneMirrorMerchant:
-        await ƒS.Speech.tell(characters.maincharacter.name,'"Ich schau´ mir noch schnell etwas an!"');
+        await ƒS.Speech.tell(characters.maincharacter.name, '"Ich schau´ mir noch schnell etwas an!"');
         ƒS.Speech.clear();
         ƒS.Character.hide(characters.Mama);
         return "01_03 MirrorMerchant";

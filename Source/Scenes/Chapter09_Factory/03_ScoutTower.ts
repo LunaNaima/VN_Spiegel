@@ -1,6 +1,6 @@
 namespace Spiegel_VN {
   export async function Chp09_ScoutTower(): ƒS.SceneReturn {
-    await ƒS.Location.show(locations.Chp10_TowerOutside)
+    await ƒS.Location.show(locations.Chp10_TowerOutside);
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_neutral, ƒS.positionPercent(70, 100));
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -19,19 +19,19 @@ namespace Spiegel_VN {
       let Chp09ScoutTowerElementAnswers = {
         iSayClimb: "(Erkunden) Hochklettern",
         iSayBirds: "(Erkunden) Vögel rufen",
-        iSayFlynn: "(Erkunden) Flynn schicken",
+        iSayFlynn: "(Erkunden) Flynn schicken"
       };
       let Chp09ScoutTowerElement = await ƒS.Menu.getInput(Chp09ScoutTowerElementAnswers, "choicesCSSclass");
 
       switch (Chp09ScoutTowerElement) {
         case Chp09ScoutTowerElementAnswers.iSayClimb:
           ƒS.Character.hideAll();
-    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_angry, ƒS.positionPercent(70, 100));
-    ƒS.update();
+          await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_angry, ƒS.positionPercent(70, 100));
+          ƒS.update();
           await ƒS.Speech.tell(characters.Flynn, '"Bist du verrückt! Niemals klettere ich an dem Ding hoch."');
           ƒS.Speech.clear();
           break;
-        
+
         case Chp09ScoutTowerElementAnswers.iSayBirds:
           dataForSave.pickedChp09ScoutTowerBirds = true;
           await ƒS.Speech.tell(characters.maincharacter, '"Ich rufe meine Vogelfreunde! Sie können hochfliegen und mir berichten, was sie durch die Fenster sehen!"');
@@ -48,15 +48,15 @@ namespace Spiegel_VN {
     } while (!dataForSave.pickedChp09ScoutTowerBirds);
 
     await ƒS.Speech.tell(characters.maincharacter, "Du rufst deine Vögelfreunde.");
-    await ƒS.Location.show(locations.Chp10_TowerOutsideBirds)
+    await ƒS.Location.show(locations.Chp10_TowerOutsideBirds);
     await ƒS.Sound.fade(soundeffects.birds, 0.1, 1, true);
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Die Vögel schaffen es, mit ihrer bloßen Anwesenheit dir einen kleinen Teil deiner Sorgen zu nehmen.");
     await ƒS.Speech.tell(characters.maincharacter, '"Bitte, schaut doch mal nach, was sich in dem Turm verbirgt! Wir glauben, dort liegt der Schlüssel zu Kailanis Befreiung."');
     await ƒS.Speech.tell(characters.maincharacter, "Die Vögel zwitschern und fliegen hoch, um den Turm zu umkreisen. Drei Mal umrunden sie den Turm und landen wieder vor deinen Füßen.");
     await ƒS.Speech.tell(characters.maincharacter, "Welche Worte kannst du durch das Gezwitscher hören? Schreibe die Worte mit Komma dazwischen in das Feld.");
-    
-    
+
+
 
     await ƒS.Sound.fade(soundeffects.listeningriddle_demon, 1, 1, false);
     ƒS.update();
@@ -75,17 +75,17 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Und das Spiegelzimmer müssen wir zerstören! Hast du die Vögel gehört, Flynn? Wir können es schaffen, ich bin mir sicher! Wir müssen diese Spiegel ein für alle Mal zerstören. Dann können wir nach Hause."');
-    
+
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_smile, ƒS.positionPercent(70, 100));
     ƒS.update();
-    
+
     await ƒS.Speech.tell(characters.Flynn, '"Die Spiegel zerstören? Eh– ja, auf jeden Fall! Kailani, wir kommen!"');
     ƒS.Character.hideAll();
     await ƒS.Speech.tell(characters.maincharacter, "Er stürmt Richtung Turm. Du schaust ihm verwirrt hinterher. Er klang nicht so euphorisch und erleichtert, eher beklommen.");
 
 
     ƒS.Sound.fade(soundeffects.birds, 0, 0, false);
-    }  
   }
+}
 

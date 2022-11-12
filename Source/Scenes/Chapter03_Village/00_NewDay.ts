@@ -1,12 +1,12 @@
 namespace Spiegel_VN {
   export async function Chp03_00_NewDay(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.black);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-    await ƒS.Location.show(locations.Chp02_02_LivingRoom)
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.Location.show(locations.Chp02_02_LivingRoom);
     ƒS.Character.hideAll();
     await ƒS.update();
-      
-      // ** RANDOM TEXT ***
+
+    // ** RANDOM TEXT ***
     let randomTextChp03NewDay = ƒ.Random.default.getRangeFloored(1, 4);
     switch (randomTextChp03NewDay) {
       case 1:
@@ -44,7 +44,7 @@ namespace Spiegel_VN {
       PickSceneChoresWithKailani: "Mit Kailani Hausarbeiten machen",
       PickSceneDiscoverForest: "(Erkunden) Im Wald rumgucken",
       PickSceneDiscoverLibrary: "(Erkunden) Die Bücherei erkunden",
-      PickSceneContinue: "Weiter",
+      PickSceneContinue: "Weiter"
     };
 
     if (
@@ -96,7 +96,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp03PickSceneElementAnswers.PickSceneContinue:
-        await ƒS.Speech.tell("","");
+        await ƒS.Speech.tell("", "");
         ƒS.Speech.clear();
         return "03_CS Kailani is missing";
         break;

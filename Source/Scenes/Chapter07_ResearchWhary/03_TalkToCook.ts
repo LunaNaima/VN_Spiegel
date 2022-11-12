@@ -1,11 +1,11 @@
 namespace Spiegel_VN {
   export async function Chp07_TalkToCook(): ƒS.SceneReturn {
     dataForSave.pickedChp07TalkToCook = true;
-   
+
     let Chp07CookElementAnswers = {
       iSayOffended: "Beleidigt",
       iSaySad: "Traurig",
-      iSayAngry: "Wütend",
+      iSayAngry: "Wütend"
     };
 
     let Chp07CookElement = await ƒS.Menu.getInput(Chp07CookElementAnswers, "choicesCSSclass");
@@ -18,7 +18,7 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         return "07_TalkToCook";
         break;
-      
+
       case Chp07CookElementAnswers.iSaySad:
         await ƒS.Speech.tell(characters.maincharacter, '"Ich vermisse sie unglaublich und mache mir sehr große Sorgen."');
         await ƒS.Speech.tell(characters.Cook, '"Ich hab’ auch ‘ne kleine Schwester. Weißt du, ob sie wirklich in der Stadt ist?"');
@@ -49,7 +49,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Cook, '"Aber jetzt – in Luft aufgelöst. Die meisten wollen davon aber nichts hören. Solange die ihre Farbe kriegen und sich aufpolstern und im Spiegel anglotzen können, ist denen alles egal. Aber nicht mir und meinem Kreis!"');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp07CookElementAnswers.iSayAngry:
         await ƒS.Speech.tell(characters.maincharacter, '"Ich bin extra hierhergereist, um Kailani zu suchen! Wieso redest du nicht mit mir? Du könntest dir doch wenigstens meine Geschichte anhören …"');
         await ƒS.Speech.tell(characters.Cook, '"Schon. Aber ich kann dir, glaube ich, nicht helfen."');
@@ -63,7 +63,7 @@ namespace Spiegel_VN {
         iSayGhost: '"(Erkunden) Was macht der Geist?"',
         iSayColor: '"(Erkunden) Woher kam die Farbe?"',
         iSayPeople: '"(Erkunden) Was macht das Volk?"',
-        iSayContinue: "Weiter",
+        iSayContinue: "Weiter"
       };
 
       // if (
@@ -83,19 +83,19 @@ namespace Spiegel_VN {
           await ƒS.Speech.tell(characters.Cook, '"Wir sind uns sicher, dass ein Geist da oben sitzt und Farbe frisst."');
           ƒS.Speech.clear();
           break;
-        
+
         case Chp07CookElementAnswers2.iSayColor:
           dataForSave.pickedChp07CookpickedColor = true;
           await ƒS.Speech.tell(characters.Cook, '"Nja, das ist eben die Frage! Das weiß keiner …"');
           ƒS.Speech.clear();
           break;
-        
+
         case Chp07CookElementAnswers2.iSayPeople:
           dataForSave.pickedChp07CookpickedPeople = true;
           await ƒS.Speech.tell(characters.Cook, '"Nichts, das ist es ja eben! Bestaunt sich im Spiegel, und das war’s."');
           ƒS.Speech.clear();
           break;
-        
+
         case Chp07CookElementAnswers2.iSayContinue:
           dataForSave.pickedChp07CookpickedContinue = true;
           await ƒS.Speech.tell(characters.maincharacter, "Das Klappern von Pfannen stört euer Gespräch.");
@@ -105,7 +105,7 @@ namespace Spiegel_VN {
           ƒS.Speech.clear();
           return "06_new day";
           break;
-      } 
+      }
     } while (!dataForSave.pickedChp07CookpickedContinue);
   }
 }

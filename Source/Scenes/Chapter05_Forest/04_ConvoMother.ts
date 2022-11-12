@@ -23,7 +23,7 @@ namespace Spiegel_VN {
     let Chp05ConvoMotherElementAnswers = {
       iSayLie: "Lügen",
       iSayDistract: "Ablenken",
-      iSayExplain: "Erklären",
+      iSayExplain: "Erklären"
     };
 
     let Chp05PickSceneElement = await ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers, "choicesCSSclass");
@@ -35,14 +35,14 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss allein los!"');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoMotherElementAnswers.iSayDistract:
         await ƒS.Speech.tell(characters.maincharacter, '"Was habt ihr denn im Dorf herausgefunden?"');
         await ƒS.Speech.tell(characters.Mama, '"Nicht viel, niemand hat Kailani gesehen. Komm jetzt ins Bett!"');
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss jetzt los."');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoMotherElementAnswers.iSayExplain:
         await ƒS.Speech.tell(characters.maincharacter, '"Kailani ist in dem Spiegel gefangen! Ich muss dorthin reisen, sie rausholen und –"');
         await ƒS.Speech.tell(characters.Mama, '"Schon wieder dieser Spiegel! Woher willst du das wissen? Wir sind doch nicht im Märchen! Auf ins Bett jetzt."');
@@ -50,9 +50,9 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         break;
     }
-    
+
     await ƒS.Speech.tell(characters.maincharacter, '"Bitte glaub’ und vertrau’ mir doch, Mama! Ich bin kein Kind mehr und weiß, was ich tue. Nur weil du es nicht mitkriegst, heißt es nicht, dass ich nicht erwachsen werde!"');
-      
+
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_shocked, ƒS.positionPercent(80, 100));
     ƒS.update();
@@ -60,7 +60,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Mama schweigt und du erkennst, dass du sie verletzt hast.");
     await ƒS.Speech.tell(characters.maincharacter, '"Es tut mir leid, das wollte ich nicht –"');
 
- ƒS.Character.hideAll();
+    ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_hand_neutral, ƒS.positionPercent(80, 100));
     ƒS.update();
 
@@ -70,7 +70,7 @@ namespace Spiegel_VN {
 
     let Chp05ConvoMotherElementAnswers2 = {
       iSayTake: "Annehmen",
-      iSayRefuse: "Nicht annehmen",
+      iSayRefuse: "Nicht annehmen"
     };
 
     let Chp05PickSceneElement2 = await ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers2, "choicesCSSclass");
@@ -81,25 +81,25 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Vielen Dank, Mama."');
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoMotherElementAnswers2.iSayRefuse:
         await ƒS.Speech.tell(characters.maincharacter, '"Deine Halskette ist dein Ein und Alles! Die kann ich nicht annehmen."');
         ƒS.Speech.clear();
         break;
     }
 
-        await ƒS.Speech.tell(characters.maincharacter, '"Ich bin bald wieder da und bringe Kailani nach Hause."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin bald wieder da und bringe Kailani nach Hause."');
     await ƒS.Speech.tell(characters.Mama, '"Bitte pass’ auf dich auf. Wir warten auf euch!"');
     ƒS.Character.hideAll();
     ƒS.update();
-        await ƒS.Speech.tell(characters.maincharacter, "Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");
-        await ƒS.Speech.tell(characters.maincharacter, "Das Geräusch tut dir im Herzen weh. Dir kommt das alles surreal vor. Aber packen solltest du trotzdem. Was willst du mitnehmen? Du kannst nur eine Sache einpacken!");
-    
-    
-     let Chp05ConvoMotherElementAnswers3 = {
+    await ƒS.Speech.tell(characters.maincharacter, "Ein leiser Schluchzer dringt durch das dunkle Zimmer, als sie die Treppen wieder hinauf geht.");
+    await ƒS.Speech.tell(characters.maincharacter, "Das Geräusch tut dir im Herzen weh. Dir kommt das alles surreal vor. Aber packen solltest du trotzdem. Was willst du mitnehmen? Du kannst nur eine Sache einpacken!");
+
+
+    let Chp05ConvoMotherElementAnswers3 = {
       iSaySeeds: "Sonnenblumenkerne",
-       iSayFood: "Vesper",
-      iSayCloak: "Dunkler Umhang",
+      iSayFood: "Vesper",
+      iSayCloak: "Dunkler Umhang"
 
     };
 
@@ -111,49 +111,49 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, "Mit den Kernen kannst du die Vögel anlocken. Gute Entscheidung!");
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoMotherElementAnswers3.iSayFood:
-          dataForSave.pickedChp05Food = true;
+        dataForSave.pickedChp05Food = true;
         await ƒS.Speech.tell(characters.maincharacter, "Etwas zu essen ist immer eine gute Idee.");
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoMotherElementAnswers3.iSayCloak:
         dataForSave.pickedChp05Cloak = true;
         await ƒS.Speech.tell(characters.maincharacter, "Vielleicht ist es in der Spiegelwelt kalt, oder du willst unentdeckt bleiben? Eine gute Wahl.");
         ƒS.Speech.clear();
         break;
-      
+
     }
-    
+
     await ƒS.Speech.tell(characters.maincharacter, "Die Kirchenglocken im Dorf schlagen 23 Uhr. Bevor du den Mut verlierst, drehst du dich um und verlässt das Haus.");
-await ƒS.Location.show(locations.Chp01_CS_ArrivalHomeNight);
+    await ƒS.Location.show(locations.Chp01_CS_ArrivalHomeNight);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        await ƒS.Speech.tell(characters.maincharacter, "Du schwörst dir, zurückzukommen, zurück nach Hause.");
+    await ƒS.Speech.tell(characters.maincharacter, "Du schwörst dir, zurückzukommen, zurück nach Hause.");
 
     await ƒS.Location.show(locations.Chp05_Forestpath);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-        await ƒS.Speech.tell(characters.maincharacter, "Der Wald ist still. Das Knacken deiner Schuhe auf Ästen ist das einzige Geräusch, das du hörst.");
+    await ƒS.Speech.tell(characters.maincharacter, "Der Wald ist still. Das Knacken deiner Schuhe auf Ästen ist das einzige Geräusch, das du hörst.");
 
     await ƒS.Location.show(locations.Chp05_River);
     ƒS.Sound.fade(soundeffects.water, 0.5, 1, false);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 
     await ƒS.Speech.tell(characters.maincharacter, "Beim Fluss angekommen, hältst du an. Du ziehst den Spiegel aus deiner Tasche und schaust hinein. Er ist immer noch blank.");
     await ƒS.Speech.tell(characters.maincharacter, "Mit dem Spiegel gerüstet kniest du dich an das Flussufer. Du versuchst, das Spiegelbild des Mondes im Wasser damit einzufangen. Wie soll das denn gehen, wenn der Spiegel blank ist?");
     await ƒS.Speech.tell(characters.maincharacter, "Doch plötzlich blitzt es auf: der Mond ist nun auch im Handspiegel zu sehen. Dort glitzert er ebenso so schön wie auf dem Wasser und am Himmel. Wie ging der Spruch nochmal?");
 
-let Chp05ConvoMotherElementAnswers4 = {
-      iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein",
+    let Chp05ConvoMotherElementAnswers4 = {
+      iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein"
     };
 
     let Chp05PickSceneElement4 = await ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Ich wünsche mir, in die Spiegelwelt zu reisen!"');
-await ƒS.Location.show(locations.black);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+    await ƒS.Location.show(locations.black);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
 
     return "06_CS Arrival Meadow";

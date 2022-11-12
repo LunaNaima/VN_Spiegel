@@ -7,7 +7,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Ihr steht in der Ecke einer gewaltigen Halle, in der es nur so vor Beschäftigten wuselt. In einzelnen Kammern stehen Menschen mit farbigen Klamotten vor großen Spiegeln, während viele in grauen Kutten geschäftig hin und her laufen.");
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_shocked, ƒS.positionPercent(85, 100));
     ƒS.update();
-    
+
     await ƒS.Speech.tell(characters.maincharacter, '"Das ist … die Fabrik! Von der die Bettlerin gesprochen hat! Was ist hier los?"');
     await ƒS.Speech.tell(characters.Flynn, '"Es sieht aus, als ob sie etwas vorführen …"');
     await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich: Die Menschen drehen und wenden sich in den Spiegelkammern. Sie flattern mit den Armen oder schwingen ihre Hüften, zeigen ihre Muskeln oder fahren sich durch glänzende Haare. Die Bewegungen kommen dir bekannt vor, aber du kannst es gerade nicht zuordnen. Plötzlich –");
@@ -16,7 +16,7 @@ namespace Spiegel_VN {
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani!!! Da ist sie! KAILANI!"');
     await ƒS.Speech.tell(characters.maincharacter, "Deine Schwester steht in der Schlange mit den anderen Kuttentragenden. Sie sieht nicht auf, als du ihren Namen rufst. Sie sieht erschöpft und fast gebrochen aus, Zustände, in denen du sie noch nie gesehen hast. Du willst losrennen und sie holen, doch Flynn hält deinen Ärmel fest.");
-    
+
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(85, 100));
     ƒS.update();
@@ -50,12 +50,12 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Genau, in dem magischen Spiegel! Warte mal – woher weißt du denn, dass ich einen Handspiegel habe?"');
     await ƒS.Speech.tell(characters.maincharacter, "Flynn tut so, als hätte er dich nicht gehört und schaut weiter angestrengt den Arbeitenden zu. Er kann gar nichts von deinem Spiegel wissen! Das Misstrauen, das heute Morgen erwacht ist, wächst.");
 
-    
+
     do {
       let Chp09InFactoryElementAnswers = {
         iSayListenToGuards: '"(Erkunden) Wachen zuhören"',
         iSayCubicle: '"(Erkunden) Kabine anschauen"',
-        iSayContinue: "Weiter",
+        iSayContinue: "Weiter"
       };
       let Chp09InFactoryElement = await ƒS.Menu.getInput(Chp09InFactoryElementAnswers, "choicesCSSclass");
 
@@ -70,14 +70,14 @@ namespace Spiegel_VN {
           await ƒS.Speech.tell(characters.maincharacter, "Du überlegst fieberhaft. Mit den Sklaven darf man also nicht sprechen! Gut, dass du vorhin nicht Kailani holen wolltest. Und im Turm sitzt ein Mann. Vielleicht der Dämon, von dem der Koch gesprochen hatte?");
           ƒS.Speech.clear();
           break;
-        
+
         case Chp09InFactoryElementAnswers.iSayCubicle:
           await ƒS.Speech.tell(characters.maincharacter, "Du willst dir diese Kabine genauer anschauen. Ein großer Spiegel hängt an der Wand. Als du zuschaust, blitzt eine Landschaft darauf auf. Ein Strand? Auf einmal tritt ein Sklave davor und spannt seine Muskeln an.");
           await ƒS.Speech.tell(characters.maincharacter, "Seine Schultern sind breit. Als er sich dreht, siehst du, dass er vorne ein Polster trägt. Ein Sixpack-Polster umspannt seinen Bauch und lässt ihn gleichzeitig stark und schlank aussehen. Du denkst an die Dorfbewohner daheim.");
           await ƒS.Speech.tell(characters.maincharacter, "Keiner von denen hat ein Sixpack und sicherlich nicht so breite Schultern. Dort achtet auch niemand auf das Äußere. Wichtig ist, dass sich jede Person in die Gemeinschaft integriert und freundlich zu Anderen ist. Die Menschen hier haben wohl jeglichen Bezug zur Gemeinschaft verloren, wenn ihnen das Äußere das Wichtigste ist.");
           ƒS.Speech.clear();
           break;
-        
+
         case Chp09InFactoryElementAnswers.iSayContinue:
           dataForSave.pickedChp09InFactoryContinue = true;
           await ƒS.Speech.tell(characters.maincharacter, '"Flynn, gehen wir. Ich habe genug gesehen. Diese armen Sklaven …"');

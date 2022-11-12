@@ -10,9 +10,9 @@ namespace Spiegel_VN {
 
     let Chp02ElementAnswersPickHerbs = {
       iSaySprinkle: "Streuen",
-      iSayKeep: "Behalten",
+      iSayKeep: "Behalten"
     };
-    
+
     let Chp02Element = await ƒS.Menu.getInput(
       Chp02ElementAnswersPickHerbs,
       "choicesCSSclass"
@@ -25,7 +25,7 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         // return "02_03 Pick Herbs";
         break;
-          
+
       case Chp02ElementAnswersPickHerbs.iSayKeep:
         dataForSave.pickedSeeds = true;
         await ƒS.Speech.tell(characters.maincharacter, "Du steckst die Samen wieder in die Tasche. Wer weiß, ob du sie noch für etwas gebrauchen kannst.");
@@ -34,36 +34,36 @@ namespace Spiegel_VN {
         break;
     }
 
-        await ƒS.Speech.tell(characters.maincharacter, "Die Kräuter sehen für die Jahreszeit schon gut aus. Du bückst dich, um ein paar Basilikumblätter abzuzupfen, als du eine Tür knallen hörst.");
-        await ƒS.Location.show(locations.Chp02_04_FightNeighborNeighbors);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        
-        await ƒS.Speech.tell("Nachbar", '"Henri! Henri, bleib’ doch hier!"');
-        await ƒS.Speech.tell("Nachbarin", '"Mir reichts, Balduin! Den ganzen Tag starrst du schon auf das Ding!"');
-        await ƒS.Speech.tell(characters.maincharacter, "Ach, die Nachbarn streiten schon wieder.");
+    await ƒS.Speech.tell(characters.maincharacter, "Die Kräuter sehen für die Jahreszeit schon gut aus. Du bückst dich, um ein paar Basilikumblätter abzuzupfen, als du eine Tür knallen hörst.");
+    await ƒS.Location.show(locations.Chp02_04_FightNeighborNeighbors);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-        await ƒS.Speech.tell("Nachbar", '"Es tut mir ja leid! Aber Henri, der Spiegel ist doch so schön."');
-        await ƒS.Speech.tell(characters.maincharacter, "Der Spiegel? Redet Balduin etwa von dem magischen Spiegel, den es heute auf dem Markt zu kaufen gab?");
-        await ƒS.Speech.tell("Nachbarin", '"Ja, der ist schön. Das ist doch das Problem. Seit heute Morgen sitzt du davor und tust nichts anderes, als den schönen Spiegel anzustarren."');
-        await ƒS.Speech.tell("Nachbarin", '"Was ist mit dem Holz? Der Karren sollte repariert werden? Und das Essen gekocht? Das waren heute alles deine Aufgaben!"');
-        await ƒS.Speech.tell("Nachbar", '"Henri, ich weiß, tut mir leid! Hör mir doch zu. Ich tu ihn schon weg! Bitte, komm herein. Die Nachbarn schauen doch schon."');
-        await ƒS.Speech.tell(characters.maincharacter, "Nanu, was war denn da los? Balduin kann sich von dem Spiegel nicht losreißen? Sah er auch anders aus als sonst? Vielleicht frage ich Mutti, ob er krank ist. Sie wartet bestimmt schon lange auf die Kräuter, ups.");
+    await ƒS.Speech.tell("Nachbar", '"Henri! Henri, bleib’ doch hier!"');
+    await ƒS.Speech.tell("Nachbarin", '"Mir reichts, Balduin! Den ganzen Tag starrst du schon auf das Ding!"');
+    await ƒS.Speech.tell(characters.maincharacter, "Ach, die Nachbarn streiten schon wieder.");
 
-        let Chp02PickHerbsAnswersContinue = {
-          iSayContinue: "Zurück ins Wohnzimmer",
-        };
-    
-        let Chp02PickHerbsContinue = await ƒS.Menu.getInput(
-          Chp02PickHerbsAnswersContinue,
-          "choicesCSSclass"
-        );
+    await ƒS.Speech.tell("Nachbar", '"Es tut mir ja leid! Aber Henri, der Spiegel ist doch so schön."');
+    await ƒS.Speech.tell(characters.maincharacter, "Der Spiegel? Redet Balduin etwa von dem magischen Spiegel, den es heute auf dem Markt zu kaufen gab?");
+    await ƒS.Speech.tell("Nachbarin", '"Ja, der ist schön. Das ist doch das Problem. Seit heute Morgen sitzt du davor und tust nichts anderes, als den schönen Spiegel anzustarren."');
+    await ƒS.Speech.tell("Nachbarin", '"Was ist mit dem Holz? Der Karren sollte repariert werden? Und das Essen gekocht? Das waren heute alles deine Aufgaben!"');
+    await ƒS.Speech.tell("Nachbar", '"Henri, ich weiß, tut mir leid! Hör mir doch zu. Ich tu ihn schon weg! Bitte, komm herein. Die Nachbarn schauen doch schon."');
+    await ƒS.Speech.tell(characters.maincharacter, "Nanu, was war denn da los? Balduin kann sich von dem Spiegel nicht losreißen? Sah er auch anders aus als sonst? Vielleicht frage ich Mutti, ob er krank ist. Sie wartet bestimmt schon lange auf die Kräuter, ups.");
 
-        switch (Chp02PickHerbsContinue) {
-          case Chp02PickHerbsAnswersContinue.iSayContinue:
-            return "02_00 Arrival Home";
-            break;
-      
-        }
+    let Chp02PickHerbsAnswersContinue = {
+      iSayContinue: "Zurück ins Wohnzimmer"
+    };
+
+    let Chp02PickHerbsContinue = await ƒS.Menu.getInput(
+      Chp02PickHerbsAnswersContinue,
+      "choicesCSSclass"
+    );
+
+    switch (Chp02PickHerbsContinue) {
+      case Chp02PickHerbsAnswersContinue.iSayContinue:
+        return "02_00 Arrival Home";
+        break;
+
     }
   }
+}
 

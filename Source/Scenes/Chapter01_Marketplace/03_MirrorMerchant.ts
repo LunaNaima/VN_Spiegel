@@ -3,7 +3,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp01_03_IntroMirror);
     dataForSave.pickedChp01_MirrorMerchant = true;
     ƒS.Character.hideAll();
-    await ƒS.update(transitions.fade.duration,transitions.fade.alpha,transitions.fade.edge);
+    await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0000);
     await ƒS.Speech.tell(characters.mirrorMerchant.name, dlg_Chp01EntryMirrorMerchant.mirrorMerchant.T0001);
@@ -14,7 +14,7 @@ namespace Spiegel_VN {
     let Chp01MirrorMerchantElementAnswers = {
       iSayUnsure: 'Unsicher',
       iSayYes: 'Aufgeregt',
-      iSayNo: 'Abwehrend',
+      iSayNo: 'Abwehrend'
     };
 
     let Chp01MirrorMerchantElement = await ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers, "choicesCSSclass");
@@ -47,7 +47,7 @@ namespace Spiegel_VN {
     let Chp01MirrorMerchantElementAnswers2 = {
       iSayYes: '"Klar!"',
       iSayUnsure: '"Weiß nicht."',
-      iSayNo: '"Nein"',
+      iSayNo: '"Nein"'
     };
 
     let Chp01MirrorMerchantElement2 = await ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers2, "choicesCSSclass");
@@ -59,13 +59,13 @@ namespace Spiegel_VN {
         // ƒS.Character.hideAll();
         return "01_01 Intro Marketplace";
         break;
-      
+
       case Chp01MirrorMerchantElementAnswers2.iSayUnsure:
         await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0008);
         // ƒS.Character.hideAll();
         return "01_01 Intro Marketplace";
         break;
-      
+
       case Chp01MirrorMerchantElementAnswers2.iSayNo:
         await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0009);
         // ƒS.Character.hideAll();
