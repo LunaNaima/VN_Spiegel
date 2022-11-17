@@ -11,7 +11,7 @@ namespace Spiegel_VN {
     
     if (!dataForSave.pickedIron) {
       return "Semi Good Ending";
-    }; 
+    } 
 
     
     await ƒS.Speech.tell(characters.maincharacter, "Instinktiv greifst du zu dem Hammer. Was für ein Glück, dass du ihn eingesteckt hast! Du schwingst ihn und triffst damit den ersten Spiegel.");
@@ -37,8 +37,8 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "– fast geschafft –");
 
     await ƒS.Sound.fade(soundeffects.glass, 0, 0, false);
-    await ƒS.Location.show(locations.Chp10_MirrorroomGrey)
-ƒS.update();
+    await ƒS.Location.show(locations.Chp10_MirrorroomGrey);
+    ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Um dich herum liegen die Überreste der Spiegel. Sie glitzern nicht mehr. Du hoffst, dass die böse Magie der Spiegel nun ein Ende hat.");
 
     ƒS.Character.hideAll();
@@ -106,7 +106,7 @@ namespace Spiegel_VN {
       let Chp10GoodEndingElementAnswers1 = {
         iSayNoticed: "(Erkunden) Hast du denn nicht bemerkt, dass …",
         iSayGrey: "(Erkunden) Dann bist du ganz grau geworden …",
-        iSayContinue: "Und dann?",
+        iSayContinue: "Und dann?"
       };
       let Chp10GoodEndingElement1 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers1, "choicesCSSclass");
 
@@ -155,7 +155,7 @@ namespace Spiegel_VN {
     let Chp10GoodEndingElementAnswers2 = {
       iSayCareful: "Vorsichtig",
       iSayAccusing: "Vorwurfsvoll",
-      iSayIgnore: "Ignorieren",
+      iSayIgnore: "Ignorieren"
     };
     let Chp10GoodEndingElement2 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers2, "choicesCSSclass");
 
@@ -235,7 +235,7 @@ namespace Spiegel_VN {
           break;
 
       }
-    } while (!dataForSave.pickedChp10GoodEndingContinue2)
+    } while (!dataForSave.pickedChp10GoodEndingContinue2);
     
 
     await ƒS.Speech.tell(characters.maincharacter, "Aber bevor du mehr fragen kannst, erzählt Flynn weiter. Die Worte sprudeln nur so aus ihm heraus, und du hast den Eindruck, ihm fällt eine große Last von den Schultern.");
@@ -282,7 +282,7 @@ namespace Spiegel_VN {
 
     let Chp10GoodEndingElementAnswers4 = {
       iSayTakeFlynn: "Flynn mitnehmen",
-      iSayNotTakeFlynn: "Flynn wegbringen",
+      iSayNotTakeFlynn: "Flynn wegbringen"
     };
     let Chp10GoodEndingElement4 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers4, "choicesCSSclass");
 
@@ -313,17 +313,17 @@ namespace Spiegel_VN {
         let Chp10GoodEndingElementAnswers5 = {
           iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
           iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
 
         };
         let Chp10GoodEndingElement5 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
 
         await ƒS.Location.show(locations.black);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge,);
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
         await ƒS.Location.show(locations.Chp01_CS_ArrivalHome);
-            ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
-            ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
+        ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
+        ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
         ƒS.Character.hideAll();
         ƒS.update();
         
@@ -344,23 +344,23 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Sollen wir dich über den See begleiten? In Whary können Kailani und ich heimreisen, und du kannst weiterreisen?"');
           
         ƒS.Character.hide(characters.Flynn);
-          await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
-         ƒS.Character.hide(characters.Kailani);
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_I_skeptical, ƒS.positionPercent(70, 100));
+        ƒS.Character.hide(characters.Kailani);
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_smile, ƒS.positionPercent(40, 100));
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Das ist eine gute Idee! Vielleicht kann ich beim Gasthof als Kellner anheuern. Mal etwas anderes, als nur kämpfen."');
-await ƒS.Location.show(locations.Chp08_ArrivalFactory);
+        await ƒS.Location.show(locations.Chp08_ArrivalFactory);
         ƒS.update();
 
         await ƒS.Speech.tell(characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn steht am Bug und schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
         await ƒS.Speech.tell(characters.maincharacter, '"Hier sind wir! Vielen Dank für deine Hilfe, Flynn. Vielleicht komm’ ich dich mal besuchen! Und halte die Ohren steif!"');
 
         ƒS.Character.hide(characters.Flynn);
-          await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_shocked, ƒS.positionPercent(70, 100));
-       ƒS.Character.hide(characters.Kailani);
+        await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_shocked, ƒS.positionPercent(70, 100));
+        ƒS.Character.hide(characters.Kailani);
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
-         ƒS.update();
+        ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Das wäre schön! Ich versuche es. Ich sehe die Welt nun mit anderen Augen. Alles wird gut! Bis bald!"');
         
@@ -376,17 +376,17 @@ await ƒS.Location.show(locations.Chp08_ArrivalFactory);
         let Chp10GoodEndingElementAnswers6 = {
           iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
           iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
 
         };
         let Chp10GoodEndingElement6 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
 
         await ƒS.Location.show(locations.black);
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge,);
+        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
         await ƒS.Location.show(locations.Chp01_CS_ArrivalHome);
-            ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
-            ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
+        ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
+        ƒS.Sound.fade(music.theme_ordinaryworld, 0.8, 1, true);
         ƒS.Character.hideAll();
         ƒS.update();
         
