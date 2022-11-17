@@ -39,6 +39,8 @@ canvas {
   background: transparent;
   border: none;
   padding: 0;
+  height: 30%;
+  width: 50%;
 }
 
 .choicesCSSclass button {
@@ -46,11 +48,12 @@ canvas {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
+  background-position: relative;
   color: #fff;
   border: none;
-  height: 49px;
-  width: 200px;
-  margin: 0 10px;
+  height: 50%;
+  width: 20%;
+  margin: 0 2%;
   cursor: pointer;
 }
 
@@ -73,8 +76,8 @@ speech content {
   display: block;
   FONT-VARIANT: JIS04;
   FONT-VARIANT: JIS04;
-  top: 40px;
-  left: 128px;
+  top: 15%;
+  left: 7%;
   font-size: 2.5vmin;
 }
 
@@ -84,12 +87,12 @@ name {
   font-size: 5vmin;
   display: block;
   color: rgb(255, 255, 255);
-  margin-bottom: 6px;
+  margin-bottom: 0, 5%;
   margin-top: 1%;
   margin-left: 5%;
   position: relative;
-  left: 100px;
-  top: 4px;
+  left: 6.5%;
+  top: 2%;
 
 }
 
