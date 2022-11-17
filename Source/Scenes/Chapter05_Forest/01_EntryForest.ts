@@ -4,7 +4,7 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Location.show(locations.Chp05_Forestpath);
-    ƒS.Sound.fade(soundeffects.forest, 0.3,1,true)
+    ƒS.Sound.fade(soundeffects.forest, 0.3, 1, true);
     await ƒS.update();
 
     await ƒS.Speech.tell(characters.maincharacter, "Du betrittst den dunkeln Wald. Du gehst in die Richtung deines alten ‘Spielplatzes’.");
@@ -19,10 +19,10 @@ namespace Spiegel_VN {
     let Chp05PickSceneElementAnswers = {
       iSaySave: "Ich muss Kailani retten!",
       iSayTired: "Ich kann bald nicht mehr …",
-      iSayMistake: "War das alles ein Fehler?",
+      iSayMistake: "War das alles ein Fehler?"
     };
 
-    let Chp05PickSceneElement = await ƒS.Menu.getInput(Chp05PickSceneElementAnswers, "choicesCSSclass");
+    await ƒS.Menu.getInput(Chp05PickSceneElementAnswers, "choicesCSSclass");
 
     await ƒS.Speech.tell(characters.maincharacter, "Schnaufend schleppst du dich von Stamm zu Stamm, über Wurzeln und Gebüsch. Plötzlich stehst du inmitten einer Lichtung.");
     await ƒS.Location.show(locations.Chp05_Wishtree);
@@ -41,7 +41,7 @@ namespace Spiegel_VN {
     let Chp05PickSceneElementAnswers2 = {
       iSayFear: "Ich habe Angst",
       iSayBest: "Ich gebe mein Bestes",
-      iSayKailani: "Ich tue es für Kailani",
+      iSayKailani: "Ich tue es für Kailani"
     };
 
     let Chp05PickSceneElement2 = await ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");

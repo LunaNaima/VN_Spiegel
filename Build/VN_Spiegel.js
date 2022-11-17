@@ -104,7 +104,7 @@ var Spiegel_VN;
         pickedChp10GoodEndingContinue2: false,
         pickedChp10SemiGoodEndingContinue1: false,
         pickedChp10SemiGoodEndingContinue2: false,
-        pickedChp10BadEndingContinue2: false,
+        pickedChp10BadEndingContinue2: false
     };
     Spiegel_VN.inventory = {
         apple: {
@@ -226,7 +226,7 @@ var Spiegel_VN;
             { id: "01_01 Intro Marketplace", scene: Spiegel_VN.Chp01_01_IntroMarketplace, name: "Intro marketplace" },
             { id: "01_E_FlowerMerchant", scene: Spiegel_VN.Chp01_E_FlowerMerchant, name: "E_FlowerMerchant" },
             { id: "01_E_LeatherMerchant", scene: Spiegel_VN.Chp01_E_LeatherMerchant, name: "E_LeatherMerchant" },
-            { id: "01_02 Conversation Mama", scene: Spiegel_VN.Chp01_02_ConvoMother, name: "ConvoMother", },
+            { id: "01_02 Conversation Mama", scene: Spiegel_VN.Chp01_02_ConvoMother, name: "ConvoMother" },
             { id: "01_03 MirrorMerchant", scene: Spiegel_VN.Chp01_03_IntroMirror, name: "IntroMirror" },
             // *** CUTSCENES CHP01***
             { id: "01_CS PerchaseMirror", scene: Spiegel_VN.Chp01_CS_PerchaseMirror, name: "CS: PerchaseMirror" },
@@ -271,7 +271,7 @@ var Spiegel_VN;
             { id: "07_TalkToCook", scene: Spiegel_VN.Chp07_TalkToCook, name: "Talk to cook" },
             // // *** CHAPTER 10: CROSSING LAKE ***
             { id: "08_Arrival lake", scene: Spiegel_VN.Chp08_ArrivalLake, name: "Arrival at lake" },
-            { id: "08_ImageRiddle", scene: Spiegel_VN.Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake", },
+            { id: "08_ImageRiddle", scene: Spiegel_VN.Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake" },
             { id: "08_OnLake", scene: Spiegel_VN.Chp08_OnLake, name: "On lake" },
             { id: "08_Arrival other side", scene: Spiegel_VN.Chp08_ArrivalOtherSide, name: "Arrival other side" },
             { id: "08_Search hiding place", scene: Spiegel_VN.Chp08_SearchHidingPlace, name: "Search for hiding place" },
@@ -290,7 +290,7 @@ var Spiegel_VN;
             { id: "Semi Good Ending", scene: Spiegel_VN.SemiGoodEnding, name: "Semi good ending" },
             { id: "Bad Ending", scene: Spiegel_VN.BadEnding, name: "Bad Ending" },
             { id: "End", scene: Spiegel_VN.End, name: "End" },
-            { id: "Empty scene", scene: Spiegel_VN.EmptyScene, name: "Empty scene" },
+            { id: "Empty scene", scene: Spiegel_VN.EmptyScene, name: "Empty scene" }
         ];
         let uiElement = document.querySelector("[type=interface]");
         Spiegel_VN.dataForSave = Spiegel_VN.ƒS.Progress.setData(Spiegel_VN.dataForSave, uiElement);
@@ -434,175 +434,175 @@ var Spiegel_VN;
     Spiegel_VN.characters = {
         // hier sollten alle char rein // char in richtiger größe!
         maincharacter: {
-            name: "Du",
+            name: "Du"
         },
         narrator: {
-            name: "Erzählerin",
+            name: "Erzählerin"
         },
         wishtree: {
-            name: "Baum der Wünsche",
+            name: "Baum der Wünsche"
         },
         Mama: {
             name: "Mama",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                dress_34_neutral: "/Assets/Characters/Leijla/Leijla_dress_34_neutral1.png",
-                dress_34_angry: "/Assets/Characters/Leijla/Leijla_dress_34_angry.png",
-                dress_34_smile: "/Assets/Characters/Leijla/Leijla_dress_34_smile.png",
+                dress_34_neutral: "Assets/Characters/Leijla/Leijla_dress_34_neutral1.png",
+                dress_34_angry: "Assets/Characters/Leijla/Leijla_dress_34_angry.png",
+                dress_34_smile: "Assets/Characters/Leijla/Leijla_dress_34_smile.png",
                 //
-                dress_angry: "/Assets/Characters/Leijla/Leijla_dress_angry.png",
-                dress_laugh: "/Assets/Characters/Leijla/Leijla_dress_laugh.png",
-                dress_neutral: "/Assets/Characters/Leijla/Leijla_dress_neutral.png",
-                dress_shocked: "/Assets/Characters/Leijla/Leijla_dress_shocked.png",
+                dress_angry: "Assets/Characters/Leijla/Leijla_dress_angry.png",
+                dress_laugh: "Assets/Characters/Leijla/Leijla_dress_laugh.png",
+                dress_neutral: "Assets/Characters/Leijla/Leijla_dress_neutral.png",
+                dress_shocked: "Assets/Characters/Leijla/Leijla_dress_shocked.png",
                 //
-                pants1_34_angry: "/Assets/Characters/Leijla/Leijla_pants1_34_angry.png",
-                pants1_34_neutral: "/Assets/Characters/Leijla/Leijla_pants1_34_neutral.png",
-                pants1_34_smile: "/Assets/Characters/Leijla/Leijla_pants1_34_smile.png",
+                pants1_34_angry: "Assets/Characters/Leijla/Leijla_pants1_34_angry.png",
+                pants1_34_neutral: "Assets/Characters/Leijla/Leijla_pants1_34_neutral.png",
+                pants1_34_smile: "Assets/Characters/Leijla/Leijla_pants1_34_smile.png",
                 //
-                pants1_laugh: "/Assets/Characters/Leijla/Leijla_pants1_laugh.png",
-                pants1_neutral: "/Assets/Characters/Leijla/Leijla_pants1_neutral.png",
-                pants1_shocked: "/Assets/Characters/Leijla/Leijla_Pants1_shocked.png",
+                pants1_laugh: "Assets/Characters/Leijla/Leijla_pants1_laugh.png",
+                pants1_neutral: "Assets/Characters/Leijla/Leijla_pants1_neutral.png",
+                pants1_shocked: "Assets/Characters/Leijla/Leijla_Pants1_shocked.png",
                 //
-                pants2_angry: "/Assets/Characters/Leijla/Leijla_pants2_angry.png",
-                pants2_laugh: "/Assets/Characters/Leijla/Leijla_pants2_laugh.png",
-                pants2_neutral: "/Assets/Characters/Leijla/Leijla_pants2_neutral.png",
-                pants2_shocked: "/Assets/Characters/Leijla/Leijla_pants2_shocked.png",
+                pants2_angry: "Assets/Characters/Leijla/Leijla_pants2_angry.png",
+                pants2_laugh: "Assets/Characters/Leijla/Leijla_pants2_laugh.png",
+                pants2_neutral: "Assets/Characters/Leijla/Leijla_pants2_neutral.png",
+                pants2_shocked: "Assets/Characters/Leijla/Leijla_pants2_shocked.png",
                 //
-                pants2_angry2: "/Assets/Characters/Leijla/Leijla_pants2_angry2.png",
-                pants2_laugh2: "/Assets/Characters/Leijla/Leijla_pants2_laugh2.png",
-                pants2_neutral2: "/Assets/Characters/Leijla/Leijla_pants2_neutral2.png",
-                pants2_shocked2: "/Assets/Characters/Leijla/Leijla_pants2_shocked2.png",
+                pants2_angry2: "Assets/Characters/Leijla/Leijla_pants2_angry2.png",
+                pants2_laugh2: "Assets/Characters/Leijla/Leijla_pants2_laugh2.png",
+                pants2_neutral2: "Assets/Characters/Leijla/Leijla_pants2_neutral2.png",
+                pants2_shocked2: "Assets/Characters/Leijla/Leijla_pants2_shocked2.png",
                 //
-                pants2_hand_angry: "/Assets/Characters/Leijla/Leijla_pants2_hand_angry.png",
-                pants2_hand_laugh: "/Assets/Characters/Leijla/Leijla_pants2_hand_laugh.png",
-                pants2_hand_neutral: "/Assets/Characters/Leijla/Leijla_pants2_hand_neutral.png",
-                pants2_hand_shocked: "/Assets/Characters/Leijla/Leijla_pants2_hand_shocked.png",
-            },
+                pants2_hand_angry: "Assets/Characters/Leijla/Leijla_pants2_hand_angry.png",
+                pants2_hand_laugh: "Assets/Characters/Leijla/Leijla_pants2_hand_laugh.png",
+                pants2_hand_neutral: "Assets/Characters/Leijla/Leijla_pants2_hand_neutral.png",
+                pants2_hand_shocked: "Assets/Characters/Leijla/Leijla_pants2_hand_shocked.png"
+            }
         },
         Mutti: {
             name: "Mutti",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                dress1_basket_frown: "/Assets/Characters/Elena/Elena_Dress1_frown.png",
-                dress1_basket_laugh: "/Assets/Characters/Elena/Elena_Dress1_laugh.png",
-                dress1_basket_neutral: "/Assets/Characters/Elena/Elena_Dress1_neutral.png",
-                dress1_basket_smile: "/Assets/Characters/Elena/Elena_Dress1_smile.png",
-                dress1_basket_smirk: "/Assets/Characters/Elena/Elena_Dress1_smirk.png",
+                dress1_basket_frown: "Assets/Characters/Elena/Elena_Dress1_frown.png",
+                dress1_basket_laugh: "Assets/Characters/Elena/Elena_Dress1_laugh.png",
+                dress1_basket_neutral: "Assets/Characters/Elena/Elena_Dress1_neutral.png",
+                dress1_basket_smile: "Assets/Characters/Elena/Elena_Dress1_smile.png",
+                dress1_basket_smirk: "Assets/Characters/Elena/Elena_Dress1_smirk.png",
                 //
-                dress2_basket_laugh: "/Assets/Characters/Elena/Elena_Dress2_laugh.png",
-                dress2_basket_neutral: "/Assets/Characters/Elena/Elena_Dress2_neutral.png",
-                dress2_basket_smile: "/Assets/Characters/Elena/Elena_Dress2_smile.png",
-                dress2_basket_smirk: "/Assets/Characters/Elena/Elena_Dress2_smirk.png",
-                dress2_basket_frown: "/Assets/Characters/Elena/Elena_Dress2_frown.png",
+                dress2_basket_laugh: "Assets/Characters/Elena/Elena_Dress2_laugh.png",
+                dress2_basket_neutral: "Assets/Characters/Elena/Elena_Dress2_neutral.png",
+                dress2_basket_smile: "Assets/Characters/Elena/Elena_Dress2_smile.png",
+                dress2_basket_smirk: "Assets/Characters/Elena/Elena_Dress2_smirk.png",
+                dress2_basket_frown: "Assets/Characters/Elena/Elena_Dress2_frown.png",
                 //
-                dress3_frown: "/Assets/Characters/Elena/Elena_Dress3_frown.png",
-                dress3_laugh: "/Assets/Characters/Elena/Elena_Dress3_laugh.png",
-                dress3_neutral: "/Assets/Characters/Elena/Elena_Dress3_neutral.png",
-                dress3_smile: "/Assets/Characters/Elena/Elena_Dress3_smile.png",
-                dress3_smirk: "/Assets/Characters/Elena/Elena_Dress3_smirk.png",
+                dress3_frown: "Assets/Characters/Elena/Elena_Dress3_frown.png",
+                dress3_laugh: "Assets/Characters/Elena/Elena_Dress3_laugh.png",
+                dress3_neutral: "Assets/Characters/Elena/Elena_Dress3_neutral.png",
+                dress3_smile: "Assets/Characters/Elena/Elena_Dress3_smile.png",
+                dress3_smirk: "Assets/Characters/Elena/Elena_Dress3_smirk.png",
                 //
-                dress4_laugh: "/Assets/Characters/Elena/Elena_Dress4_laugh.png",
-                dress4_neutral: "/Assets/Characters/Elena/Elena_Dress4_neutral.png",
-                dress4_frown: "/Assets/Characters/Elena/Elena_Dress4_frown.png",
-                dress4_smile: "/Assets/Characters/Elena/Elena_Dress4_smile.png",
-                dress4_smirk: "/Assets/Characters/Elena/Elena_Dress4_smirk.png",
+                dress4_laugh: "Assets/Characters/Elena/Elena_Dress4_laugh.png",
+                dress4_neutral: "Assets/Characters/Elena/Elena_Dress4_neutral.png",
+                dress4_frown: "Assets/Characters/Elena/Elena_Dress4_frown.png",
+                dress4_smile: "Assets/Characters/Elena/Elena_Dress4_smile.png",
+                dress4_smirk: "Assets/Characters/Elena/Elena_Dress4_smirk.png",
                 //
-                dress5_frown: "/Assets/Characters/Elena/Elena_Dress5_frown.png",
-                dress5_laugh: "/Assets/Characters/Elena/Elena_Dress5_laugh.png",
-                dress5_neutral: "/Assets/Characters/Elena/Elena_Dress5_neutral.png",
-                dress5_smile: "/Assets/Characters/Elena/Elena_Dress5_smile.png",
-                dress5_smirk: "/Assets/Characters/Elena/Elena_Dress5_smirk.png",
+                dress5_frown: "Assets/Characters/Elena/Elena_Dress5_frown.png",
+                dress5_laugh: "Assets/Characters/Elena/Elena_Dress5_laugh.png",
+                dress5_neutral: "Assets/Characters/Elena/Elena_Dress5_neutral.png",
+                dress5_smile: "Assets/Characters/Elena/Elena_Dress5_smile.png",
+                dress5_smirk: "Assets/Characters/Elena/Elena_Dress5_smirk.png",
                 //
-                dress6_frown: "/Assets/Characters/Elena/Elena_Dress6_frown.png",
-                dress6_laugh: "/Assets/Characters/Elena/Elena_Dress6_laugh.png",
-                dress6_neutral: "/Assets/Characters/Elena/Elena_Dress6_neutral.png",
-                dress6_smile: "/Assets/Characters/Elena/Elena_Dress6_smile.png",
-                dress6_smirk: "/Assets/Characters/Elena/Elena_Dress6_smirk.png",
+                dress6_frown: "Assets/Characters/Elena/Elena_Dress6_frown.png",
+                dress6_laugh: "Assets/Characters/Elena/Elena_Dress6_laugh.png",
+                dress6_neutral: "Assets/Characters/Elena/Elena_Dress6_neutral.png",
+                dress6_smile: "Assets/Characters/Elena/Elena_Dress6_smile.png",
+                dress6_smirk: "Assets/Characters/Elena/Elena_Dress6_smirk.png",
                 //
-                dress7_frown: "/Assets/Characters/Elena/Elena_Dress7_frown.png",
-                dress7_laugh: "/Assets/Characters/Elena/Elena_Dress7_laugh.png",
-                dress7_neutral: "/Assets/Characters/Elena/Elena_Dress7_neutral.png",
-                dress7_smile: "/Assets/Characters/Elena/Elena_Dress7_smile.png",
-                dress7_smirk: "/Assets/Characters/Elena/Elena_Dress7_smirk.png",
-            },
+                dress7_frown: "Assets/Characters/Elena/Elena_Dress7_frown.png",
+                dress7_laugh: "Assets/Characters/Elena/Elena_Dress7_laugh.png",
+                dress7_neutral: "Assets/Characters/Elena/Elena_Dress7_neutral.png",
+                dress7_smile: "Assets/Characters/Elena/Elena_Dress7_smile.png",
+                dress7_smirk: "Assets/Characters/Elena/Elena_Dress7_smirk.png"
+            }
         },
         Kailani: {
             name: "Kailani",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
                 // Outfit 1
-                outfit1_annoyed_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_annoyed_angry.png",
-                outfit1_annoyed_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_annoyed_eyeroll.png",
-                outfit1_back_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_back_smile.png",
-                outfit1_back_worried: "./Assets/Characters/Kailani/Outfit1/Kailani_back_worried.png",
-                outfit1_begging_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_begging_eyeroll.png",
-                outfit1_begging_shrug: "./Assets/Characters/Kailani/Outfit1/Kailani_begging_shrug.png",
-                outfit1_crossed_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_crossed_angry.png",
-                outfit1_crossed_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll.png",
-                outfit1_crossed_neutral: "./Assets/Characters/Kailani/Outfit1/Kailani_crossed_neutral.png",
-                outfit1_neutral_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry.png",
-                outfit1_neutral_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_eyeroll.png",
-                outfit1_neutral_happy: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_happy.png",
-                outfit1_neutral_neutral: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_neutral.png",
-                outfit1_neutral_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_smile.png",
-                outfit1_profile_h_neutral: "./Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_neutral.png",
-                outfit1_profile_h_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_smile.png",
-                outfit1_profile_neutral: "./Assets/Characters/Kailani/Outfit1/Kailani_profile_neutral.png",
-                outfit1_profile_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_profile_smile.png",
-                outfit1_shrug_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_shrug_eyeroll.png",
-                outfit1_shrug_happy: "./Assets/Characters/Kailani/Outfit1/Kailani_shrug_happy.png",
-                outfit1_shrug_shrug: "./Assets/Characters/Kailani/Outfit1/Kailani_shrug_shrug.png",
-                outfit1_thinking_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_thinking_angry.png",
-                outfit1_thinking_neutral: "./Assets/Characters/Kailani/Outfit1/Kailani_thinking_neutral.png",
-                outfit1_thinking_shrug: "./Assets/Characters/Kailani/Outfit1/Kailani_thinking_shrug.png",
+                outfit1_annoyed_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_annoyed_angry.png",
+                outfit1_annoyed_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_annoyed_eyeroll.png",
+                outfit1_back_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_back_smile.png",
+                outfit1_back_worried: ".Assets/Characters/Kailani/Outfit1/Kailani_back_worried.png",
+                outfit1_begging_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_begging_eyeroll.png",
+                outfit1_begging_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_begging_shrug.png",
+                outfit1_crossed_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_angry.png",
+                outfit1_crossed_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll.png",
+                outfit1_crossed_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_neutral.png",
+                outfit1_neutral_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry.png",
+                outfit1_neutral_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_eyeroll.png",
+                outfit1_neutral_happy: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_happy.png",
+                outfit1_neutral_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_neutral.png",
+                outfit1_neutral_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_smile.png",
+                outfit1_profile_h_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_neutral.png",
+                outfit1_profile_h_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_smile.png",
+                outfit1_profile_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_neutral.png",
+                outfit1_profile_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_smile.png",
+                outfit1_shrug_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_eyeroll.png",
+                outfit1_shrug_happy: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_happy.png",
+                outfit1_shrug_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_shrug.png",
+                outfit1_thinking_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_angry.png",
+                outfit1_thinking_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_neutral.png",
+                outfit1_thinking_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_shrug.png",
                 // Outfit 2
-                outfit2_dress_back_neutral: "./Assets/Characters/Kailani/Outfit2/Kailani_back_dress_neutral.png",
-                outfit2_dress_back_smile: "./Assets/Characters/Kailani/Outfit2/Kailani_back_dress_smile.png",
-                outfit2_dress1_angry: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_I_angry.png",
-                outfit2_dress1_eyeroll: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_I_eyeroll.png",
-                outfit2_dress1_happy: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_I_happy.png",
-                outfit2_dress1_shrug: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_I_shrug.png",
-                outfit2_dress1_smile: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_I_smile.png",
-                outfit2_dress2_smile: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_II_angry.png",
-                outfit2_dress2_eyeroll: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_II_eyeroll.png",
-                outfit2_dress3_angry: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_angry.png",
-                outfit2_dress3_eyeroll: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_eyeroll.png",
-                outfit2_dress3_happy: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_happy.png",
-                outfit2_dress3_shrug: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_shrug.png",
-                outfit2_dress3_smile: "./Assets/Characters/Kailani/Outfit2/Kailani_dress_III_smile.png",
+                outfit2_dress_back_neutral: ".Assets/Characters/Kailani/Outfit2/Kailani_back_dress_neutral.png",
+                outfit2_dress_back_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_back_dress_smile.png",
+                outfit2_dress1_angry: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_angry.png",
+                outfit2_dress1_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_eyeroll.png",
+                outfit2_dress1_happy: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_happy.png",
+                outfit2_dress1_shrug: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_shrug.png",
+                outfit2_dress1_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_smile.png",
+                outfit2_dress2_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_II_angry.png",
+                outfit2_dress2_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_II_eyeroll.png",
+                outfit2_dress3_angry: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_angry.png",
+                outfit2_dress3_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_eyeroll.png",
+                outfit2_dress3_happy: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_happy.png",
+                outfit2_dress3_shrug: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_shrug.png",
+                outfit2_dress3_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_smile.png",
                 // Grey Outfits
-                grey_slave: "./Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
-                grey_shrug_eyeroll: "./Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
-                grey_neutral_angry: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
-                grey_neutral_smile: "./Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
-                grey_crossed_angry: "./Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
-                grey_neutral_happy: "./Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png",
-            },
+                grey_slave: ".Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
+                grey_shrug_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
+                grey_neutral_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+                grey_neutral_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+                grey_crossed_angry: ".Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
+                grey_neutral_happy: ".Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png"
+            }
         },
         Evarius: {
             name: "Evarius",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
                 // Position 1
-                pos1_angry: "./Assets/Characters/Evarius/Ev_Pos1_angry.png",
-                pos1_frown: "./Assets/Characters/Evarius/Ev_Pos1_frown.png",
-                pos1_laugh: "./Assets/Characters/Evarius/Ev_Pos1_laugh.png",
-                pos1_neutral: "./Assets/Characters/Evarius/Ev_Pos1_neutral.png",
-                pos1_smile: "./Assets/Characters/Evarius/Ev_Pos1_smile.png",
+                pos1_angry: ".Assets/Characters/Evarius/Ev_Pos1_angry.png",
+                pos1_frown: ".Assets/Characters/Evarius/Ev_Pos1_frown.png",
+                pos1_laugh: ".Assets/Characters/Evarius/Ev_Pos1_laugh.png",
+                pos1_neutral: ".Assets/Characters/Evarius/Ev_Pos1_neutral.png",
+                pos1_smile: ".Assets/Characters/Evarius/Ev_Pos1_smile.png",
                 // Position 2
-                pos2_angry: "./Assets/Characters/Evarius/Ev_Pos2_angry.png",
-                pos2_frown: "./Assets/Characters/Evarius/Ev_Pos2_frown.png",
-                pos2_laugh: "./Assets/Characters/Evarius/Ev_Pos2_laugh.png",
-                pos2_neutral: "./Assets/Characters/Evarius/Ev_Pos2_neutral.png",
-                pos2_smile: "./Assets/Characters/Evarius/Ev_Pos2_smile.png",
+                pos2_angry: ".Assets/Characters/Evarius/Ev_Pos2_angry.png",
+                pos2_frown: ".Assets/Characters/Evarius/Ev_Pos2_frown.png",
+                pos2_laugh: ".Assets/Characters/Evarius/Ev_Pos2_laugh.png",
+                pos2_neutral: ".Assets/Characters/Evarius/Ev_Pos2_neutral.png",
+                pos2_smile: ".Assets/Characters/Evarius/Ev_Pos2_smile.png",
                 // Position 3
-                pos3_angry: "./Assets/Characters/Evarius/Ev_Pos3_angry.png",
-                pos3_frown: "./Assets/Characters/Evarius/Ev_Pos3_frown.png",
-                pos3_laugh: "./Assets/Characters/Evarius/Ev_Pos3_laugh.png",
-                pos3_neutral: "./Assets/Characters/Evarius/Ev_Pos3_neutral.png",
+                pos3_angry: ".Assets/Characters/Evarius/Ev_Pos3_angry.png",
+                pos3_frown: ".Assets/Characters/Evarius/Ev_Pos3_frown.png",
+                pos3_laugh: ".Assets/Characters/Evarius/Ev_Pos3_laugh.png",
+                pos3_neutral: ".Assets/Characters/Evarius/Ev_Pos3_neutral.png",
                 // Profile
-                profile_neutral: "./Assets/Characters/Evarius/Ev_Profile_neutral.png",
-                profile_smile: "./Assets/Characters/Evarius/Ev_Profile_smile.png",
+                profile_neutral: ".Assets/Characters/Evarius/Ev_Profile_neutral.png",
+                profile_smile: ".Assets/Characters/Evarius/Ev_Profile_smile.png"
             }
         },
         Flynn: {
@@ -610,142 +610,142 @@ var Spiegel_VN;
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMLEFT,
             pose: {
                 // Outfit 1
-                pos1_angry: "./Assets/Characters/Flynn/Outfit1/Flynn_light_angry.png",
-                pos1_happy: "./Assets/Characters/Flynn/Outfit1/Flynn_light_happy.png",
-                pos1_neutral: "./Assets/Characters/Flynn/Outfit1/Flynn_light_neutral.png",
-                pos1_smile: "./Assets/Characters/Flynn/Outfit1/Flynn_light_smile.png",
-                pos1_smile2: "./Assets/Characters/Flynn/Outfit1/Flynn_light_smileII.png",
-                pos2_happy2: "./Assets/Characters/Flynn/Outfit1/Flynn_light_hand_happy_II.png",
-                pos2_neutral: "./Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral.png",
-                pos2_neutral2: "./Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral_II.png",
-                pos2_uncertain2: "./Assets/Characters/Flynn/Outfit1/Flynn_light_hand_uncertain_II.png",
-                pos3_angry: "./Assets/Characters/Flynn/Outfit1/Flynn_light_right_angry.png",
-                pos3_happy: "./Assets/Characters/Flynn/Outfit1/Flynn_light_right_happy.png",
-                pos3_smile: "./Assets/Characters/Flynn/Outfit1/Flynn_light_right_smile.png",
+                pos1_angry: ".Assets/Characters/Flynn/Outfit1/Flynn_light_angry.png",
+                pos1_happy: ".Assets/Characters/Flynn/Outfit1/Flynn_light_happy.png",
+                pos1_neutral: ".Assets/Characters/Flynn/Outfit1/Flynn_light_neutral.png",
+                pos1_smile: ".Assets/Characters/Flynn/Outfit1/Flynn_light_smile.png",
+                pos1_smile2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_smileII.png",
+                pos2_happy2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_happy_II.png",
+                pos2_neutral: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral.png",
+                pos2_neutral2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral_II.png",
+                pos2_uncertain2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_uncertain_II.png",
+                pos3_angry: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_angry.png",
+                pos3_happy: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_happy.png",
+                pos3_smile: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_smile.png",
                 // Outfit 2
-                pos1_confused: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_confused.png",
-                pos1_sad: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_confused_sad.png",
-                pos2_crossed_angry: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_angry.png",
-                pos2_crossed_neutral: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral.png",
-                pos2_crossed_neutral2: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral_II.png",
-                pos2_crossed_sad: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_sad.png",
-                pos2_crossed_shocked: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked.png",
-                pos2_crossed_shocked2: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked_II.png",
-                pos2_crossed_smile: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
-                pos2_crossed_smile2: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile_II.png",
-                pos2_crossed_uncertain: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_uncertain.png",
-                pos3_arms_smile: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
-                pos3_arms_happy: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_neutral_happy.png",
-                pos3_arms2_angry: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_angry.png",
-                pos3_arms2_sad: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_sad.png",
-                pos3_arms2_smile: "./Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_smile.png",
+                pos1_confused: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_confused.png",
+                pos1_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_confused_sad.png",
+                pos2_crossed_angry: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_angry.png",
+                pos2_crossed_neutral: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral.png",
+                pos2_crossed_neutral2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral_II.png",
+                pos2_crossed_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_sad.png",
+                pos2_crossed_shocked: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked.png",
+                pos2_crossed_shocked2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked_II.png",
+                pos2_crossed_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
+                pos2_crossed_smile2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile_II.png",
+                pos2_crossed_uncertain: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_uncertain.png",
+                pos3_arms_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
+                pos3_arms_happy: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_neutral_happy.png",
+                pos3_arms2_angry: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_angry.png",
+                pos3_arms2_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_sad.png",
+                pos3_arms2_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_smile.png",
                 // W/O outfit
-                wo_angry: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_angry.png",
-                wo_happy: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_happy.png",
-                wo_I_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_I_skeptical.png",
-                wo_II_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_II_sad.png",
-                wo_shocked: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_shocked.png",
+                wo_angry: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_angry.png",
+                wo_happy: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_happy.png",
+                wo_I_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_I_skeptical.png",
+                wo_II_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_II_sad.png",
+                wo_shocked: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_shocked.png",
                 // Grey outfit
-                grey_wo_skeptical: "./Assets/Characters/Flynn/Outfit3/Flynn_wo_skeptical.png",
-                grey_wo_angry: "./Assets/Characters/Flynn/Outfit3/grey_wo_angry.png",
-                grey_wo_I_skeptical: "./Assets/Characters/Flynn/Outfit3/grey_wo_I_skeptical.png",
-                grey_wo_II_skeptical: "./Assets/Characters/Flynn/Outfit3/grey_wo_II_sad.png",
-                grey_wo_shocked: "./Assets/Characters/Flynn/Outfit3/grey_wo_shocked.png",
-                grey_blue_confused: "./Assets/Characters/Flynn/Outfit3/grey_blue_confused.png",
-                grey_blue_confused_sad: "./Assets/Characters/Flynn/Outfit3/grey_blue_confused_sad.png",
-                grey_blue_happy: "./Assets/Characters/Flynn/Outfit3/grey_blue_neutral_happy.png",
-                grey_blue_crossed_angry: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_angry.png",
-                grey_blue_crossed_shocked: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_shocked.png",
-                grey_blue_crossed_neutral: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_neutral.png",
-                grey_blue_crossed_sad: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_sad.png",
-                grey_blue_crossed_smile: "./Assets/Characters/Flynn/Outfit3/grey_blue_crossed_smile_II.png",
-            },
+                grey_wo_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_skeptical.png",
+                grey_wo_angry: ".Assets/Characters/Flynn/Outfit3/grey_wo_angry.png",
+                grey_wo_I_skeptical: ".Assets/Characters/Flynn/Outfit3/grey_wo_I_skeptical.png",
+                grey_wo_II_skeptical: ".Assets/Characters/Flynn/Outfit3/grey_wo_II_sad.png",
+                grey_wo_shocked: ".Assets/Characters/Flynn/Outfit3/grey_wo_shocked.png",
+                grey_blue_confused: ".Assets/Characters/Flynn/Outfit3/grey_blue_confused.png",
+                grey_blue_confused_sad: ".Assets/Characters/Flynn/Outfit3/grey_blue_confused_sad.png",
+                grey_blue_happy: ".Assets/Characters/Flynn/Outfit3/grey_blue_neutral_happy.png",
+                grey_blue_crossed_angry: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_angry.png",
+                grey_blue_crossed_shocked: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_shocked.png",
+                grey_blue_crossed_neutral: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_neutral.png",
+                grey_blue_crossed_sad: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_sad.png",
+                grey_blue_crossed_smile: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_smile_II.png"
+            }
         },
         flowerMerchant: {
             name: "Blumenhändler",
-            origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
+            origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER
         },
         leatherMerchant: {
             name: "Lederhändler",
-            origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
+            origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT
         },
         mirrorMerchant: {
             name: "Spiegelhändler",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                left: "./Assets/Characters/Mirrormerchant/mm_1.png",
-                neutral: "./Assets/Characters/Mirrormerchant/mm_2.png",
-            },
+                left: ".Assets/Characters/Mirrormerchant/mm_1.png",
+                neutral: ".Assets/Characters/Mirrormerchant/mm_2.png"
+            }
         },
         Demon: {
             name: "Dämon",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_angry: "./Assets/Characters/Demon/Demon_angry.png",
-                pos2_angry: "./Assets/Characters/Demon/Demon_pos2_angry.png",
-                pos2_smile: "./Assets/Characters/Demon/Demon_pos2_smile.png",
-            },
+                pos1_angry: ".Assets/Characters/Demon/Demon_angry.png",
+                pos2_angry: ".Assets/Characters/Demon/Demon_pos2_angry.png",
+                pos2_smile: ".Assets/Characters/Demon/Demon_pos2_smile.png"
+            }
         },
         Beggar: {
             name: "Bettlerin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                anguish: "./Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
-                front: "./Assets/Characters/Beggar/Beggar_Pos1_front.png",
-                neutral: "./Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
-                shocked: "./Assets/Characters/Beggar/Beggar_Pos1_shocked.png",
-            },
+                anguish: ".Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
+                front: ".Assets/Characters/Beggar/Beggar_Pos1_front.png",
+                neutral: ".Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
+                shocked: ".Assets/Characters/Beggar/Beggar_Pos1_shocked.png"
+            }
         },
         Cook: {
             name: "Koch",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_concerned: "./Assets/Characters/Cook/Cook_Pos1_concerned.png",
-                pos1_neutral: "./Assets/Characters/Cook/Cook_Pos1_neutral.png",
-                pos2_concerned: "./Assets/Characters/Cook/Cook_Pos2_concerned.png",
-                pos2_unknowing: "./Assets/Characters/Cook/Cook_Pos2_unknowing.png",
-            },
+                pos1_concerned: ".Assets/Characters/Cook/Cook_Pos1_concerned.png",
+                pos1_neutral: ".Assets/Characters/Cook/Cook_Pos1_neutral.png",
+                pos2_concerned: ".Assets/Characters/Cook/Cook_Pos2_concerned.png",
+                pos2_unknowing: ".Assets/Characters/Cook/Cook_Pos2_unknowing.png"
+            }
         },
         Innkeeper: {
             name: "Wirtin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_laugh: "./Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
-                pos1_neutral: "./Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
-                pos1_smile: "./Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
-                pos1_worried: "./Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
-                pos2_frown: "./Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
-                pos2_laugh: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-                pos2_neutral: "./Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-                pos2_smile: "./Assets/Characters/Innkeeper/Innk_Pos2_smile.png",
-            },
+                pos1_laugh: ".Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
+                pos1_neutral: ".Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
+                pos1_smile: ".Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
+                pos1_worried: ".Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
+                pos2_frown: ".Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
+                pos2_laugh: ".Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+                pos2_neutral: ".Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+                pos2_smile: ".Assets/Characters/Innkeeper/Innk_Pos2_smile.png"
+            }
         },
         Stablehand: {
             name: "Stallmädchen",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_afraid: "./Assets/Characters/Stablehand/Stable_Pos1_afraid.png",
-                pos1_angry: "./Assets/Characters/Stablehand/Stable_Pos1_angry.png",
-                pos1_laugh: "./Assets/Characters/Stablehand/Stable_Pos1_laugh.png",
-                pos2_afraid: "./Assets/Characters/Stablehand/Stable_Pos2_afraid.png",
-                pos2_angry: "./Assets/Characters/Stablehand/Stable_Pos2_angry.png",
-                pos2_laugh: "./Assets/Characters/Stablehand/Stable_Pos2_laugh.png",
-            },
+                pos1_afraid: ".Assets/Characters/Stablehand/Stable_Pos1_afraid.png",
+                pos1_angry: ".Assets/Characters/Stablehand/Stable_Pos1_angry.png",
+                pos1_laugh: ".Assets/Characters/Stablehand/Stable_Pos1_laugh.png",
+                pos2_afraid: ".Assets/Characters/Stablehand/Stable_Pos2_afraid.png",
+                pos2_angry: ".Assets/Characters/Stablehand/Stable_Pos2_angry.png",
+                pos2_laugh: ".Assets/Characters/Stablehand/Stable_Pos2_laugh.png"
+            }
         },
         Seller: {
             name: "Verkäuferin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1: "./Assets/Characters/wharywoman.png",
-            },
+                pos1: ".Assets/Characters/wharywoman.png"
+            }
         },
         MerchantWhary: {
             name: "Händler",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1: "./Assets/Characters/wharymale.png",
-            },
-        },
+                pos1: ".Assets/Characters/wharymale.png"
+            }
+        }
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
@@ -1377,7 +1377,7 @@ var Spiegel_VN;
             PickSceneMirrorMerchant: "Was glitzert so da hinten?",
             PickSceneExploreFlowerMerchant: "(Erkunden) Was gibt es Neues beim Blumenhändler?",
             PickSceneExploreLeatherMerchant: "(Erkunden) Was gibt es Neues beim Lederhändler?",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
         if (!Spiegel_VN.dataForSave.pickedChp01_ConvoMother ||
             !Spiegel_VN.dataForSave.pickedChp01_MirrorMerchant) {
@@ -1519,7 +1519,7 @@ var Spiegel_VN;
         let Chp01MirrorMerchantElementAnswers = {
             iSayUnsure: 'Unsicher',
             iSayYes: 'Aufgeregt',
-            iSayNo: 'Abwehrend',
+            iSayNo: 'Abwehrend'
         };
         let Chp01MirrorMerchantElement = await Spiegel_VN.ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -1546,7 +1546,7 @@ var Spiegel_VN;
         let Chp01MirrorMerchantElementAnswers2 = {
             iSayYes: '"Klar!"',
             iSayUnsure: '"Weiß nicht."',
-            iSayNo: '"Nein"',
+            iSayNo: '"Nein"'
         };
         let Chp01MirrorMerchantElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp01MirrorMerchantElementAnswers2, "choicesCSSclass");
         // *** RESPONSES ***
@@ -1665,7 +1665,7 @@ var Spiegel_VN;
             iSayAskAboutTrip: '"(Erkunden) Was gibt es denn Neues in der Welt?"',
             iSayAskAboutClothes: "'(Erkunden) Eure Ware sieht so anders aus...'",
             iSayBuyShoeCream: "Schuhcreme kaufen",
-            iSayLeave: "'Auf Wiedersehen!'",
+            iSayLeave: "'Auf Wiedersehen!'"
         };
         if (!Spiegel_VN.dataForSave.pickedChp01_ConvoMother) {
             delete Chp01LeatherMerchantDialogueElementAnswers.iSayBuyShoeCream;
@@ -1720,7 +1720,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Zusammen mit deinen Geschwistern Evarius, Kailani und Mama nimmst du die Abkürzung durch das Feld in Richtung zuhause. Das kleine Häuschen, in dem ihr, seit du denken kannst, lebt, liegt am Rande des Dorfes, dort, wo die Bäume enger zusammenstehen und das Moos schon an den Hauswänden hochkriecht.");
         let Chp02GoInsideHouseAnswers = {
-            iSayGoInside: "Ins Haus eintreten.",
+            iSayGoInside: "Ins Haus eintreten."
         };
         let Chp02GoInsideHouse = await Spiegel_VN.ƒS.Menu.getInput(Chp02GoInsideHouseAnswers, "choicesCSSclass");
         switch (Chp02GoInsideHouse) {
@@ -1827,7 +1827,7 @@ var Spiegel_VN;
             PickScenePickHerbs: "Kräuter ernten",
             PickSceneKitchen: "Einkäufe wegbringen",
             PickSceneDiscoverBedroom: "(Erkunden) Dein Schlafzimmer anschauen",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
         if (!Spiegel_VN.dataForSave.pickedChp02_PickHerbsGarden ||
             !Spiegel_VN.dataForSave.pickedChp02_Kitchen) {
@@ -1911,10 +1911,10 @@ var Spiegel_VN;
         let Chp02PickSceneElementAnswersDinner = {
             iSayDistract: "Ablenken.",
             iSayFight: "Streit ansprechen.",
-            iSaySilent: "Nicken und Schweigen.",
+            iSaySilent: "Nicken und Schweigen."
         };
         // if (
-        //   !dataForSave.pickedChp02_DinnerScene || // ! heißt not: es wird nach entgegengesetztem Zustand gefragt // || = oder; && = und
+        //   !dataForSave.pickedChp02_DinnerScene || 
         //   !dataForSave.pickedChp02_PickHerbsGarden ||
         //   !dataForSave.pickedChp02_TestWithElena ||
         //   !dataForSave.pickedChp02_FightNeighbor
@@ -1974,7 +1974,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Mama);
         let Chp02TestMirrorElementAnswers = {
             iSayTestWithKailani: "Mit Kailani testen",
-            iSayTestWithEvarius: "Mit Evarius testen",
+            iSayTestWithEvarius: "Mit Evarius testen"
         };
         let Chp02TestMirrorElement = await Spiegel_VN.ƒS.Menu.getInput(Chp02TestMirrorElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2012,7 +2012,7 @@ var Spiegel_VN;
             let Chp02TestMirrorElementAnswers2 = {
                 iSayAnswer1: "Spieglein, Spieglein, zeige mir das Träumelein.",
                 iSayAnswer2: "Spieglein, Spieglein, weise mir das Wünschlein",
-                iSayAnswer3: "Spieglein, Spieglein, weise mir das Träumlein",
+                iSayAnswer3: "Spieglein, Spieglein, weise mir das Träumlein"
             };
             let Chp02TestMirrorElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp02TestMirrorElementAnswers2, "choicesCSSclass");
             switch (Chp02TestMirrorElement2) {
@@ -2041,7 +2041,7 @@ var Spiegel_VN;
                 iSayAnswer3: "Palmen",
                 iSayAnswer4: "Fliegen",
                 iSayAnswer5: "Tauchen",
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp02TestMirrorScenesE = await Spiegel_VN.ƒS.Menu.getInput(Chp02TestMirrorScenesOptionsE, "choicesCSSclass");
             switch (Chp02TestMirrorScenesE) {
@@ -2110,7 +2110,7 @@ var Spiegel_VN;
             let Chp02TestMirrorElementAnswersOptions2 = {
                 iSayAnswer1: "Spieglein, Spieglein, zeige mir das Träumelein.",
                 iSayAnswer2: "Spieglein, Spieglein, weise mir das Wünschlein",
-                iSayAnswer3: "Spieglein, Spieglein, weise mir das Träumlein",
+                iSayAnswer3: "Spieglein, Spieglein, weise mir das Träumlein"
             };
             let Chp02TestMirrorElementOptions = await Spiegel_VN.ƒS.Menu.getInput(Chp02TestMirrorElementAnswersOptions2, "choicesCSSclass");
             switch (Chp02TestMirrorElementOptions) {
@@ -2138,7 +2138,7 @@ var Spiegel_VN;
                 iSayAnswer3: "Palmen",
                 iSayAnswer4: "Fliegen",
                 iSayAnswer5: "Tauchen",
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp02TestMirrorScenes = await Spiegel_VN.ƒS.Menu.getInput(Chp02TestMirrorScenesOptions, "choicesCSSclass");
             switch (Chp02TestMirrorScenes) {
@@ -2202,7 +2202,7 @@ var Spiegel_VN;
         let Chp02PickSceneElementAnswersKitchen = {
             PickScenePantry: "(Erkunden) In die Speisekammer",
             PickSceneOven: "(Erkunden) Ofen beheizen",
-            PickSceneContinue: "Zurück ins Wohnzimmer",
+            PickSceneContinue: "Zurück ins Wohnzimmer"
         };
         let Chp02PickSceneElementAnswers = await Spiegel_VN.ƒS.Menu.getInput(Chp02PickSceneElementAnswersKitchen, "choicesCSSclass");
         switch (Chp02PickSceneElementAnswers) {
@@ -2243,7 +2243,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du kramst in deiner Hosentasche und findest ein paar übrig gebliebene Sonnenblumenkerne vom Hühnerfüttern gestern. Streust du sie über den Boden oder behältst du sie in der Tasche?");
         let Chp02ElementAnswersPickHerbs = {
             iSaySprinkle: "Streuen",
-            iSayKeep: "Behalten",
+            iSayKeep: "Behalten"
         };
         let Chp02Element = await Spiegel_VN.ƒS.Menu.getInput(Chp02ElementAnswersPickHerbs, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2273,7 +2273,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell("Nachbar", '"Henri, ich weiß, tut mir leid! Hör mir doch zu. Ich tu ihn schon weg! Bitte, komm herein. Die Nachbarn schauen doch schon."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Nanu, was war denn da los? Balduin kann sich von dem Spiegel nicht losreißen? Sah er auch anders aus als sonst? Vielleicht frage ich Mutti, ob er krank ist. Sie wartet bestimmt schon lange auf die Kräuter, ups.");
         let Chp02PickHerbsAnswersContinue = {
-            iSayContinue: "Zurück ins Wohnzimmer",
+            iSayContinue: "Zurück ins Wohnzimmer"
         };
         let Chp02PickHerbsContinue = await Spiegel_VN.ƒS.Menu.getInput(Chp02PickHerbsAnswersContinue, "choicesCSSclass");
         switch (Chp02PickHerbsContinue) {
@@ -2294,7 +2294,7 @@ var Spiegel_VN;
         let Chp02DiscoverBedroomElementAnswers = {
             iSayDiscoverDesk: "(Erkunden) Was liegt da auf dem Tisch (Tagebuch)?",
             iSayDiscoverBooks: "(Erkunden) Bücher anschauen",
-            iSayLeave: "Zurück",
+            iSayLeave: "Zurück"
         };
         let Chp02DiscoverBedroomElement = await Spiegel_VN.ƒS.Menu.getInput(Chp02DiscoverBedroomElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2362,7 +2362,7 @@ var Spiegel_VN;
             PickSceneChoresWithKailani: "Mit Kailani Hausarbeiten machen",
             PickSceneDiscoverForest: "(Erkunden) Im Wald rumgucken",
             PickSceneDiscoverLibrary: "(Erkunden) Die Bücherei erkunden",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
         if (
         // !dataForSave.pickedChp03_Dressmaker ||
@@ -2435,7 +2435,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell("Schneider", '"Ich habe einfach so viel zu tun. Ich will mich doch nicht hetzen. Du möchtest sicher, dass sie auch hübsch sind, nicht wahr?"');
         let Chp03DressmakerElementAnswers = {
             iSayNo: "Hauptsache, warm.",
-            iSayYes: "Das Aussehen zählt.",
+            iSayYes: "Das Aussehen zählt."
         };
         let Chp03DressmakerElement = await Spiegel_VN.ƒS.Menu.getInput(Chp03DressmakerElementAnswers, "choicesCSSclass");
         switch (Chp03DressmakerElement) {
@@ -2467,7 +2467,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Mir egal ..."');
         let Chp03ChoresKailaniElementAnswers = {
             PickSceneWaterwell: "Wasser holen gehen.",
-            PickSceneWoodChopping: "Holz hacken.",
+            PickSceneWoodChopping: "Holz hacken."
         };
         let Chp03ChoresKailaniElement = await Spiegel_VN.ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2498,7 +2498,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Oh je. Da musst du wohl anders ran.");
         let Chp03ChoresKailaniElementAnswers1 = {
             iSayWorried: "Besorgt",
-            iSayTrusting: "Vertraut",
+            iSayTrusting: "Vertraut"
         };
         let Chp03ChoresKailaniElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers1, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2523,7 +2523,7 @@ var Spiegel_VN;
         let Chp03ChoresKailaniElementAnswers11 = {
             iSayGood: '"Klingt gut"',
             iSayBother: '"Stört dich etwas?"',
-            iSaySilent: "Nicken und schweigen",
+            iSaySilent: "Nicken und schweigen"
         };
         let Chp03ChoresKailaniElement11 = await Spiegel_VN.ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers11, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2589,7 +2589,6 @@ var Spiegel_VN;
     }
     Spiegel_VN.Chp03_021_ChoresWithKailani = Chp03_021_ChoresWithKailani;
 })(Spiegel_VN || (Spiegel_VN = {}));
-;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp03_E_DiscoverForest() {
@@ -3052,9 +3051,9 @@ var Spiegel_VN;
         let Chp05PickSceneElementAnswers = {
             iSaySave: "Ich muss Kailani retten!",
             iSayTired: "Ich kann bald nicht mehr …",
-            iSayMistake: "War das alles ein Fehler?",
+            iSayMistake: "War das alles ein Fehler?"
         };
-        let Chp05PickSceneElement = await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers, "choicesCSSclass");
+        await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Schnaufend schleppst du dich von Stamm zu Stamm, über Wurzeln und Gebüsch. Plötzlich stehst du inmitten einer Lichtung.");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Wishtree);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
@@ -3070,7 +3069,7 @@ var Spiegel_VN;
         let Chp05PickSceneElementAnswers2 = {
             iSayFear: "Ich habe Angst",
             iSayBest: "Ich gebe mein Bestes",
-            iSayKailani: "Ich tue es für Kailani",
+            iSayKailani: "Ich tue es für Kailani"
         };
         let Chp05PickSceneElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Also gut."');
@@ -3168,7 +3167,7 @@ var Spiegel_VN;
             iSayInner: "(Erkunden) Sein Innerstes?",
             iSaySick: "(Erkunden) Wie werden sie krank?",
             iSayFree: "(Erkunden) Wie kann Kailani befreit werden?",
-            iSayRiddleWords: "Die Rätselwörter!",
+            iSayRiddleWords: "Die Rätselwörter!"
         };
         if (!Spiegel_VN.dataForSave.pickedChp05Inner ||
             !Spiegel_VN.dataForSave.pickedChp05Sick ||
@@ -3213,7 +3212,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator, "Wie willst du dich mit ihnen verbinden?");
         let Chp05ConvoTreeElementAnswers2 = {
             iSaySing: "Zu Vögeln singen",
-            iSayFeed: "Füttern",
+            iSayFeed: "Füttern"
         };
         let Chp05ConvoTreeElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers2, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3242,7 +3241,7 @@ var Spiegel_VN;
         let Chp05ConvoTreeElementAnswers3 = {
             iSayHello: "Hallo?",
             iSayQuestions: "Ich habe noch so viele Fragen!",
-            iSayNeed: "Ich brauche Sie!",
+            iSayNeed: "Ich brauche Sie!"
         };
         let Chp05ConvoTreeElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
@@ -3272,7 +3271,7 @@ var Spiegel_VN;
         let Chp05ConvoMotherElementAnswers = {
             iSayLie: "Lügen",
             iSayDistract: "Ablenken",
-            iSayExplain: "Erklären",
+            iSayExplain: "Erklären"
         };
         let Chp05PickSceneElement = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers, "choicesCSSclass");
         switch (Chp05PickSceneElement) {
@@ -3309,7 +3308,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Hier, nimm meine Eisen-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
         let Chp05ConvoMotherElementAnswers2 = {
             iSayTake: "Annehmen",
-            iSayRefuse: "Nicht annehmen",
+            iSayRefuse: "Nicht annehmen"
         };
         let Chp05PickSceneElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers2, "choicesCSSclass");
         switch (Chp05PickSceneElement2) {
@@ -3332,7 +3331,7 @@ var Spiegel_VN;
         let Chp05ConvoMotherElementAnswers3 = {
             iSaySeeds: "Sonnenblumenkerne",
             iSayFood: "Vesper",
-            iSayCloak: "Dunkler Umhang",
+            iSayCloak: "Dunkler Umhang"
         };
         let Chp05PickSceneElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers3, "choicesCSSclass");
         switch (Chp05PickSceneElement3) {
@@ -3366,7 +3365,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mit dem Spiegel gerüstet kniest du dich an das Flussufer. Du versuchst, das Spiegelbild des Mondes im Wasser damit einzufangen. Wie soll das denn gehen, wenn der Spiegel blank ist?");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Doch plötzlich blitzt es auf: der Mond ist nun auch im Handspiegel zu sehen. Dort glitzert er ebenso so schön wie auf dem Wasser und am Himmel. Wie ging der Spruch nochmal?");
         let Chp05ConvoMotherElementAnswers4 = {
-            iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein",
+            iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein"
         };
         let Chp05PickSceneElement4 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich wünsche mir, in die Spiegelwelt zu reisen!"');
@@ -3389,7 +3388,7 @@ var Spiegel_VN;
         do {
             let Chp06ArrivalMeadowElementAnswers = {
                 iSayFlowers: "(Erkunden) Blumen anschauen",
-                iSayLeave: "Auf den Weg machen",
+                iSayLeave: "Auf den Weg machen"
             };
             let Chp06ArrivalMeadowElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06ArrivalMeadowElementAnswers, "choicesCSSclass");
             switch (Chp06ArrivalMeadowElement) {
@@ -3422,7 +3421,7 @@ var Spiegel_VN;
             iSayLie: "Lügen",
             iSayDistract: "Ablenken",
             iSayTruth: "Die Wahrheit sagen",
-            iSaySilent: "Schweigen",
+            iSaySilent: "Schweigen"
         };
         let Chp06EntryGatesElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06EntryGatesElementAnswers, "choicesCSSclass");
         switch (Chp06EntryGatesElement) {
@@ -3476,7 +3475,7 @@ var Spiegel_VN;
         let Chp06EntryGatesElementAnswers2 = {
             iSayShame: "Beschämt",
             iSayDontCare: "Gleichgültig",
-            iSayAngry: "Verärgert",
+            iSayAngry: "Verärgert"
         };
         let Chp06EntryGatesElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp06EntryGatesElementAnswers2, "choicesCSSclass");
         switch (Chp06EntryGatesElement2) {
@@ -3508,7 +3507,7 @@ var Spiegel_VN;
         let Chp06EntryWharyElementAnswers = {
             iSayWindow: "(Erkunden) Schaufenster anschauen",
             iSayVillagers: "(Erkunden) Leute beobachten",
-            iSayInn: "Bleibe suchen",
+            iSayInn: "Bleibe suchen"
         };
         if (!Spiegel_VN.dataForSave.pickedChp06Window ||
             !Spiegel_VN.dataForSave.pickedChp06Villagers) {
@@ -3584,7 +3583,7 @@ var Spiegel_VN;
         let Chp06ClothesElementAnswers = {
             iSayDress: "Kleid",
             iSayShirt: "Hemd & Hose",
-            iSaySkirt: "Hemd & Rock",
+            iSaySkirt: "Hemd & Rock"
         };
         let Chp06ClothesElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3633,7 +3632,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und du denkst, sie könnte hier sein?"');
         let Chp06ClothesElementAnswers2 = {
             iSayHonest: "Ehrlich sein",
-            iSayLie: "Ausflüchten",
+            iSayLie: "Ausflüchten"
         };
         let Chp06ClothesElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers2, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3657,7 +3656,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sein Abenteuergeist geweckt, springt Flynn aufgeregt um dich herum. Du seufzt. Ist das der beste Partner bei der Suche nach Kailani?");
         let Chp06ClothesElementAnswers3 = {
             iSayTrust: "Flynn vertrauen",
-            iSayNotTrust: "Flynn nicht vertrauen",
+            iSayNotTrust: "Flynn nicht vertrauen"
         };
         let Chp06ClothesElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers3, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3694,7 +3693,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Innkeeper, '"Kann ich helfen?"');
         let Chp06InnElementAnswers = {
-            iSayRoom: '"Haben Sie noch ein Zimmer frei?"',
+            iSayRoom: '"Haben Sie noch ein Zimmer frei?"'
         };
         let Chp06InnElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
         // if (dataForSave.pickedChp06TrustFlynn) {
@@ -3774,7 +3773,7 @@ var Spiegel_VN;
             PickSceneSpeakToInnkeeper: "Mit Gastwirtin sprechen",
             PickSceneSpeakToCook: "Mit Koch sprechen",
             // PickSceneSpeakToStablehand: "Mit Stallmädchen sprechen",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
         if (!Spiegel_VN.dataForSave.pickedChp07ResearchMarketplace ||
             !Spiegel_VN.dataForSave.pickedChp07TalkToCook ||
@@ -3895,7 +3894,7 @@ var Spiegel_VN;
                 let Chp07PickContinueElementAnswers = {
                     iSayCertain: "Bestimmt",
                     iSayIgnore: "Ignorieren",
-                    iSayAngry: "Verärgert",
+                    iSayAngry: "Verärgert"
                 };
                 let Chp07PickContinueElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07PickContinueElementAnswers, "choicesCSSclass");
                 switch (Chp07PickContinueElement) {
@@ -3927,7 +3926,7 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         let Chp07DiscoverMarketplaceElementAnswers = {
             // iSayListenToVillagers: "(Erkunden) Bewohnern zuhören",
-            iSayMerchants: "(Erkunden) Mit den Händlern sprechen",
+            iSayMerchants: "(Erkunden) Mit den Händlern sprechen"
         };
         if (Spiegel_VN.dataForSave.pickedChp07DiscoverMerchants
         // dataForSave.pickedChp07DiscoverSpeakToVillagers
@@ -3982,7 +3981,7 @@ var Spiegel_VN;
         let Chp07BeggarSceneElementAnswers = {
             iSayFood: "Essen",
             iSayEntertainment: "Vorstellung",
-            iSayWarmth: "Wärme",
+            iSayWarmth: "Wärme"
         };
         if (!Spiegel_VN.dataForSave.pickedChp05Food) {
             delete Chp07BeggarSceneElementAnswers.iSayFood;
@@ -4080,7 +4079,7 @@ var Spiegel_VN;
         let Chp07InnkeeperElementAnswers = {
             iSayBeg: "Bettelnd",
             iSayAngry: "Verärgert",
-            iSayDesperate: "Verzweifelt",
+            iSayDesperate: "Verzweifelt"
         };
         // if (
         //   !dataForSave.pickedChp07ResearchMarketplace ||
@@ -4132,7 +4131,7 @@ var Spiegel_VN;
                 iSayColor: '"(Erkunden) Woher kommt die Farbe?"',
                 iSayGrey: '"(Erkunden)  Kailani war auch grau"',
                 iSayWhatHappened: '"(Erkunden) Was, denken Sie, ist mit Kailani geschehen?"',
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             //    if (
             //   !dataForSave.pickedChp07pickedColor ||
@@ -4179,7 +4178,7 @@ var Spiegel_VN;
         let Chp07CookElementAnswers = {
             iSayOffended: "Beleidigt",
             iSaySad: "Traurig",
-            iSayAngry: "Wütend",
+            iSayAngry: "Wütend"
         };
         let Chp07CookElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07CookElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -4226,7 +4225,7 @@ var Spiegel_VN;
                 iSayGhost: '"(Erkunden) Was macht der Geist?"',
                 iSayColor: '"(Erkunden) Woher kam die Farbe?"',
                 iSayPeople: '"(Erkunden) Was macht das Volk?"',
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             // if (
             //   !dataForSave.pickedChp07CookpickedGhost ||
@@ -4292,7 +4291,8 @@ var Spiegel_VN;
         };
         await Spiegel_VN.ƒS.Location.show(locLake);
         Spiegel_VN.ƒS.update(0);
-        let hitboxes = [
+        let hitboxes = // Von Jonas Plotzky programmiert
+         [
             createHitbox(0),
             createHitbox(1),
             createHitbox(2),
@@ -4300,7 +4300,7 @@ var Spiegel_VN;
             createHitbox(4),
             createHitbox(5),
             createHitbox(6),
-            createHitbox(7),
+            createHitbox(7)
         ];
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         for (const hitbox of hitboxes) { // Von Jonas Plotzky programmiert
@@ -4370,7 +4370,7 @@ var Spiegel_VN;
                 iSayExploreTheyAreAfraid: "(Erkunden) Vielleicht haben sie Angst?",
                 iSayExploreAttention: "(Erkunden) Sie brauchen die Aufmerksamkeit",
                 iSayExploreAll: "(Erkunden) Wenn alle so sind ...",
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             // if (
             //   !dataForSave.pickedChoiceChp10ExploreAfraid ||
@@ -4431,7 +4431,6 @@ var Spiegel_VN;
                     return "08_Arrival other side";
                     break;
             }
-            ;
         } while (!Spiegel_VN.dataForSave.pickedChp08ConvoContinue);
     }
     Spiegel_VN.Chp08_OnLake = Chp08_OnLake;
@@ -4458,7 +4457,7 @@ var Spiegel_VN;
         }
         let Chp08ArrivalOtherSideElementAnswers = {
             iSayDiscoverTower: "(Erkunden) Turm anschauen",
-            iSaySearchForHidingPlace: "Nach Versteck suchen",
+            iSaySearchForHidingPlace: "Nach Versteck suchen"
         };
         let Chp08ArrivalOtherSideElement = await Spiegel_VN.ƒS.Menu.getInput(Chp08ArrivalOtherSideElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -4488,7 +4487,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du und Flynn lauft schweigend und etwas ratlos durch das Dorf. Die Häuschen stehen eng aneinandergereiht und hüllen sich ebenfalls in Schweigen. Eigentlich willst du so schnell wie möglich wieder raus.");
         let Chp08HidingPlaceFactoryElementAnswers = {
             iSayExploreVillage: "(Erkunden) Dorf erkunden",
-            iSayContinue: "Weiter suchen",
+            iSayContinue: "Weiter suchen"
         };
         let Chp08HidingPlaceFactoryElement = await Spiegel_VN.ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers, "choicesCSSclass");
         switch (Chp08HidingPlaceFactoryElement) {
@@ -4515,7 +4514,7 @@ var Spiegel_VN;
             let Chp08HidingPlaceFactoryElementAnswers2 = {
                 iSayLeft: "Links",
                 iSayRight: "Rechts",
-                iSayHammer: "Was glänzt da?",
+                iSayHammer: "Was glänzt da?"
             };
             if (Spiegel_VN.dataForSave.pickedIron) {
                 delete Chp08HidingPlaceFactoryElementAnswers2.iSayHammer;
@@ -4539,7 +4538,7 @@ var Spiegel_VN;
                     Spiegel_VN.ƒS.update();
                     let Chp08HidingPlaceFactoryElementAnswers3 = {
                         iSayTake: "Einstecken",
-                        iSayNotTake: "Liegen lassen",
+                        iSayNotTake: "Liegen lassen"
                     };
                     let Chp08HidingPlaceFactoryElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers3, "choicesCSSclass");
                     switch (Chp08HidingPlaceFactoryElement3) {
@@ -4571,7 +4570,7 @@ var Spiegel_VN;
                 iSayThinkAboutVillage: '"(Erkunden) Was denkst du über das Dorf?"',
                 iSayThinkAboutTower: '"(Erkunden) Wie findest du den Turm?"',
                 iSayAskAboutPeople: "(Erkunden) Wo sind alle?",
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp08HidingPlaceFactoryElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers3, "choicesCSSclass");
             switch (Chp08HidingPlaceFactoryElement3) {
@@ -4636,7 +4635,7 @@ var Spiegel_VN;
         let Chp08HidingPlaceFactoryElementAnswers4 = {
             iSayDefiant: "Trotzig",
             iSayGiveIn: "Einlenken",
-            iSaySilent: "Schweigen",
+            iSaySilent: "Schweigen"
         };
         let Chp08HidingPlaceFactoryElement4 = await Spiegel_VN.ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers4, "choicesCSSclass");
         switch (Chp08HidingPlaceFactoryElement4) {
@@ -4718,7 +4717,7 @@ var Spiegel_VN;
             let Chp09ScoutTowerElementAnswers = {
                 iSayClimb: "(Erkunden) Hochklettern",
                 iSayBirds: "(Erkunden) Vögel rufen",
-                iSayFlynn: "(Erkunden) Flynn schicken",
+                iSayFlynn: "(Erkunden) Flynn schicken"
             };
             let Chp09ScoutTowerElement = await Spiegel_VN.ƒS.Menu.getInput(Chp09ScoutTowerElementAnswers, "choicesCSSclass");
             switch (Chp09ScoutTowerElement) {
@@ -4816,7 +4815,7 @@ var Spiegel_VN;
             let Chp09InFactoryElementAnswers = {
                 iSayListenToGuards: '"(Erkunden) Wachen zuhören"',
                 iSayCubicle: '"(Erkunden) Kabine anschauen"',
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp09InFactoryElement = await Spiegel_VN.ƒS.Menu.getInput(Chp09InFactoryElementAnswers, "choicesCSSclass");
             switch (Chp09InFactoryElement) {
@@ -4860,7 +4859,7 @@ var Spiegel_VN;
             let Chp10InTowerElementAnswers = {
                 iSayPortrait: "(Erkunden) Portrait anschauen",
                 // iSayWindow: '"(Erkunden) Fenster"',
-                iSayContinue: "Weiter",
+                iSayContinue: "Weiter"
             };
             let Chp10InTowerElement = await Spiegel_VN.ƒS.Menu.getInput(Chp10InTowerElementAnswers, "choicesCSSclass");
             switch (Chp10InTowerElement) {
@@ -4950,7 +4949,7 @@ var Spiegel_VN;
         // start game interactions
         let viewport = Spiegel_VN.ƒS.Base.getViewport();
         viewport.canvas.addEventListener("mousemove", moveMirror);
-        Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
+        Spiegel_VN.ƒ.Loop.addEventListener("loopFrame" /* ƒ.EVENT.LOOP_FRAME */, loopFrame);
         // define signals for fail and success
         let gameOver = Spiegel_VN.ƒS.Progress.defineSignal([
             () => Spiegel_VN.ƒS.Progress.createEventPromise(document, "tunnelFail"),
@@ -4962,23 +4961,20 @@ var Spiegel_VN;
         // cleanup and end chapter
         graph.removeComponent(graph.cmpTransform);
         Spiegel_VN.ƒS.Character.hideAll();
-        Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* LOOP_FRAME */, loopFrame);
+        Spiegel_VN.ƒ.Loop.removeEventListener("loopFrame" /* ƒ.EVENT.LOOP_FRAME */, loopFrame);
         viewport.canvas.removeEventListener("mousemove", moveMirror);
         if (event.type == "tunnelFail") {
             Spiegel_VN.dataForSave.tunnelFailed += 1;
             Spiegel_VN.ƒS.Speech.tell("", "Mist, der Dämon hat dich erwischt! " + Spiegel_VN.dataForSave.tunnelFailed + " Mal, probier's nochmal.<br/>Drücke dazu die Leertaste");
         }
-        ;
         if (Spiegel_VN.dataForSave.tunnelFailed == 3) {
             Spiegel_VN.ƒS.Speech.clear();
             Spiegel_VN.ƒS.Speech.tell("Dämon", "Ha! Hab' ich dich!");
             return "Bad Ending";
         }
-        ;
         if (event.type == "tunnelSuccess") {
             return "Good Ending";
         }
-        ;
         // for testing, stop NV from starting
         await Spiegel_VN.ƒS.getKeypress(Spiegel_VN.ƒ.KEYBOARD_CODE.SPACE);
         await Chp10_MinigameDemon();
@@ -5058,7 +5054,6 @@ var Spiegel_VN;
         if (!Spiegel_VN.dataForSave.pickedIron) {
             return "Semi Good Ending";
         }
-        ;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Instinktiv greifst du zu dem Hammer. Was für ein Glück, dass du ihn eingesteckt hast! Du schwingst ihn und triffst damit den ersten Spiegel.");
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, true);
         Spiegel_VN.ƒS.update();
@@ -5130,7 +5125,7 @@ var Spiegel_VN;
             let Chp10GoodEndingElementAnswers1 = {
                 iSayNoticed: "(Erkunden) Hast du denn nicht bemerkt, dass …",
                 iSayGrey: "(Erkunden) Dann bist du ganz grau geworden …",
-                iSayContinue: "Und dann?",
+                iSayContinue: "Und dann?"
             };
             let Chp10GoodEndingElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers1, "choicesCSSclass");
             switch (Chp10GoodEndingElement1) {
@@ -5167,7 +5162,7 @@ var Spiegel_VN;
         let Chp10GoodEndingElementAnswers2 = {
             iSayCareful: "Vorsichtig",
             iSayAccusing: "Vorwurfsvoll",
-            iSayIgnore: "Ignorieren",
+            iSayIgnore: "Ignorieren"
         };
         let Chp10GoodEndingElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers2, "choicesCSSclass");
         switch (Chp10GoodEndingElement2) {
@@ -5266,7 +5261,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, das kannst du nicht machen! Komm, lass die Splitter hier. Deine Mission war es, mir bei der Suche nach meiner Schwester zu helfen. Und das ist dir gelungen! Das ist doch alles, was zählt. Die Spiegel sind nun ein für alle mal zerstört. Wir können endlich nach Hause!"');
         let Chp10GoodEndingElementAnswers4 = {
             iSayTakeFlynn: "Flynn mitnehmen",
-            iSayNotTakeFlynn: "Flynn wegbringen",
+            iSayNotTakeFlynn: "Flynn wegbringen"
         };
         let Chp10GoodEndingElement4 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers4, "choicesCSSclass");
         switch (Chp10GoodEndingElement4) {
@@ -5292,7 +5287,7 @@ var Spiegel_VN;
                 let Chp10GoodEndingElementAnswers5 = {
                     iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
                     iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-                    iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+                    iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
                 };
                 let Chp10GoodEndingElement5 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
@@ -5340,7 +5335,7 @@ var Spiegel_VN;
                 let Chp10GoodEndingElementAnswers6 = {
                     iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
                     iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-                    iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+                    iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
                 };
                 let Chp10GoodEndingElement6 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
@@ -5417,7 +5412,7 @@ var Spiegel_VN;
             let Chp10SemiGoodEndingElementAnswers1 = {
                 iSayNoticed: "(Erkunden) Hast du denn nicht bemerkt, dass …",
                 iSayGrey: "(Erkunden) Dann bist du ganz grau geworden …",
-                iSayContinue: "Und dann?",
+                iSayContinue: "Und dann?"
             };
             let Chp10SemiGoodEndingElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp10SemiGoodEndingElementAnswers1, "choicesCSSclass");
             switch (Chp10SemiGoodEndingElement1) {
@@ -5453,7 +5448,7 @@ var Spiegel_VN;
         let Chp10SemiGoodEndingElementAnswers2 = {
             iSayCareful: "Vorsichtig",
             iSayAccusing: "Vorwurfsvoll",
-            iSayIgnore: "Ignorieren",
+            iSayIgnore: "Ignorieren"
         };
         let Chp10SemiGoodEndingElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp10SemiGoodEndingElementAnswers2, "choicesCSSclass");
         switch (Chp10SemiGoodEndingElement2) {
@@ -5562,7 +5557,7 @@ var Spiegel_VN;
         let Chp10SemiGoodEndingElementAnswers4 = {
             iSayYes: '"Klar!"',
             iSayUnsure: '"Mal schauen"',
-            iSayNo: '"Auf gar keinen Fall"',
+            iSayNo: '"Auf gar keinen Fall"'
         };
         let Chp10SemiGoodEndingElement4 = await Spiegel_VN.ƒS.Menu.getInput(Chp10SemiGoodEndingElementAnswers4, "choicesCSSclass");
         switch (Chp10SemiGoodEndingElement4) {
@@ -5585,7 +5580,7 @@ var Spiegel_VN;
         let Chp10GoodEndingElementAnswers5 = {
             iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
             iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-            iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein",
+            iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
         };
         let Chp10GoodEndingElement5 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
@@ -5696,8 +5691,7 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
-    async function EmptyScene() {
-    }
+    async function EmptyScene() { }
     Spiegel_VN.EmptyScene = EmptyScene;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;

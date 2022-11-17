@@ -119,7 +119,7 @@ namespace Spiegel_VN {
     pickedChp10GoodEndingContinue2: false,
     pickedChp10SemiGoodEndingContinue1: false,
     pickedChp10SemiGoodEndingContinue2: false,
-    pickedChp10BadEndingContinue2: false,
+    pickedChp10BadEndingContinue2: false
 
   };
 
@@ -253,21 +253,21 @@ namespace Spiegel_VN {
       // { id: "00 Name Entry", scene: Chp00_00_NameEntry, name: "NameEntry" },
 
       // ***CHAPTER 01 ***
-      {id: "01_00 IntroNarration",scene: Chp01_00_IntroNarration, name: "Intro Narration"},
-      {id: "01_01 Intro Marketplace",scene: Chp01_01_IntroMarketplace, name: "Intro marketplace"}, 
-      {id: "01_E_FlowerMerchant",scene: Chp01_E_FlowerMerchant, name: "E_FlowerMerchant"},
+      {id: "01_00 IntroNarration", scene: Chp01_00_IntroNarration, name: "Intro Narration"},
+      {id: "01_01 Intro Marketplace", scene: Chp01_01_IntroMarketplace, name: "Intro marketplace"}, 
+      {id: "01_E_FlowerMerchant", scene: Chp01_E_FlowerMerchant, name: "E_FlowerMerchant"},
       { id: "01_E_LeatherMerchant", scene: Chp01_E_LeatherMerchant, name: "E_LeatherMerchant" },
-      {id: "01_02 Conversation Mama", scene: Chp01_02_ConvoMother, name: "ConvoMother", },
+      {id: "01_02 Conversation Mama", scene: Chp01_02_ConvoMother, name: "ConvoMother" },
       {id: "01_03 MirrorMerchant", scene: Chp01_03_IntroMirror, name: "IntroMirror"},
       // *** CUTSCENES CHP01***
       {id: "01_CS PerchaseMirror", scene: Chp01_CS_PerchaseMirror, name: "CS: PerchaseMirror"},
       {id: "01_CS Arrival Home", scene: Chp01_CS_ArrivalHome, name: "CS: ArrivalHome"},
 
       // // // // ***CHAPTER 02: FAMILY HOME ***
-      {id: "02_00 Arrival Home",scene: Chp02_00_ArrivalHome, name: "02_00 ArrivalHome"},
+      {id: "02_00 Arrival Home", scene: Chp02_00_ArrivalHome, name: "02_00 ArrivalHome"},
       {id: "02_01 Dinner at home", scene: Chp02_01_Dinner, name: "Dinner"},
       {id: "02_021 Test Mirror Kailani", scene: Chp02_021_TestMirrorK, name: "Test mirror"},
-      {id: "02_021 Test Mirror Evarius", scene: Chp02_021_TestMirrorE,name: "Test mirror"},
+      {id: "02_021 Test Mirror Evarius", scene: Chp02_021_TestMirrorE, name: "Test mirror"},
       {id: "02_E Discover bedroom", scene: Chp02_E_DiscoverBedroom, name: "E_Bedroom"},
       {id: "02_03 Pick Herbs", scene: Chp02_03_PickHerbs, name: "Herbs Garden"},
       {id: "02_Kitchen", scene: Chp02_Kitchen, name: "Kitchen"},
@@ -277,18 +277,18 @@ namespace Spiegel_VN {
       // *** CHAPTER 03: VILLAGE ***
       {id: "03_00 New day", scene: Chp03_00_NewDay, name: " New Day" },
       // {id: "03_01 Dressmaker", scene: Chp03_01_Dressmaker, name: "Dressmaker"}, DELETE
-      {id: "03_E Discover Forest",scene: Chp03_E_DiscoverForest, name: "E_Forest"},
+      {id: "03_E Discover Forest", scene: Chp03_E_DiscoverForest, name: "E_Forest"},
       {id: "03_E Discover Library", scene: Chp03_E_DiscoverLibrary, name: "E_Library"},
-      {id: "03_021 Chores with Kailani",scene: Chp03_021_ChoresWithKailani, name: "Chores Kailani" },
+      {id: "03_021 Chores with Kailani", scene: Chp03_021_ChoresWithKailani, name: "Chores Kailani" },
       {id: "03_CS Kailani is missing", scene: Chp03_CS_KailaniMissing, name: "CS: Kailani is missing"},
       // {id: "03_CS Turmoil marketplace", scene: Chp03_CS_TurmoilMarketplace, name: "CS: TurmoilMarketplace"}, DELETE 
 
       // // // *** CHAPTER 04 RESEARCH ***
       
       {id: "04_00_Research Options", scene: Chp04_00_ResearchOptions, name: "Research options"},
-      {id: "04_01 Talk with family",scene: Chp04_01_TalkWithFamily, name: "Talk with family"},
+      {id: "04_01 Talk with family", scene: Chp04_01_TalkWithFamily, name: "Talk with family"},
       {id: "04_03 Research library", scene: Chp04_03_ResearchLibrary, name: "Research library"},
-      {id: "04_E_Examine mirror",scene: Chp04_E_ExamineMirror,name: "Examine Mirror"},
+      {id: "04_E_Examine mirror", scene: Chp04_E_ExamineMirror, name: "Examine Mirror"},
       
 
       // // *** CHAPTER 05: FOREST
@@ -313,7 +313,7 @@ namespace Spiegel_VN {
       
       // // *** CHAPTER 10: CROSSING LAKE ***
       {id: "08_Arrival lake", scene: Chp08_ArrivalLake, name: "Arrival at lake"},
-      {id: "08_ImageRiddle", scene: Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake",},
+      {id: "08_ImageRiddle", scene: Chp07_ImageRiddle, name: "ImageRiddle", next: "08_OnLake"},
       {id: "08_OnLake", scene: Chp08_OnLake, name: "On lake"},
       {id: "08_Arrival other side", scene: Chp08_ArrivalOtherSide, name: "Arrival other side"},
       {id: "08_Search hiding place", scene: Chp08_SearchHidingPlace, name: "Search for hiding place"},
@@ -335,9 +335,9 @@ namespace Spiegel_VN {
       {id: "10_MinigameDemon", scene: Chp10_MinigameDemon, name: "Destroy mirror"},
       {id: "Good Ending", scene: GoodEnding, name: "Good Ending"},
       {id: "Semi Good Ending", scene: SemiGoodEnding, name: "Semi good ending"},
-      {id: "Bad Ending",scene: BadEnding,name: "Bad Ending"},
+      {id: "Bad Ending", scene: BadEnding, name: "Bad Ending"},
       {id: "End", scene: End, name: "End"},
-      {id: "Empty scene",scene: EmptyScene,name: "Empty scene"},
+      {id: "Empty scene", scene: EmptyScene, name: "Empty scene"}
       
     ];
 
