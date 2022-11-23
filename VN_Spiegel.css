@@ -85,10 +85,11 @@ speech content {
     url('enchanted-land.regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  unicode-range: U+0-10FFFF;
 }
 
 name {
-  font-family: 'enchanted_landregular', Helvetica, sans-serif;
+  font-family: Enchanted Land, Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 5vmin;
