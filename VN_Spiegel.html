@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="VN_Spiegel.css" />
-    <link rel="stylesheet" href="VN_Spiegel_Lake.css" />
-    <script src="Fudge/FudgeCore.js"></script>
-    <script src="FudgeStory/FudgeStory.js"></script>
-    <script src="./Build/VN_Spiegel.js"></script>
-    <title>Der Spiegel, der das Lächeln fraß</title>
-  </head>
 
-  <body>
-    <scene>
-      <dialog type="splash" open>
-        <p>
-          <img id="FudgeStoryLogo" theme="dark" />
-        </p>
-      </dialog>
-      <canvas></canvas>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="VN_Spiegel.css" />
+  <link rel="stylesheet" href="VN_Spiegel_Lake.css" />
+  <script src="Fudge/FudgeCore.js"></script>
+  <script src="FudgeStory/FudgeStory.js"></script>
+  <script src="./Build/VN_Spiegel.js"></script>
+  <title>Der Spiegel, der das Lächeln fraß</title>
+</head>
 
-      <speech>
-        <name></name>
-        <content></content>
-      </speech>
+<body>
+  <scene>
+    <dialog type="splash" open>
+      <p>
+        <img id="FudgeStoryLogo" theme="dark" />
+      </p>
+    </dialog>
+    <canvas></canvas>
 
-      <dialog type="inventory">
-        <button type="button">close</button>
-        <ul></ul>
-      </dialog>
+    <speech>
+      <name></name>
+      <content></content>
+    </speech>
 
-      <div type="interface">
-        <!-- <input
+    <dialog type="inventory">
+      <button type="button">close</button>
+      <ul></ul>
+    </dialog>
+
+    <div type="interface">
+      <!-- <input
           name="scoreEmpathyPoints"
           value="Empathy Points"
           type="text"
           disabled
         /> -->
-        <!-- für value der Skala; Füllung -->
-        <!-- <meter
+      <!-- für value der Skala; Füllung -->
+      <!-- <meter
           id="EmpathyPointsSkala"
           name="EmpathyPoints"
           min="0"
           max="100"
           disabled
         ></meter> -->
-      </div>
-      <dialog type="text"></dialog>
-    </scene>
-  </body>
+    </div>
+    <dialog type="text"></dialog>
+  </scene>
+</body>
+
 </html>
