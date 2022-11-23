@@ -1225,7 +1225,7 @@ var Spiegel_VN;
             T00012: '"Sicherlich rennt sie irgendwo deinen Chaos-Geschwistern hinterher. Kailani und Evarius. Verrückte Namen, oder? Was haben sich Mama und Mutti nur dabei gedacht!"',
             T0013: '"Mama ist wieder gestresst. Dabei sehe ich sie gerade sowieso so selten. Manchmal wünschte ich mir, sie würde weniger arbeiten und lieber mit uns Zeit verbringen."',
             T0014: '"(Tipp: Die Erkundungsoptionen kannst du wählen, ohne in der Story voranzuschreiten!)"'
-        },
+        }
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
@@ -1309,6 +1309,7 @@ var Spiegel_VN;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp01_00_IntroNarration() {
+        Spiegel_VN.ƒS.Speech.hide();
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.WitchInTheWoods);
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.cracklingfire, 0.1, 1, false);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
@@ -3071,7 +3072,8 @@ var Spiegel_VN;
             iSayBest: "Ich gebe mein Bestes",
             iSayKailani: "Ich tue es für Kailani"
         };
-        let Chp05PickSceneElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
+        // let Chp05PickSceneElement2 =
+        await Spiegel_VN.ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Also gut."');
         // await ƒS.Speech.tell(characters.maincharacter, "Der Baum raschelt und ächzt. Um dich herum säuselt der Wind.");
         return "TextRiddle";
@@ -3243,7 +3245,8 @@ var Spiegel_VN;
             iSayQuestions: "Ich habe noch so viele Fragen!",
             iSayNeed: "Ich brauche Sie!"
         };
-        let Chp05ConvoTreeElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
+        // let Chp05ConvoTreeElement3 =
+        await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
         return "05_ConvoMother";
@@ -3367,7 +3370,8 @@ var Spiegel_VN;
         let Chp05ConvoMotherElementAnswers4 = {
             iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein"
         };
-        let Chp05PickSceneElement4 = await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
+        // let Chp05PickSceneElement4 =
+        await Spiegel_VN.ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich wünsche mir, in die Spiegelwelt zu reisen!"');
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
@@ -3695,7 +3699,8 @@ var Spiegel_VN;
         let Chp06InnElementAnswers = {
             iSayRoom: '"Haben Sie noch ein Zimmer frei?"'
         };
-        let Chp06InnElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
+        // let Chp06InnElement =
+        await Spiegel_VN.ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
         // if (dataForSave.pickedChp06TrustFlynn) {
         //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue Flynn.");
         // }
@@ -4757,7 +4762,9 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.listeningriddle_destroy, 1, 1, false);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Wie war das?");
-        let answerBirds = await Spiegel_VN.ƒS.Speech.getInput();
+        // let answerBirds:
+        // String =
+        await Spiegel_VN.ƒS.Speech.getInput();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Und das Spiegelzimmer müssen wir zerstören! Hast du die Vögel gehört, Flynn? Wir können es schaffen, ich bin mir sicher! Wir müssen diese Spiegel ein für alle Mal zerstören. Dann können wir nach Hause."');
         Spiegel_VN.ƒS.Character.hideAll();
@@ -5289,7 +5296,7 @@ var Spiegel_VN;
                     iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
                     iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
                 };
-                let Chp10GoodEndingElement5 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
+                await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_CS_ArrivalHome);
@@ -5337,7 +5344,8 @@ var Spiegel_VN;
                     iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
                     iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
                 };
-                let Chp10GoodEndingElement6 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
+                // let Chp10GoodEndingElement6 =
+                await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
                 await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_CS_ArrivalHome);
@@ -5582,7 +5590,8 @@ var Spiegel_VN;
             iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
             iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
         };
-        let Chp10GoodEndingElement5 = await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
+        // let Chp10GoodEndingElement5 =
+        await Spiegel_VN.ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.black);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp01_CS_ArrivalHome);

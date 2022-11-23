@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp05_02_ConvoTree(): ƒS.SceneReturn {
 
-  
+
     let Chp05ConvoTreeElementAnswers = {
       iSayInner: "(Erkunden) Sein Innerstes?",
       iSaySick: "(Erkunden) Wie werden sie krank?",
@@ -33,20 +33,20 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         return "05_02 Convo Tree";
         break;
-      
+
       case Chp05ConvoTreeElementAnswers.iSayFree:
         dataForSave.pickedChp05Free = true;
         await ƒS.Speech.tell(characters.wishtree, '"Die Spiegel haben eine weitere, heute unbekannte Funktion. Sie wurden ursprünglich als Reisemöglichkeit hergestellt. Du kannst mit dem Handspiegel, dem Kailani verfallen ist, in die Spiegelwelt reisen."');
         ƒS.Speech.clear();
         return "05_02 Convo Tree";
         break;
-      
+
       case Chp05ConvoTreeElementAnswers.iSayRiddleWords:
         await ƒS.Speech.tell(characters.wishtree, '"Kannst du erraten, wie du sie retten kannst?"');
         ƒS.Speech.clear();
         break;
     }
-  
+
     await ƒS.Speech.tell(characters.maincharacter, "Ich muss mich um Mitternacht mit dem Spiegel an einen Fluss begeben!");
     await ƒS.Speech.tell(characters.wishtree, '"Das ist richtig. Reisen kannst du nur, wenn du dich in einer dunklen Nacht mit hellem Mondschein um 12 Uhr an ein Gewässer begibst. Sprich den Zauberspruch und halte den Spiegel parallel zum Gewässer, damit sich der Mond darin spiegelt."');
     await ƒS.Speech.tell(characters.maincharacter, "Wie ist denn der Zauberspruch?");
@@ -72,12 +72,12 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast.");
         ƒS.Speech.clear();
         break;
-      
+
       case Chp05ConvoTreeElementAnswers2.iSayFeed:
         if (dataForSave.pickedSeeds) {
-          await ƒS.Speech.tell(characters.maincharacter, "Du greifst in deine Tasche und wirfst den Vögeln die Sonnenblumenkerne hin. Sie fliegen um dich herum und zirpen fröhlich."); 
+          await ƒS.Speech.tell(characters.maincharacter, "Du greifst in deine Tasche und wirfst den Vögeln die Sonnenblumenkerne hin. Sie fliegen um dich herum und zirpen fröhlich.");
         } else {
-          await ƒS.Speech.tell(characters.maincharacter, "Leider hast du deine übrigen Sonnenblumenkerne im Garten verpflanzt. "); 
+          await ƒS.Speech.tell(characters.maincharacter, "Leider hast du deine übrigen Sonnenblumenkerne im Garten verpflanzt. ");
 
         }
         await ƒS.Speech.tell(characters.maincharacter, "Du nimmst allen Mut zusammen und beginnst mit wackeliger Stimme das Schlaflied ‘Gute Nacht, kleiner Igel’ zu singen, dass du Kailani und Evarius, als sie noch klein waren, vorgesungen hast.");
@@ -98,7 +98,8 @@ namespace Spiegel_VN {
       iSayNeed: "Ich brauche Sie!"
     };
 
-    let Chp05ConvoTreeElement3 = await ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
+    // let Chp05ConvoTreeElement3 =
+    await ƒS.Menu.getInput(Chp05ConvoTreeElementAnswers3, "choicesCSSclass");
     await ƒS.Speech.tell(characters.maincharacter, "Der Wald schweigt. Du seufzt und drehst dich um. Es ist schon spät geworden. Mit einem Blick nach oben registrierst du, dass es Vollmond ist. Was hatte der Baum gesagt? Dir dämmert, dass die Zeit für die Abreise naht.");
     await ƒS.Speech.tell(characters.maincharacter, "Langsam trittst du deinen Heimweg an. Ist Kailani wirklich in dem Spiegel gefangen? Leidet sie? Wie sieht die Welt dort aus? Was muss ich mitnehmen? Wie komme ich zurück? Komme ich jemals zurück … ?");
 

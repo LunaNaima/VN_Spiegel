@@ -21,6 +21,6 @@ namespace Spiegel_VN {
       T00012: '"Sicherlich rennt sie irgendwo deinen Chaos-Geschwistern hinterher. Kailani und Evarius. Verrückte Namen, oder? Was haben sich Mama und Mutti nur dabei gedacht!"',
       T0013: '"Mama ist wieder gestresst. Dabei sehe ich sie gerade sowieso so selten. Manchmal wünschte ich mir, sie würde weniger arbeiten und lieber mit uns Zeit verbringen."',
       T0014: '"(Tipp: Die Erkundungsoptionen kannst du wählen, ohne in der Story voranzuschreiten!)"'
-    },
+    }
   };
 }

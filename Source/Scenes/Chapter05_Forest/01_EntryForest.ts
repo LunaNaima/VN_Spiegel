@@ -27,7 +27,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Schnaufend schleppst du dich von Stamm zu Stamm, über Wurzeln und Gebüsch. Plötzlich stehst du inmitten einer Lichtung.");
     await ƒS.Location.show(locations.Chp05_Wishtree);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        
+
     await ƒS.Speech.tell(characters.wishtree, '"Willkommen, Kind."');
     await ƒS.Speech.tell(characters.maincharacter, "Was war das? Wer hat da gesprochen?");
     await ƒS.Speech.tell(characters.wishtree, '"Komm’ nur näher."');
@@ -44,7 +44,8 @@ namespace Spiegel_VN {
       iSayKailani: "Ich tue es für Kailani"
     };
 
-    let Chp05PickSceneElement2 = await ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
+    // let Chp05PickSceneElement2 =
+    await ƒS.Menu.getInput(Chp05PickSceneElementAnswers2, "choicesCSSclass");
     await ƒS.Speech.tell(characters.wishtree, '"Also gut."');
     // await ƒS.Speech.tell(characters.maincharacter, "Der Baum raschelt und ächzt. Um dich herum säuselt der Wind.");
 

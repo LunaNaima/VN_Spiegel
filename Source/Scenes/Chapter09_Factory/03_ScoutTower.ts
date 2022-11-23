@@ -70,7 +70,9 @@ namespace Spiegel_VN {
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "Wie war das?");
 
-    let answerBirds: String = await ƒS.Speech.getInput();
+    // let answerBirds:
+    // String =
+    await ƒS.Speech.getInput();
 
 
     await ƒS.Speech.tell(characters.maincharacter, '"Also, da oben ist ein Spiegelzimmer, das von einem Dämon bewacht wird. Wir sind schon viel näher dran! Es ist tatsächlich ein Dämon im Turm!"');

@@ -149,7 +149,8 @@ namespace Spiegel_VN {
       iSaySpell: "Spieglein, Spieglein, weise mir mein Weglein"
     };
 
-    let Chp05PickSceneElement4 = await ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
+    // let Chp05PickSceneElement4 =
+    await ƒS.Menu.getInput(Chp05ConvoMotherElementAnswers4, "choicesCSSclass");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Ich wünsche mir, in die Spiegelwelt zu reisen!"');
     await ƒS.Location.show(locations.black);

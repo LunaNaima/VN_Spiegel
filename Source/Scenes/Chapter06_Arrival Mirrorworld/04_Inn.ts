@@ -18,7 +18,8 @@ namespace Spiegel_VN {
       iSayRoom: '"Haben Sie noch ein Zimmer frei?"'
     };
 
-    let Chp06InnElement = await ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
+    // let Chp06InnElement =
+    await ƒS.Menu.getInput(Chp06InnElementAnswers, "choicesCSSclass");
 
     // if (dataForSave.pickedChp06TrustFlynn) {
     //   await ƒS.Speech.tell(characters.maincharacter, "Ich vertraue Flynn.");

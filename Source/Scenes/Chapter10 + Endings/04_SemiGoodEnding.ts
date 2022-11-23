@@ -282,7 +282,8 @@ namespace Spiegel_VN {
       iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
 
     };
-    let Chp10GoodEndingElement5 = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
+    // let Chp10GoodEndingElement5 =
+    await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers5, "choicesCSSclass");
 
     await ƒS.Location.show(locations.black);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);

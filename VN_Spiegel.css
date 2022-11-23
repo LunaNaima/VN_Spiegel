@@ -32,12 +32,15 @@ canvas {
   margin-left: auto;
 }
 
-.choicesCSSclass {
+dialog[class="choicesCSSclass"] {
   background: transparent;
   border: none;
   padding: 0;
   height: 30%;
   width: 50%;
+}
+
+dialog[class="choicesCSSclass"] button { 
   background-image: url(./Assets/Items/UI_Dialogbox.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -51,8 +54,6 @@ canvas {
   margin: 0 2%;
   cursor: pointer;
 }
-
-/*.choicesCSSclass button {}*/
 
 speech {
   background-image: url(./Assets/Items/UI_Speechbox.png);
@@ -78,10 +79,12 @@ speech content {
   font-size: 2.5vmin;
 }
 
-font-face {
-  /* Von Riem Yasin */
+@font-face {
+  font-family: 'enchanted_landregular';
   src: url('enchanted-land.regular-webfont.woff2') format('woff2'),
     url('enchanted-land.regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 name {
