@@ -34,6 +34,7 @@ canvas {
 
 dialog[class="choicesCSSclass"] {
   background: transparent;
+  text-align: center;
   border: none;
   padding: 0;
   height: 30%;
@@ -41,7 +42,7 @@ dialog[class="choicesCSSclass"] {
 }
 
 dialog[class="choicesCSSclass"] button {
-  background-image: url(./Assets/Items/UI_Dialogbox.png);
+  background-image: url(./Assets/Items/UI_Dialogbox.png); /* Von Ronja Neumann implementiert */
   background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -55,8 +56,8 @@ dialog[class="choicesCSSclass"] button {
   cursor: pointer;
 }
 
-speech {
-  background-image: url(./Assets/Items/UI_Speechbox.png);
+speech { 
+  background-image: url(./Assets/Items/UI_Speechbox.png); /* Von Ronja Neumann implementiert */
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
