@@ -13,7 +13,7 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smile, ƒS.positionPercent(55, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Mutti, "Hallo, Schatz!");
+        await ƒS.Speech.tell(characters.Mutti, '"Hallo, Schatz!"');
         ƒS.Character.hideAll();
         break;
 

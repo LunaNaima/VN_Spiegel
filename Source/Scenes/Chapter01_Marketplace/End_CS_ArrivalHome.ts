@@ -14,7 +14,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Zusammen mit deinen Geschwistern Evarius, Kailani und Mama nimmst du die Abkürzung durch das Feld in Richtung zuhause. Das kleine Häuschen, in dem ihr, seit du denken kannst, lebt, liegt am Rande des Dorfes, dort, wo die Bäume enger zusammenstehen und das Moos schon an den Hauswänden hochkriecht.");
 
     let Chp02GoInsideHouseAnswers = {
-      iSayGoInside: "Ins Haus eintreten."
+      iSayGoInside: "In's Haus eintreten."
     };
 
     let Chp02GoInsideHouse = await ƒS.Menu.getInput(Chp02GoInsideHouseAnswers, "choicesCSSclass"
@@ -61,7 +61,8 @@ namespace Spiegel_VN {
 
         await ƒS.Speech.tell(characters.Mutti, '"Eure Mama, immer die Pragmatische. Ist eine verrückte Idee, diese Wunsch-Anzeige. Ich kann es kaum erwarten, ihn auszuprobieren."');
         await ƒS.Speech.tell(characters.Mutti, '"Aber erstmal essen wir! Evarius, Kailani, bitte deckt schon mal den Tisch. Du, ' + dataForSave.nameProtagonist + ', kannst die Einkäufe in die Küche bringen. Und geh doch bitte in den Garten, um ein paar Kräuter für das Abendessen zu ernten."');
-
+        ƒS.Character.hideAll();
+        ƒS.update();
         return "02_00 Arrival Home";
     }
   }

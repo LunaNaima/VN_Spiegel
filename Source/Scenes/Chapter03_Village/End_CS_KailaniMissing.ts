@@ -10,7 +10,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Du willst nur schnell nach Kailani schauen, bevor du dich zurückziehst.");
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Location.show(locations.Chp03_KailaniBedroom);
-
+    ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani? Bist du da?"');
     await ƒS.Speech.tell(characters.maincharacter, "Der Spiegel liegt glitzernd auf dem Bett. Von Kailani fehlt aber jede Spur. Ist sie vielleicht bei Evarius?");
 

@@ -6,12 +6,12 @@ namespace Spiegel_VN {
     ƒS.update();
 
     //*** BEGIN DIALOGUE */
-    await ƒS.Speech.tell(characters.mirrorMerchant, '"Ah, Sie sind bestimmt die Schwester!"');
+    await ƒS.Speech.tell(characters.mirrorMerchant, '"Ah, Sie sind bestimmt die Schwester von ' + dataForSave.nameProtagonist + '!');
     ƒS.update();
-    await ƒS.Speech.tell(characters.Mama, '"Ach, lassen Sie das Geschmeichlel! Ich wollte nur mein Kind abholen."');
+    await ƒS.Speech.tell(characters.Mama, '"Ach, lassen Sie das Geschmeichle! Ich wollte nur mein Kind abholen."');
     await ƒS.Speech.tell(characters.mirrorMerchant, '"Lassen Sie sich doch für einen kurzen Moment aus Ihrem stressigen Alltag entführen … in eine Welt, die aus Ihren Träumen gebaut ist."');
     ƒS.update();
-    await ƒS.Speech.tell(characters.mirrorMerchant, '"Darf ich Ihnen den magischen Spiegel vorführen? Es funktioniert so: Sie halten sich den Spiegel vor das Gesicht und sagen “Spieglein, Spieglein, weise mir mein Träumlein” hinein, und dann dürfen Sie sich etwas wünschen."');
+    await ƒS.Speech.tell(characters.mirrorMerchant, '"Darf ich Ihnen den magischen Spiegel vorführen? Es funktioniert so: Sie halten sich den Spiegel vor das Gesicht und sagen ´Spieglein, Spieglein, weise mir mein Träumlein´ hinein, und dann dürfen Sie sich etwas wünschen."');
     await ƒS.Speech.tell(characters.mirrorMerchant, '"Hier, ich zeige es Ihnen: Spieglein, Spieglein, weise mir mein Träumlein! Ich wünschte, ich wäre ein König vor einem wunderschönen Strand!"');
     await ƒS.Location.show(locations.Chp01_03_MirrorDemo);
     ƒS.Character.hideAll();

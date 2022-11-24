@@ -47,9 +47,9 @@ namespace Spiegel_VN {
     // *** RESPONSES ***
     switch (chp01FlowerMerchantDialogueElement) {
       case chp01FlowerMerchantDialogueElementAnswers.iSayAskAboutTrip:
-        await ƒS.Speech.tell(characters.flowerMerchant.name, '"Wie war denn die Reise hierher?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Wie war denn die Reise hierher?"');
         await ƒS.Speech.tell(characters.flowerMerchant.name, '"Ich weiß nicht, ob du, mein liebes Kind, davon etwas gehört hast, aber derzeit lauern überall Banditen auf den Königswegen! Einmal wären wir beinahe mitten in eine Bande hineingefahren."');
-        await ƒS.Speech.tell(characters.flowerMerchant.name, '"Zum Glück habe ich so ein feines Näschen. Damit konnte ich das Gesindel meilenweit voraus riechen! Schau nicht so zweifelnd, jedes Wort, das ich gesprochen habe, ist wahr, jaja!."');
+        await ƒS.Speech.tell(characters.flowerMerchant.name, '"Zum Glück habe ich so ein feines Näschen. Damit konnte ich das Gesindel meilenweit voraus riechen! Schau nicht so zweifelnd, jedes Wort, das ich gesprochen habe, ist wahr, jaja!"');
         ƒS.Speech.clear();
         return "01_E_FlowerMerchant";
         break;

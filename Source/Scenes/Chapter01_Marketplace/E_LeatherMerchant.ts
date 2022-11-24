@@ -10,7 +10,7 @@ namespace Spiegel_VN {
         break;
 
       case 2:
-        await ƒS.Speech.tell(characters.maincharacter, '"Die Felle der Lederhändler sind immer so schön weich."');
+        await ƒS.Speech.tell(characters.maincharacter, 'Die Felle der Lederhändler sind immer so schön weich.');
         break;
 
       case 3:
@@ -26,8 +26,8 @@ namespace Spiegel_VN {
 
     // *** DIALOGUE OPTIONS ***
     let Chp01LeatherMerchantDialogueElementAnswers = {
-      iSayAskAboutTrip: '"(Erkunden) Was gibt es denn Neues in der Welt?"',
-      iSayAskAboutClothes: "'(Erkunden) Eure Ware sieht so anders aus...'",
+      iSayAskAboutTrip: "(Erkunden) Was gibt es denn Neues in der Welt?",
+      iSayAskAboutClothes: "(Erkunden) Eure Ware sieht so anders aus...",
       iSayBuyShoeCream: "Schuhcreme kaufen",
       iSayLeave: "'Auf Wiedersehen!'"
     };
@@ -44,7 +44,7 @@ namespace Spiegel_VN {
     // *** SWITCHCASE DIALOGUE OPTIONS ***
     switch (Chp01LeatherMerchantDialogueElement) {
       case Chp01LeatherMerchantDialogueElementAnswers.iSayAskAboutTrip:
-        await ƒS.Speech.tell(characters.maincharacter, '"Ihr habt auf der Reise bestimmt Interessantes erlebt!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Ihr habt auf der Reise hier her bestimmt Interessantes erlebt!"');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Oh, aber wie! Die Leute haben uns mitten auf der Straße angehalten und wollten unsere Ware kaufen. Das ist uns noch nie passiert."');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Etwas ungewöhnlich, das Ganze. Ganz gesund sahen sie nicht aus."');
         ƒS.Speech.clear();
@@ -62,7 +62,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp01LeatherMerchantDialogueElementAnswers.iSayBuyShoeCream:
-        await ƒS.Speech.tell(characters.maincharacter, "Ich würde gerne diese Schuhcreme für meine Lederstiefel kaufen.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Ich würde gerne diese Schuhcreme für meine Lederstiefel kaufen."');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Die können es wirklich gebrauchen! Das macht 30 Pfennig."');
         await ƒS.Speech.tell(characters.maincharacter, "Du nimmst die Schuhcreme an und lächelst. Du liebst deine alten Schuhe, egal was andere sagen.");
         ƒS.Speech.clear();
@@ -70,7 +70,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp01LeatherMerchantDialogueElementAnswers.iSayLeave:
-        await ƒS.Speech.tell(characters.maincharacter, "Wiedersehen!");
+        await ƒS.Speech.tell(characters.maincharacter, '"Wiedersehen!"');
         await ƒS.Speech.tell(characters.leatherMerchant, '"Auf bald!"');
         ƒS.Speech.clear();
         return "01_01 Intro Marketplace";

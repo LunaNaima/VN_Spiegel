@@ -109,7 +109,7 @@ namespace Spiegel_VN {
             ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
+            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
             ƒS.Speech.clear();
             break;
@@ -154,7 +154,7 @@ namespace Spiegel_VN {
             ƒS.Character.hideAll();
             await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
             ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
+            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
             await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
             ƒS.Speech.clear();
             break;

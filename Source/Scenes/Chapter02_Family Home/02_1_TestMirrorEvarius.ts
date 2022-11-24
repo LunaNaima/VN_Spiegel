@@ -10,7 +10,7 @@ namespace Spiegel_VN {
     // ƒS.Character.hide(characters.Evarius);
     ƒS.update();
     await ƒS.Speech.tell(characters.Evarius, '"Auja!"');
-    await ƒS.Speech.tell(characters.maincharacter, "Er packt den Spiegel und hebt ihn sich vors Gesicht.");
+    await ƒS.Speech.tell(characters.maincharacter, "Er packt den Spiegel aus und hebt ihn sich vors Gesicht.");
 
     ƒS.Character.hide(characters.Evarius);
     await ƒS.Character.show(characters.Evarius, characters.Evarius.pose.profile_neutral, ƒS.positionPercent(45, 100));
@@ -112,7 +112,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mutti, '"So, jetzt ab auf eure Zimmer! Versucht bitte, so früh wie möglich schlafen zu gehen. Ich weiß, es graut euch schon davor, aber nächste Woche geht die Schule wieder los."');
-    await ƒS.Speech.tell(characters.Mama, '"Also nicht wieder die ganze Nacht wachbleiben! Evarius, dich meine ich. Gute Nacht"');
+    await ƒS.Speech.tell(characters.Mama, '"Also nicht wieder die ganze Nacht wachbleiben! Evarius, dich meine ich. Gute Nacht."');
     ƒS.Character.hideAll();
 
     await ƒS.Location.show(locations.Chp02_E_DiscoverBedroom);

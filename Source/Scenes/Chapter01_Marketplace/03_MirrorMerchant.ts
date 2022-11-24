@@ -34,7 +34,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp01MirrorMerchantElementAnswers.iSayNo:
-        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0010);
+        await ƒS.Speech.tell(characters.maincharacter.name, dlg_Chp01EntryMirrorMerchant.maincharacter.T0012);
         ƒS.Speech.clear();
         break;
     }

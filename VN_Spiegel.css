@@ -38,32 +38,32 @@ dialog[class="choicesCSSclass"] {
   border: none;
   object-fit: cover;
   object-position: bottom;
-  padding: 0;
-  height: 30%;
-  width: 60%;
-  
+  padding: 0; 
+  height: 100%;
+  /* width: auto; */
+  aspect-ratio: 16/9; /* Von Jonas Plotzky programmiert */
+  align-items: center; /* Von Jonas Plotzky programmiert */
+  justify-content: center; /* Von Jonas Plotzky programmiert */
+  display: flex; /* Von Jonas Plotzky programmiert */
+}
+/* Von Jonas Plotzky programmiert */
+dialog[class="choicesCSSclass"]:not([open]) {
+  display: none;
 }
 
 dialog[class="choicesCSSclass"] button {
   background-image: url(./Assets/Items/UI_Dialogbox.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  object-fit: cover;
-  object-position: bottom;
-  text-align: center;
-  position: relative;
-  color: #fff;
-  border: none;
-  height: 50%;
-  width: 20%;
-  margin: 0 2%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-  font-size: 2vmin
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    border: none;
+    height: 10%;
+    width: 30%;
+    padding: 1% 4%;
+    cursor: pointer;
+    font-size: 2vmin;
 }
 
 speech {
@@ -91,14 +91,14 @@ speech content {
   font-size: 2.5vmin;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'enchanted_landregular';
   src: url('enchanted-land.regular-webfont.woff2') format('woff2'),
     url('enchanted-land.regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   unicode-range: U+0-10FFFF;
-}
+} */
 
 name {
   font-family: Enchanted Land, Helvetica, sans-serif;

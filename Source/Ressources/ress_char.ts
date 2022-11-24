@@ -248,7 +248,7 @@ namespace Spiegel_VN {
     },
 
     leatherMerchant: {
-      name: "Lederhändler",
+      name: "Lederhändlerin",
       origin: ƒS.ORIGIN.BOTTOMRIGHT
     },
 
