@@ -531,52 +531,52 @@ var Spiegel_VN;
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
                 // Outfit 1
-                outfit1_annoyed_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_annoyed_angry.png",
-                outfit1_annoyed_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_annoyed_eyeroll.png",
-                outfit1_back_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_back_smile.png",
-                outfit1_back_worried: ".Assets/Characters/Kailani/Outfit1/Kailani_back_worried.png",
-                outfit1_begging_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_begging_eyeroll.png",
-                outfit1_begging_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_begging_shrug.png",
-                outfit1_crossed_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_angry.png",
-                outfit1_crossed_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll.png",
-                outfit1_crossed_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_neutral.png",
-                outfit1_neutral_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry.png",
-                outfit1_neutral_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_eyeroll.png",
-                outfit1_neutral_happy: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_happy.png",
-                outfit1_neutral_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_neutral.png",
-                outfit1_neutral_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_smile.png",
-                outfit1_profile_h_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_neutral.png",
-                outfit1_profile_h_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_smile.png",
-                outfit1_profile_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_neutral.png",
-                outfit1_profile_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_profile_smile.png",
-                outfit1_shrug_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_eyeroll.png",
-                outfit1_shrug_happy: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_happy.png",
-                outfit1_shrug_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_shrug_shrug.png",
-                outfit1_thinking_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_angry.png",
-                outfit1_thinking_neutral: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_neutral.png",
-                outfit1_thinking_shrug: ".Assets/Characters/Kailani/Outfit1/Kailani_thinking_shrug.png",
+                outfit1_annoyed_angry: "Assets/Characters/Kailani/Outfit1/Kailani_annoyed_angry.png",
+                outfit1_annoyed_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_annoyed_eyeroll.png",
+                outfit1_back_smile: "Assets/Characters/Kailani/Outfit1/Kailani_back_smile.png",
+                outfit1_back_worried: "Assets/Characters/Kailani/Outfit1/Kailani_back_worried.png",
+                outfit1_begging_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_begging_eyeroll.png",
+                outfit1_begging_shrug: "Assets/Characters/Kailani/Outfit1/Kailani_begging_shrug.png",
+                outfit1_crossed_angry: "Assets/Characters/Kailani/Outfit1/Kailani_crossed_angry.png",
+                outfit1_crossed_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll.png",
+                outfit1_crossed_neutral: "Assets/Characters/Kailani/Outfit1/Kailani_crossed_neutral.png",
+                outfit1_neutral_angry: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry.png",
+                outfit1_neutral_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_eyeroll.png",
+                outfit1_neutral_happy: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_happy.png",
+                outfit1_neutral_neutral: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_neutral.png",
+                outfit1_neutral_smile: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_smile.png",
+                outfit1_profile_h_neutral: "Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_neutral.png",
+                outfit1_profile_h_smile: "Assets/Characters/Kailani/Outfit1/Kailani_profile_holding_smile.png",
+                outfit1_profile_neutral: "Assets/Characters/Kailani/Outfit1/Kailani_profile_neutral.png",
+                outfit1_profile_smile: "Assets/Characters/Kailani/Outfit1/Kailani_profile_smile.png",
+                outfit1_shrug_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_shrug_eyeroll.png",
+                outfit1_shrug_happy: "Assets/Characters/Kailani/Outfit1/Kailani_shrug_happy.png",
+                outfit1_shrug_shrug: "Assets/Characters/Kailani/Outfit1/Kailani_shrug_shrug.png",
+                outfit1_thinking_angry: "Assets/Characters/Kailani/Outfit1/Kailani_thinking_angry.png",
+                outfit1_thinking_neutral: "Assets/Characters/Kailani/Outfit1/Kailani_thinking_neutral.png",
+                outfit1_thinking_shrug: "Assets/Characters/Kailani/Outfit1/Kailani_thinking_shrug.png",
                 // Outfit 2
-                outfit2_dress_back_neutral: ".Assets/Characters/Kailani/Outfit2/Kailani_back_dress_neutral.png",
-                outfit2_dress_back_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_back_dress_smile.png",
-                outfit2_dress1_angry: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_angry.png",
-                outfit2_dress1_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_eyeroll.png",
-                outfit2_dress1_happy: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_happy.png",
-                outfit2_dress1_shrug: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_shrug.png",
-                outfit2_dress1_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_I_smile.png",
-                outfit2_dress2_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_II_angry.png",
-                outfit2_dress2_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_II_eyeroll.png",
-                outfit2_dress3_angry: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_angry.png",
-                outfit2_dress3_eyeroll: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_eyeroll.png",
-                outfit2_dress3_happy: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_happy.png",
-                outfit2_dress3_shrug: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_shrug.png",
-                outfit2_dress3_smile: ".Assets/Characters/Kailani/Outfit2/Kailani_dress_III_smile.png",
+                outfit2_dress_back_neutral: "Assets/Characters/Kailani/Outfit2/Kailani_back_dress_neutral.png",
+                outfit2_dress_back_smile: "Assets/Characters/Kailani/Outfit2/Kailani_back_dress_smile.png",
+                outfit2_dress1_angry: "Assets/Characters/Kailani/Outfit2/Kailani_dress_I_angry.png",
+                outfit2_dress1_eyeroll: "Assets/Characters/Kailani/Outfit2/Kailani_dress_I_eyeroll.png",
+                outfit2_dress1_happy: "Assets/Characters/Kailani/Outfit2/Kailani_dress_I_happy.png",
+                outfit2_dress1_shrug: "Assets/Characters/Kailani/Outfit2/Kailani_dress_I_shrug.png",
+                outfit2_dress1_smile: "Assets/Characters/Kailani/Outfit2/Kailani_dress_I_smile.png",
+                outfit2_dress2_smile: "Assets/Characters/Kailani/Outfit2/Kailani_dress_II_angry.png",
+                outfit2_dress2_eyeroll: "Assets/Characters/Kailani/Outfit2/Kailani_dress_II_eyeroll.png",
+                outfit2_dress3_angry: "Assets/Characters/Kailani/Outfit2/Kailani_dress_III_angry.png",
+                outfit2_dress3_eyeroll: "Assets/Characters/Kailani/Outfit2/Kailani_dress_III_eyeroll.png",
+                outfit2_dress3_happy: "Assets/Characters/Kailani/Outfit2/Kailani_dress_III_happy.png",
+                outfit2_dress3_shrug: "Assets/Characters/Kailani/Outfit2/Kailani_dress_III_shrug.png",
+                outfit2_dress3_smile: "Assets/Characters/Kailani/Outfit2/Kailani_dress_III_smile.png",
                 // Grey Outfits
-                grey_slave: ".Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
-                grey_shrug_eyeroll: ".Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
-                grey_neutral_angry: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
-                grey_neutral_smile: ".Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
-                grey_crossed_angry: ".Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
-                grey_neutral_happy: ".Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png"
+                grey_slave: "Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
+                grey_shrug_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
+                grey_neutral_angry: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+                grey_neutral_smile: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+                grey_crossed_angry: "Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
+                grey_neutral_happy: "Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png"
             }
         },
         Evarius: {
@@ -584,25 +584,25 @@ var Spiegel_VN;
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
                 // Position 1
-                pos1_angry: ".Assets/Characters/Evarius/Ev_Pos1_angry.png",
-                pos1_frown: ".Assets/Characters/Evarius/Ev_Pos1_frown.png",
-                pos1_laugh: ".Assets/Characters/Evarius/Ev_Pos1_laugh.png",
-                pos1_neutral: ".Assets/Characters/Evarius/Ev_Pos1_neutral.png",
-                pos1_smile: ".Assets/Characters/Evarius/Ev_Pos1_smile.png",
+                pos1_angry: "Assets/Characters/Evarius/Ev_Pos1_angry.png",
+                pos1_frown: "Assets/Characters/Evarius/Ev_Pos1_frown.png",
+                pos1_laugh: "Assets/Characters/Evarius/Ev_Pos1_laugh.png",
+                pos1_neutral: "Assets/Characters/Evarius/Ev_Pos1_neutral.png",
+                pos1_smile: "Assets/Characters/Evarius/Ev_Pos1_smile.png",
                 // Position 2
-                pos2_angry: ".Assets/Characters/Evarius/Ev_Pos2_angry.png",
-                pos2_frown: ".Assets/Characters/Evarius/Ev_Pos2_frown.png",
-                pos2_laugh: ".Assets/Characters/Evarius/Ev_Pos2_laugh.png",
-                pos2_neutral: ".Assets/Characters/Evarius/Ev_Pos2_neutral.png",
-                pos2_smile: ".Assets/Characters/Evarius/Ev_Pos2_smile.png",
+                pos2_angry: "Assets/Characters/Evarius/Ev_Pos2_angry.png",
+                pos2_frown: "Assets/Characters/Evarius/Ev_Pos2_frown.png",
+                pos2_laugh: "Assets/Characters/Evarius/Ev_Pos2_laugh.png",
+                pos2_neutral: "Assets/Characters/Evarius/Ev_Pos2_neutral.png",
+                pos2_smile: "Assets/Characters/Evarius/Ev_Pos2_smile.png",
                 // Position 3
-                pos3_angry: ".Assets/Characters/Evarius/Ev_Pos3_angry.png",
-                pos3_frown: ".Assets/Characters/Evarius/Ev_Pos3_frown.png",
-                pos3_laugh: ".Assets/Characters/Evarius/Ev_Pos3_laugh.png",
-                pos3_neutral: ".Assets/Characters/Evarius/Ev_Pos3_neutral.png",
+                pos3_angry: "Assets/Characters/Evarius/Ev_Pos3_angry.png",
+                pos3_frown: "Assets/Characters/Evarius/Ev_Pos3_frown.png",
+                pos3_laugh: "Assets/Characters/Evarius/Ev_Pos3_laugh.png",
+                pos3_neutral: "Assets/Characters/Evarius/Ev_Pos3_neutral.png",
                 // Profile
-                profile_neutral: ".Assets/Characters/Evarius/Ev_Profile_neutral.png",
-                profile_smile: ".Assets/Characters/Evarius/Ev_Profile_smile.png"
+                profile_neutral: "Assets/Characters/Evarius/Ev_Profile_neutral.png",
+                profile_smile: "Assets/Characters/Evarius/Ev_Profile_smile.png"
             }
         },
         Flynn: {
@@ -610,55 +610,55 @@ var Spiegel_VN;
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMLEFT,
             pose: {
                 // Outfit 1
-                pos1_angry: ".Assets/Characters/Flynn/Outfit1/Flynn_light_angry.png",
-                pos1_happy: ".Assets/Characters/Flynn/Outfit1/Flynn_light_happy.png",
-                pos1_neutral: ".Assets/Characters/Flynn/Outfit1/Flynn_light_neutral.png",
-                pos1_smile: ".Assets/Characters/Flynn/Outfit1/Flynn_light_smile.png",
-                pos1_smile2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_smileII.png",
-                pos2_happy2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_happy_II.png",
-                pos2_neutral: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral.png",
-                pos2_neutral2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral_II.png",
-                pos2_uncertain2: ".Assets/Characters/Flynn/Outfit1/Flynn_light_hand_uncertain_II.png",
-                pos3_angry: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_angry.png",
-                pos3_happy: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_happy.png",
-                pos3_smile: ".Assets/Characters/Flynn/Outfit1/Flynn_light_right_smile.png",
+                pos1_angry: "Assets/Characters/Flynn/Outfit1/Flynn_light_angry.png",
+                pos1_happy: "Assets/Characters/Flynn/Outfit1/Flynn_light_happy.png",
+                pos1_neutral: "Assets/Characters/Flynn/Outfit1/Flynn_light_neutral.png",
+                pos1_smile: "Assets/Characters/Flynn/Outfit1/Flynn_light_smile.png",
+                pos1_smile2: "Assets/Characters/Flynn/Outfit1/Flynn_light_smileII.png",
+                pos2_happy2: "Assets/Characters/Flynn/Outfit1/Flynn_light_hand_happy_II.png",
+                pos2_neutral: "Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral.png",
+                pos2_neutral2: "Assets/Characters/Flynn/Outfit1/Flynn_light_hand_neutral_II.png",
+                pos2_uncertain2: "Assets/Characters/Flynn/Outfit1/Flynn_light_hand_uncertain_II.png",
+                pos3_angry: "Assets/Characters/Flynn/Outfit1/Flynn_light_right_angry.png",
+                pos3_happy: "Assets/Characters/Flynn/Outfit1/Flynn_light_right_happy.png",
+                pos3_smile: "Assets/Characters/Flynn/Outfit1/Flynn_light_right_smile.png",
                 // Outfit 2
-                pos1_confused: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_confused.png",
-                pos1_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_confused_sad.png",
-                pos2_crossed_angry: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_angry.png",
-                pos2_crossed_neutral: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral.png",
-                pos2_crossed_neutral2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral_II.png",
-                pos2_crossed_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_sad.png",
-                pos2_crossed_shocked: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked.png",
-                pos2_crossed_shocked2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked_II.png",
-                pos2_crossed_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
-                pos2_crossed_smile2: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile_II.png",
-                pos2_crossed_uncertain: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_uncertain.png",
-                pos3_arms_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
-                pos3_arms_happy: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_neutral_happy.png",
-                pos3_arms2_angry: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_angry.png",
-                pos3_arms2_sad: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_sad.png",
-                pos3_arms2_smile: ".Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_smile.png",
+                pos1_confused: "Assets/Characters/Flynn/Outfit2/Flynn_blue_confused.png",
+                pos1_sad: "Assets/Characters/Flynn/Outfit2/Flynn_blue_confused_sad.png",
+                pos2_crossed_angry: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_angry.png",
+                pos2_crossed_neutral: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral.png",
+                pos2_crossed_neutral2: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_neutral_II.png",
+                pos2_crossed_sad: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_sad.png",
+                pos2_crossed_shocked: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked.png",
+                pos2_crossed_shocked2: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_shocked_II.png",
+                pos2_crossed_smile: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
+                pos2_crossed_smile2: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile_II.png",
+                pos2_crossed_uncertain: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_uncertain.png",
+                pos3_arms_smile: "Assets/Characters/Flynn/Outfit2/Flynn_blue_crossed_smile.png",
+                pos3_arms_happy: "Assets/Characters/Flynn/Outfit2/Flynn_blue_neutral_happy.png",
+                pos3_arms2_angry: "Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_angry.png",
+                pos3_arms2_sad: "Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_sad.png",
+                pos3_arms2_smile: "Assets/Characters/Flynn/Outfit2/Flynn_blue_uncertain_smile.png",
                 // W/O outfit
-                wo_angry: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_angry.png",
-                wo_happy: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_happy.png",
-                wo_I_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_I_skeptical.png",
-                wo_II_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_II_sad.png",
-                wo_shocked: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_shocked.png",
+                wo_angry: "Assets/Characters/Flynn/Outfit3/Flynn_wo_angry.png",
+                wo_happy: "Assets/Characters/Flynn/Outfit3/Flynn_wo_happy.png",
+                wo_I_skeptical: "Assets/Characters/Flynn/Outfit3/Flynn_wo_I_skeptical.png",
+                wo_II_skeptical: "Assets/Characters/Flynn/Outfit3/Flynn_wo_II_sad.png",
+                wo_shocked: "Assets/Characters/Flynn/Outfit3/Flynn_wo_shocked.png",
                 // Grey outfit
-                grey_wo_skeptical: ".Assets/Characters/Flynn/Outfit3/Flynn_wo_skeptical.png",
-                grey_wo_angry: ".Assets/Characters/Flynn/Outfit3/grey_wo_angry.png",
-                grey_wo_I_skeptical: ".Assets/Characters/Flynn/Outfit3/grey_wo_I_skeptical.png",
-                grey_wo_II_skeptical: ".Assets/Characters/Flynn/Outfit3/grey_wo_II_sad.png",
-                grey_wo_shocked: ".Assets/Characters/Flynn/Outfit3/grey_wo_shocked.png",
-                grey_blue_confused: ".Assets/Characters/Flynn/Outfit3/grey_blue_confused.png",
-                grey_blue_confused_sad: ".Assets/Characters/Flynn/Outfit3/grey_blue_confused_sad.png",
-                grey_blue_happy: ".Assets/Characters/Flynn/Outfit3/grey_blue_neutral_happy.png",
-                grey_blue_crossed_angry: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_angry.png",
-                grey_blue_crossed_shocked: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_shocked.png",
-                grey_blue_crossed_neutral: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_neutral.png",
-                grey_blue_crossed_sad: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_sad.png",
-                grey_blue_crossed_smile: ".Assets/Characters/Flynn/Outfit3/grey_blue_crossed_smile_II.png"
+                grey_wo_skeptical: "Assets/Characters/Flynn/Outfit3/Flynn_wo_skeptical.png",
+                grey_wo_angry: "Assets/Characters/Flynn/Outfit3/grey_wo_angry.png",
+                grey_wo_I_skeptical: "Assets/Characters/Flynn/Outfit3/grey_wo_I_skeptical.png",
+                grey_wo_II_skeptical: "Assets/Characters/Flynn/Outfit3/grey_wo_II_sad.png",
+                grey_wo_shocked: "Assets/Characters/Flynn/Outfit3/grey_wo_shocked.png",
+                grey_blue_confused: "Assets/Characters/Flynn/Outfit3/grey_blue_confused.png",
+                grey_blue_confused_sad: "Assets/Characters/Flynn/Outfit3/grey_blue_confused_sad.png",
+                grey_blue_happy: "Assets/Characters/Flynn/Outfit3/grey_blue_neutral_happy.png",
+                grey_blue_crossed_angry: "Assets/Characters/Flynn/Outfit3/grey_blue_crossed_angry.png",
+                grey_blue_crossed_shocked: "Assets/Characters/Flynn/Outfit3/grey_blue_crossed_shocked.png",
+                grey_blue_crossed_neutral: "Assets/Characters/Flynn/Outfit3/grey_blue_crossed_neutral.png",
+                grey_blue_crossed_sad: "Assets/Characters/Flynn/Outfit3/grey_blue_crossed_sad.png",
+                grey_blue_crossed_smile: "Assets/Characters/Flynn/Outfit3/grey_blue_crossed_smile_II.png"
             }
         },
         flowerMerchant: {
@@ -673,77 +673,77 @@ var Spiegel_VN;
             name: "Spiegelhändler",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                left: ".Assets/Characters/Mirrormerchant/mm_1.png",
-                neutral: ".Assets/Characters/Mirrormerchant/mm_2.png"
+                left: "Assets/Characters/Mirrormerchant/mm_1.png",
+                neutral: "Assets/Characters/Mirrormerchant/mm_2.png"
             }
         },
         Demon: {
             name: "Dämon",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_angry: ".Assets/Characters/Demon/Demon_angry.png",
-                pos2_angry: ".Assets/Characters/Demon/Demon_pos2_angry.png",
-                pos2_smile: ".Assets/Characters/Demon/Demon_pos2_smile.png"
+                pos1_angry: "Assets/Characters/Demon/Demon_angry.png",
+                pos2_angry: "Assets/Characters/Demon/Demon_pos2_angry.png",
+                pos2_smile: "Assets/Characters/Demon/Demon_pos2_smile.png"
             }
         },
         Beggar: {
             name: "Bettlerin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                anguish: ".Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
-                front: ".Assets/Characters/Beggar/Beggar_Pos1_front.png",
-                neutral: ".Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
-                shocked: ".Assets/Characters/Beggar/Beggar_Pos1_shocked.png"
+                anguish: "Assets/Characters/Beggar/Beggar_Pos1_anguish.png",
+                front: "Assets/Characters/Beggar/Beggar_Pos1_front.png",
+                neutral: "Assets/Characters/Beggar/Beggar_Pos1_neutral.png",
+                shocked: "Assets/Characters/Beggar/Beggar_Pos1_shocked.png"
             }
         },
         Cook: {
             name: "Koch",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_concerned: ".Assets/Characters/Cook/Cook_Pos1_concerned.png",
-                pos1_neutral: ".Assets/Characters/Cook/Cook_Pos1_neutral.png",
-                pos2_concerned: ".Assets/Characters/Cook/Cook_Pos2_concerned.png",
-                pos2_unknowing: ".Assets/Characters/Cook/Cook_Pos2_unknowing.png"
+                pos1_concerned: "Assets/Characters/Cook/Cook_Pos1_concerned.png",
+                pos1_neutral: "Assets/Characters/Cook/Cook_Pos1_neutral.png",
+                pos2_concerned: "Assets/Characters/Cook/Cook_Pos2_concerned.png",
+                pos2_unknowing: "Assets/Characters/Cook/Cook_Pos2_unknowing.png"
             }
         },
         Innkeeper: {
             name: "Wirtin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_laugh: ".Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
-                pos1_neutral: ".Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
-                pos1_smile: ".Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
-                pos1_worried: ".Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
-                pos2_frown: ".Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
-                pos2_laugh: ".Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-                pos2_neutral: ".Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
-                pos2_smile: ".Assets/Characters/Innkeeper/Innk_Pos2_smile.png"
+                pos1_laugh: "Assets/Characters/Innkeeper/Innk_Pos1_laugh.png",
+                pos1_neutral: "Assets/Characters/Innkeeper/Innk_pos1_neutral.png",
+                pos1_smile: "Assets/Characters/Innkeeper/Innk_Pos1_smile.png",
+                pos1_worried: "Assets/Characters/Innkeeper/Innk_Pos1_worried.png",
+                pos2_frown: "Assets/Characters/Innkeeper/Innk_Pos2_frown.png",
+                pos2_laugh: "Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+                pos2_neutral: "Assets/Characters/Innkeeper/Innk_Pos2_laugh.png",
+                pos2_smile: "Assets/Characters/Innkeeper/Innk_Pos2_smile.png"
             }
         },
         Stablehand: {
             name: "Stallmädchen",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1_afraid: ".Assets/Characters/Stablehand/Stable_Pos1_afraid.png",
-                pos1_angry: ".Assets/Characters/Stablehand/Stable_Pos1_angry.png",
-                pos1_laugh: ".Assets/Characters/Stablehand/Stable_Pos1_laugh.png",
-                pos2_afraid: ".Assets/Characters/Stablehand/Stable_Pos2_afraid.png",
-                pos2_angry: ".Assets/Characters/Stablehand/Stable_Pos2_angry.png",
-                pos2_laugh: ".Assets/Characters/Stablehand/Stable_Pos2_laugh.png"
+                pos1_afraid: "Assets/Characters/Stablehand/Stable_Pos1_afraid.png",
+                pos1_angry: "Assets/Characters/Stablehand/Stable_Pos1_angry.png",
+                pos1_laugh: "Assets/Characters/Stablehand/Stable_Pos1_laugh.png",
+                pos2_afraid: "Assets/Characters/Stablehand/Stable_Pos2_afraid.png",
+                pos2_angry: "Assets/Characters/Stablehand/Stable_Pos2_angry.png",
+                pos2_laugh: "Assets/Characters/Stablehand/Stable_Pos2_laugh.png"
             }
         },
         Seller: {
             name: "Verkäuferin",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1: ".Assets/Characters/wharywoman.png"
+                pos1: "Assets/Characters/wharywoman.png"
             }
         },
         MerchantWhary: {
             name: "Händler",
             origin: Spiegel_VN.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                pos1: ".Assets/Characters/wharymale.png"
+                pos1: "Assets/Characters/wharymale.png"
             }
         }
     };
