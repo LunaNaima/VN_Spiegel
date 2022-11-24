@@ -40,7 +40,7 @@ dialog[class="choicesCSSclass"] {
   width: 50%;
 }
 
-dialog[class="choicesCSSclass"] button { 
+dialog[class="choicesCSSclass"] button {
   background-image: url(./Assets/Items/UI_Dialogbox.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -69,12 +69,12 @@ speech {
 
 speech content {
   color: rgb(255 255 255);
-  position: relative;
+  position: absolute;
   width: 70%;
   display: block;
   FONT-VARIANT: JIS04;
   FONT-VARIANT: JIS04;
-  top: 15%;
+  top: 40%;
   left: 7%;
   font-size: 2.5vmin;
 }
@@ -92,24 +92,25 @@ name {
   font-family: Enchanted Land, Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 5vmin;
+  font-size: 4.5vmin;
   display: block;
   color: rgb(255, 255, 255);
   margin-bottom: 0, 5%;
-  margin-top: 1%;
-  margin-left: 5%;
+  /* margin-top: 1%; */
+  /* margin-left: 5%; */
+  top: 5%;
   position: relative;
-  left: 6.5%;
-  top: 2%;
+  left: 11.5%;
+  top: 7%;
 }
 
-.decisionButtons {
+/* .decisionButtons {
   padding: 2%;
   background-color: blueviolet;
-}
+} */
 
-dialog[type="inventory"]>ul>li>amount {
-  /*ändert amount spezfisch*/
+/* dialog[type="inventory"]>ul>li>amount { 
+  ändert amount spezfisch
   background-color: rgb(255, 255, 255);
   left: 0px;
   width: 20px;
@@ -120,19 +121,16 @@ dialog[type="inventory"]>ul>li>amount {
   border: rgb(0, 0, 0);
   border-width: 2px;
   padding: 10px;
+} */
 
-}
-
-dialog[type="inventory"] {
+/* dialog[type="inventory"] {
   background-color: rgb(240, 18, 103);
   left: 0px;
   width: 90%;
   height: 90%;
   font-size: large;
+} /*
 
-}
-
-/***** METER BAR *****/
 meter::-webkit-meter-bar {
   background-color: #ececec;
 }
@@ -157,7 +155,7 @@ meter[id="EmpathyPointsSkala"]::-webkit-meter-optimum-value {
       #cf82bf 95%,
       #719fd1 95%,
       #719fd1 100%);
-  /* background-color: #719fd1; */
+  /* background-color: #719fd1; 
 }
 
 input[name="scoreEmpathyPoints"] {
@@ -167,4 +165,4 @@ input[name="scoreEmpathyPoints"] {
   left: 0.75%;
   bottom: 19.5%;
   width: 5%;
-}
+} */
