@@ -1194,7 +1194,7 @@ var Spiegel_VN;
         wood: "./Assets/Soundeffekte/woodcutter.mp3",
         listeningriddle_demon: "./Assets/Soundeffekte/Dämon_Cave.wav",
         listeningriddle_mirror: "./Assets/Soundeffekte/Spiegelzimmer_cave.wav",
-        listeningriddle_destroy: "./Assets/Soundeffekte/Zerstören_cave.wav",
+        listeningriddle_destroy: "./Assets/Soundeffekte/Zerstören_cave.wav"
     };
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
@@ -2638,7 +2638,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_02_LivingRoom);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         let Chp03SearchKailaniElementAnswers = {
-            PickSceneSearchGarden: "Im Garten suchen",
+            PickSceneSearchGarden: "Im Garten suchen"
         };
         // if (
         //   !dataForSave.pickedChp03_SearchGarden ||
@@ -2667,7 +2667,7 @@ var Spiegel_VN;
         let Chp03SearchKailaniElementAnswers1 = {
             iSayPanicked: "Panisch",
             iSayWorried: "Besorgt",
-            iSaySoothing: "Beschwichtigend",
+            iSaySoothing: "Beschwichtigend"
         };
         let Chp03SearchKailaniElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp03SearchKailaniElementAnswers1, "choicesCSSclass");
         switch (Chp03SearchKailaniElement1) {
@@ -2791,7 +2791,7 @@ var Spiegel_VN;
             PickSceneTalkToFamily: "Mit Mutti sprechen",
             PickSceneResearchLibrary: "Zur Bücherei",
             PickSceneExamineMirror: "Nochmal in Kailanis Schlafzimmer",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
         if (!Spiegel_VN.dataForSave.pickedChp04TalkToFamily ||
             !Spiegel_VN.dataForSave.pickedChp04ResearchLibrary ||
@@ -2911,7 +2911,7 @@ var Spiegel_VN;
         let Chp04TalkFamilyElementAnswers1 = {
             iSayBelieve: "Glauben.",
             iSayDoubt: "Zweifeln",
-            iSayReject: "Ablehnen",
+            iSayReject: "Ablehnen"
         };
         let Chp04TalkFamilyElement1 = await Spiegel_VN.ƒS.Menu.getInput(Chp04TalkFamilyElementAnswers1, "choicesCSSclass");
         // *** RESPONSES ***
@@ -2961,7 +2961,7 @@ var Spiegel_VN;
         let Chp04ResearchLibraryElementAnswers = {
             iSayOption1: "Die Leys--gegend und ihre m-gischen Eigen–aften",
             iSayOption2: "W-ld und Wiese – eine –stische Analyse",
-            iSayOption3: "Das in–fizielle Mag–kum der Leysenwäl–",
+            iSayOption3: "Das in–fizielle Mag–kum der Leysenwäl–"
         };
         let Chp04ResearchLibraryElement = await Spiegel_VN.ƒS.Menu.getInput(Chp04ResearchLibraryElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3000,7 +3000,7 @@ var Spiegel_VN;
         let Chp04ExamineMirrorElementAnswers = {
             iSayMirror: "(Erkunden) Spiegel nehmen",
             iSayDiary: "(Erkunden) Tagebuch lesen",
-            iSayContinue: "Zurück",
+            iSayContinue: "Zurück"
         };
         let Chp04ExamineMirrorElement = await Spiegel_VN.ƒS.Menu.getInput(Chp04ExamineMirrorElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
@@ -3105,7 +3105,7 @@ var Spiegel_VN;
             iSayRiddle1: "Rätsel 1",
             iSayRiddle2: "Rätsel 2",
             iSayRiddle3: "Rätsel 3",
-            iSayProven: "Ich habe mich bewiesen! Und jetzt?",
+            iSayProven: "Ich habe mich bewiesen! Und jetzt?"
         };
         if (!Spiegel_VN.dataForSave.pickedRiddle1 ||
             !Spiegel_VN.dataForSave.pickedRiddle2 ||

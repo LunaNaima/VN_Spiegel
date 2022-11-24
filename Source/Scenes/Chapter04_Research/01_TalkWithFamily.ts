@@ -66,27 +66,27 @@ namespace Spiegel_VN {
 //         break;
 //     }
     ƒS.Character.hide(characters.Mama);
-        await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_laugh2, ƒS.positionPercent(80, 100));
-        ƒS.update();
+    await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_laugh2, ƒS.positionPercent(80, 100));
+    ƒS.update();
     ƒS.Character.hide(characters.Mutti);
-        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smirk, ƒS.positionPercent(55, 100));
-        ƒS.update();
-        await ƒS.Speech.tell(characters.Mama, '"Warum gehen wir sie nicht im Dorf suchen? Stell dir vor, wir machen hier ein großes Drama und später spaziert sie seelenruhig zur Tür rein."');
-        await ƒS.Speech.tell(characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit ' + dataForSave.nameProtagonist + ' sprechen."');
+    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_smirk, ƒS.positionPercent(55, 100));
+    ƒS.update();
+    await ƒS.Speech.tell(characters.Mama, '"Warum gehen wir sie nicht im Dorf suchen? Stell dir vor, wir machen hier ein großes Drama und später spaziert sie seelenruhig zur Tür rein."');
+    await ƒS.Speech.tell(characters.Mutti, '"Geh’ du schon Mal vor, Leijla. Ich möchte kurz mit ' + dataForSave.nameProtagonist + ' sprechen."');
     ƒS.Character.hide(characters.Mama);
     ƒS.Character.hide(characters.Evarius);
     ƒS.update();
 
-            await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt."');
-            await ƒS.Speech.tell(characters.Mutti, '"Also: wie du weißt, beschäftige ich mich gerne mit der Vergangenheit und Magie. Ich bin der festen Überzeugung, dass Magie noch heute existiert."');
+    await ƒS.Speech.tell(characters.Mutti, '"Schatz, vielleicht hälst du mich für verrückt."');
+    await ƒS.Speech.tell(characters.Mutti, '"Also: wie du weißt, beschäftige ich mich gerne mit der Vergangenheit und Magie. Ich bin der festen Überzeugung, dass Magie noch heute existiert."');
 
     let Chp04TalkFamilyElementAnswers1 = {
       iSayBelieve: "Glauben.",
       iSayDoubt: "Zweifeln",
-      iSayReject: "Ablehnen",
+      iSayReject: "Ablehnen"
     };
 
-    let Chp04TalkFamilyElement1 = await ƒS.Menu.getInput(Chp04TalkFamilyElementAnswers1,"choicesCSSclass");
+    let Chp04TalkFamilyElement1 = await ƒS.Menu.getInput(Chp04TalkFamilyElementAnswers1, "choicesCSSclass");
 
     // *** RESPONSES ***
     switch (Chp04TalkFamilyElement1) {
@@ -98,7 +98,7 @@ namespace Spiegel_VN {
       
       case Chp04TalkFamilyElementAnswers1.iSayDoubt:
         await ƒS.Speech.tell(characters.maincharacter, '"Magie? Bist du dir sicher? Aber wie kann uns das bei der Suche nach Kailani helfen?"');
-    ƒS.Speech.clear();
+        ƒS.Speech.clear();
         break;
       
       case Chp04TalkFamilyElementAnswers1.iSayReject:
@@ -112,12 +112,12 @@ namespace Spiegel_VN {
     }
 
 
-        ƒS.Character.hide(characters.Mutti);
-        await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_neutral, ƒS.positionPercent(55, 100));
-        ƒS.update();
-            await ƒS.Speech.tell(characters.Mutti, '"Ich habe mich aus dem Grund hier in der Gegend niedergelassen, weil ich gespürt habe, dass hier noch kleine Magie-Reste überlebt haben. Es gab Gerüchte, dass der Wald hinter unserem Haus etwas Mystisches verbirgt. Und ich glaube, das könnte uns bei der Suche helfen."');
-        await ƒS.Speech.tell(characters.maincharacter, "Im Hintergrund ruft Mama.");
-            await ƒS.Speech.tell(characters.Mutti, '"Oh, Mama drängt. Versuch’ doch mal dein Glück, ja?"');
+    ƒS.Character.hide(characters.Mutti);
+    await ƒS.Character.show(characters.Mutti, characters.Mutti.pose.dress2_basket_neutral, ƒS.positionPercent(55, 100));
+    ƒS.update();
+    await ƒS.Speech.tell(characters.Mutti, '"Ich habe mich aus dem Grund hier in der Gegend niedergelassen, weil ich gespürt habe, dass hier noch kleine Magie-Reste überlebt haben. Es gab Gerüchte, dass der Wald hinter unserem Haus etwas Mystisches verbirgt. Und ich glaube, das könnte uns bei der Suche helfen."');
+    await ƒS.Speech.tell(characters.maincharacter, "Im Hintergrund ruft Mama.");
+    await ƒS.Speech.tell(characters.Mutti, '"Oh, Mama drängt. Versuch’ doch mal dein Glück, ja?"');
 
     return "04_00_Research Options";
   }

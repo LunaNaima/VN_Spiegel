@@ -2,7 +2,7 @@ namespace Spiegel_VN {
   export async function textRiddle(): ƒS.SceneReturn {
 
      let randomTextChp05TextRiddle = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
-        switch (randomTextChp05TextRiddle) {
+     switch (randomTextChp05TextRiddle) {
             case 1:
                 await ƒS.Speech.tell(characters.wishtree, '"Verzage nicht ..."');
                 break;
@@ -24,14 +24,14 @@ namespace Spiegel_VN {
                 break;
     }
     
-let Chp05TextRiddleElementAnswers = {
+     let Chp05TextRiddleElementAnswers = {
             iSayRiddle1: "Rätsel 1",
             iSayRiddle2: "Rätsel 2",
   iSayRiddle3: "Rätsel 3", 
-             iSayProven: "Ich habe mich bewiesen! Und jetzt?", 
+             iSayProven: "Ich habe mich bewiesen! Und jetzt?" 
     };
     
-    if (
+     if (
             !dataForSave.pickedRiddle1 ||
             !dataForSave.pickedRiddle2 ||
     !dataForSave.pickedRiddle3
@@ -40,41 +40,41 @@ let Chp05TextRiddleElementAnswers = {
             // return Chp01_CS_ArrivalHome();
         }
 
-    let Chp05TextRiddleElement = await ƒS.Menu.getInput(
+     let Chp05TextRiddleElement = await ƒS.Menu.getInput(
             Chp05TextRiddleElementAnswers,
             "choicesCSSclass"
         );
 
         // *** RESPONSES ***
-    switch (Chp05TextRiddleElement) {
+     switch (Chp05TextRiddleElement) {
       case Chp05TextRiddleElementAnswers.iSayRiddle1:
         dataForSave.pickedRiddle1 = true;
         await ƒS.Speech.tell(characters.wishtree, '"Ich habe ein Bett, doch ich find keine Ruh.<br>Ich habe einen Mund, doch ich kann nicht sprechen.<br>Ich bewege mich rasend schnell, doch ich verlasse niemals einen Ort.<br>Wer oder was bin ich? Tipp: Es hat etwas mit Wasser zu tun!<br/>"', false);
         let answer1: String = await ƒS.Speech.getInput();
     
         if (answer1.toLowerCase() == "fluss") {
-          await ƒS.Speech.tell("Baum der Wünsche", "Das erste Rätsel geschafft!")
+          await ƒS.Speech.tell("Baum der Wünsche", "Das erste Rätsel geschafft!");
       
         }
         else {
-          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...")
+          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...");
         }
         return "TextRiddle";
         break;
     
       case Chp05TextRiddleElementAnswers.iSayRiddle2:
                 dataForSave.pickedRiddle2 = true;
-        await ƒS.Speech.tell(characters.maincharacter, "Geisterstunde ist um ... ?", false);
-        let answer2: String = await ƒS.Speech.getInput();
+                await ƒS.Speech.tell(characters.maincharacter, "Geisterstunde ist um ... ?", false);
+                let answer2: String = await ƒS.Speech.getInput();
     
-        if (answer2.toLowerCase() == "mitternacht") {
-          await ƒS.Speech.tell("Baum der Wünsche", "Schon das zweite Rätsel gelöst.")
+                if (answer2.toLowerCase() == "mitternacht") {
+          await ƒS.Speech.tell("Baum der Wünsche", "Schon das zweite Rätsel gelöst.");
         }
         else {
-          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...")
+          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...");
         }
-        return "TextRiddle";
-        break;
+                return "TextRiddle";
+                break;
       
       case Chp05TextRiddleElementAnswers.iSayRiddle3:
         dataForSave.pickedRiddle3 = true;
@@ -82,24 +82,24 @@ let Chp05TextRiddleElementAnswers = {
         let answer3: String = await ƒS.Speech.getInput();
     
         if (answer3.toLowerCase() == "spiegel") {
-          await ƒS.Speech.tell("Baum der Wünsche", "Tatsächlich, du hast dich bewiesen ... ")
+          await ƒS.Speech.tell("Baum der Wünsche", "Tatsächlich, du hast dich bewiesen ... ");
       
         }
         else {
-          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...")
+          await ƒS.Speech.tell("Baum der Wünsche", "Denke nochmal nach ...");
           
         }
         return "TextRiddle";
         break;
       
-      await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
+        await ƒS.getKeypress(ƒ.KEYBOARD_CODE.SPACE);
       
       case Chp05TextRiddleElementAnswers.iSayProven:
         await ƒS.Speech.tell(characters.wishtree, '"Kailani besaß einen Spiegel, richtig? Er ist kein gewöhnlicher Spiegel, wie du sicher schon bemerkt hast."');
-    await ƒS.Speech.tell(characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie ist die Spiegelmagie dunkel."');
-    await ƒS.Speech.tell(characters.wishtree, '"Der Spiegel sorgt dafür, dass die Menschen, die in ihn hineinblicken, krank werden. Sind sie erkrankt, zieht sie der Spiegel in sein Innerstes. Dort werden sie gefangen gehalten."');
+        await ƒS.Speech.tell(characters.wishtree, '"Er zeigt dir an, was du dir wünschst. Anders aber als meine Magie ist die Spiegelmagie dunkel."');
+        await ƒS.Speech.tell(characters.wishtree, '"Der Spiegel sorgt dafür, dass die Menschen, die in ihn hineinblicken, krank werden. Sind sie erkrankt, zieht sie der Spiegel in sein Innerstes. Dort werden sie gefangen gehalten."');
 
-      return "05_02 Convo Tree";
+        return "05_02 Convo Tree";
     }
     }
   }

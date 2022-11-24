@@ -14,8 +14,7 @@ namespace Spiegel_VN {
 
     listeningriddle_demon: "./Assets/Soundeffekte/Dämon_Cave.wav",
     listeningriddle_mirror: "./Assets/Soundeffekte/Spiegelzimmer_cave.wav",
-    listeningriddle_destroy: "./Assets/Soundeffekte/Zerstören_cave.wav",
-
+    listeningriddle_destroy: "./Assets/Soundeffekte/Zerstören_cave.wav"
 
   };
 }

@@ -31,7 +31,7 @@ namespace Spiegel_VN {
             PickSceneTalkToFamily: "Mit Mutti sprechen",
             PickSceneResearchLibrary: "Zur Bücherei",
             PickSceneExamineMirror: "Nochmal in Kailanis Schlafzimmer",
-            PickSceneContinue: "Weiter",
+            PickSceneContinue: "Weiter"
         };
 
         if (
@@ -44,7 +44,7 @@ namespace Spiegel_VN {
         if (dataForSave.pickedChp04TalkToFamily) {
       delete Chp04PickSceneElementAnswers.PickSceneTalkToFamily;
     }
-    if (dataForSave.pickedChp04ResearchLibrary) {
+        if (dataForSave.pickedChp04ResearchLibrary) {
       delete Chp04PickSceneElementAnswers.PickSceneResearchLibrary;
         }
         if (dataForSave.pickedChp04ExamineMirror) {

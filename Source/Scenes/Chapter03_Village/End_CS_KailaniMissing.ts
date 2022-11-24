@@ -28,7 +28,7 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     let Chp03SearchKailaniElementAnswers = {
-      PickSceneSearchGarden: "Im Garten suchen",
+      PickSceneSearchGarden: "Im Garten suchen"
     };
 
     // if (
@@ -64,7 +64,7 @@ namespace Spiegel_VN {
     let Chp03SearchKailaniElementAnswers1 = {
       iSayPanicked: "Panisch",
       iSayWorried: "Besorgt",
-      iSaySoothing: "Beschwichtigend",
+      iSaySoothing: "Beschwichtigend"
     };
 
     let Chp03SearchKailaniElement1 = await ƒS.Menu.getInput(Chp03SearchKailaniElementAnswers1, "choicesCSSclass");
