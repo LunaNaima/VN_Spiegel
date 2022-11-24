@@ -20,10 +20,10 @@ namespace Spiegel_VN {
     let Chp04ResearchLibraryElementAnswers = {
             iSayOption1: "Die Leys--gegend und ihre m-gischen Eigen–aften",
             iSayOption2: "W-ld und Wiese – eine –stische Analyse",
-            iSayOption3: "Das in–fizielle Mag–kum der Leysenwäl–",
+            iSayOption3: "Das in–fizielle Mag–kum der Leysenwäl–"
         };
     
-     let Chp04ResearchLibraryElement = await ƒS.Menu.getInput(Chp04ResearchLibraryElementAnswers, "choicesCSSclass");
+    let Chp04ResearchLibraryElement = await ƒS.Menu.getInput(Chp04ResearchLibraryElementAnswers, "choicesCSSclass");
 
         // *** RESPONSES ***
     switch (Chp04ResearchLibraryElement) {
