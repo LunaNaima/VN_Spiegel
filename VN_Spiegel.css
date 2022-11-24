@@ -36,28 +36,38 @@ dialog[class="choicesCSSclass"] {
   background: transparent;
   text-align: center;
   border: none;
+  object-fit: cover;
+  object-position: bottom;
   padding: 0;
   height: 30%;
-  width: 50%;
+  width: 60%;
+  
 }
 
 dialog[class="choicesCSSclass"] button {
-  background-image: url(./Assets/Items/UI_Dialogbox.png); /* Von Ronja Neumann implementiert */
+  background-image: url(./Assets/Items/UI_Dialogbox.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent;
-  background-position: absolute;
+  object-fit: cover;
+  object-position: bottom;
   text-align: center;
   color: #fff;
   border: none;
   height: 50%;
   width: 20%;
   margin: 0 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
+  font-size: 2vmin
 }
 
-speech { 
-  background-image: url(./Assets/Items/UI_Speechbox.png); /* Von Ronja Neumann implementiert */
+speech {
+  background-image: url(./Assets/Items/UI_Speechbox.png);
+  /* Von Ronja Neumann implementiert */
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
