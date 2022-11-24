@@ -91,17 +91,8 @@ speech content {
   font-size: 2.5vmin;
 }
 
-/* @font-face {
-  font-family: 'enchanted_landregular';
-  src: url('enchanted-land.regular-webfont.woff2') format('woff2'),
-    url('enchanted-land.regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  unicode-range: U+0-10FFFF;
-} */
-
 name {
-  font-family: Enchanted Land, Helvetica, sans-serif;
+  font-family: 'Lobster Two', cursive, Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 4.5vmin;

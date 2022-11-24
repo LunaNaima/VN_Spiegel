@@ -5702,6 +5702,7 @@ var Spiegel_VN;
 })(Spiegel_VN || (Spiegel_VN = {}));
 var Spiegel_VN;
 (function (Spiegel_VN) {
+    // tslint:disable-next-line: no-empty
     async function EmptyScene() { }
     Spiegel_VN.EmptyScene = EmptyScene;
 })(Spiegel_VN || (Spiegel_VN = {}));
