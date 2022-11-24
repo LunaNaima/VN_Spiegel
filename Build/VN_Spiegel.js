@@ -4908,6 +4908,7 @@ var Spiegel_VN;
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp10_MinigameDemon() {
+        Spiegel_VN.ƒS.Speech.hide();
         Spiegel_VN.ƒS.Character.hideAll();
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_mirrorworld_factory, 0, 0, false);
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_DemonMinigame, 0.8, 1, true);

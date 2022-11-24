@@ -1,5 +1,6 @@
 namespace Spiegel_VN {
   export async function Chp10_MinigameDemon(): ƒS.SceneReturn {
+    ƒS.Speech.hide();
     ƒS.Character.hideAll();
     ƒS.Sound.fade(music.theme_mirrorworld_factory, 0, 0, false);
     await ƒS.Sound.fade(music.theme_DemonMinigame, 0.8, 1, true);
