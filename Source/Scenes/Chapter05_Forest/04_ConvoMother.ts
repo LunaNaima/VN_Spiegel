@@ -7,7 +7,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_neutral, ƒS.positionPercent(80, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Mama, dataForSave.nameProtagonist);
+    await ƒS.Speech.tell(characters.Mama, '""' + dataForSave.nameProtagonist + '"?"');
     await ƒS.Speech.tell(characters.maincharacter, "Du erschrickst. Mama kommt die Treppe hinunter.");
     await ƒS.Speech.tell(characters.Mama, '"Wo warst du denn? Wir haben uns Sorgen gemacht!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Es tut mir leid … Mama, ich muss gehen. Bitte sag Mutti und Evarius Bescheid."');
@@ -39,7 +39,7 @@ namespace Spiegel_VN {
       case Chp05ConvoMotherElementAnswers.iSayDistract:
         await ƒS.Speech.tell(characters.maincharacter, '"Was habt ihr denn im Dorf herausgefunden?"');
         await ƒS.Speech.tell(characters.Mama, '"Nicht viel, niemand hat Kailani gesehen. Komm jetzt ins Bett!"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss jetzt los."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Nein, ich muss jetzt los ..."');
         ƒS.Speech.clear();
         break;
 
@@ -66,7 +66,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Mama, '"Du hast recht. Ich sehe dich noch als Kind, und nicht als starke und mutige Person."');
     await ƒS.Speech.tell(characters.Mama, '"Wenn du unbedingt gehen willst, dann tu es. Ich vertraue dir, in Ordnung? Aber bitte komme zurück, Liebling."');
-    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Eisen-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
+    await ƒS.Speech.tell(characters.Mama, '"Hier, nimm meine Hufeisen-Halskette. Sie wird dir Glück bringen und dir den Weg zeigen, falls du dich heute Nacht verirrst."');
 
     let Chp05ConvoMotherElementAnswers2 = {
       iSayTake: "Annehmen",
@@ -78,7 +78,7 @@ namespace Spiegel_VN {
     switch (Chp05PickSceneElement2) {
       case Chp05ConvoMotherElementAnswers2.iSayTake:
         dataForSave.pickedIron = true;
-        await ƒS.Speech.tell(characters.maincharacter, '"Vielen Dank, Mama."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Vielen Dank, Mama. Ich weiß, dass sie dir viel bedeutet."');
         ƒS.Speech.clear();
         break;
 

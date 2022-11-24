@@ -38,14 +38,19 @@ dialog[class="choicesCSSclass"] {
   border: none;
   object-fit: cover;
   object-position: bottom;
-  padding: 0; 
+  padding: 0;
   height: 100%;
   /* width: auto; */
-  aspect-ratio: 16/9; /* Von Jonas Plotzky programmiert */
-  align-items: center; /* Von Jonas Plotzky programmiert */
-  justify-content: center; /* Von Jonas Plotzky programmiert */
-  display: flex; /* Von Jonas Plotzky programmiert */
+  aspect-ratio: 16/9;
+  /* Von Jonas Plotzky programmiert */
+  align-items: center;
+  /* Von Jonas Plotzky programmiert */
+  justify-content: center;
+  /* Von Jonas Plotzky programmiert */
+  display: flex;
+  /* Von Jonas Plotzky programmiert */
 }
+
 /* Von Jonas Plotzky programmiert */
 dialog[class="choicesCSSclass"]:not([open]) {
   display: none;
@@ -53,17 +58,17 @@ dialog[class="choicesCSSclass"]:not([open]) {
 
 dialog[class="choicesCSSclass"] button {
   background-image: url(./Assets/Items/UI_Dialogbox.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    text-align: center;
-    color: #fff;
-    border: none;
-    height: 10%;
-    width: 30%;
-    padding: 1% 4%;
-    cursor: pointer;
-    font-size: 2vmin;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+  border: none;
+  height: 10%;
+  width: 30%;
+  padding: 1% 4%;
+  cursor: pointer;
+  font-size: 2vmin;
 }
 
 speech {
@@ -92,20 +97,17 @@ speech content {
 }
 
 name {
-  font-family: 'Lobster Two', cursive, Helvetica, sans-serif;
+  font-family: 'Uncial Antiqua', Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 4.5vmin;
+  font-size: 3vmin;
   display: block;
-  position: relative;
+  position: absolute;
   color: rgb(255, 255, 255);
-  /* margin-bottom: 0, 5%; */
-  /* margin-top: 1%; */
-  /* margin-left: 5%; */
-  top: 5%;
-  bottom: 5%;
+  margin-top: 1.8%;
+  margin-bottom: 0%;
   left: 11.5%;
-  top: 7%;
+  right: 4%;
 }
 
 /* .decisionButtons {

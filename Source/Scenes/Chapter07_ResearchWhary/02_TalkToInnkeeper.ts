@@ -102,7 +102,7 @@ namespace Spiegel_VN {
 
         case Chp07InnkeeperElementAnswers2.iSayWhatHappened:
           dataForSave.pickedChp07pickedWhatHappened = true;
-          await ƒS.Speech.tell(characters.Innkeeper, '"Ich weiß es doch nich’ … ich denk’, sie is’ hier. Du bis’ schon am richtigen Ort zum Suchen. Aber mehr weiß ich leider nich."');
+          await ƒS.Speech.tell(characters.Innkeeper, '"Ich weiß es doch nich’ … ich denk’, sie is’ hier. Du bis’ schon am richtigen Ort zum Suchen. Aber mehr weiß ich leider nich´."');
           ƒS.Speech.clear();
           break;
 

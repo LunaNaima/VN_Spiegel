@@ -147,7 +147,7 @@ namespace Spiegel_VN {
         grey_slave: "Assets/Characters/Kailani/Outfit3/Kailani_greydress2.png",
         grey_shrug_eyeroll: "Assets/Characters/Kailani/Outfit1/Kailani_crossed_eyeroll_grey.png",
         grey_neutral_angry: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
-        grey_neutral_smile: "Assets/Characters/Kailani/Outfit1/Kailani_neutral_angry_grey.png",
+        grey_neutral_smile: "Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_smile.png",
         grey_crossed_angry: "Assets/Characters/Kailani/Outfit1/grey_Kailani_crossed_angry.png",
         grey_neutral_happy: "Assets/Characters/Kailani/Outfit1/grey_Kailani_neutral_happy.png"
 

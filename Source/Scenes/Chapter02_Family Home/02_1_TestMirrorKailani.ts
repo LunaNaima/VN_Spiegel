@@ -9,7 +9,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit2_dress1_happy, ƒS.positionPercent(45, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Kailani, '"Auja!"');
-    await ƒS.Speech.tell(characters.maincharacter, "Sie packt den Spiegel und hebt ihn sich vors Gesicht.");
+    await ƒS.Speech.tell(characters.maincharacter, "Sie packt den Spiegel aus und hebt ihn sich vors Gesicht.");
     await ƒS.Speech.tell(characters.maincharacter, '"Vorsicht, Kailani! Der ist Muttis und war teuer. Also, wie ging der Spruch nochmal?"');
 
 
@@ -104,7 +104,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Mutti, '"So, jetzt ab auf eure Zimmer! Versucht bitte, so früh wie möglich schlafen zu gehen. Ich weiß, es graut euch schon davor, aber nächste Woche geht die Schule wieder los."');
-    await ƒS.Speech.tell(characters.Mama, '"Also nicht wieder die ganze Nacht wachbleiben! Gute Nacht"');
+    await ƒS.Speech.tell(characters.Mama, '"Also nicht wieder die ganze Nacht wachbleiben! Gute Nacht."');
     ƒS.Character.hideAll();
     await ƒS.Location.show(locations.Chp02_E_DiscoverBedroom);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);

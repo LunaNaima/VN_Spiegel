@@ -3,7 +3,7 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.Chp08_HidingPlace);
         ƒS.Character.hideAll();
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
-        await ƒS.Speech.tell(characters.maincharacter, "Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du machst die Augen auf. Alles ist in tiefe Schatten getaucht. Es ist wohl noch sehr früh am Morgen? Dann fällt dir ein, dass diese Welt immer grau ist. Du bist auf einmal hellwach und aufgelöst. Gleichzeitig fühlst du dich so weit weg von daheim wie nie zuvor.");
 
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
         ƒS.update();

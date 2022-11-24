@@ -6,14 +6,22 @@ namespace Spiegel_VN {
 
     // do {
     let Chp06EntryWharyElementAnswers = {
-      iSayWindow: "(Erkunden) Schaufenster anschauen",
-      iSayVillagers: "(Erkunden) Leute beobachten",
+      iSayWindow: "Schaufenster anschauen",
+      iSayVillagers: "Leute beobachten",
       iSayInn: "Bleibe suchen"
     };
 
     if (!dataForSave.pickedChp06Window ||
       !dataForSave.pickedChp06Villagers) {
       delete Chp06EntryWharyElementAnswers.iSayInn;
+    }
+
+    if (dataForSave.pickedChp06Window) {
+      delete Chp06EntryWharyElementAnswers.iSayWindow;
+    }
+
+    if (dataForSave.pickedChp06Villagers) {
+      delete Chp06EntryWharyElementAnswers.iSayVillagers;
     }
 
     let Chp06EntryWharyElement = await ƒS.Menu.getInput(Chp06EntryWharyElementAnswers, "choicesCSSclass");
@@ -51,7 +59,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Flynn, '"Was meinst du denn?"');
         await ƒS.Speech.tell(characters.maincharacter, '"Naja, viele sehen so … aufgeplustert aus"');
         await ƒS.Speech.tell(characters.Flynn, '"Ah so! Ja. Das ist mir noch gar nicht aufgefallen. Die finden das vermutlich schön. Du bist nicht wirklich aufgeplustert."');
-        await ƒS.Speech.tell(characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Komisch, dass die Leute gleich aussehen möchten. Zuhause tragen alle, was sie wollen.");
+        await ƒS.Speech.tell(characters.maincharacter, "Da hat er Recht. Du zupfst an deinem Hemdärmel. Zuhause tragen alle, was sie wollen.");
         ƒS.Speech.clear();
         return "06_In Whary";
         break;

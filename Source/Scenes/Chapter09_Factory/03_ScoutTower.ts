@@ -60,7 +60,7 @@ namespace Spiegel_VN {
 
     await ƒS.Sound.fade(soundeffects.listeningriddle_demon, 1, 1, false);
     ƒS.update();
-    await ƒS.Speech.tell(characters.maincharacter, "Was hast du gehört?");
+    // await ƒS.Speech.tell(characters.maincharacter, "Was hast du gehört?");
 
     await ƒS.Sound.fade(soundeffects.listeningriddle_mirror, 1, 1, false);
     ƒS.update();

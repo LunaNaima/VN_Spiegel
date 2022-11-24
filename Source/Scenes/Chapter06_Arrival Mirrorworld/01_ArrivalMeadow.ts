@@ -30,7 +30,7 @@ namespace Spiegel_VN {
 
         case Chp06ArrivalMeadowElementAnswers.iSayLeave:
           dataForSave.pickedChp06Leave = true;
-          await ƒS.Speech.tell(characters.maincharacter, "Du rappelst dich auf. Neben dir liegt ein See, und auf der anderen Seite eine Straße.");
+          await ƒS.Speech.tell(characters.maincharacter, "Du rappelst dich auf. Neben dir liegt ein See und auf der anderen Seite eine Straße.");
           await ƒS.Location.show(locations.Chp06_StreetToWhary);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
           await ƒS.Speech.tell(characters.maincharacter, "In der Ferne glitzert etwas und du siehst Leute, die sich vor großen Stadttoren bewegen. Du machst dich auf den Weg. Nebenbei bemerkst du die grellen, saftgrünen Bäume rechts und links. Auch wenn die Welt sonst so aussieht, wie deine eigene: an die satten Farben musst du dich erst gewöhnen.");
@@ -115,7 +115,7 @@ namespace Spiegel_VN {
     }
 
     await ƒS.Speech.tell(characters.Flynn, '"Wie heißt du denn?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist);
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist + '"."');
     await ƒS.Speech.tell(characters.Flynn, '"Freut mich!"');
 
     await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an.");

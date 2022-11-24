@@ -117,8 +117,10 @@ namespace Spiegel_VN {
     pickedChp10IntoTowerContinue: false,
     pickedChp10GoodEndingContinue1: false,
     pickedChp10GoodEndingContinue2: false,
+    pickedChp10GoodEndingContinue3: false,
     pickedChp10SemiGoodEndingContinue1: false,
     pickedChp10SemiGoodEndingContinue2: false,
+    pickedChp10SemiEndingContinue3: false,
     pickedChp10BadEndingContinue2: false
 
   };

@@ -3,9 +3,9 @@ namespace Spiegel_VN {
 
 
     let Chp05ConvoTreeElementAnswers = {
-      iSayInner: "(Erkunden) Sein Innerstes?",
-      iSaySick: "(Erkunden) Wie werden sie krank?",
-      iSayFree: "(Erkunden) Wie kann Kailani befreit werden?",
+      iSayInner: "Sein Innerstes?",
+      iSaySick: "Wie werden sie krank?",
+      iSayFree: "Wie kann Kailani befreit werden?",
       iSayRiddleWords: "Die Rätselwörter!"
     };
 
@@ -57,7 +57,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp05_WishtreeBirds);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-    await ƒS.Speech.tell(characters.narrator, "Wie willst du dich mit ihnen verbinden?");
+    await ƒS.Speech.tell(characters.narrator, '"Wie willst du dich mit ihnen verbinden?"');
 
     let Chp05ConvoTreeElementAnswers2 = {
       iSaySing: "Zu Vögeln singen",
@@ -84,8 +84,8 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         break;
     }
-    await ƒS.Speech.tell(characters.maincharacter, "Das war eine gute, ehrliche Bindung. Sie werden dich nun begleiten und dir stets zur Seite stehen. Die Reise wird nicht einfach. Denke daran, dass in der Spiegelwelt nicht alles so ist, wie es scheint. Ein letzter Hinweis noch: Ehrliches Material führt dein Herz zum Ziel.");
-    await ƒS.Speech.tell(characters.maincharacter, "Nun muss ich eine Weile ruhen. Diese Begegnung hat mich sehr viel Kraft gekostet …");
+    await ƒS.Speech.tell(characters.wishtree, "Das war eine gute, ehrliche Bindung. Sie werden dich nun begleiten und dir stets zur Seite stehen. Die Reise wird nicht einfach. Denke daran, dass in der Spiegelwelt nicht alles so ist, wie es scheint. Ein letzter Hinweis noch: Ehrliches Material führt dein Herz zum Ziel.");
+    await ƒS.Speech.tell(characters.wishtree, "Nun muss ich eine Weile ruhen. Diese Begegnung hat mich sehr viel Kraft gekostet …");
     ƒS.Sound.fade(soundeffects.birds, 0, 0, false);
     ƒS.Sound.fade(soundeffects.forest, 0, 0, false);
 

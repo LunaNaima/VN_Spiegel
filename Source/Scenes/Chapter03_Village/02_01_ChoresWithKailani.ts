@@ -80,7 +80,7 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Kailani, '"Also, dieser Spiegel. Der von Mutti. Der ist halt echt toll. Ich kann mir so viel wünschen, wie ich will, und er zeigt es mir! Verstehst du, was ich meine?"');
 
     let Chp03ChoresKailaniElementAnswers11 = {
-          iSayGood: '"Klingt gut"',
+          iSayGood: '"Klingt gut!"',
           iSayBother: '"Stört dich etwas?"',
           iSaySilent: "Nicken und schweigen"
         };

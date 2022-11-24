@@ -68,13 +68,13 @@ namespace Spiegel_VN {
                 break;
 
             case Chp04PickSceneElementAnswers.PickSceneExamineMirror:
-                await ƒS.Speech.tell(characters.maincharacter, "Ich muss mir nochmal den Spiegel anschauen.");
+                await ƒS.Speech.tell(characters.maincharacter, '"Ich muss mir nochmal den Spiegel anschauen."');
                 ƒS.Speech.clear();
                 return "04_E_Examine mirror";
                 break;
 
             case Chp04PickSceneElementAnswers.PickSceneContinue:
-                await ƒS.Speech.tell(characters.maincharacter, "Nun gut, ab in den Wald ...");
+                await ƒS.Speech.tell(characters.maincharacter, '"Ich muss wohl in die Tiefen des Waldes ..."');
                 ƒS.Speech.clear();
                 return "04_CS Entry forest";
                 break;

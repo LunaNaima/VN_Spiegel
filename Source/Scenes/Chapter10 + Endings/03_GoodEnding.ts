@@ -13,8 +13,7 @@ namespace Spiegel_VN {
       return "Semi Good Ending";
     }
 
-
-    await ƒS.Speech.tell(characters.maincharacter, "Instinktiv greifst du zu dem Hammer. Was für ein Glück, dass du ihn eingesteckt hast! Du schwingst ihn und triffst damit den ersten Spiegel.");
+    await ƒS.Speech.tell(characters.maincharacter, "Instinktiv greifst du zu dem Eisen, das du eingesteckt hast. Du schwingst ihn und triffst damit den ersten Spiegel.");
 
     ƒS.Sound.fade(soundeffects.glass, 0.5, 1, true);
     ƒS.update();
@@ -66,12 +65,12 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp10_DemontunnelGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Du hetzt zurück durch den leeren Tunnel zurück nach unten."');
+    await ƒS.Speech.tell(characters.maincharacter, "Du hetzt zurück durch den leeren Tunnel zurück nach unten.");
 
     await ƒS.Location.show(locations.Chp10_GroundFloorTowerGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    await ƒS.Speech.tell(characters.maincharacter, '"Vorbei an den Portraits, deren tote Augen dich im Halbdunklen verfolgen."');
+    await ƒS.Speech.tell(characters.maincharacter, "Vorbei an den Portraits, deren tote Augen dich im Halbdunklen verfolgen.");
 
     await ƒS.Location.show(locations.Chp10_TowerOutsideSlavesGrey);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -84,14 +83,18 @@ namespace Spiegel_VN {
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, '"Kailani! KAILANI! Du bist wieder da! Ich kann es kaum fassen… Wie geht’s dir? Was ist passiert? Ich bin so erleichtert!"');
     await ƒS.Speech.tell(characters.maincharacter, "Unter Kailanis Augen zeichnen sich Ringe ab, die vor ihrem Verschwinden nicht da waren. Trotzdem leuchten ihre Augen etwas auf, als sie dich anlächelt.");
-
-    await ƒS.Speech.tell(characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal!"');
-
     ƒS.Character.hide(characters.Kailani);
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
     ƒS.update();
+    await ƒS.Speech.tell(characters.Kailani, '"Oh! Ich bin ja so erleichtert! Wie schön, dich zu sehen … Hast du wirklich nach mir gesucht? Das hätte ich dir echt nicht zugetraut … und wer ist das?"');
+    await ƒS.Speech.tell(characters.maincharacter, '"So ein Blödsinn, klar suche ich nach dir! Ich bin durch die halbe Spiegelwelt gereist, um dich zu finden! Dabei habe ich Flynn getroffen und er hat sich mir angeschlossen. Aber erzähl’ doch mal!"');
+
     await ƒS.Speech.tell(characters.Kailani, '"Ich bin dir so unendlich dankbar. Wirklich! Die Zeit hier war richtig schlimm. Also, wo fange ich an. Jetzt geht’s mir besser, nachdem ich befreit wurde. Aber vorher, puh, das war nicht einfach."');
+
+    ƒS.Character.hide(characters.Kailani);
+    await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_angry, ƒS.positionPercent(40, 100));
+    ƒS.update();
+
     await ƒS.Speech.tell(characters.Kailani, '"Eigentlich war alles gut, bis ich diesen bescheuerten Spiegel gekriegt hab’. Ich fand den so toll, wirklich."');
     // await ƒS.Speech.tell(characters.maincharacter, '"Ich weiß doch! Aber warum hast du mir nichts gesagt? Oder Mutti oder Evarius?"');
 
@@ -166,7 +169,7 @@ namespace Spiegel_VN {
         break;
 
       case Chp10GoodEndingElementAnswers2.iSayAccusing:
-        await ƒS.Speech.tell(characters.maincharacter, '"Flynn, was ist in deiner Tasche? Zeig es mir, sofort!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Flynn, was ist in deiner Tasche? Zeig´ es mir, sofort!"');
         ƒS.Speech.clear();
         break;
 
@@ -187,6 +190,10 @@ namespace Spiegel_VN {
 
     ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_sad, ƒS.positionPercent(70, 100));
+    ƒS.update();
+
+    ƒS.Character.hide(characters.Kailani);
+    await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Okay, ich geb’s auf. Ich war deshalb an den Spiegeln interessiert, weil –"');
@@ -354,13 +361,15 @@ namespace Spiegel_VN {
         ƒS.update();
 
         await ƒS.Speech.tell(characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn steht am Bug und schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
+
+        ƒS.Character.hide(characters.Kailani);
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
+        ƒS.update();
+
         await ƒS.Speech.tell(characters.maincharacter, '"Hier sind wir! Vielen Dank für deine Hilfe, Flynn. Vielleicht komm’ ich dich mal besuchen! Und halte die Ohren steif!"');
 
         ƒS.Character.hide(characters.Flynn);
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_wo_shocked, ƒS.positionPercent(70, 100));
-        ƒS.Character.hide(characters.Kailani);
-        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));
-        ƒS.update();
 
         await ƒS.Speech.tell(characters.Flynn, '"Das wäre schön! Ich versuche es. Ich sehe die Welt nun mit anderen Augen. Alles wird gut! Bis bald!"');
 
@@ -373,15 +382,35 @@ namespace Spiegel_VN {
         ƒS.update();
         await ƒS.Speech.tell(characters.maincharacter, "Die Mittagssonne strahlt vom Himmel. Du fragst dich, ob ein Reisen mit dem Handspiegel auch bei Mittag, statt bei Mitternacht möglich ist. Schließlich ist in dieser Welt – wie hat Flynn sie nochmal genannt, Norovia? – alles Andersherum.");
 
-        let Chp10GoodEndingElementAnswers6 = {
-          iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
-          iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
-          iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
+        do {
+          let Chp10GoodEndingElementAnswers6 = {
+            iSayOption1: "Spieglein, Spieglein, weise mir mein Routlein",
+            iSayOption2: "Spieglein, Spieglein, weise mir mein Sträßlein",
+            iSayOption3: "Spieglein, Spieglein, weise mir mein Weglein"
 
-        };
-        // let Chp10GoodEndingElement6 =
-        await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
+          };
+          let Chp10GoodEndingElement = await ƒS.Menu.getInput(Chp10GoodEndingElementAnswers6, "choicesCSSclass");
 
+          switch (Chp10GoodEndingElement) {
+            case Chp10GoodEndingElementAnswers6.iSayOption1:
+              await ƒS.Speech.tell(characters.narrator, "Nicht ganz ...");
+              ƒS.Speech.clear();
+              break;
+            
+            case Chp10GoodEndingElementAnswers6.iSayOption2:
+              await ƒS.Speech.tell(characters.narrator, "Probier's nochmal!");
+              ƒS.Speech.clear();
+              break;
+            
+            case Chp10GoodEndingElementAnswers6.iSayOption3:
+              dataForSave.pickedChp10GoodEndingContinue3 = true;
+              await ƒS.Speech.tell(characters.narrator, "Das war´s!");
+              ƒS.Speech.clear();
+              break;
+          }
+        } while (!dataForSave.pickedChp10GoodEndingContinue3);
+         
+        ƒS.Speech.clear();
         await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
@@ -398,13 +427,13 @@ namespace Spiegel_VN {
         ƒS.update();
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-        await ƒS.Speech.tell(characters.maincharacter, "Endlich zuhause! Kailani ruft schon nach euren Eltern. Mama und Mutti kommen aus dem Haus gestürmt, dicht gefolgt von Evarius. Alle strahlen über das ganze Gesicht und umarmen sich. Geschnatter von allen Seiten prasselt auf dich und Kailani ein. Flynn wird einfach mit umarmt. Er strahlt auch. Du schaust in die Gesichter deiner Familie und siehst dort Liebe, Akzeptanz und Glück.");
+        await ƒS.Speech.tell(characters.maincharacter, "Endlich zuhause! Kailani ruft schon nach euren Eltern. Mama und Mutti kommen aus dem Haus gestürmt, dicht gefolgt von Evarius. Alle strahlen über das ganze Gesicht und umarmen sich. Geschnatter von allen Seiten prasselt auf dich und Kailani ein. Du schaust in die Gesichter deiner Familie und siehst dort Liebe, Akzeptanz und Glück.");
         ƒS.Speech.clear();
         ƒS.Character.hideAll();
         ƒS.update();
         return "End";
         break;
 
-    }
+        }
   }
-}
+  }

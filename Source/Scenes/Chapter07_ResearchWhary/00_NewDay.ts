@@ -11,7 +11,7 @@ namespace Spiegel_VN {
         break;
 
       case 2:
-        await ƒS.Speech.tell(characters.Flynn, "So! Wo geht's jetzt hin?");
+        await ƒS.Speech.tell(characters.Flynn, '"So! Wo geht´s jetzt hin?"');
         break;
 
       case 3:
@@ -85,7 +85,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.Cook, '"Du kommst gerade richtig! Ich brauche dringend eine Pause."');
         await ƒS.Speech.tell(characters.maincharacter, "Nanu? Hat ausgerechnet der Koch für mich Zeit?");
         await ƒS.Speech.tell(characters.Cook, '"Hat es dir denn gestern geschmeckt?"');
-        await ƒS.Speech.tell(characters.maincharacter, "Eh, ja, sehr! War super lecker.");
+        await ƒS.Speech.tell(characters.maincharacter, '"Eh, ja, sehr! War super lecker."');
         await ƒS.Speech.tell(characters.maincharacter, '"Aber, ehm, ich wollte etwas anderes fragen. Ich bin nämlich auf der Suche nach meiner Schwester. Und –"');
 
         ƒS.Character.hideAll();

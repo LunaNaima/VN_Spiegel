@@ -1,7 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp08_OnLake(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp08_OnBoat);
-    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_uncertain, ƒS.positionPercent(70, 100));
+    await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_uncertain, ƒS.positionPercent(50, 100));
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.maincharacter, "Auf dem See ist es ruhig. Eine graue Welt, eine verschwundene Königin, Spiegel und ganz viel Farbe … und irgendwo mittendrin ist Kailani.");
     await ƒS.Speech.tell(characters.maincharacter, "Flynn verspürt wohl auch die veränderte Atmosphäre, denn das erste Mal, seit du ihn kennst (was ja auch wirklich keine lange Zeit ist), ist er still und paddelt vor sich hin. Du beschließt, ihn ein bisschen auszuhorchen.");
@@ -62,13 +62,14 @@ namespace Spiegel_VN {
 
         case Chp08ConvoFlynnElementAnswers.iSayContinue:
           dataForSave.pickedChp08ConvoContinue = true;
+          ƒS.Character.hideAll();
+          ƒS.update();
           await ƒS.Location.show(locations.black);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
           await ƒS.Location.show(locations.Chp08_ArrivalFactory);
           await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-          ƒS.Character.hideAll();
           ƒS.Sound.fade(music.theme_mirrorworld_whary, 0, 0, false);
           ƒS.Sound.fade(music.theme_mirrorworld_factory, 0.8, 1, true);
           ƒS.update();

@@ -2,7 +2,7 @@ namespace Spiegel_VN {
   export async function Chp10_IntoTower(): ƒS.SceneReturn {
 
 
-    await ƒS.Speech.tell(characters.maincharacter, "Es ist soweit! Du zitterst erwartungsvoll. Was ist aber, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
+    await ƒS.Speech.tell(characters.maincharacter, "Es ist soweit! Du zitterst vor Angst. Was ist, wenn du den Dämon nicht besiegen kannst? Welcher Mensch kann schließlich einfach so Dämonen besiegen?");
     await ƒS.Speech.tell(characters.maincharacter, "Hättest du einen Plan machen sollen, wie Flynn es vorgeschlagen hat? Mit leeren Händen und nur deinem ‘offenen Herzen’, wie es der Wünschebaum sagen würde, trittst du nun dem Bösen entgegen. Ob das reicht?.");
 
     await ƒS.Location.show(locations.Chp10_GroundFloorTower);

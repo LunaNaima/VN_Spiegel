@@ -109,7 +109,7 @@ namespace Spiegel_VN {
     ƒS.update();
 
     await ƒS.Speech.tell(characters.Flynn, '"Wo ist sie denn hin?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Sie ist einfach weg? Sie wusste so viel! Ich wollte sich doch noch so viel fragen …"');
+    await ƒS.Speech.tell(characters.maincharacter, '"Sie ist einfach weg? Ich wollte sich doch noch so viel fragen …"');
     await ƒS.Speech.tell(characters.maincharacter, "Verzweifelt suchst du nach ihr in der Menschenmenge, doch die Bettlerin scheint wie vom Erdboden verschluckt.");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Das gibt’s doch nicht! Wie kann sie so schnell weg sein?"');
@@ -120,7 +120,7 @@ namespace Spiegel_VN {
 
     await ƒS.Speech.tell(characters.Flynn, '"Aber wir haben eine Spur! Menschen werden irgendwo festgehalten, gegen ihren Willen, und arbeiten ..."');
     await ƒS.Speech.tell(characters.maincharacter, '"Klingt fast wie … wie eine Fabrik!"');
-    await ƒS.Speech.tell(characters.maincharacter, "Als du es aussprichst, tauchen Bilder von Kailani in deinem Kopf auf: Kailani in einem Riesenkäfig, gepeitscht von bösen Wärtern.");
+    await ƒS.Speech.tell(characters.maincharacter, "Als du es aussprichst, tauchen Bilder von Kailani in deinem Kopf auf: Kailani in einem Riesenkäfig, gepeitscht von bösen Wärtern. Du musst sie finden!");
 
     await ƒS.Speech.tell(characters.maincharacter, '"Hast du etwas rausgefunden, Flynn?"');
 

@@ -53,8 +53,8 @@ namespace Spiegel_VN {
 
     do {
       let Chp09InFactoryElementAnswers = {
-        iSayListenToGuards: '"(Erkunden) Wachen zuhören"',
-        iSayCubicle: '"(Erkunden) Kabine anschauen"',
+        iSayListenToGuards: "(Erkunden) Wachen zuhören",
+        iSayCubicle: "(Erkunden) Kabine anschauen",
         iSayContinue: "Weiter"
       };
       let Chp09InFactoryElement = await ƒS.Menu.getInput(Chp09InFactoryElementAnswers, "choicesCSSclass");
@@ -74,7 +74,7 @@ namespace Spiegel_VN {
         case Chp09InFactoryElementAnswers.iSayCubicle:
           await ƒS.Speech.tell(characters.maincharacter, "Du willst dir diese Kabine genauer anschauen. Ein großer Spiegel hängt an der Wand. Als du zuschaust, blitzt eine Landschaft darauf auf. Ein Strand? Auf einmal tritt ein Sklave davor und spannt seine Muskeln an.");
           await ƒS.Speech.tell(characters.maincharacter, "Seine Schultern sind breit. Als er sich dreht, siehst du, dass er vorne ein Polster trägt. Ein Sixpack-Polster umspannt seinen Bauch und lässt ihn gleichzeitig stark und schlank aussehen. Du denkst an die Dorfbewohner daheim.");
-          await ƒS.Speech.tell(characters.maincharacter, "Keiner von denen hat ein Sixpack und sicherlich nicht so breite Schultern. Dort achtet auch niemand auf das Äußere. Wichtig ist, dass sich jede Person in die Gemeinschaft integriert und freundlich zu Anderen ist. Die Menschen hier haben wohl jeglichen Bezug zur Gemeinschaft verloren, wenn ihnen das Äußere das Wichtigste ist.");
+          await ƒS.Speech.tell(characters.maincharacter, "Keiner von denen hat ein Sixpack und sicherlich nicht so breite Schultern. Dort achtet auch niemand auf das Äußere. Wichtig ist, dass sich jede Person in die Gemeinschaft integriert und freundlich zu Anderen ist.");
           ƒS.Speech.clear();
           break;
 

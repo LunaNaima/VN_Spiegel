@@ -20,6 +20,7 @@ namespace Spiegel_VN {
                 await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
                 await ƒS.Speech.tell(characters.maincharacter, "Du wanderst in eine Gasse, um dich genauer umzusehen. Es rührt sich nichts – keine Vögel, Menschen oder andere Lebewesen sind in Sicht. Es sieht nicht so aus, als ob ihr hier irgendwo unterkommen könnt.");
                 ƒS.Speech.clear();
+                await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
                 return "08_Search hiding place";
                 break;
 
@@ -35,7 +36,7 @@ namespace Spiegel_VN {
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_confused, ƒS.positionPercent(70, 100));
         ƒS.update();
-        await ƒS.Speech.tell(characters.Flynn, "Ich würde nach links! Links ist immer richtig.");
+        await ƒS.Speech.tell(characters.Flynn, '"Ich würde nach links! Links ist immer richtig."');
 
 
         do {
@@ -48,7 +49,6 @@ namespace Spiegel_VN {
             if (dataForSave.pickedIron) {
                 delete Chp08HidingPlaceFactoryElementAnswers2.iSayHammer;
             }
-
 
             let Chp08HidingPlaceFactoryElement2 = await ƒS.Menu.getInput(Chp08HidingPlaceFactoryElementAnswers2, "choicesCSSclass");
 
@@ -95,7 +95,7 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.Chp08_HidingPlace);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         await ƒS.Speech.tell(characters.maincharacter, "Schnaufend kommt ihr oben an einem Überhang an. Der Hügel war doch nicht so mühelos. Dafür habt ihr jetzt eine Aussicht auf das Dorf, die atemberaubend wäre …");
-        await ƒS.Speech.tell(characters.maincharacter, "… wären da nicht die seltsame Stille und das Fehlen der Farben.");
+        await ƒS.Speech.tell(characters.maincharacter, "… wäre da nicht die seltsame Stille und das Fehlen der Farben.");
 
         ƒS.Character.hideAll();
         await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_happy, ƒS.positionPercent(70, 100));
@@ -144,7 +144,7 @@ namespace Spiegel_VN {
                     await ƒS.Speech.tell(characters.Flynn, '"Das ist eine gute Frage. Von hier oben sehe ich noch immer keine einzige Bewegung, du etwa?"');
                     await ƒS.Speech.tell(characters.maincharacter, "Als du den Kopf schüttelst, überlegt er weiter.");
                     await ƒS.Speech.tell(characters.Flynn, '"Vielleicht sind die Häuser alle verlassen, außer dem Turm? Deshalb hat nur er noch die Farbe?"');
-                    await ƒS.Speech.tell(characters.maincharacter, "Das kann sein … Aber wo sind die Menschen hin? Irgendetwas muss sie doch fortgetrieben haben.");
+                    await ƒS.Speech.tell(characters.maincharacter, '"Das kann sein … Aber wo sind die Menschen hin? Irgendetwas muss sie doch fortgetrieben haben."');
 
                     ƒS.Character.hideAll();
                     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.grey_blue_crossed_angry, ƒS.positionPercent(70, 100));
@@ -176,7 +176,7 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, '"Die gehen alle in die Häuser! Siehst du das auch?"');
         await ƒS.Speech.tell(characters.maincharacter, "Tatsächlich verschwinden die kleinen Figuren, eine nach der anderen, in den Häuschen, die vorhin so still und leer wirkten.");
         await ƒS.Speech.tell(characters.Flynn, '"Da wohnen sie also! Schau, ist doch alles in Ordnung. In den Turm ist aber niemand gegangen …"');
-        await ƒS.Speech.tell(characters.maincharacter, '"Viel interessanter ist doch, dass Kailani vielleicht unter diesen Menschen war! Sie ist womöglich jetzt in einem der Häuser? Ich muss sofort von hier runter!"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Viel interessanter ist doch, dass Kailani vielleicht unter diesen Menschen ist! Sie ist womöglich jetzt in einem der Häuser? Ich muss sofort von hier runter!"');
         await ƒS.Speech.tell(characters.Flynn, '"Okay, warte mal. Wir sind doch erst hier hochgekrochen und haben uns ein Lager gemacht. Außerdem wird es gleich dunkel, und nachts will ich eigentlich nicht durch das Geisterdorf streichen, auch wenn wir nun wissen, dass es Menschen gibt."');
         await ƒS.Speech.tell(characters.Flynn, '"Wer weiß, wie die drauf sind? Lieber legen wir uns etwas hin und ruhen uns aus."');
 
@@ -205,7 +205,7 @@ namespace Spiegel_VN {
 
         }
         ƒS.Character.hideAll();
-        await ƒS.Speech.tell(characters.maincharacter, "Es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
+        await ƒS.Speech.tell(characters.maincharacter, "Es stimmt, es ist schon fast dunkel. Du schaust hinunter und bemerkst etwas Seltsames. Du kommst nicht sofort darauf, aber dann fällt dir auf: wo normalerweise Licht hinter den Fenstern glänzt, ist es stockdunkel. Die Menschen haben keine Kerzen angezündet. Komisch.");
         // await ƒS.Speech.tell(characters.maincharacter, "Du hättest es beinahe vergessen – deine alten Klamotten sind noch in deiner Tasche! Du ziehst dich um und fühlst sofort wohler. Die Polster lässt du unter dem Baum liegen. Dass die Menschen sich in Whary so fehlerhaft finden, dass sie sich einpolstern müssen, ist wirklich seltsam.");
         await ƒS.Speech.tell(characters.maincharacter, "Du bist dir sicher, Kailani hier näher zu sein. Mit diesen tröstenden Gedanken drehst du dich um und kuschelst dich in das Lager ein, dass Flynn gebaut hat.");
 

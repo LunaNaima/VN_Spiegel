@@ -75,8 +75,10 @@ declare namespace Spiegel_VN {
         pickedChp10IntoTowerContinue: boolean;
         pickedChp10GoodEndingContinue1: boolean;
         pickedChp10GoodEndingContinue2: boolean;
+        pickedChp10GoodEndingContinue3: boolean;
         pickedChp10SemiGoodEndingContinue1: boolean;
         pickedChp10SemiGoodEndingContinue2: boolean;
+        pickedChp10SemiEndingContinue3: boolean;
         pickedChp10BadEndingContinue2: boolean;
     };
     let inventory: {

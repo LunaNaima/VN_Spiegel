@@ -21,7 +21,7 @@ namespace Spiegel_VN {
 
       case Chp07CookElementAnswers.iSaySad:
         await ƒS.Speech.tell(characters.maincharacter, '"Ich vermisse sie unglaublich und mache mir sehr große Sorgen."');
-        await ƒS.Speech.tell(characters.Cook, '"Ich hab’ auch ‘ne kleine Schwester. Weißt du, ob sie wirklich in der Stadt ist?"');
+        await ƒS.Speech.tell(characters.Cook, '"Oh je. Ich hab’ auch ‘ne kleine Schwester. Weißt du, ob sie wirklich in der Stadt ist?"');
         await ƒS.Speech.tell(characters.maincharacter, '"Ich habe keine Ahnung. Vermutlich ist sie hier irgendwo gefangen. Habe ich zumindest gehört."');
 
         ƒS.Character.hideAll();
@@ -29,7 +29,7 @@ namespace Spiegel_VN {
         ƒS.update();
 
         await ƒS.Speech.tell(characters.Cook, '"Gefangen? Sag bloß …"');
-        await ƒS.Speech.tell(characters.maincharacter, "Er grübelt lange und sieht auf einmal gar nicht mehr so lässig aus.");
+        await ƒS.Speech.tell(characters.maincharacter, "Er grübelt und sieht auf einmal gar nicht mehr so lässig aus.");
         await ƒS.Speech.tell(characters.Cook, '"Ich habe in letzter Zeit einiges gehört … nur aus der Gerüchteküche. Wortwörtlich, hehe."');
 
         ƒS.Character.hideAll();
