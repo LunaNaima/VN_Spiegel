@@ -104,7 +104,6 @@ namespace Spiegel_VN {
     switch (Chp01SceneElement) {
       case Chp01PickSceneElementAnswers.PickSceneConvoMother:
         await ƒS.Speech.tell(characters.maincharacter.name, '"Warte kurz, Mama!"');
-        // dataForSave.scoreEmpathyPoints += 10;
         ƒS.Speech.clear();
         return "01_02 Conversation Mama";
         break;
@@ -117,14 +116,14 @@ namespace Spiegel_VN {
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreFlowerMerchant:
-        await ƒS.Speech.tell(characters.maincharacter, 'Mal schauen, was der Blumenhändler so im Angebot hat');
+        await ƒS.Speech.tell(characters.maincharacter, 'Mal schauen, was der Blumenhändler so im Angebot hat.');
         ƒS.Character.hide(characters.Mama);
         ƒS.Speech.clear();
         return "01_E_FlowerMerchant";
         break;
 
       case Chp01PickSceneElementAnswers.PickSceneExploreLeatherMerchant:
-        await ƒS.Speech.tell(characters.Mama, 'Da wollte ich schon lange mal vorbei.');
+        await ƒS.Speech.tell(characters.maincharacter, 'Da wollte ich schon lange mal vorbei.');
         ƒS.Character.hide(characters.Mama);
         ƒS.Speech.clear();
         return "01_E_LeatherMerchant";
