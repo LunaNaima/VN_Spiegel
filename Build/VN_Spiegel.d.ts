@@ -1067,25 +1067,3 @@ declare namespace Spiegel_VN {
 declare namespace Spiegel_VN {
     function EmptyScene(): ƒS.SceneReturn;
 }
-declare namespace Spiegel_VN {
-    function Auswahlmöglichkeiten(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Diary(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function HowToMakeChoices(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function RandomIntervall(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function ScnTestzene01(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function ScnTestzene02(): ƒS.SceneReturn;
-}
-declare let weihnachtsdeko: string;
-declare let x: number;
-declare let y: number;
-declare let z: number;
