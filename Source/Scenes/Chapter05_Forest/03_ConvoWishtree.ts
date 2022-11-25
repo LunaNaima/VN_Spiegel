@@ -57,7 +57,7 @@ namespace Spiegel_VN {
     await ƒS.Location.show(locations.Chp05_WishtreeBirds);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-    await ƒS.Speech.tell(characters.narrator, '"Wie willst du dich mit ihnen verbinden?"');
+    await ƒS.Speech.tell(characters.wishtree, '"Wie willst du dich mit ihnen verbinden?"');
 
     let Chp05ConvoTreeElementAnswers2 = {
       iSaySing: "Zu Vögeln singen",

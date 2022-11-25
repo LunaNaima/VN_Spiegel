@@ -3216,7 +3216,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_WishtreeBirds);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"… habe ich einige Freunde gerufen. Sie begleiten dich auf deinem Weg in die andere Welt. Dazu musst du sie aber an dich binden."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.narrator, '"Wie willst du dich mit ihnen verbinden?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Wie willst du dich mit ihnen verbinden?"');
         let Chp05ConvoTreeElementAnswers2 = {
             iSaySing: "Zu Vögeln singen",
             iSayFeed: "Füttern"
@@ -3266,7 +3266,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schleichst dich leise herein. Bestimmt schlafen alle schon.");
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.pants2_neutral, Spiegel_VN.ƒS.positionPercent(80, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '""' + Spiegel_VN.dataForSave.nameProtagonist + '"?"');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '""' + Spiegel_VN.dataForSave.nameProtagonist + '?"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du erschrickst. Mama kommt die Treppe hinunter.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama, '"Wo warst du denn? Wir haben uns Sorgen gemacht!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Es tut mir leid … Mama, ich muss gehen. Bitte sag Mutti und Evarius Bescheid."');
@@ -3476,7 +3476,7 @@ var Spiegel_VN;
                 break;
         }
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wie heißt du denn?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich bin ' + Spiegel_VN.dataForSave.nameProtagonist + '"."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich bin ' + Spiegel_VN.dataForSave.nameProtagonist + '."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Freut mich!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an.");
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ihr passiert die Tore ohne Probleme. Die Wachen beobachten die Menge aufmerksam, aber ihr fallt – zum Glück! – nicht auf.");
@@ -3748,7 +3748,7 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Als du unten ankommst, flutet eine helle Sonne das Zimmer. Du schaust genauer hin und entdeckst, dass die Gäste frühstücken. Hast du etwa den ganzen Tag verschlafen?");
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos1_confused, Spiegel_VN.ƒS.positionPercent(70, 100));
         Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '""' + Spiegel_VN.dataForSave.nameProtagonist + '", da bist du ja! Schlafmütze. Ich dachte schon, du wachst gar nicht mehr auf."');
+        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"' + Spiegel_VN.dataForSave.nameProtagonist + ', da bist du ja! Schlafmütze. Ich dachte schon, du wachst gar nicht mehr auf."');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich habe viel zu lange geschlafen! Ich muss doch Kailani suchen!"');
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
@@ -3970,7 +3970,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.MerchantWhary, Spiegel_VN.characters.MerchantWhary.pose.pos1, Spiegel_VN.ƒS.positionPercent(40, 100));
                 Spiegel_VN.ƒS.update();
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.MerchantWhary, '"Was darf ich Ihnen anbieten? Diese Beeren sind im Angebot, acht kg für den Preis von sieben!"');
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Was! Wer brauch schon 8 kg Beeren?");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Was! Wer brauch schon acht kg Beeren?");
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Nein, danke. Ich wollte wissen, ob Sie ein Mädchen gesehen haben. Sie trägt ein braunes Kleid und–"');
                 await Spiegel_VN.ƒS.Speech.tell("Handelnde", '"Siehst du hier irgendjemanden, der braun trägt? So etwas gibt es, seit wir alle Farbe bekommen, nicht mehr. Abgesehen davon habe ich keine Zeit für so etwas!"');
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Die Leute bekommen Farbe? Du würdest gerne noch weiterfragen, doch der Händler hat sich schon abgewandt.");
@@ -4376,6 +4376,7 @@ var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp08_OnLake() {
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_OnBoat);
+        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_uncertain, Spiegel_VN.ƒS.positionPercent(50, 100));
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Auf dem See ist es ruhig. Eine graue Welt, eine verschwundene Königin, Spiegel und ganz viel Farbe … und irgendwo mittendrin ist Kailani.");
@@ -4488,7 +4489,7 @@ var Spiegel_VN;
             case Chp08ArrivalOtherSideElementAnswers.iSaySearchForHidingPlace:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Gut, suchen wir nach etwas, wo wir bleiben können. Einen so schönen Gasthof wie in Whary wird es wohl nicht geben!"');
                 Spiegel_VN.ƒS.Speech.clear();
-                await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
+                Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
                 return "08_Search hiding place";
                 break;
         }
