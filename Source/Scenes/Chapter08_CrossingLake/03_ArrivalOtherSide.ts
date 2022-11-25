@@ -41,7 +41,7 @@ namespace Spiegel_VN {
       case Chp08ArrivalOtherSideElementAnswers.iSaySearchForHidingPlace:
         await ƒS.Speech.tell(characters.maincharacter, '"Gut, suchen wir nach etwas, wo wir bleiben können. Einen so schönen Gasthof wie in Whary wird es wohl nicht geben!"');
         ƒS.Speech.clear();
-        await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+        ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         return "08_Search hiding place";
         break;
 

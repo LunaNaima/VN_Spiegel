@@ -1,6 +1,7 @@
 namespace Spiegel_VN {
   export async function Chp08_OnLake(): ƒS.SceneReturn {
     await ƒS.Location.show(locations.Chp08_OnBoat);
+    ƒS.Character.hide(characters.Flynn);
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_uncertain, ƒS.positionPercent(50, 100));
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
     await ƒS.Speech.tell(characters.maincharacter, "Auf dem See ist es ruhig. Eine graue Welt, eine verschwundene Königin, Spiegel und ganz viel Farbe … und irgendwo mittendrin ist Kailani.");

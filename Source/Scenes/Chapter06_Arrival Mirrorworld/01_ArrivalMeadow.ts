@@ -115,7 +115,7 @@ namespace Spiegel_VN {
     }
 
     await ƒS.Speech.tell(characters.Flynn, '"Wie heißt du denn?"');
-    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist + '"."');
+    await ƒS.Speech.tell(characters.maincharacter, '"Ich bin ' + dataForSave.nameProtagonist + '."');
     await ƒS.Speech.tell(characters.Flynn, '"Freut mich!"');
 
     await ƒS.Speech.tell(characters.maincharacter, "Während Flynn munter weiter plappert, schaust du ihn leicht irritiert, aber auch neugierig von der Seite an.");

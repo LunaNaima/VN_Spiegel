@@ -39,7 +39,7 @@ namespace Spiegel_VN {
         ƒS.update();
 
         await ƒS.Speech.tell(characters.MerchantWhary, '"Was darf ich Ihnen anbieten? Diese Beeren sind im Angebot, acht kg für den Preis von sieben!"');
-        await ƒS.Speech.tell(characters.maincharacter, "Was! Wer brauch schon 8 kg Beeren?");
+        await ƒS.Speech.tell(characters.maincharacter, "Was! Wer brauch schon acht kg Beeren?");
         await ƒS.Speech.tell(characters.maincharacter, '"Nein, danke. Ich wollte wissen, ob Sie ein Mädchen gesehen haben. Sie trägt ein braunes Kleid und–"');
         await ƒS.Speech.tell("Handelnde", '"Siehst du hier irgendjemanden, der braun trägt? So etwas gibt es, seit wir alle Farbe bekommen, nicht mehr. Abgesehen davon habe ich keine Zeit für so etwas!"');
         await ƒS.Speech.tell(characters.maincharacter, "Die Leute bekommen Farbe? Du würdest gerne noch weiterfragen, doch der Händler hat sich schon abgewandt.");

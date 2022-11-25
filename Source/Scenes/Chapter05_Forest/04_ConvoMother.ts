@@ -7,7 +7,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.pants2_neutral, ƒS.positionPercent(80, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Mama, '""' + dataForSave.nameProtagonist + '"?"');
+    await ƒS.Speech.tell(characters.Mama, '""' + dataForSave.nameProtagonist + '?"');
     await ƒS.Speech.tell(characters.maincharacter, "Du erschrickst. Mama kommt die Treppe hinunter.");
     await ƒS.Speech.tell(characters.Mama, '"Wo warst du denn? Wir haben uns Sorgen gemacht!"');
     await ƒS.Speech.tell(characters.maincharacter, '"Es tut mir leid … Mama, ich muss gehen. Bitte sag Mutti und Evarius Bescheid."');

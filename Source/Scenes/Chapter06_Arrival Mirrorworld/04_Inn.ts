@@ -70,7 +70,7 @@ namespace Spiegel_VN {
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos1_confused, ƒS.positionPercent(70, 100));
     ƒS.update();
 
-    await ƒS.Speech.tell(characters.Flynn, '""' + dataForSave.nameProtagonist + '", da bist du ja! Schlafmütze. Ich dachte schon, du wachst gar nicht mehr auf."');
+    await ƒS.Speech.tell(characters.Flynn, '"' + dataForSave.nameProtagonist + ', da bist du ja! Schlafmütze. Ich dachte schon, du wachst gar nicht mehr auf."');
     await ƒS.Speech.tell(characters.maincharacter, '"Ich habe viel zu lange geschlafen! Ich muss doch Kailani suchen!"');
     ƒS.Character.hideAll();
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_neutral, ƒS.positionPercent(70, 100));
