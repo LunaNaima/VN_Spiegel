@@ -1,7 +1,7 @@
 "use strict";
 var Spiegel_VN;
 (function (Spiegel_VN) {
-    Spiegel_VN.ƒ = FudgeCore; //importiert teile, die nicht in typescript sind, sondern außerhalb in fudge
+    Spiegel_VN.ƒ = FudgeCore;
     Spiegel_VN.ƒS = FudgeStory;
     // *** DATA THAT WILL BE SAVED ***
     Spiegel_VN.dataForSave = {

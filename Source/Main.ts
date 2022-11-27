@@ -1,5 +1,5 @@
 namespace Spiegel_VN {
-  export import ƒ = FudgeCore; //importiert teile, die nicht in typescript sind, sondern außerhalb in fudge
+  export import ƒ = FudgeCore; 
   export import ƒS = FudgeStory;
 
   
