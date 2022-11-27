@@ -113,9 +113,8 @@ namespace Spiegel_VN {
 
 
   export function showCredits(): void {
-    ƒS.Text.setClass("class2"); // setclass = löscht vorherige Klasse und übergeht formatierungen davor (vorherige infos werden gelöscht und nur die setclass wird angezeigt). addclass fügt Klasse hinzu
-    // (wenns vorher eine addclass gab, dann wird vorherige gestaltung nicht gelöscht. also alte formatierung von css option sehen wir noch) bei szenenwechsel können wir addclass nehmen.
-    ƒS.Text.print("GRATITUDE<br>Thank you to everyone who helped me create this project!<br>To Hannah for explaining the code<br>To Riem for more code questions<br>To both of them for giving me unwavering confidence in myself<br>To Rino for all miscellaneous questions and unlimited emotional support<br>To Jonas for fixing the(mostly) simplest bugs for me<br>To my Dad for the wonderful music<br>To my testers, who took the time to play the game<br>BACKGROUNDS<br>All sources for backgrounds are cited in the thesis<br>Backgrounds that aren't cited were drawn from own images<br>CHARACTERS<br>Inspiration for the characters were taken from Pinterest<br>@bobbo_andonova's tutorials really helped with the sketches<br>FONTS<br>Speech: Arial<br>Name: Uncial Anitqua from https://fonts.google.com/specimen/Uncial+Antiqua?query=uncial"); // hier credits rein schreiben, damit erscheint eine novelpage bzw eine Box, in der der text steht
+    ƒS.Text.setClass("class2"); 
+    ƒS.Text.print("GRATITUDE<br>Thank you to everyone who helped me create this project!<br>To Hannah for explaining the code<br>To Riem for more code questions<br>To both of them for giving me unwavering confidence in myself<br>To Rino for all miscellaneous questions and unlimited emotional support<br>To Jonas for fixing the(mostly) simplest bugs for me<br>To my Dad for the wonderful music<br>To my testers, who took the time to play the game<br>BACKGROUNDS<br>All sources for backgrounds are cited in the thesis<br>Backgrounds that aren't cited were drawn from own images<br>CHARACTERS<br>Inspiration for the characters were taken from Pinterest<br>@bobbo_andonova's tutorials really helped with the sketches<br>FONTS<br>Speech: Arial<br>Name: Uncial Anitqua from https://fonts.google.com/specimen/Uncial+Antiqua?query=uncial");
   }
 
   //**** MENÜ ****/
