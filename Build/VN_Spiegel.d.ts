@@ -81,14 +81,6 @@ declare namespace Spiegel_VN {
         pickedChp10SemiEndingContinue3: boolean;
         pickedChp10BadEndingContinue2: boolean;
     };
-    let inventory: {
-        apple: {
-            name: string;
-            description: string;
-            image: string;
-            static: boolean;
-        };
-    };
     function showCredits(): void;
 }
 declare namespace Spiegel_VN {
