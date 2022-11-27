@@ -4,7 +4,6 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     ƒS.Sound.fade(music.theme_ordinaryworld, 0, 0, false);
     ƒS.Sound.fade(soundeffects.water, 0, 0, false);
-
     ƒS.Sound.fade(music.theme_mirrorworld_whary, 0.5, 1, true);
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 

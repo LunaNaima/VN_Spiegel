@@ -352,7 +352,7 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.Chp08_ArrivalFactory);
         ƒS.update();
 
-        await ƒS.Speech.tell(characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn steht am Bug und schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
+        await ƒS.Speech.tell(characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
 
         ƒS.Character.hide(characters.Kailani);
         await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(40, 100));

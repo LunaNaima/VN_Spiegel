@@ -4,7 +4,7 @@ namespace Spiegel_VN {
     let randomTextChp05TextRiddle = ƒ.Random.default.getRangeFloored(1, 4); //gerundet
     switch (randomTextChp05TextRiddle) {
       case 1:
-        await ƒS.Speech.tell(characters.wishtree, '"Verzage nicht ..."');
+        await ƒS.Speech.tell(characters.wishtree, "Verzage nicht ...");
         break;
 
       case 2:
@@ -12,7 +12,7 @@ namespace Spiegel_VN {
         break;
 
       case 3:
-        await ƒS.Speech.tell(characters.wishtree, '"Nicht mehr lange ..."');
+        await ƒS.Speech.tell(characters.wishtree, "Nicht mehr lange ...");
         break;
 
       case 4:
