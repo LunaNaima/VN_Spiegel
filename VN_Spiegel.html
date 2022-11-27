@@ -18,16 +18,11 @@
   <script src="FudgeStory/FudgeStory.js"></script>
   <script src="./Build/VN_Spiegel.js"></script>
   <title>Der Spiegel, der das Lächeln fraß</title>
-  <splash src="Assets/Backgrounds/splash.png"></splash>
+  <!-- <splash src="Assets/Backgrounds/splash.png"></splash> -->
 </head>
 
 <body>
   <scene>
-    <dialog type="splash" open>
-      <p>
-        <img id="FudgeStoryLogo" theme="dark" />
-      </p>
-    </dialog>
     <canvas></canvas>
 
     <speech>
@@ -41,23 +36,16 @@
     </dialog>
 
     <div type="interface">
-      <!-- <input
-          name="scoreEmpathyPoints"
-          value="Empathy Points"
-          type="text"
-          disabled
-        /> -->
-      <!-- für value der Skala; Füllung -->
-      <!-- <meter
-          id="EmpathyPointsSkala"
-          name="EmpathyPoints"
-          min="0"
-          max="100"
-          disabled
-        ></meter> -->
     </div>
     <dialog type="text"></dialog>
   </scene>
+  <dialog type="splash" open>
+    <img id="FudgeStoryLogo" theme="dark" /> <!-- use "light" or "dark" -->
+    <p>
+      <!-- Design your splash screen here. Reposition and rescale the logo above, but do not remove. -->
+    </p>
+  </dialog>
+
 </body>
 
 </html>
