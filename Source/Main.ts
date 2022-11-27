@@ -139,38 +139,35 @@ namespace Spiegel_VN {
     load: "Load",
     close: "Close",
     credits: "Credits"
-  }; // volume noch dazu
+  };
 
-  let gameMenu: ƒS.Menu; // später, wenn wir das menu erstellen, heißt das hier: wir erstellen es mit den und den buttons
+  let gameMenu: ƒS.Menu;
 
-  let menuIsOpen: boolean = true; // abfragen, ob menu offen (true) oder geschlossen (false) ist
-  let inventoryIsOpen: boolean = false;
+  let menuIsOpen: boolean = true; 
 
-  // asynchrone Funktionen, 1x für button, 1x für eventlistener (für shortcuts)
   async function buttonFunctionalities(_option: string): Promise<void> {
-    console.log(_option); // sicherheitshalber anzeigen lassen, damit man weiß, was passiert
+    console.log(_option); 
     switch (_option) {
       case inGameMenuButtons.save:
-        await ƒS.Progress.save(); // save und load Funktionen sind schon in Progress klasse definiert
+        await ƒS.Progress.save(); 
         break;
       case inGameMenuButtons.load:
         await ƒS.Progress.load();
         break;
       case inGameMenuButtons.close:
-        gameMenu.close(), (menuIsOpen = false); // false = geschlossen
+        gameMenu.close(), (menuIsOpen = false); 
         break;
       case inGameMenuButtons.credits:
-        showCredits(); // dafür gibts noch keine Funktion, deshalb rot. die muss vorher definiert werden, 1 funktion machen, exportieren (damit sie verwendet werden kann),
+        showCredits(); 
     }
   }
 
   // Shortcuts fürs Menü (für Menübuttons)
-  document.addEventListener("keydown", hndKeyPress); // weil: es gibt versch arten von events, die wir für jeweiligen listener verwenden können. bei window gibts andere zur verfügung als bei doc
-  // unterschied keypress & keydown: down = gedrückt halten, press = drücke und loslassen
+  document.addEventListener("keydown", hndKeyPress); 
   async function hndKeyPress(_event: KeyboardEvent): Promise<void> {
     let ctrlPressed: boolean = ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.CTRL_LEFT, ƒ.KEYBOARD_CODE.CTRL_RIGHT]);
     switch (_event.code) {
-      case ƒ.KEYBOARD_CODE.S: // hier kann man taste auswählen, achtung: amerikanisches keyboard hier!
+      case ƒ.KEYBOARD_CODE.S: 
         if (!ctrlPressed)
           break;
         console.log("Save");
@@ -182,30 +179,30 @@ namespace Spiegel_VN {
         console.log("Load");
         await ƒS.Progress.load();
         break;
-      case ƒ.KEYBOARD_CODE.M: //M steht für Menu
+      case ƒ.KEYBOARD_CODE.M: 
         if (menuIsOpen) {
           console.log("Close");
           gameMenu.close();
-          menuIsOpen = false; // wenn ich m drücke, und das menu geöffnet is, schließe das menu. wenn es offen ist:
+          menuIsOpen = false; 
         } else {
           console.log("Open");
           gameMenu.open();
           menuIsOpen = true;
         }
         break;
-      // INVENTORY MENU
-      case ƒ.KEYBOARD_CODE.I:
-        console.log("Inventory");
-        if (inventoryIsOpen) {
-          console.log("Inventory Close");
-          ƒS.Inventory.close();
-          inventoryIsOpen = false; // wenn ich m drücke, und das menu geöffnet is, schließe das menu. wenn es offen ist:
-        } else {
-          console.log("Inventory Open");
-          ƒS.Inventory.open();
-          inventoryIsOpen = true;
-        }
-        break;
+      // // INVENTORY MENU
+      // case ƒ.KEYBOARD_CODE.I:
+      //   console.log("Inventory");
+      //   if (inventoryIsOpen) {
+      //     console.log("Inventory Close");
+      //     ƒS.Inventory.close();
+      //     inventoryIsOpen = false; // wenn ich m drücke, und das menu geöffnet is, schließe das menu. wenn es offen ist:
+      //   } else {
+      //     console.log("Inventory Open");
+      //     ƒS.Inventory.open();
+      //     inventoryIsOpen = true;
+      //   }
+      //   break;
     }
   }
 
@@ -219,29 +216,6 @@ namespace Spiegel_VN {
     buttonFunctionalities("Close");
 
     let scenes: ƒS.Scenes = [
-      // { scene: ScnTestzene01, name: "Testszene 01" }, // scene: hier muss name von funktion rein! Name ist was anderes, kann spaces enthalten wegen string
-      
-      
-      // {
-      //   id: "TestTunnel",scene: testTunnel,
-      //   name: "TestTunnel"
-      // },
-      // {
-      //   id: "Quiz_Wishtree",
-      //   scene: quizWishtree,
-      //   name: "Quiz_Wishtree"
-      // },
-      //   id: "Auswahlmöglichkeiten",
-      //   scene: Auswahlmöglichkeiten,
-      //   name: "Testszene 1",
-      // },
-      // {
-      //   scene: MinigameDemon,
-      //   name: "Scene Minigame",
-      // },
-
-      // *** INTRO ***
-      // { id: "00 Name Entry", scene: Chp00_00_NameEntry, name: "NameEntry" },
 
       // ***CHAPTER 01 ***
       {id: "01_00 IntroNarration", scene: Chp01_00_IntroNarration, name: "Intro Narration"},
@@ -314,12 +288,6 @@ namespace Spiegel_VN {
       {id: "09_Enter factory", scene: Chp09_EnterFactory, name: "Enter factory"},
       {id: "09_In Factory", scene: Chp09_InFactory, name: "In Factory"},
       {id: "09_Scout Tower", scene: Chp09_ScoutTower, name: "Scout Tower"},
-
-      // // *** CHAPTER 10: THE GREAT ORDEAL ***
-      // {id: "13_01 Entry village", scene: Chp13_01_EntryVillage, name: "Entry village"},
-      // {id: "13_02 Get into tower", scene: Chp13_02_GetIntoTower, name: "Go to tower"},
-      // {id: "13_03 Entry tower", scene: Chp13_03_EntryTower, name: "Entry tower"},
-      
 
       // // *** CHAPTER 10 Endings
       {id: "10_IntoTower", scene: Chp10_IntoTower, name: "Destroy mirror"},

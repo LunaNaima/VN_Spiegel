@@ -895,9 +895,6 @@ declare namespace Spiegel_VN {
     };
 }
 declare namespace Spiegel_VN {
-    function Chp00_00_NameEntry(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
     function Chp01_00_IntroNarration(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
