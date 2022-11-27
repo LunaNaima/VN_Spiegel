@@ -70,13 +70,10 @@ namespace Spiegel_VN {
       }
     }
 
-
     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_smile2, ƒS.positionPercent(70, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Flynn, '"Da ist ein Boot! Hat das jemand hier liegenlassen? Wie perfekt! Ich wusste übrigens die ganze Zeit, dass sich etwas hinter dem Schilf versteckt."');
     await ƒS.Speech.tell(characters.maincharacter, "Du verdrehst die Augen und hüpfst hinter Flynn ins Boot hinein. Zum Glück ist es trocken und nicht morsch. Ihr stoßt euch mit dem Paddel, das im Boot lag, vom Ufer ab und fahrt los.");
-
-
 
   }
 }

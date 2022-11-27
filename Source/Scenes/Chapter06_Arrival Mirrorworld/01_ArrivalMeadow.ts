@@ -152,7 +152,5 @@ namespace Spiegel_VN {
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
     await ƒS.Speech.tell(characters.Flynn, '"Ich merke schon, du bist ziemlich abgelenkt. Hast du mir überhaupt zugehört? Echt unhöflich! Aber gut. Wir sind in Whary! Willkommen! Was hast du denn jetzt vor?"');
-
-
   }
 }

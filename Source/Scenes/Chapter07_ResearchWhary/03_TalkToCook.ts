@@ -66,14 +66,6 @@ namespace Spiegel_VN {
         iSayContinue: "Weiter"
       };
 
-      // if (
-      //   !dataForSave.pickedChp07CookpickedGhost ||
-      //   !dataForSave.pickedChp07CookpickedColor ||
-      //   !dataForSave.pickedChp07CookpickedPeople
-      // ) {
-      //   delete Chp07CookElementAnswers2.iSayContinue;
-      // }
-
       let Chp07CookElement2 = await ƒS.Menu.getInput(Chp07CookElementAnswers2, "choicesCSSclass");
 
       // *** RESPONSES ***

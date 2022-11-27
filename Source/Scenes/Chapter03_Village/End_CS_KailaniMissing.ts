@@ -31,13 +31,6 @@ namespace Spiegel_VN {
       PickSceneSearchGarden: "Im Garten suchen"
     };
 
-    // if (
-    //   !dataForSave.pickedChp03_SearchGarden ||
-    //   !dataForSave.pickedChp03_SearchKitchen
-    // ) {
-    //   delete Chp03SearchKailaniElementAnswers.PickSceneContinue;
-    // }
-
     let Chp03SearchKailaniElement = await ƒS.Menu.getInput(Chp03SearchKailaniElementAnswers, "choicesCSSclass");
 
     switch (Chp03SearchKailaniElement) {

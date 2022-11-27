@@ -42,14 +42,14 @@ namespace Spiegel_VN {
             delete Chp04PickSceneElementAnswers.PickSceneContinue;
         }
         if (dataForSave.pickedChp04TalkToFamily) {
-      delete Chp04PickSceneElementAnswers.PickSceneTalkToFamily;
-    }
+            delete Chp04PickSceneElementAnswers.PickSceneTalkToFamily;
+        }
         if (dataForSave.pickedChp04ResearchLibrary) {
-      delete Chp04PickSceneElementAnswers.PickSceneResearchLibrary;
+            delete Chp04PickSceneElementAnswers.PickSceneResearchLibrary;
         }
         if (dataForSave.pickedChp04ExamineMirror) {
-      delete Chp04PickSceneElementAnswers.PickSceneExamineMirror;
-    }
+            delete Chp04PickSceneElementAnswers.PickSceneExamineMirror;
+        }
 
         let Chp04PickSceneElement = await ƒS.Menu.getInput(Chp04PickSceneElementAnswers, "choicesCSSclass");
 

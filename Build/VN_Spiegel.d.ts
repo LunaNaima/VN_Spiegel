@@ -3,12 +3,7 @@ declare namespace Spiegel_VN {
     export import ƒS = FudgeStory;
     let dataForSave: {
         nameProtagonist: string;
-        scoreEmpathyPoints: number;
-        EmpathyPointsSkala: string;
-        scoreCouragePoints: number;
-        scoreKnowledgePoints: number;
         tunnelFailed: number;
-        pickedBoat: boolean;
         pickedRightChoice: boolean;
         pickedRightChoiceMirror: boolean;
         pickedIron: boolean;
@@ -958,9 +953,6 @@ declare namespace Spiegel_VN {
     function Chp03_CS_KailaniMissing(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
-    function Chp03_CS_TurmoilMarketplace(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
     function Chp04_00_ResearchOptions(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
@@ -989,9 +981,6 @@ declare namespace Spiegel_VN {
 }
 declare namespace Spiegel_VN {
     function Chp06_InWhary(): ƒS.SceneReturn;
-}
-declare namespace Spiegel_VN {
-    function Chp06_ClothingStore(): ƒS.SceneReturn;
 }
 declare namespace Spiegel_VN {
     function Chp06_Inn(): ƒS.SceneReturn;

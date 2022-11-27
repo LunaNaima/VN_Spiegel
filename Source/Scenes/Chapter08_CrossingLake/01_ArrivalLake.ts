@@ -11,7 +11,6 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Flynn, '"Der ist ja riesig! So nahe war ich noch nie. Jetzt müssen wir nur noch rüberkommen."');
     await ƒS.Speech.tell(characters.narrator, "Suche im Bild nach Möglichkeiten zur Überfahrt! Klicke dabei auf die Stellen, bei denen sich der Mauszeiger ändert. Wenn du einen Weg gefunden hast, tippe auf die Leertaste.");
 
-
     ƒS.Speech.clear();
     return "08_ImageRiddle";
   }

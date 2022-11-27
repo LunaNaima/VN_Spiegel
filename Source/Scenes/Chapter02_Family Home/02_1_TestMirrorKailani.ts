@@ -4,8 +4,6 @@ namespace Spiegel_VN {
     ƒS.Character.hideAll();
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-
-    // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
     await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.outfit2_dress1_happy, ƒS.positionPercent(45, 100));
     ƒS.update();
     await ƒS.Speech.tell(characters.Kailani, '"Auja!"');

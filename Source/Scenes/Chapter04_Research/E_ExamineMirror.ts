@@ -9,17 +9,17 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, "Das Zimmer ist so still. Du schaust dich um. Eigentlich fühlst du dich unwohl, hier zu sein, weil sie bestimmt etwas dagegen hätte, wenn du durch ihre Sachen schnüffelst.");
 
     let Chp04ExamineMirrorElementAnswers = {
-            iSayMirror: "(Erkunden) Spiegel nehmen",
-            iSayDiary: "(Erkunden) Tagebuch lesen",
-            iSayContinue: "Zurück"
+      iSayMirror: "(Erkunden) Spiegel nehmen",
+      iSayDiary: "(Erkunden) Tagebuch lesen",
+      iSayContinue: "Zurück"
     };
-    
+
     let Chp04ExamineMirrorElement = await ƒS.Menu.getInput(Chp04ExamineMirrorElementAnswers, "choicesCSSclass");
 
-        // *** RESPONSES ***
+    // *** RESPONSES ***
     switch (Chp04ExamineMirrorElement) {
       case Chp04ExamineMirrorElementAnswers.iSayMirror:
-        await ƒS.Location.show(locations.Chp03_KailaniBedroomMirror); 
+        await ƒS.Location.show(locations.Chp03_KailaniBedroomMirror);
         ƒS.update();
         await ƒS.Speech.tell(characters.maincharacter, "Der Spiegel glitzert und glänzt. Du schaust hinein, siehst aber nichts. Wahrscheinlich ist er noch im Wünsche-Modus. Moment mal – Wünsche-Modus? Kannst du anschauen, was sich Kailani zuletzt gewünscht hat?");
         await ƒS.Speech.tell(characters.maincharacter, '"Spieglein, Spieglein, weise mir mein Träumlein: Ich wünsche mir Kailanis letzten Wunsch!"');
@@ -27,7 +27,7 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         return "04_E_Examine mirror";
         break;
-        
+
       case Chp04ExamineMirrorElementAnswers.iSayDiary:
         await ƒS.Location.show(locations.Chp03_KailaniBedroomDiary);
         ƒS.update();
@@ -45,8 +45,8 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, "Hier gibt es nichts mehr zu sehen.");
         return "04_00_Research Options";
         break;
-        
+
     }
-    
+
   }
 }

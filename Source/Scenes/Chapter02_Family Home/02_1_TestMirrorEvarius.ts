@@ -6,8 +6,6 @@ namespace Spiegel_VN {
 
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
-    // ƒS.Character.hide(characters.Evarius);
     ƒS.update();
     await ƒS.Speech.tell(characters.Evarius, '"Auja!"');
     await ƒS.Speech.tell(characters.maincharacter, "Er packt den Spiegel aus und hebt ihn sich vors Gesicht.");

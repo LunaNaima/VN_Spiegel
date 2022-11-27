@@ -27,12 +27,7 @@ namespace Spiegel_VN {
       iSayUnsure: "Unsicher"
     };
 
-    // if (dataForSave.scoreEmpathyPoints < 20) {
-    //   delete chp01ConvoMotherElementAnswers.iSayEmpathyPoints;
-    // }
-    // console.log(dataForSave.scoreEmpathyPoints);
 
-    //*** CSS-CLASS */
     let chp01ConvoMotherElement = await ƒS.Menu.getInput(
       chp01ConvoMotherElementAnswers,
       "choicesCSSclass"

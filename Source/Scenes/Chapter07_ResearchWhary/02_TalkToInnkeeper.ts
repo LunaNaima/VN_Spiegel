@@ -8,15 +8,6 @@ namespace Spiegel_VN {
       iSayDesperate: "Verzweifelt"
     };
 
-    // if (
-    //   !dataForSave.pickedChp07ResearchMarketplace ||
-    //   !dataForSave.pickedChp07TalkToCook ||
-    //   !dataForSave.pickedChp07TalkToInnkeeper ||
-    //   !dataForSave.pickedChp07TalkToStablehand
-    // ) {
-    //   delete Chp07InnkeeperElementAnswers.PickSceneContinue;
-    // }
-
     let Chp07InnkeeperElement = await ƒS.Menu.getInput(Chp07InnkeeperElementAnswers, "choicesCSSclass");
 
     // *** RESPONSES ***
@@ -75,14 +66,6 @@ namespace Spiegel_VN {
         iSayContinue: "Weiter"
       };
 
-      //    if (
-      //   !dataForSave.pickedChp07pickedColor ||
-      //   !dataForSave.pickedChp07pickedGrey ||
-      //   !dataForSave.pickedChp07pickedWhatHappened
-      // ) {
-      //   delete Chp07InnkeeperElementAnswers2.iSayContinue;
-      // }
-
       let Chp07InnkeeperElement2 = await ƒS.Menu.getInput(Chp07InnkeeperElementAnswers2, "choicesCSSclass");
 
       // *** RESPONSES ***
@@ -113,6 +96,7 @@ namespace Spiegel_VN {
           break;
       }
     } while (!dataForSave.pickedChp07Continue);
+
     ƒS.Character.hideAll();
     return "06_new day";
   }

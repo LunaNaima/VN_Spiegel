@@ -19,20 +19,12 @@ namespace Spiegel_VN {
     ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– ein Krachen ertönt, so laut, dass du dir die Ohren zuhalten musst –");
 
-    // await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-    // ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– noch ein Spiegel kaputt! –");
 
-    //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-    // ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– schon die Hälfte zerstört! –");
 
-    //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-    // ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– der vierte Spiegel geht zu Bruch –");
 
-    //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-    // ƒS.update();
     await ƒS.Speech.tell(characters.maincharacter, "– fast geschafft –");
 
     await ƒS.Sound.fade(soundeffects.glass, 0, 0, false);
@@ -396,12 +388,12 @@ namespace Spiegel_VN {
               await ƒS.Speech.tell(characters.narrator, "Nicht ganz ...");
               ƒS.Speech.clear();
               break;
-            
+
             case Chp10GoodEndingElementAnswers6.iSayOption2:
               await ƒS.Speech.tell(characters.narrator, "Probier's nochmal!");
               ƒS.Speech.clear();
               break;
-            
+
             case Chp10GoodEndingElementAnswers6.iSayOption3:
               dataForSave.pickedChp10GoodEndingContinue3 = true;
               await ƒS.Speech.tell(characters.narrator, "Das war´s!");
@@ -409,7 +401,7 @@ namespace Spiegel_VN {
               break;
           }
         } while (!dataForSave.pickedChp10GoodEndingContinue3);
-         
+
         ƒS.Speech.clear();
         await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
@@ -434,6 +426,6 @@ namespace Spiegel_VN {
         return "End";
         break;
 
-        }
+    }
   }
-  }
+}

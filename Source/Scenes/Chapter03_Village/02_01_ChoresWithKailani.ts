@@ -37,7 +37,7 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         break;
     }
-  
+
     await ƒS.Speech.tell(characters.maincharacter, "Kailani ist heute wirklich schlecht drauf. Dabei ist eure Beziehung eigentlich gut.");
     await ƒS.Speech.tell(characters.maincharacter, "Irgendwie kommt sie dir etwas grauer vor. Du nimmst dir vor, ihr auf den Zahn zu fühlen.");
 
@@ -80,86 +80,86 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.Kailani, '"Also, dieser Spiegel. Der von Mutti. Der ist halt echt toll. Ich kann mir so viel wünschen, wie ich will, und er zeigt es mir! Verstehst du, was ich meine?"');
 
     let Chp03ChoresKailaniElementAnswers11 = {
-          iSayGood: '"Klingt gut!"',
-          iSayBother: '"Stört dich etwas?"',
-          iSaySilent: "Nicken und schweigen"
-        };
+      iSayGood: '"Klingt gut!"',
+      iSayBother: '"Stört dich etwas?"',
+      iSaySilent: "Nicken und schweigen"
+    };
 
     let Chp03ChoresKailaniElement11 = await ƒS.Menu.getInput(Chp03ChoresKailaniElementAnswers11, "choicesCSSclass");
 
-        // *** RESPONSES ***
+    // *** RESPONSES ***
     switch (Chp03ChoresKailaniElement11) {
-          case Chp03ChoresKailaniElementAnswers11.iSayGood:
-            await ƒS.Speech.tell(characters.maincharacter, '"Das klingt doch gut, oder? Dann macht er genau das, was er soll."');
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
-            ƒS.update();
+      case Chp03ChoresKailaniElementAnswers11.iSayGood:
+        await ƒS.Speech.tell(characters.maincharacter, '"Das klingt doch gut, oder? Dann macht er genau das, was er soll."');
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
+        ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Naja, schon. Das stimmt. Das gefällt mir einfach. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
-            await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
+        await ƒS.Speech.tell(characters.Kailani, '"Naja, schon. Das stimmt. Das gefällt mir einfach. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
-            ƒS.update();
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
+        ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
-            await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
+        await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
+        await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
 
-            await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
-            ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
-            await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
-            ƒS.Speech.clear();
-            break;
+        await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
+        await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
+        ƒS.Speech.clear();
+        break;
 
-          case Chp03ChoresKailaniElementAnswers11.iSayBother:
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
-            ƒS.update();
+      case Chp03ChoresKailaniElementAnswers11.iSayBother:
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
+        ƒS.update();
 
-            await ƒS.Speech.tell(characters.maincharacter, '"Und was stört dich daran?"');
-            await ƒS.Speech.tell(characters.Kailani, '"Gar nichts, das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Und was stört dich daran?"');
+        await ƒS.Speech.tell(characters.Kailani, '"Gar nichts, das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
 
-            await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
+        await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
-            ƒS.update();
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
+        ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
-            await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
+        await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
+        await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
 
-            await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
-            ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
-            await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
-            ƒS.Speech.clear();
-            break;
+        await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – Ist das Kleid in der Wäsche verblichen?");
+        await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
+        ƒS.Speech.clear();
+        break;
 
-          case Chp03ChoresKailaniElementAnswers11.iSaySilent:
-            await ƒS.Speech.tell(characters.Kailani, '"Das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
-            await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
+      case Chp03ChoresKailaniElementAnswers11.iSaySilent:
+        await ƒS.Speech.tell(characters.Kailani, '"Das macht einfach Spaß. Die Farben sind superschön und ich kann mich dabei beobachten, wie ich diese ganzen tollen Sachen mache."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Was schaust du dir denn so in dem magischen Spiegel an?"');
 
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
-            ƒS.update();
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_neutral_happy, ƒS.positionPercent(45, 100));
+        ƒS.update();
 
-            await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
-            await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
-            await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
-            ƒS.Character.hideAll();
-            await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
-            ƒS.update();
-            await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
-            await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
-            ƒS.Speech.clear();
-            break;
+        await ƒS.Speech.tell(characters.Kailani, '"Alles Mögliche! Ich kann Zeitreisen, fliegen, Tiere beobachten, reich sein …"');
+        await ƒS.Speech.tell(characters.Kailani, '"Und ich bin soo hübsch in dem Spiegel! Ganz schlank und mit langen Haaren. So wollte ich schon immer aussehen."');
+        await ƒS.Speech.tell(characters.maincharacter, '"Und deshalb schaust du so gerne hinein, weil du dich darin hübscher findest? Aber du bist doch in echt schon hübsch!"');
+        ƒS.Character.hideAll();
+        await ƒS.Character.show(characters.Kailani, characters.Kailani.pose.grey_crossed_angry, ƒS.positionPercent(45, 100));
+        ƒS.update();
+        await ƒS.Speech.tell(characters.maincharacter, "Kailani verstummt und zupft an ihrem Kleid herum. Du runzelst die Stirn. Warte – ist das Kleid in der Wäsche verblichen?");
+        await ƒS.Speech.tell(characters.Kailani, '"Können wir einfach unser Zeug fertig machen? Ich habe keine Lust mehr, hier rumzustehen."');
+        ƒS.Speech.clear();
+        break;
     }
-    
+
     return "03_00 New day";
-    }
   }
+}

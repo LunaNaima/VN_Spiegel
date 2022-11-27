@@ -9,7 +9,6 @@ namespace Spiegel_VN {
     await ƒS.Speech.tell(characters.maincharacter, '"Also, Flynn, es ist ja wirklich nicht zu übersehen, dass die Leute hier sehr auf ihr Äußeres achten."');
     await ƒS.Speech.tell(characters.Flynn, '"Naja, wer will nicht schön aussehen?"');
 
-
     do {
       let Chp08ConvoFlynnElementAnswers = {
         iSayExploreTheyAreAfraid: "(Erkunden) Vielleicht haben sie Angst?",

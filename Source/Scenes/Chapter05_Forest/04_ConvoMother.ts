@@ -123,7 +123,6 @@ namespace Spiegel_VN {
         await ƒS.Speech.tell(characters.maincharacter, "Vielleicht ist es in der Spiegelwelt kalt, oder du willst unentdeckt bleiben? Eine gute Wahl.");
         ƒS.Speech.clear();
         break;
-
     }
 
     await ƒS.Speech.tell(characters.maincharacter, "Die Kirchenglocken im Dorf schlagen 23 Uhr. Bevor du den Mut verlierst, drehst du dich um und verlässt das Haus.");

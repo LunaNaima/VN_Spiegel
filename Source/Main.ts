@@ -5,16 +5,9 @@ namespace Spiegel_VN {
   
   // *** DATA THAT WILL BE SAVED ***
   export let dataForSave = {
-    // hier kommt alles rein, was gespeichert werden soll. Der Spielstand wird von Beginn der jeweiligen Szene gespeichert.
     nameProtagonist: "",
-    // *** SCORE ***
-    scoreEmpathyPoints: 0,
-    EmpathyPointsSkala: "",
-    scoreCouragePoints: 0,
-    scoreKnowledgePoints: 0,
+
     tunnelFailed: 0,
-    pickedBoat: false,
-    // so geht nicht! muss die einzeln aufschreiben und nicht als Objekt scoreEmpathyPoints: 20 usw. und dann wo ichs aufruf ändern (ohne score)
 
     // *** RIGHT OPTION PICKED ***
     pickedRightChoice: false,
@@ -34,16 +27,13 @@ namespace Spiegel_VN {
     pickedRiddle1: false,
     pickedRiddle2: false,
     pickedRiddle3: false,
-    // pickediSayBlue: false,
-    // pickediSayGreen: false,
-    // pickediSayEyes: false,
 
     // Chapter 01 - Flower Merchant ***
     pickediAskAboutTrip: false,
     pickediAskAboutDecorations: false,
 
     // CHAPTER 01: PICKED ALL SCENES
-    pickedChp01_E_FlowerMerchantScene: false, // FRAGE: wie einrichten, dass wenn alle mandatory scenes absolviert werden aber keine expore scenes, eine
+    pickedChp01_E_FlowerMerchantScene: false, 
     pickedChp01_E_LeatherMerchantScene: false,
     pickedChp01_ConvoMother: false,
     pickedChp01_MirrorMerchant: false,
@@ -56,8 +46,6 @@ namespace Spiegel_VN {
     pickedChp02_PickHerbsGarden: false,
     pickedChp02_FightNeighbor: false,
     pickedChp02MirrorScenesContinue: false,
-    // // pickedChp02_E_DiscoverBedroom: false,
-    // // pickedChp02_E_DiscoverKitchen: false,
 
     //  CHAPTER 03: PICKED ALL SCENES
     pickedChp03_Dressmaker: false,
@@ -69,7 +57,6 @@ namespace Spiegel_VN {
     pickedChp04TalkToFamily: false,
     pickedChp04ResearchLibrary: false,
     pickedChp04ExamineMirror: false,
-
 
     // CHAPTER 05: PICKED ALL SCENES
     pickedChp05Inner: false,
@@ -103,7 +90,6 @@ namespace Spiegel_VN {
     pickedChp07Continue: false,
 
     // CHAPTER 08: FACTORY
-    // pickedChp08pickedBoat: false,
     pickedChp08ConvoContinue: false,
     pickedChp08Left: false,
     pickedChp08Right: false,

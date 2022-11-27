@@ -8,26 +8,11 @@ namespace Spiegel_VN {
 
     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
 
-    // ***TEST-INVENTORY***
-    // ƒS.Inventory.add(inventory.apple);
-    // await ƒS.Inventory.open;
-    //hier wird eine asynch funktion exportiert, wie heißt die funktion? in diesem fall name funktion = name von szene
-
-    // ***TEST-DIALOGE***
-    // console.log(characters.monologue.name); // console = konsole, log = befehl, der sagt, was ausgegeben wird (was in der klammer). was ausgegeben werden soll: heir wird ausgegeben, was ich rein schreibe, zum debuggen udn verstehen, was mein programm tut, wie ein wegweiser. Am ende der Sache kann ich den Namen der jeweiligen Szene eingeben, is nur für mich & für Prof
-    // await ƒS.Speech.tell("Bab", "Hallo, ich bin Bab."); //fs = ich greife auf die library zu, was jmdn anders schon für die library programmiert hat.
-    // await ƒS.Speech.tell("Xenoi", "Hallo, ich bin Xeni.");
-
-    // await ƒS.Speech.tell(
-    //   characters.maincharacter.name,
-    //   "Hallo, ich bin Dein Name."
-    // );
-
     // ***BEGINN SZENE***
     await ƒS.Character.show(characters.Mama, characters.Mama.pose.dress_34_neutral, ƒS.positionPercent(70, 115));
     ƒS.update();
 
-    let randomTextChp01Marketplace = ƒ.Random.default.getRangeFloored(1, 5); //gerundet
+    let randomTextChp01Marketplace = ƒ.Random.default.getRangeFloored(1, 5);
     switch (randomTextChp01Marketplace) {
       case 1:
         await ƒS.Speech.tell(

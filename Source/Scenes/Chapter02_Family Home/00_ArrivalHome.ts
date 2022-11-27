@@ -3,7 +3,7 @@ namespace Spiegel_VN {
         await ƒS.Location.show(locations.black);
         await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
         await ƒS.Location.show(locations.Chp02_02_LivingRoom);
-        
+
         await ƒS.update();
 
         // ** RANDOM TEXT ***

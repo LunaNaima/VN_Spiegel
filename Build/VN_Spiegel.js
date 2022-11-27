@@ -5,16 +5,8 @@ var Spiegel_VN;
     Spiegel_VN.ƒS = FudgeStory;
     // *** DATA THAT WILL BE SAVED ***
     Spiegel_VN.dataForSave = {
-        // hier kommt alles rein, was gespeichert werden soll. Der Spielstand wird von Beginn der jeweiligen Szene gespeichert.
         nameProtagonist: "",
-        // *** SCORE ***
-        scoreEmpathyPoints: 0,
-        EmpathyPointsSkala: "",
-        scoreCouragePoints: 0,
-        scoreKnowledgePoints: 0,
         tunnelFailed: 0,
-        pickedBoat: false,
-        // so geht nicht! muss die einzeln aufschreiben und nicht als Objekt scoreEmpathyPoints: 20 usw. und dann wo ichs aufruf ändern (ohne score)
         // *** RIGHT OPTION PICKED ***
         pickedRightChoice: false,
         pickedRightChoiceMirror: false,
@@ -31,9 +23,6 @@ var Spiegel_VN;
         pickedRiddle1: false,
         pickedRiddle2: false,
         pickedRiddle3: false,
-        // pickediSayBlue: false,
-        // pickediSayGreen: false,
-        // pickediSayEyes: false,
         // Chapter 01 - Flower Merchant ***
         pickediAskAboutTrip: false,
         pickediAskAboutDecorations: false,
@@ -50,8 +39,6 @@ var Spiegel_VN;
         pickedChp02_PickHerbsGarden: false,
         pickedChp02_FightNeighbor: false,
         pickedChp02MirrorScenesContinue: false,
-        // // pickedChp02_E_DiscoverBedroom: false,
-        // // pickedChp02_E_DiscoverKitchen: false,
         //  CHAPTER 03: PICKED ALL SCENES
         pickedChp03_Dressmaker: false,
         pickedChp03_ChoresWithKailani: false,
@@ -90,7 +77,6 @@ var Spiegel_VN;
         pickedChp07SpeakToBeggar: false,
         pickedChp07Continue: false,
         // CHAPTER 08: FACTORY
-        // pickedChp08pickedBoat: false,
         pickedChp08ConvoContinue: false,
         pickedChp08Left: false,
         pickedChp08Right: false,
@@ -1292,22 +1278,10 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.cracklingfire, 0, 0, false);
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.music.theme_ordinaryworld, 0.5, 1, true);
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        // ***TEST-INVENTORY***
-        // ƒS.Inventory.add(inventory.apple);
-        // await ƒS.Inventory.open;
-        //hier wird eine asynch funktion exportiert, wie heißt die funktion? in diesem fall name funktion = name von szene
-        // ***TEST-DIALOGE***
-        // console.log(characters.monologue.name); // console = konsole, log = befehl, der sagt, was ausgegeben wird (was in der klammer). was ausgegeben werden soll: heir wird ausgegeben, was ich rein schreibe, zum debuggen udn verstehen, was mein programm tut, wie ein wegweiser. Am ende der Sache kann ich den Namen der jeweiligen Szene eingeben, is nur für mich & für Prof
-        // await ƒS.Speech.tell("Bab", "Hallo, ich bin Bab."); //fs = ich greife auf die library zu, was jmdn anders schon für die library programmiert hat.
-        // await ƒS.Speech.tell("Xenoi", "Hallo, ich bin Xeni.");
-        // await ƒS.Speech.tell(
-        //   characters.maincharacter.name,
-        //   "Hallo, ich bin Dein Name."
-        // );
         // ***BEGINN SZENE***
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Mama, Spiegel_VN.characters.Mama.pose.dress_34_neutral, Spiegel_VN.ƒS.positionPercent(70, 115));
         Spiegel_VN.ƒS.update();
-        let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5); //gerundet
+        let randomTextChp01Marketplace = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 5);
         switch (randomTextChp01Marketplace) {
             case 1:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Mama.name, '"Hör auf zu träumen und komm’. Wir haben noch einiges vor dem Essen zu erledigen."');
@@ -1408,11 +1382,6 @@ var Spiegel_VN;
             iSaySave: "Sparen",
             iSayUnsure: "Unsicher"
         };
-        // if (dataForSave.scoreEmpathyPoints < 20) {
-        //   delete chp01ConvoMotherElementAnswers.iSayEmpathyPoints;
-        // }
-        // console.log(dataForSave.scoreEmpathyPoints);
-        //*** CSS-CLASS */
         let chp01ConvoMotherElement = await Spiegel_VN.ƒS.Menu.getInput(chp01ConvoMotherElementAnswers, "choicesCSSclass");
         //*** RESPONSES */
         switch (chp01ConvoMotherElement) {
@@ -1615,7 +1584,6 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.leatherMerchant, '"Willkommen!"');
                 break;
         }
-        // ***BEGIN DIALOGUE ***
         // *** DIALOGUE OPTIONS ***
         let Chp01LeatherMerchantDialogueElementAnswers = {
             iSayAskAboutTrip: "(Erkunden) Was gibt es denn Neues in der Welt?",
@@ -1870,15 +1838,6 @@ var Spiegel_VN;
             iSayFight: "Streit ansprechen.",
             iSaySilent: "Nicken und Schweigen."
         };
-        // if (
-        //   !dataForSave.pickedChp02_DinnerScene || 
-        //   !dataForSave.pickedChp02_PickHerbsGarden ||
-        //   !dataForSave.pickedChp02_TestWithElena ||
-        //   !dataForSave.pickedChp02_FightNeighbor
-        // ) {
-        //   delete Chp02PickSceneElementAnswers.iSayContinue;
-        //   // return Chp01_CS_ArrivalHome();
-        // }
         let Chp02PickSceneElementDinner = await Spiegel_VN.ƒS.Menu.getInput(Chp02PickSceneElementAnswersDinner, "choicesCSSclass");
         // *** RESPONSES ***
         switch (Chp02PickSceneElementDinner) {
@@ -1955,8 +1914,6 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Evarius, Spiegel_VN.characters.Evarius.pose.pos2_laugh, Spiegel_VN.ƒS.positionPercent(45, 100));
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Evarius, testen wir das neue Ding!"');
-        // ƒS.Character.hide(characters.Evarius);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Evarius, '"Auja!"');
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Er packt den Spiegel aus und hebt ihn sich vors Gesicht.");
@@ -2057,7 +2014,6 @@ var Spiegel_VN;
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp02_02_LivingRoom);
         Spiegel_VN.ƒS.Character.hideAll();
         await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        // await ƒS.Speech.tell(characters.maincharacter, '"Komm’, Kailani, testen wir das neue Ding!"');
         await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.outfit2_dress1_happy, Spiegel_VN.ƒS.positionPercent(45, 100));
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Kailani, '"Auja!"');
@@ -2597,12 +2553,6 @@ var Spiegel_VN;
         let Chp03SearchKailaniElementAnswers = {
             PickSceneSearchGarden: "Im Garten suchen"
         };
-        // if (
-        //   !dataForSave.pickedChp03_SearchGarden ||
-        //   !dataForSave.pickedChp03_SearchKitchen
-        // ) {
-        //   delete Chp03SearchKailaniElementAnswers.PickSceneContinue;
-        // }
         let Chp03SearchKailaniElement = await Spiegel_VN.ƒS.Menu.getInput(Chp03SearchKailaniElementAnswers, "choicesCSSclass");
         switch (Chp03SearchKailaniElement) {
             case Chp03SearchKailaniElementAnswers.PickSceneSearchGarden:
@@ -2693,33 +2643,31 @@ var Spiegel_VN;
     }
     Spiegel_VN.Chp03_CS_KailaniMissing = Chp03_CS_KailaniMissing;
 })(Spiegel_VN || (Spiegel_VN = {}));
-var Spiegel_VN;
-(function (Spiegel_VN) {
-    async function Chp03_CS_TurmoilMarketplace() {
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp05_Forestpath);
-        Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Etwas verzweifelt und unsicher gehst du den Pfad Richtung Dorfzentrum entlang und lässt deinen Blick zwischen den Bäumen schweifen. Wo kann sie nur sein?");
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_022_Marketplace_empty);
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Auf dem Marktplatz angekommen, bist du leicht überrascht. Trotz des frühen Nachmittags herrscht auf dem Marktplatz weniger Trubel als sonst. Die Bewohner stehen in kleinen Gruppen zusammen. Eine angespannte Atmosphäre hängt wie eine schwere Gewitterwolke über dem Platz.");
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp03_MarketplacePerson);
-        await Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell("???", '"Hast du Pantro gesehen? Mein Sohn, er ist weg"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Eine Freundin von Mutti kommt auf dich zugelaufen. Ihre Augen sind aufgerissen und sie greift hektisch nach dir");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Was? Das kann nicht sein. Was ist denn passiert?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Warte mal – Kailani ist auch verschwunden! Wir finden sie nicht."');
-        await Spiegel_VN.ƒS.Speech.tell("???", '"Das ist – das darf nicht wahr sein"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Verzweifelt ringt sie sich die Hände.");
-        await Spiegel_VN.ƒS.Speech.tell("???", '"Was sollen wir bloß tun?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"War Pantro irgendwie komisch, bevor er verschwunden ist? Hat er sich anders verhalten oder so?"');
-        await Spiegel_VN.ƒS.Speech.tell("???", '"Ja … jetzt, da du fragst, fällt es mir ein – die letzten Tage war er seltsam bleich. Und zurückgezogen, als ob er mich meiden wolle. Ich habe das ignoriert; wegen seines Alters, weißt du? Aber gewiss waren Anzeichen dafür, dass in ihm etwas vorgegangen ist. Und ich habe es nicht bemerkt!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sie wendet sich ab, setzt sich auf den Brunnen und vergräbt das Gesicht in den Händen. Jetzt sind es zwei Kinder, die verschwunden sind. Zwei bleiche, zurückgezogenen Kinder. Das kann kein Zufall mehr sein.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Jetzt sind es zwei Kinder, die verschwunden sind. Zwei bleiche, zurückgezogenen Kinder. Das kann kein Zufall mehr sein. Du versuchst, tief durchzuatmen und dich nicht von der aufsteigenden Panik überrennen zu lassen. Dein Herz pocht schneller und schneller, wie ein Häschen, dass vor dem Fuchs wegläuft. Was ist hier geschehen? Und, viel wichtiger, wo ist Kailani??? Schnell zurück nach Hause!");
-        return "04_00_Research Options";
-    }
-    Spiegel_VN.Chp03_CS_TurmoilMarketplace = Chp03_CS_TurmoilMarketplace;
-})(Spiegel_VN || (Spiegel_VN = {}));
+// namespace Spiegel_VN {
+//   export async function Chp03_CS_TurmoilMarketplace(): ƒS.SceneReturn {
+//     await ƒS.Location.show(locations.Chp05_Forestpath);
+//     ƒS.Character.hideAll();
+//     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+//     await ƒS.Speech.tell(characters.maincharacter, "Etwas verzweifelt und unsicher gehst du den Pfad Richtung Dorfzentrum entlang und lässt deinen Blick zwischen den Bäumen schweifen. Wo kann sie nur sein?");
+//     await ƒS.Location.show(locations.Chp03_022_Marketplace_empty);
+//     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+//     await ƒS.Speech.tell(characters.maincharacter, "Auf dem Marktplatz angekommen, bist du leicht überrascht. Trotz des frühen Nachmittags herrscht auf dem Marktplatz weniger Trubel als sonst. Die Bewohner stehen in kleinen Gruppen zusammen. Eine angespannte Atmosphäre hängt wie eine schwere Gewitterwolke über dem Platz.");
+//     await ƒS.Location.show(locations.Chp03_MarketplacePerson);
+//     await ƒS.update();
+//     await ƒS.Speech.tell("???", '"Hast du Pantro gesehen? Mein Sohn, er ist weg"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Eine Freundin von Mutti kommt auf dich zugelaufen. Ihre Augen sind aufgerissen und sie greift hektisch nach dir");
+//     await ƒS.Speech.tell(characters.maincharacter, '"Was? Das kann nicht sein. Was ist denn passiert?"');
+//     await ƒS.Speech.tell(characters.maincharacter, '"Warte mal – Kailani ist auch verschwunden! Wir finden sie nicht."');
+//     await ƒS.Speech.tell("???", '"Das ist – das darf nicht wahr sein"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Verzweifelt ringt sie sich die Hände.");
+//     await ƒS.Speech.tell("???", '"Was sollen wir bloß tun?"');
+//     await ƒS.Speech.tell(characters.maincharacter, '"War Pantro irgendwie komisch, bevor er verschwunden ist? Hat er sich anders verhalten oder so?"');
+//     await ƒS.Speech.tell("???", '"Ja … jetzt, da du fragst, fällt es mir ein – die letzten Tage war er seltsam bleich. Und zurückgezogen, als ob er mich meiden wolle. Ich habe das ignoriert; wegen seines Alters, weißt du? Aber gewiss waren Anzeichen dafür, dass in ihm etwas vorgegangen ist. Und ich habe es nicht bemerkt!"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Sie wendet sich ab, setzt sich auf den Brunnen und vergräbt das Gesicht in den Händen. Jetzt sind es zwei Kinder, die verschwunden sind. Zwei bleiche, zurückgezogenen Kinder. Das kann kein Zufall mehr sein.");
+//     await ƒS.Speech.tell(characters.maincharacter, "Jetzt sind es zwei Kinder, die verschwunden sind. Zwei bleiche, zurückgezogenen Kinder. Das kann kein Zufall mehr sein. Du versuchst, tief durchzuatmen und dich nicht von der aufsteigenden Panik überrennen zu lassen. Dein Herz pocht schneller und schneller, wie ein Häschen, dass vor dem Fuchs wegläuft. Was ist hier geschehen? Und, viel wichtiger, wo ist Kailani??? Schnell zurück nach Hause!");
+//     return "04_00_Research Options";
+//   }
+// }
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp04_00_ResearchOptions() {
@@ -3526,128 +3474,129 @@ var Spiegel_VN;
     }
     Spiegel_VN.Chp06_InWhary = Chp06_InWhary;
 })(Spiegel_VN || (Spiegel_VN = {}));
-var Spiegel_VN;
-(function (Spiegel_VN) {
-    async function Chp06_ClothingStore() {
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_ClothingStore);
-        Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.crowd, 0, 0, false);
-        Spiegel_VN.ƒS.update();
-        Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ohne auf deine Widerrede zu hören, zieht dich Flynn in ein Bekleidungsgeschäft.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Halt, was tust du?!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du weißt gar nicht, wie dir geschieht. Erst reist du in eine komplett andere Welt, die genauso und gleichzeitig so anders ist als daheim. Dann schwätzt dich dieser Kerl an und will dir nicht von der Seite weichen.");
-        Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_neutral, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich will dir ein neues Outfit kaufen, als Willkommensgeschenk!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Bevor du widersprechen kannst, kommt eine Verkäuferin auf euch zu. Sie strahlt euch mit brillant-weißen Zähnen an.");
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Seller, Spiegel_VN.characters.Seller.pose.pos1, Spiegel_VN.ƒS.positionPercent(40, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell("Verkäuferin", '"Ihr wollt ein neues Outfit? Sehr gerne!"');
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sie schiebt dich in eine Ecke des Geschäfts und holt ihr Messband hervor.");
-        await Spiegel_VN.ƒS.Speech.tell("Verkäuferin", '"Was soll’s denn werden? Ein hübsches Kleid? Oder Hemd & Hose?"');
-        let Chp06ClothesElementAnswers = {
-            iSayDress: "Kleid",
-            iSayShirt: "Hemd & Hose",
-            iSaySkirt: "Hemd & Rock"
-        };
-        let Chp06ClothesElement = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers, "choicesCSSclass");
-        // *** RESPONSES ***
-        switch (Chp06ClothesElement) {
-            case Chp06ClothesElementAnswers.iSayDress:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du stammelst. Vielleicht ein Kleid?");
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp06ClothesElementAnswers.iSayShirt:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du stammelst. Vielleicht Hemd und Hose?");
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp06ClothesElementAnswers.iSaySkirt:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du stammelst. Vielleicht Hemd und Rock?");
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-        }
-        await Spiegel_VN.ƒS.Speech.tell("Verkäuferin", "Kommt sofort!");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du willst dich gerade nach Flynn umdrehen und ihn anfauchen, als die Dame schon wieder da ist und dir das Kleidungsstück aufdrängt.");
-        Spiegel_VN.ƒS.Character.hideAll();
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos3_arms2_smile, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Das steht dir wirklich sehr gut!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Flynn hat sich in der Zwischenzeit auch etwas ausgesucht. Er steht vor dir und lacht.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Wunderbar! Jetzt passt du perfekt zu Whary!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du schaffst es gerade so, deine alten Klamotten aufzusammeln. Flynn zahlt und zieht dich wieder nach draußen");
-        await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp06_InWharyPeople);
-        await Spiegel_VN.ƒS.update(Spiegel_VN.transitions.fade.duration, Spiegel_VN.transitions.fade.alpha, Spiegel_VN.transitions.fade.edge);
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dort wirbelt er dich einmal um deine eigene Achse und strahlt. Das Outfi zwickt und zwängt dich ein. Ein Korsett macht deine Taille schlank und dicke Polster sorgen für ausgefüllte Körperstellen. Du fühlst dich wie eine aufgeblasene Wurst.");
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos3_arms_happy, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Du siehst super aus! Wo geht es als nächstes hin?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Dein Geduldsfaden reißt.");
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Flynn, ich bin nicht als Tourist hier! Du kannst mich nicht wie eine Puppe behandeln! Mir reichts. Ich muss meine Schwester suchen! Und dazu brauche ich dich nicht. Hast du verstanden?"');
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos3_arms2_sad, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Oh … das tut mir leid."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ja, das sollte es auch! Du kannst mich nicht zu deiner eigenen Bespaßung rumschleppen. Meine Schwester ist weg, und ich hoffe, dass sie hier irgendwo ist …"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Deine Schwester? Seit wann ist sie denn weg?"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Seit … ich glaube, gestern Mittag."');
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_uncertain, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Und du denkst, sie könnte hier sein?"');
-        let Chp06ClothesElementAnswers2 = {
-            iSayHonest: "Ehrlich sein",
-            iSayLie: "Ausflüchten"
-        };
-        let Chp06ClothesElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers2, "choicesCSSclass");
-        // *** RESPONSES ***
-        switch (Chp06ClothesElement2) {
-            case Chp06ClothesElementAnswers2.iSayHonest:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich glaube, sie wird hier als Sklavin gefangen gehalten. Von wem oder wo, weiß ich aber nicht …"');
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp06ClothesElementAnswers2.iSayLie:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Sie ist vermutlich weggelaufen und steckt irgendwo fest. Ich weiß aber nicht, wo …"');
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-        }
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich mache mir solche Sorgen! Sie ist allein und hat bestimmt große Angst."');
-        Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Flynn);
-        await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Flynn, Spiegel_VN.characters.Flynn.pose.pos2_crossed_smile2, Spiegel_VN.ƒS.positionPercent(70, 100));
-        Spiegel_VN.ƒS.update();
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich helfe dir! Das ist kein Problem. Wir finden deine Schwester!"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Warum willst du mir unbedingt dabei helfen? Wir kennen uns kaum. Und das könnte eine lange Suche werden."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Ich helfe immer gern. Und diese Mission klingt super spann– ich meinte, außergewöhnlich."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Sein Abenteuergeist geweckt, springt Flynn aufgeregt um dich herum. Du seufzt. Ist das der beste Partner bei der Suche nach Kailani?");
-        let Chp06ClothesElementAnswers3 = {
-            iSayTrust: "Flynn vertrauen",
-            iSayNotTrust: "Flynn nicht vertrauen"
-        };
-        let Chp06ClothesElement3 = await Spiegel_VN.ƒS.Menu.getInput(Chp06ClothesElementAnswers3, "choicesCSSclass");
-        // *** RESPONSES ***
-        switch (Chp06ClothesElement3) {
-            case Chp06ClothesElementAnswers3.iSayTrust:
-                Spiegel_VN.dataForSave.pickedChp06TrustFlynn = true;
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du kennst dich hier nicht aus und kennst auch niemand anderen in dieser schrillen Stadt. Schließlich hast du keine Wahl. Du musst ihm einfach vertrauen und hoffen, dass er dir wirklich bei der Suche unterstützen kann.");
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-            case Chp06ClothesElementAnswers3.iSayNotTrust:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Ehrlich gesagt, findest du diesen jungen Mann ziemlich komisch. Du entscheidest, ihm nicht zu vertrauen. Wer weiß, welche Motivationen er hat?");
-                Spiegel_VN.ƒS.Speech.clear();
-                break;
-        }
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Gut. Tut mir leid, dass ich dich gerade so angeschnauzt habe. Vielen Dank für das Angebot."');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Klar doch! Wie starten wir? Sollen wir zuerst an den Markt und dort Leute befragen, oder –"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, '"Ich muss mich zuerst irgendwo einquartieren. Bin todmüde …"');
-        await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Na dann, auf zum Gasthof! Ich kenne da einen guten."');
-        return;
-    }
-    Spiegel_VN.Chp06_ClothingStore = Chp06_ClothingStore;
-})(Spiegel_VN || (Spiegel_VN = {}));
+// namespace Spiegel_VN {
+//   export async function Chp06_ClothingStore(): ƒS.SceneReturn {
+//     await ƒS.Location.show(locations.Chp06_ClothingStore);
+//     ƒS.Sound.fade(soundeffects.crowd, 0, 0, false);
+//     ƒS.update();
+//     ƒS.Character.hideAll();
+//     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+//     await ƒS.Speech.tell(characters.maincharacter, "Ohne auf deine Widerrede zu hören, zieht dich Flynn in ein Bekleidungsgeschäft.");
+//     await ƒS.Speech.tell(characters.maincharacter, '"Halt, was tust du?!"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Du weißt gar nicht, wie dir geschieht. Erst reist du in eine komplett andere Welt, die genauso und gleichzeitig so anders ist als daheim. Dann schwätzt dich dieser Kerl an und will dir nicht von der Seite weichen.");
+//     ƒS.Character.hideAll();
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_neutral, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Ich will dir ein neues Outfit kaufen, als Willkommensgeschenk!"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Bevor du widersprechen kannst, kommt eine Verkäuferin auf euch zu. Sie strahlt euch mit brillant-weißen Zähnen an.");
+//     await ƒS.Character.show(characters.Seller, characters.Seller.pose.pos1, ƒS.positionPercent(40, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell("Verkäuferin", '"Ihr wollt ein neues Outfit? Sehr gerne!"');
+//     ƒS.Character.hide(characters.Flynn);
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.maincharacter, "Sie schiebt dich in eine Ecke des Geschäfts und holt ihr Messband hervor.");
+//     await ƒS.Speech.tell("Verkäuferin", '"Was soll’s denn werden? Ein hübsches Kleid? Oder Hemd & Hose?"');
+//     let Chp06ClothesElementAnswers = {
+//       iSayDress: "Kleid",
+//       iSayShirt: "Hemd & Hose",
+//       iSaySkirt: "Hemd & Rock"
+//     };
+//     let Chp06ClothesElement = await ƒS.Menu.getInput(
+//       Chp06ClothesElementAnswers,
+//       "choicesCSSclass"
+//     );
+//     // *** RESPONSES ***
+//     switch (Chp06ClothesElement) {
+//       case Chp06ClothesElementAnswers.iSayDress:
+//         await ƒS.Speech.tell(characters.maincharacter, "Du stammelst. Vielleicht ein Kleid?");
+//         ƒS.Speech.clear();
+//         break;
+//       case Chp06ClothesElementAnswers.iSayShirt:
+//         await ƒS.Speech.tell(characters.maincharacter, "Du stammelst. Vielleicht Hemd und Hose?");
+//         ƒS.Speech.clear();
+//         break;
+//       case Chp06ClothesElementAnswers.iSaySkirt:
+//         await ƒS.Speech.tell(characters.maincharacter, "Du stammelst. Vielleicht Hemd und Rock?");
+//         ƒS.Speech.clear();
+//         break;
+//     }
+//     await ƒS.Speech.tell("Verkäuferin", "Kommt sofort!");
+//     await ƒS.Speech.tell(characters.maincharacter, "Du willst dich gerade nach Flynn umdrehen und ihn anfauchen, als die Dame schon wieder da ist und dir das Kleidungsstück aufdrängt.");
+//     ƒS.Character.hideAll();
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos3_arms2_smile, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Das steht dir wirklich sehr gut!"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Flynn hat sich in der Zwischenzeit auch etwas ausgesucht. Er steht vor dir und lacht.");
+//     await ƒS.Speech.tell(characters.Flynn, '"Wunderbar! Jetzt passt du perfekt zu Whary!"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Du schaffst es gerade so, deine alten Klamotten aufzusammeln. Flynn zahlt und zieht dich wieder nach draußen");
+//     await ƒS.Location.show(locations.Chp06_InWharyPeople);
+//     await ƒS.update(transitions.fade.duration, transitions.fade.alpha, transitions.fade.edge);
+//     await ƒS.Speech.tell(characters.maincharacter, "Dort wirbelt er dich einmal um deine eigene Achse und strahlt. Das Outfi zwickt und zwängt dich ein. Ein Korsett macht deine Taille schlank und dicke Polster sorgen für ausgefüllte Körperstellen. Du fühlst dich wie eine aufgeblasene Wurst.");
+//     ƒS.Character.hide(characters.Flynn);
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos3_arms_happy, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Du siehst super aus! Wo geht es als nächstes hin?"');
+//     await ƒS.Speech.tell(characters.maincharacter, "Dein Geduldsfaden reißt.");
+//     await ƒS.Speech.tell(characters.maincharacter, '"Flynn, ich bin nicht als Tourist hier! Du kannst mich nicht wie eine Puppe behandeln! Mir reichts. Ich muss meine Schwester suchen! Und dazu brauche ich dich nicht. Hast du verstanden?"');
+//     ƒS.Character.hide(characters.Flynn);
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos3_arms2_sad, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Oh … das tut mir leid."');
+//     await ƒS.Speech.tell(characters.maincharacter, '"Ja, das sollte es auch! Du kannst mich nicht zu deiner eigenen Bespaßung rumschleppen. Meine Schwester ist weg, und ich hoffe, dass sie hier irgendwo ist …"');
+//     await ƒS.Speech.tell(characters.Flynn, '"Deine Schwester? Seit wann ist sie denn weg?"');
+//     await ƒS.Speech.tell(characters.maincharacter, '"Seit … ich glaube, gestern Mittag."');
+//     ƒS.Character.hide(characters.Flynn);
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_uncertain, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Und du denkst, sie könnte hier sein?"');
+//     let Chp06ClothesElementAnswers2 = {
+//       iSayHonest: "Ehrlich sein",
+//       iSayLie: "Ausflüchten"
+//     };
+//     let Chp06ClothesElement2 = await ƒS.Menu.getInput(Chp06ClothesElementAnswers2, "choicesCSSclass");
+//     // *** RESPONSES ***
+//     switch (Chp06ClothesElement2) {
+//       case Chp06ClothesElementAnswers2.iSayHonest:
+//         await ƒS.Speech.tell(characters.maincharacter, '"Ich glaube, sie wird hier als Sklavin gefangen gehalten. Von wem oder wo, weiß ich aber nicht …"');
+//         ƒS.Speech.clear();
+//         break;
+//       case Chp06ClothesElementAnswers2.iSayLie:
+//         await ƒS.Speech.tell(characters.maincharacter, '"Sie ist vermutlich weggelaufen und steckt irgendwo fest. Ich weiß aber nicht, wo …"');
+//         ƒS.Speech.clear();
+//         break;
+//     }
+//     await ƒS.Speech.tell(characters.maincharacter, '"Ich mache mir solche Sorgen! Sie ist allein und hat bestimmt große Angst."');
+//     ƒS.Character.hide(characters.Flynn);
+//     await ƒS.Character.show(characters.Flynn, characters.Flynn.pose.pos2_crossed_smile2, ƒS.positionPercent(70, 100));
+//     ƒS.update();
+//     await ƒS.Speech.tell(characters.Flynn, '"Ich helfe dir! Das ist kein Problem. Wir finden deine Schwester!"');
+//     await ƒS.Speech.tell(characters.maincharacter, '"Warum willst du mir unbedingt dabei helfen? Wir kennen uns kaum. Und das könnte eine lange Suche werden."');
+//     await ƒS.Speech.tell(characters.Flynn, '"Ich helfe immer gern. Und diese Mission klingt super spann– ich meinte, außergewöhnlich."');
+//     await ƒS.Speech.tell(characters.maincharacter, "Sein Abenteuergeist geweckt, springt Flynn aufgeregt um dich herum. Du seufzt. Ist das der beste Partner bei der Suche nach Kailani?");
+//     let Chp06ClothesElementAnswers3 = {
+//       iSayTrust: "Flynn vertrauen",
+//       iSayNotTrust: "Flynn nicht vertrauen"
+//     };
+//     let Chp06ClothesElement3 = await ƒS.Menu.getInput(Chp06ClothesElementAnswers3, "choicesCSSclass");
+//     // *** RESPONSES ***
+//     switch (Chp06ClothesElement3) {
+//       case Chp06ClothesElementAnswers3.iSayTrust:
+//         dataForSave.pickedChp06TrustFlynn = true;
+//         await ƒS.Speech.tell(characters.maincharacter, "Du kennst dich hier nicht aus und kennst auch niemand anderen in dieser schrillen Stadt. Schließlich hast du keine Wahl. Du musst ihm einfach vertrauen und hoffen, dass er dir wirklich bei der Suche unterstützen kann.");
+//         ƒS.Speech.clear();
+//         break;
+//       case Chp06ClothesElementAnswers3.iSayNotTrust:
+//         await ƒS.Speech.tell(characters.maincharacter, "Ehrlich gesagt, findest du diesen jungen Mann ziemlich komisch. Du entscheidest, ihm nicht zu vertrauen. Wer weiß, welche Motivationen er hat?");
+//         ƒS.Speech.clear();
+//         break;
+//     }
+//     await ƒS.Speech.tell(characters.maincharacter, '"Gut. Tut mir leid, dass ich dich gerade so angeschnauzt habe. Vielen Dank für das Angebot."');
+//     await ƒS.Speech.tell(characters.Flynn, '"Klar doch! Wie starten wir? Sollen wir zuerst an den Markt und dort Leute befragen, oder –"');
+//     await ƒS.Speech.tell(characters.maincharacter, '"Ich muss mich zuerst irgendwo einquartieren. Bin todmüde …"');
+//     await ƒS.Speech.tell(characters.Flynn, '"Na dann, auf zum Gasthof! Ich kenne da einen guten."');
+//     return;
+//   }
+// }
 var Spiegel_VN;
 (function (Spiegel_VN) {
     async function Chp06_Inn() {
@@ -4052,14 +4001,6 @@ var Spiegel_VN;
             iSayAngry: "Verärgert",
             iSayDesperate: "Verzweifelt"
         };
-        // if (
-        //   !dataForSave.pickedChp07ResearchMarketplace ||
-        //   !dataForSave.pickedChp07TalkToCook ||
-        //   !dataForSave.pickedChp07TalkToInnkeeper ||
-        //   !dataForSave.pickedChp07TalkToStablehand
-        // ) {
-        //   delete Chp07InnkeeperElementAnswers.PickSceneContinue;
-        // }
         let Chp07InnkeeperElement = await Spiegel_VN.ƒS.Menu.getInput(Chp07InnkeeperElementAnswers, "choicesCSSclass");
         // *** RESPONSES ***
         switch (Chp07InnkeeperElement) {
@@ -4104,13 +4045,6 @@ var Spiegel_VN;
                 iSayWhatHappened: '"(Erkunden) Was, denken Sie, ist mit Kailani geschehen?"',
                 iSayContinue: "Weiter"
             };
-            //    if (
-            //   !dataForSave.pickedChp07pickedColor ||
-            //   !dataForSave.pickedChp07pickedGrey ||
-            //   !dataForSave.pickedChp07pickedWhatHappened
-            // ) {
-            //   delete Chp07InnkeeperElementAnswers2.iSayContinue;
-            // }
             let Chp07InnkeeperElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp07InnkeeperElementAnswers2, "choicesCSSclass");
             // *** RESPONSES ***
             switch (Chp07InnkeeperElement2) {
@@ -4198,13 +4132,6 @@ var Spiegel_VN;
                 iSayPeople: '"(Erkunden) Was macht das Volk?"',
                 iSayContinue: "Weiter"
             };
-            // if (
-            //   !dataForSave.pickedChp07CookpickedGhost ||
-            //   !dataForSave.pickedChp07CookpickedColor ||
-            //   !dataForSave.pickedChp07CookpickedPeople
-            // ) {
-            //   delete Chp07CookElementAnswers2.iSayContinue;
-            // }
             let Chp07CookElement2 = await Spiegel_VN.ƒS.Menu.getInput(Chp07CookElementAnswers2, "choicesCSSclass");
             // *** RESPONSES ***
             switch (Chp07CookElement2) {
@@ -5036,17 +4963,9 @@ var Spiegel_VN;
         Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0.5, 1, true);
         Spiegel_VN.ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– ein Krachen ertönt, so laut, dass du dir die Ohren zuhalten musst –");
-        // await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– noch ein Spiegel kaputt! –");
-        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– schon die Hälfte zerstört! –");
-        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– der vierte Spiegel geht zu Bruch –");
-        //         await ƒS.Sound.fade(soundeffects.glass, 0.5, 1, false);
-        // ƒS.update();
         await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "– fast geschafft –");
         await Spiegel_VN.ƒS.Sound.fade(Spiegel_VN.soundeffects.glass, 0, 0, false);
         await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp10_MirrorroomGrey);

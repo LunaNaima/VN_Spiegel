@@ -54,16 +54,6 @@ namespace Spiegel_VN {
       iSaySilent: "Nicken und Schweigen."
     };
 
-    // if (
-    //   !dataForSave.pickedChp02_DinnerScene || 
-    //   !dataForSave.pickedChp02_PickHerbsGarden ||
-    //   !dataForSave.pickedChp02_TestWithElena ||
-    //   !dataForSave.pickedChp02_FightNeighbor
-    // ) {
-    //   delete Chp02PickSceneElementAnswers.iSayContinue;
-    //   // return Chp01_CS_ArrivalHome();
-    // }
-
     let Chp02PickSceneElementDinner = await ƒS.Menu.getInput(
       Chp02PickSceneElementAnswersDinner,
       "choicesCSSclass"
@@ -81,7 +71,6 @@ namespace Spiegel_VN {
         ƒS.Speech.clear();
         // return "02_021 Test Mirror";
         break;
-
 
       case Chp02PickSceneElementAnswersDinner.iSayFight:
         await ƒS.Speech.tell(characters.maincharacter, '"Klar, Mama. Ich habe nur eben diesen seltsamen Streit von Henri und Balduin mitbekommen. Hast du es auch gehört?"');

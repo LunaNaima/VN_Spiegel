@@ -22,8 +22,6 @@ namespace Spiegel_VN {
         break;
     }
 
-    // ***BEGIN DIALOGUE ***
-
     // *** DIALOGUE OPTIONS ***
     let Chp01LeatherMerchantDialogueElementAnswers = {
       iSayAskAboutTrip: "(Erkunden) Was gibt es denn Neues in der Welt?",
