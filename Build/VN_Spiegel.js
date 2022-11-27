@@ -154,19 +154,6 @@ var Spiegel_VN;
                     menuIsOpen = true;
                 }
                 break;
-            // // INVENTORY MENU
-            // case ƒ.KEYBOARD_CODE.I:
-            //   console.log("Inventory");
-            //   if (inventoryIsOpen) {
-            //     console.log("Inventory Close");
-            //     ƒS.Inventory.close();
-            //     inventoryIsOpen = false; // wenn ich m drücke, und das menu geöffnet is, schließe das menu. wenn es offen ist:
-            //   } else {
-            //     console.log("Inventory Open");
-            //     ƒS.Inventory.open();
-            //     inventoryIsOpen = true;
-            //   }
-            //   break;
         }
     }
     window.addEventListener("load", start);
