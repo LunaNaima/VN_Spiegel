@@ -2979,13 +2979,13 @@ var Spiegel_VN;
         let randomTextChp05TextRiddle = Spiegel_VN.ƒ.Random.default.getRangeFloored(1, 4); //gerundet
         switch (randomTextChp05TextRiddle) {
             case 1:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Verzage nicht ..."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, "Verzage nicht ...");
                 break;
             case 2:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Das ist doch alles verrückt.");
                 break;
             case 3:
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, '"Nicht mehr lange ..."');
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.wishtree, "Nicht mehr lange ...");
                 break;
             case 4:
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Mutti hatte Recht!");
@@ -5207,7 +5207,7 @@ var Spiegel_VN;
                 await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.Flynn, '"Das ist eine gute Idee! Vielleicht kann ich beim Gasthof als Kellner anheuern. Mal etwas anderes, als nur kämpfen."');
                 await Spiegel_VN.ƒS.Location.show(Spiegel_VN.locations.Chp08_ArrivalFactory);
                 Spiegel_VN.ƒS.update();
-                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn steht am Bug und schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
+                await Spiegel_VN.ƒS.Speech.tell(Spiegel_VN.characters.maincharacter, "Du und Kailani plaudert losgelöst über alles Mögliche. Nur Flynn schaut melancholisch in die Ferne. Es muss schwer sein, Befehle zu ignorieren! Vor allem, wenn er nichts anderes kennt.");
                 Spiegel_VN.ƒS.Character.hide(Spiegel_VN.characters.Kailani);
                 await Spiegel_VN.ƒS.Character.show(Spiegel_VN.characters.Kailani, Spiegel_VN.characters.Kailani.pose.grey_neutral_happy, Spiegel_VN.ƒS.positionPercent(40, 100));
                 Spiegel_VN.ƒS.update();
